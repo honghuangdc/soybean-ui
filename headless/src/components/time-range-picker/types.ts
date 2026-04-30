@@ -74,3 +74,21 @@ export interface TimeRangePickerRootContext extends PropsToContext<TimeRangePick
 
 export type TimeRangePickerUiSlot = 'root' | 'trigger' | 'popup' | 'list' | 'cellTrigger';
 export type TimeRangePickerUi = UiClass<TimeRangePickerUiSlot>;
+
+export interface TimeRangePickerCompactProps extends TimeRangePickerRootProps {
+  triggerProps?: TimeRangePickerTriggerProps;
+  popupProps?: TimeRangePickerPopupProps;
+}
+
+export type TimeRangePickerCompactEmits = TimeRangePickerRootEmits;
+
+export type TimeRangePickerCompactSlots = {
+  default?: (props: {
+    modelValue: TimeRange;
+    placeholder: TimeValue;
+    displayValue: string;
+    open: boolean;
+  }) => any;
+  trigger?: (props: { displayValue: string; modelValue: TimeRange; open: boolean }) => any;
+  time?: (props: { label: string; value: TimeValue; disabled: boolean }) => any;
+};
