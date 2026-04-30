@@ -38,3 +38,24 @@ export interface PopoverRootContextParams {
 }
 
 export type { PopperAnchorProps as PopoverAnchorProps } from '../popper/types';
+
+export interface PopoverCompactProps extends PopoverRootProps {
+  placement?: PopperPositionerProps['placement'];
+  showArrow?: boolean;
+  triggerProps?: PopoverTriggerProps;
+  portalProps?: ForceMountProps;
+  positionerProps?: PopoverPositionerProps;
+  popupProps?: PopoverPopupProps;
+  arrowProps?: PopperPopupProps;
+  closeProps?: PopoverCloseProps;
+}
+
+export type PopoverCompactEmits = PopoverRootEmits & PopoverPositionerEmits;
+
+export interface PopoverCompactSlots {
+  default?: () => any;
+  trigger?: () => any;
+  close?: () => any;
+}
+
+export type { PopperUiSlot as PopoverUiSlot, PopperUi as PopoverUi } from '../popper/types';
