@@ -1,15 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import {
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardRoot,
-  CardTitle,
-  CardTitleRoot,
-  provideCardUi
-} from '@soybeanjs/headless';
+import { CardCompact, provideCardUi } from '@soybeanjs/headless';
 import { useOmitProps } from '@soybeanjs/headless/composables';
 import { mergeSlotVariants } from '@/theme';
 import { cardVariants } from './variants';
@@ -29,16 +20,8 @@ const forwardedProps = useOmitProps(props, [
   'class',
   'size',
   'ui',
-  'title',
-  'description',
   'scrollable',
-  'split',
-  'headerProps',
-  'contentProps',
-  'footerProps',
-  'titleRootProps',
-  'titleProps',
-  'descriptionProps'
+  'split'
 ]);
 
 type Slots = {
@@ -53,11 +36,7 @@ type Slots = {
   description: () => any;
 };
 
-const slots = defineSlots<Slots>();
-
-const showHeader = computed(() => {
-  return Boolean(slots.header || slots.title || slots.description || slots.extra || props.title || props.description);
-});
+defineSlots<Slots>();
 
 const ui = computed(() => {
   const variants = cardVariants({
@@ -73,27 +52,30 @@ provideCardUi(ui);
 </script>
 
 <template>
-  <CardRoot v-bind="forwardedProps">
-    <CardHeader v-if="showHeader" v-bind="headerProps">
-      <slot name="header">
-        <CardTitleRoot v-bind="titleRootProps">
-          <slot name="title-leading" />
-          <CardTitle v-bind="titleProps">
-            <slot name="title">{{ title }}</slot>
-          </CardTitle>
-          <slot name="title-trailing" />
-        </CardTitleRoot>
-        <slot name="extra" />
-        <CardDescription v-if="slots.description || description" v-bind="descriptionProps">
-          <slot name="description">{{ description }}</slot>
-        </CardDescription>
-      </slot>
-    </CardHeader>
-    <CardContent v-bind="contentProps">
+  <CardCompact v-bind="forwardedProps">
+    <template #header>
+      <slot name="header" />
+    </template>
+    <template #title-leading>
+      <slot name="title-leading" />
+    </template>
+    <template #title>
+      <slot name="title" />
+    </template>
+    <template #title-trailing>
+      <slot name="title-trailing" />
+    </template>
+    <template #extra>
+      <slot name="extra" />
+    </template>
+    <template #description>
+      <slot name="description" />
+    </template>
+    <template #default>
       <slot />
-    </CardContent>
-    <CardFooter v-if="slots.footer" v-bind="footerProps">
+    </template>
+    <template #footer>
       <slot name="footer" />
-    </CardFooter>
-  </CardRoot>
+    </template>
+  </CardCompact>
 </template>

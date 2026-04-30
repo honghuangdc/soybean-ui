@@ -61,6 +61,7 @@ export const components = {
   ],
   button: ['Button'],
   card: [
+    'CardCompact',
     'CardRoot',
     'CardHeader',
     'CardTitle',

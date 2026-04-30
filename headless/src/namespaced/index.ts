@@ -66,6 +66,7 @@ import {
   BreadcrumbSeparator,
   Button,
   CardCollapsibleTrigger,
+  CardCompact,
   CardContent,
   CardDescription,
   CardFooter,
@@ -612,6 +613,7 @@ export const Breadcrumb = {
 export { Button };
 
 export const Card = {
+  Compact: CardCompact,
   Root: CardRoot,
   Header: CardHeader,
   Title: CardTitle,
@@ -621,6 +623,7 @@ export const Card = {
   Footer: CardFooter,
   CollapsibleTrigger: CardCollapsibleTrigger
 } as {
+  Compact: typeof CardCompact;
   Root: typeof CardRoot;
   Header: typeof CardHeader;
   Title: typeof CardTitle;
