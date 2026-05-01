@@ -121,7 +121,8 @@ function formatStringArray(values: string[]): string {
 }
 
 function generateComponentsFile(groups: ComponentGroup[]): string {
-  const entries = groups.map(group => `  ${group.key}: ${formatStringArray(group.exports)}`);
+  const sorted = [...groups].sort((a, b) => a.key.localeCompare(b.key));
+  const entries = sorted.map(group => `  ${group.key}: ${formatStringArray(group.exports)}`);
 
   return `export const components = {\n${entries.join(',\n')}\n};\n`;
 }
