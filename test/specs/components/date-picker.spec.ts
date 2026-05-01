@@ -1,12 +1,13 @@
 import { mount } from '@vue/test-utils';
 import { CalendarDate } from '@internationalized/date';
 import { describe, expect, it } from 'vitest';
-import { h, nextTick } from 'vue';
+import { nextTick } from 'vue';
 
 import { SDatePicker } from '@soybeanjs/ui';
 
 describe('sDatePicker', () => {
-  const findPopup = () => document.body.querySelector('[data-slot="popup"]');
+  const findPopup = () => document.body.querySelector('[data-dismissable-layer][role="dialog"]');
+  const findTrigger = (wrapper: ReturnType<typeof mount>) => wrapper.find('button[aria-haspopup="dialog"]');
   const waitForDismissableLayer = async () => new Promise(resolve => window.setTimeout(resolve, 0));
 
   describe('rendering', () => {
@@ -19,7 +20,7 @@ describe('sDatePicker', () => {
       });
 
       expect(wrapper.find('[data-slot="root"]').exists()).toBe(true);
-      expect(wrapper.find('[data-slot="trigger"]').exists()).toBe(true);
+      expect(findTrigger(wrapper).exists()).toBe(true);
 
       wrapper.unmount();
     });
@@ -79,7 +80,7 @@ describe('sDatePicker', () => {
         }
       });
 
-      const trigger = wrapper.find('[data-slot="trigger"]');
+      const trigger = findTrigger(wrapper);
 
       await trigger.trigger('click');
       await wrapper.vm.$nextTick();
@@ -97,7 +98,7 @@ describe('sDatePicker', () => {
         }
       });
 
-      const trigger = wrapper.find('[data-slot="trigger"]');
+      const trigger = findTrigger(wrapper);
 
       await trigger.trigger('click');
 
@@ -158,7 +159,7 @@ describe('sDatePicker', () => {
         }
       });
 
-      const trigger = wrapper.find('[data-slot="trigger"]');
+      const trigger = findTrigger(wrapper);
 
       expect(trigger.attributes('aria-disabled')).toBe('true');
 
@@ -174,7 +175,7 @@ describe('sDatePicker', () => {
         }
       });
 
-      const trigger = wrapper.find('[data-slot="trigger"]');
+      const trigger = findTrigger(wrapper);
 
       await trigger.trigger('click');
       await wrapper.vm.$nextTick();
@@ -192,23 +193,12 @@ describe('sDatePicker', () => {
         props: {
           defaultPlaceholder: new CalendarDate(2024, 1, 1),
           defaultOpen: true
-        },
-        slots: {
-          calendar: ({ setDate }: { setDate: (date: CalendarDate) => void }) =>
-            h(
-              'button',
-              {
-                'data-slot': 'calendarAction',
-                onClick: () => setDate(new CalendarDate(2024, 1, 2))
-              },
-              'Pick'
-            )
         }
       });
 
       await nextTick();
 
-      const calendarAction = document.body.querySelector('[data-slot="calendarAction"]');
+      const calendarAction = document.body.querySelector('[data-value="2024-01-02"]');
 
       expect(calendarAction).not.toBeNull();
 

@@ -193,7 +193,7 @@ provideDatePickerRootContext({
 </script>
 
 <template>
-  <PopoverRoot v-model:open="open" :modal="modal">
+  <PopoverRoot v-model:open="open" :disabled="disabled" :modal="modal">
     <Primitive
       :ref="setRootElement"
       v-bind="attrs"
