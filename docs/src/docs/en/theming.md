@@ -136,3 +136,59 @@ import { SConfigProvider } from '@soybeanjs/ui';
 The theme system uses tailwindcss color presets.
 
 <TailwindPalette />
+
+## Component-level Style Customization
+
+In addition to global theme configuration, you can fine-tune individual component styles using the `ui` prop.
+
+### Using the ui prop
+
+Multi-slot components support overriding each slot's style classes via the `ui` prop:
+
+```vue
+<script setup lang="ts">
+import { SAccordion } from '@soybeanjs/ui';
+
+const items = [
+  { title: 'Title 1', value: 'item-1', description: 'Content 1' },
+  { title: 'Title 2', value: 'item-2', description: 'Content 2' }
+];
+</script>
+
+<template>
+  <SAccordion
+    :items="items"
+    :ui="{
+      root: 'border-2 border-primary',
+      item: 'bg-card hover:bg-accent',
+      trigger: 'text-lg font-bold',
+      content: 'text-sm text-muted-foreground'
+    }"
+  />
+</template>
+```
+
+### class prop merging
+
+All components support the `class` prop, which intelligently merges with default styles:
+
+```vue
+<template>
+  <SButton class="w-full rounded-full">
+    Custom Button
+  </SButton>
+</template>
+```
+
+### cn() utility function
+
+SoybeanUI provides the `cn()` utility for intelligent Tailwind class merging, automatically handling conflicting class names:
+
+```ts
+import { cn } from '@soybeanjs/ui';
+
+// Conflicting classes are properly handled
+const classes = cn('px-4 py-2', 'px-6'); // Result: 'py-2 px-6'
+```
+
+This utility is especially useful when customizing component styles, ensuring your class names don't accidentally override or conflict with each other.
