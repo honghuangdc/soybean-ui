@@ -129,26 +129,6 @@ html.dark .shiki span {
     --uno: my-0;
   }
 
-  table:not([role='table']) {
-    --uno: w-full border-none text-sm;
-
-    tr {
-      --uno: 'm-0 border-b';
-    }
-
-    tr:not(thead tr) {
-      --uno: 'last:border-b-none ';
-    }
-
-    th {
-      --uno: px-4 p-2 text-left font-semibold;
-    }
-
-    td {
-      --uno: px-4 p-2 text-left whitespace-nowrap;
-    }
-  }
-
   blockquote {
     --uno: border-l-4 border-primary border-opacity-50 pl-4 py-2 my-6;
 
