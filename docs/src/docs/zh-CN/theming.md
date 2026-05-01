@@ -136,3 +136,59 @@ import { SConfigProvider } from '@soybeanjs/ui';
 主题系统使用 Tailwind CSS 的颜色预设。
 
 <TailwindPalette />
+
+## 组件级样式定制
+
+除了全局主题配置，你还可以通过 `ui` prop 对单个组件的样式进行精细控制。
+
+### 使用 ui prop
+
+多插槽组件支持通过 `ui` prop 覆盖每个插槽的样式类：
+
+```vue
+<script setup lang="ts">
+import { SAccordion } from '@soybeanjs/ui';
+
+const items = [
+  { title: '标题 1', value: 'item-1', description: '内容 1' },
+  { title: '标题 2', value: 'item-2', description: '内容 2' }
+];
+</script>
+
+<template>
+  <SAccordion
+    :items="items"
+    :ui="{
+      root: 'border-2 border-primary',
+      item: 'bg-card hover:bg-accent',
+      trigger: 'text-lg font-bold',
+      content: 'text-sm text-muted-foreground'
+    }"
+  />
+</template>
+```
+
+### class prop 合并
+
+所有组件都支持 `class` prop，它会与默认样式智能合并：
+
+```vue
+<template>
+  <SButton class="w-full rounded-full">
+    自定义按钮
+  </SButton>
+</template>
+```
+
+### cn() 工具函数
+
+SoybeanUI 提供 `cn()` 工具函数用于 Tailwind 类名的智能合并，它会自动处理冲突的类名：
+
+```ts
+import { cn } from '@soybeanjs/ui';
+
+// 冲突的类名会被正确处理
+const classes = cn('px-4 py-2', 'px-6'); // 结果: 'py-2 px-6'
+```
+
+这个工具在自定义组件样式时特别有用，确保你的类名不会意外地被覆盖或产生冲突。
