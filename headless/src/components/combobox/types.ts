@@ -16,15 +16,19 @@ import type {
   ListboxFilterProps,
   ListboxRootEmits,
   ListboxRootProps,
+  ListboxGroupProps as ComboboxGroupProps,
+  ListboxGroupLabelProps as ComboboxGroupLabelProps,
+  ListboxItemIndicatorProps as ComboboxItemIndicatorProps,
   ListboxVirtualizerProps
 } from '../listbox/types';
 import type { PrimitiveProps } from '../primitive/types';
 import type {
-  PopperAnchorProps,
-  PopperArrowProps,
+  PopperAnchorProps as ComboboxAnchorProps,
+  PopperArrowProps as ComboboxArrowProps,
   PopperPopupProps,
   PopperPositionerEmits,
-  PopperPositionerProps
+  PopperPositionerProps,
+  PopperUiSlot
 } from '../popper/types';
 import type { IconValue } from '../_icon/types';
 import type { PortalProps } from '../portal/types';
@@ -74,8 +78,6 @@ export type ComboboxRootEmits<M extends boolean = false> = Pick<
   'update:open': [value: boolean];
 };
 
-export interface ComboboxAnchorProps extends PopperAnchorProps {}
-
 export interface ComboboxTriggerProps extends PrimitiveProps, /** @vue-ignore */ HTMLAttributes {
   disabled?: boolean;
 }
@@ -104,10 +106,6 @@ export interface ComboboxViewportProps extends /** @vue-ignore */ HTMLAttributes
   nonce?: string;
 }
 
-export interface ComboboxGroupProps extends /** @vue-ignore */ HTMLAttributes {}
-
-export interface ComboboxGroupLabelProps extends /** @vue-ignore */ HTMLAttributes {}
-
 export interface ComboboxItemProps extends PrimitiveProps, /** @vue-ignore */ Omit<HTMLAttributes, 'onSelect'> {
   value: string;
   disabled?: boolean;
@@ -118,8 +116,6 @@ export type ComboboxItemEmits = {
   select: [event: SelectEvent<string>];
 };
 
-export interface ComboboxItemIndicatorProps extends PrimitiveProps, /** @vue-ignore */ HTMLAttributes {}
-
 export interface ComboboxEmptyProps extends PrimitiveProps, /** @vue-ignore */ HTMLAttributes {}
 
 export interface ComboboxSeparatorProps extends PrimitiveProps, /** @vue-ignore */ HTMLAttributes {}
@@ -127,8 +123,6 @@ export interface ComboboxSeparatorProps extends PrimitiveProps, /** @vue-ignore 
 export interface ComboboxCancelProps extends PrimitiveProps, /** @vue-ignore */ HTMLAttributes {
   disabled?: boolean;
 }
-
-export interface ComboboxArrowProps extends PopperArrowProps {}
 
 export interface ComboboxVirtualizerProps extends ListboxVirtualizerProps {}
 
@@ -245,14 +239,11 @@ export interface ComboboxRootContext extends PropsToContext<
 }
 
 export type ComboboxUiSlot =
+  | PopperUiSlot
   | 'root'
-  | 'anchor'
   | 'trigger'
   | 'triggerIcon'
   | 'cancel'
-  | 'positioner'
-  | 'popup'
-  | 'arrow'
   | 'viewport'
   | 'inputRoot'
   | 'inputControl'
@@ -265,3 +256,11 @@ export type ComboboxUiSlot =
   | 'virtualizer';
 
 export type ComboboxUi = UiClass<ComboboxUiSlot>;
+
+export type {
+  ComboboxAnchorProps,
+  ComboboxArrowProps,
+  ComboboxGroupProps,
+  ComboboxGroupLabelProps,
+  ComboboxItemIndicatorProps
+};

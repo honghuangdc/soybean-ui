@@ -7,7 +7,6 @@ import {
   useExposedElement,
   useFocusGuards,
   useFocusScope,
-  useHideOthers,
   useOmitProps
 } from '../../composables';
 import { PopperPopup, PopperPositioner } from '../popper';
@@ -70,6 +69,9 @@ const { onKeydown } = useFocusScope(contentElement, {
   },
   onCloseAutoFocus: event => {
     emit('closeAutoFocus', event);
+    if (event.defaultPrevented) return;
+    triggerElement.value?.focus({ preventScroll: true });
+    event.preventDefault();
   }
 });
 
@@ -120,7 +122,6 @@ provideComboboxContentContext({
 });
 
 useFocusGuards();
-useHideOthers(contentElement);
 
 watchEffect(() => {
   if (!props.bodyLock) {
