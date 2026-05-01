@@ -1,12 +1,13 @@
 <script setup lang="ts" generic="T extends CommandSingleOptionData = CommandSingleOptionData">
 import { computed } from 'vue';
-import { CommandCompact, provideCommandUi } from '@soybeanjs/headless';
+import { CommandCompact, provideCommandUi } from '@soybeanjs/headless/command';
+import type { CommandSingleOptionData } from '@soybeanjs/headless/command';
 import { useForwardListeners, useOmitProps } from '@soybeanjs/headless/composables';
 import { keysOf } from '@soybeanjs/utils';
 import { mergeBaseVariants, mergeSlotVariants } from '@/theme';
 import { kbdVariants } from '../kbd/variants';
 import { commandVariants } from './variants';
-import type { CommandEmits, CommandProps, CommandSingleOptionData, CommandSlots } from './types';
+import type { CommandEmits, CommandProps, CommandSlots } from './types';
 
 defineOptions({
   name: 'SCommand'

@@ -1529,6 +1529,126 @@
       }
     },
     "RangeCalendarCompact": {
+      "emits": {
+        "kind": "emits",
+        "name": "RangeCalendarCompactEmits",
+        "type": "TypeAlias RangeCalendarCompactEmits: RangeCalendarRootEmits",
+        "resolvedType": "{ \"update:modelValue\": [range: DateRange]; \"update:placeholder\": [date: DateValue]; \"update:startValue\": [date: DateValue | undefined] }",
+        "description": "",
+        "sourcePath": "headless/src/components/range-calendar/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[range: DateRange]",
+            "parameters": "range: DateRange",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/range-calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateRange",
+                "kind": "interface",
+                "type": "DateRange",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:placeholder",
+            "type": "[date: DateValue]",
+            "parameters": "date: DateValue",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/range-calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:startValue",
+            "type": "[date: DateValue | undefined]",
+            "parameters": "date: DateValue | undefined",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/range-calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": [
+          {
+            "name": "RangeCalendarRootEmits",
+            "kind": "typeAlias",
+            "type": "{ 'update:modelValue': [range: DateRange]; 'update:placeholder': [date: DateValue]; 'update:startValue': [date: DateValue | undefined]; }",
+            "resolvedType": "{ \"update:modelValue\": [range: DateRange]; \"update:placeholder\": [date: DateValue]; \"update:startValue\": [date: DateValue | undefined] }",
+            "description": "",
+            "sourcePath": "headless/src/components/range-calendar/types.ts",
+            "typeParameters": [],
+            "external": false,
+            "members": [],
+            "callables": [
+              {
+                "name": "update:modelValue",
+                "type": "[range: DateRange]",
+                "parameters": "range: DateRange",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/range-calendar/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:placeholder",
+                "type": "[date: DateValue]",
+                "parameters": "date: DateValue",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/range-calendar/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:startValue",
+                "type": "[date: DateValue | undefined]",
+                "parameters": "date: DateValue | undefined",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/range-calendar/types.ts",
+                "referencedTypes": []
+              }
+            ]
+          }
+        ]
+      },
       "props": {
         "kind": "props",
         "name": "RangeCalendarCompactProps",
@@ -2006,7 +2126,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2050,7 +2170,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultPlaceholder",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2073,7 +2193,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "placeholder",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2096,7 +2216,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2140,7 +2260,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "allowNonContiguousRanges",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2150,7 +2270,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "pagedNavigation",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2160,7 +2280,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "preventDeselect",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2170,7 +2290,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "maximumDays",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2180,7 +2300,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "weekStartsOn",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2203,7 +2323,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "weekdayFormat",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2226,7 +2346,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "calendarLabel",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2236,7 +2356,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "fixedWeeks",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2246,7 +2366,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "maxValue",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2269,7 +2389,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "minValue",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2292,7 +2412,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "locale",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2302,7 +2422,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "numberOfMonths",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2312,7 +2432,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2322,7 +2442,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "readonly",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2332,7 +2452,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "initialFocus",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2342,7 +2462,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "isDateDisabled",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2365,7 +2485,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "isDateUnavailable",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2388,7 +2508,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "isDateHighlightable",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2411,7 +2531,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2434,7 +2554,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "nextPage",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2457,7 +2577,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "prevPage",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": [
               {
@@ -2480,7 +2600,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disableDaysOutsideCurrentView",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2490,7 +2610,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "fixedDate",
             "sourcePath": "headless/src/components/range-calendar/types.ts",
             "referencedTypes": []
           },
@@ -2500,7 +2620,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -2510,7 +2630,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -2538,126 +2658,6 @@
         ],
         "callables": [],
         "referencedTypes": []
-      },
-      "emits": {
-        "kind": "emits",
-        "name": "RangeCalendarCompactEmits",
-        "type": "TypeAlias RangeCalendarCompactEmits",
-        "resolvedType": "{ \"update:modelValue\": [range: DateRange]; \"update:placeholder\": [date: DateValue]; \"update:startValue\": [date: DateValue | undefined] }",
-        "description": "",
-        "sourcePath": "headless/src/components/range-calendar/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[range: DateRange]",
-            "parameters": "range: DateRange",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/range-calendar/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DateRange",
-                "kind": "interface",
-                "type": "DateRange",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/date/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "update:placeholder",
-            "type": "[date: DateValue]",
-            "parameters": "date: DateValue",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/range-calendar/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DateValue",
-                "kind": "typeAlias",
-                "type": "DateValue",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "update:startValue",
-            "type": "[date: DateValue | undefined]",
-            "parameters": "date: DateValue | undefined",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/range-calendar/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DateValue",
-                "kind": "typeAlias",
-                "type": "DateValue",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "referencedTypes": [
-          {
-            "name": "RangeCalendarRootEmits",
-            "kind": "typeAlias",
-            "type": "{ 'update:modelValue': [range: DateRange]; 'update:placeholder': [date: DateValue]; 'update:startValue': [date: DateValue | undefined]; }",
-            "resolvedType": "{ \"update:modelValue\": [range: DateRange]; \"update:placeholder\": [date: DateValue]; \"update:startValue\": [date: DateValue | undefined] }",
-            "description": "",
-            "sourcePath": "headless/src/components/range-calendar/types.ts",
-            "typeParameters": [],
-            "external": false,
-            "members": [],
-            "callables": [
-              {
-                "name": "update:modelValue",
-                "type": "[range: DateRange]",
-                "parameters": "range: DateRange",
-                "required": true,
-                "description": "",
-                "sourcePath": "headless/src/components/range-calendar/types.ts",
-                "referencedTypes": []
-              },
-              {
-                "name": "update:placeholder",
-                "type": "[date: DateValue]",
-                "parameters": "date: DateValue",
-                "required": true,
-                "description": "",
-                "sourcePath": "headless/src/components/range-calendar/types.ts",
-                "referencedTypes": []
-              },
-              {
-                "name": "update:startValue",
-                "type": "[date: DateValue | undefined]",
-                "parameters": "date: DateValue | undefined",
-                "required": true,
-                "description": "",
-                "sourcePath": "headless/src/components/range-calendar/types.ts",
-                "referencedTypes": []
-              }
-            ]
-          }
-        ]
       },
       "slots": {
         "kind": "slots",

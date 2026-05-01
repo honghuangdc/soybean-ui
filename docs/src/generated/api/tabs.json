@@ -1,6 +1,74 @@
 {
   "component": "tabs",
   "symbols": {
+    "SegmentIndicator": {
+      "props": {
+        "kind": "props",
+        "name": "SegmentIndicatorProps",
+        "type": "Interface SegmentIndicatorProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/tabs/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "SegmentList": {
+      "props": {
+        "kind": "props",
+        "name": "SegmentListProps",
+        "type": "Interface SegmentListProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/tabs/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "SegmentRoot": {
+      "emits": {
+        "kind": "emits",
+        "name": "SegmentRootEmits",
+        "type": "TypeAlias SegmentRootEmits<T>",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/tabs/types.ts",
+        "typeParameters": ["TypeParameter T"],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "props": {
+        "kind": "props",
+        "name": "SegmentRootProps",
+        "type": "Interface SegmentRootProps<T>",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/tabs/types.ts",
+        "typeParameters": ["TypeParameter T"],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "SegmentTrigger": {
+      "props": {
+        "kind": "props",
+        "name": "SegmentTriggerProps",
+        "type": "Interface SegmentTriggerProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/tabs/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "Tabs": {
       "props": {
         "kind": "props",
@@ -821,7 +889,7 @@
       "emits": {
         "kind": "emits",
         "name": "TabsCompactEmits",
-        "type": "TypeAlias TabsCompactEmits<T>: TabsRootEmits<T>",
+        "type": "TypeAlias TabsCompactEmits<T>: SegmentRootEmits<T>",
         "resolvedType": "{ \"update:modelValue\": [payload: NonNullable<T>] }",
         "description": "",
         "sourcePath": "headless/src/components/tabs/types.ts",
@@ -847,7 +915,7 @@
         "resolvedType": "{ trigger?: ((props: T & { active: boolean; }) => any); content?: ((props: T & { active: boolean; }) => any); indicator?: (() => any) }",
         "description": "",
         "sourcePath": "headless/src/components/tabs/types.ts",
-        "typeParameters": ["T extends TabsOptionData = TabsOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -971,7 +1039,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "PrimitiveProps.asChild",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -981,7 +1049,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "PrimitiveProps.as",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -1033,7 +1101,7 @@
         "resolvedType": "{ modelValue?: T; defaultValue?: T; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/tabs/types.ts",
-        "typeParameters": ["TypeParameter T"],
+        "typeParameters": ["T extends AcceptableValue = AcceptableValue"],
         "members": [
           {
             "name": "modelValue",
@@ -1094,7 +1162,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": "Omit.dir",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -1117,7 +1185,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": "Omit.orientation",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -1140,7 +1208,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": "Omit.loop",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           }
@@ -1155,7 +1223,7 @@
         "resolvedType": "{ \"update:modelValue\": [payload: NonNullable<T>] }",
         "description": "",
         "sourcePath": "headless/src/components/tabs/types.ts",
-        "typeParameters": ["TypeParameter T"],
+        "typeParameters": ["T = AcceptableValue"],
         "members": [],
         "callables": [
           {
@@ -1220,7 +1288,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "PrimitiveProps.asChild",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -1230,7 +1298,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "PrimitiveProps.as",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {

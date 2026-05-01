@@ -1891,234 +1891,6 @@
       }
     },
     "ComboboxCompact": {
-      "emits": {
-        "kind": "emits",
-        "name": "ComboboxCompactEmits",
-        "type": "TypeAlias ComboboxCompactEmits<M>: ComboboxRootEmits<M> & ComboboxContentEmits & AutocompleteItemEmits",
-        "resolvedType": "{ \"update:modelValue\": [value: M extends true ? string[] : string]; highlight: [payload?: CollectionItemData<ListboxCollectionItemData> | undefined]; \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; placed: []; select: [event: SelectEvent<string>] }",
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": ["TypeParameter M"],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[value: M extends true ? string[] : string]",
-            "parameters": "value: M extends true ? string[] : string",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/types/common.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "highlight",
-            "type": "[payload?: CollectionItemData<ListboxCollectionItemData> | undefined]",
-            "parameters": "payload?: CollectionItemData<ListboxCollectionItemData> | undefined",
-            "required": true,
-            "description": "Event handler when highlighted element changes.",
-            "sourcePath": "headless/src/components/listbox/types.ts",
-            "referencedTypes": [
-              {
-                "name": "CollectionItemData",
-                "kind": "interface",
-                "type": "CollectionItemData<ListboxCollectionItemData>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/composables/use-collection.ts",
-                "typeParameters": ["ItemData = Record<string, any>"],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "update:open",
-            "type": "[value: boolean]",
-            "parameters": "value: boolean",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/combobox/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "escapeKeyDown",
-            "type": "[event: KeyboardEvent]",
-            "parameters": "event: KeyboardEvent",
-            "required": true,
-            "description": "Event handler called when the escape key is down. Can be prevented.",
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": [
-              {
-                "name": "KeyboardEvent",
-                "kind": "interface",
-                "type": "KeyboardEvent",
-                "resolvedType": null,
-                "description": "**`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type (keydown, keypress, or keyup) identifies what kind of keyboard activity occurred.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/KeyboardEvent)",
-                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "pointerDownOutside",
-            "type": "[event: PointerDownOutsideEvent]",
-            "parameters": "event: PointerDownOutsideEvent",
-            "required": true,
-            "description": "Event handler called when a `pointerdown` event happens outside of the `DismissableLayer`. Can be prevented.",
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": [
-              {
-                "name": "PointerDownOutsideEvent",
-                "kind": "typeAlias",
-                "type": "CustomEvent<{ originalEvent: PointerEvent; }>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/types/event.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "focusOutside",
-            "type": "[event: FocusOutsideEvent]",
-            "parameters": "event: FocusOutsideEvent",
-            "required": true,
-            "description": "Event handler called when the focus moves outside of the `DismissableLayer`. Can be prevented.",
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": [
-              {
-                "name": "FocusOutsideEvent",
-                "kind": "typeAlias",
-                "type": "CustomEvent<{ originalEvent: FocusEvent; }>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/types/event.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "interactOutside",
-            "type": "[event: PointerDownOutsideEvent | FocusOutsideEvent]",
-            "parameters": "event: PointerDownOutsideEvent | FocusOutsideEvent",
-            "required": true,
-            "description": "Event handler called when an interaction happens outside the `DismissableLayer`. Specifically, when a `pointerdown`\nevent happens outside or focus moves outside of it. Can be prevented.",
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": [
-              {
-                "name": "FocusOutsideEvent",
-                "kind": "typeAlias",
-                "type": "CustomEvent<{ originalEvent: FocusEvent; }>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/types/event.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              },
-              {
-                "name": "PointerDownOutsideEvent",
-                "kind": "typeAlias",
-                "type": "CustomEvent<{ originalEvent: PointerEvent; }>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/types/event.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "openAutoFocus",
-            "type": "[event: Event]",
-            "parameters": "event: Event",
-            "required": true,
-            "description": "Event handler called when auto-focusing on open. Can be prevented.",
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": [
-              {
-                "name": "Event",
-                "kind": "interface",
-                "type": "Event",
-                "resolvedType": null,
-                "description": "The **`Event`** interface represents an event which takes place on an EventTarget.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/Event)",
-                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "closeAutoFocus",
-            "type": "[event: Event]",
-            "parameters": "event: Event",
-            "required": true,
-            "description": "Event handler called when auto-focusing on close. Can be prevented.",
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": [
-              {
-                "name": "Event",
-                "kind": "interface",
-                "type": "Event",
-                "resolvedType": null,
-                "description": "The **`Event`** interface represents an event which takes place on an EventTarget.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/Event)",
-                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "placed",
-            "type": "[]",
-            "parameters": null,
-            "required": true,
-            "description": "Event handler called when the positioner is placed",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "select",
-            "type": "[event: SelectEvent<string>]",
-            "parameters": "event: SelectEvent<string>",
-            "required": true,
-            "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
-            "sourcePath": "headless/src/components/listbox/types.ts",
-            "referencedTypes": [
-              {
-                "name": "SelectEvent",
-                "kind": "typeAlias",
-                "type": "CustomEvent<{ originalEvent: MouseEvent; value?: string | undefined; }>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/types/event.ts",
-                "typeParameters": ["T"],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "referencedTypes": []
-      },
       "props": {
         "kind": "props",
         "name": "ComboboxCompactProps",
@@ -3334,6 +3106,234 @@
         "callables": [],
         "referencedTypes": []
       },
+      "emits": {
+        "kind": "emits",
+        "name": "ComboboxCompactEmits",
+        "type": "TypeAlias ComboboxCompactEmits<M>: ComboboxRootEmits<M> & ComboboxContentEmits & AutocompleteItemEmits",
+        "resolvedType": "{ \"update:modelValue\": [value: M extends true ? string[] : string]; highlight: [payload?: CollectionItemData<ListboxCollectionItemData> | undefined]; \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; placed: []; select: [event: SelectEvent<string>] }",
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[value: M extends true ? string[] : string]",
+            "parameters": "value: M extends true ? string[] : string",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/types/common.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "highlight",
+            "type": "[payload?: CollectionItemData<ListboxCollectionItemData> | undefined]",
+            "parameters": "payload?: CollectionItemData<ListboxCollectionItemData> | undefined",
+            "required": true,
+            "description": "Event handler when highlighted element changes.",
+            "sourcePath": "headless/src/components/listbox/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CollectionItemData",
+                "kind": "interface",
+                "type": "CollectionItemData<ListboxCollectionItemData>",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/composables/use-collection.ts",
+                "typeParameters": ["ItemData = Record<string, any>"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:open",
+            "type": "[value: boolean]",
+            "parameters": "value: boolean",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/combobox/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "escapeKeyDown",
+            "type": "[event: KeyboardEvent]",
+            "parameters": "event: KeyboardEvent",
+            "required": true,
+            "description": "Event handler called when the escape key is down. Can be prevented.",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": [
+              {
+                "name": "KeyboardEvent",
+                "kind": "interface",
+                "type": "KeyboardEvent",
+                "resolvedType": null,
+                "description": "**`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type (keydown, keypress, or keyup) identifies what kind of keyboard activity occurred.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/KeyboardEvent)",
+                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "pointerDownOutside",
+            "type": "[event: PointerDownOutsideEvent]",
+            "parameters": "event: PointerDownOutsideEvent",
+            "required": true,
+            "description": "Event handler called when a `pointerdown` event happens outside of the `DismissableLayer`. Can be prevented.",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": [
+              {
+                "name": "PointerDownOutsideEvent",
+                "kind": "typeAlias",
+                "type": "CustomEvent<{ originalEvent: PointerEvent; }>",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/types/event.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "focusOutside",
+            "type": "[event: FocusOutsideEvent]",
+            "parameters": "event: FocusOutsideEvent",
+            "required": true,
+            "description": "Event handler called when the focus moves outside of the `DismissableLayer`. Can be prevented.",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": [
+              {
+                "name": "FocusOutsideEvent",
+                "kind": "typeAlias",
+                "type": "CustomEvent<{ originalEvent: FocusEvent; }>",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/types/event.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "interactOutside",
+            "type": "[event: PointerDownOutsideEvent | FocusOutsideEvent]",
+            "parameters": "event: PointerDownOutsideEvent | FocusOutsideEvent",
+            "required": true,
+            "description": "Event handler called when an interaction happens outside the `DismissableLayer`. Specifically, when a `pointerdown`\nevent happens outside or focus moves outside of it. Can be prevented.",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": [
+              {
+                "name": "FocusOutsideEvent",
+                "kind": "typeAlias",
+                "type": "CustomEvent<{ originalEvent: FocusEvent; }>",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/types/event.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "PointerDownOutsideEvent",
+                "kind": "typeAlias",
+                "type": "CustomEvent<{ originalEvent: PointerEvent; }>",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/types/event.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "openAutoFocus",
+            "type": "[event: Event]",
+            "parameters": "event: Event",
+            "required": true,
+            "description": "Event handler called when auto-focusing on open. Can be prevented.",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": [
+              {
+                "name": "Event",
+                "kind": "interface",
+                "type": "Event",
+                "resolvedType": null,
+                "description": "The **`Event`** interface represents an event which takes place on an EventTarget.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/Event)",
+                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "closeAutoFocus",
+            "type": "[event: Event]",
+            "parameters": "event: Event",
+            "required": true,
+            "description": "Event handler called when auto-focusing on close. Can be prevented.",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": [
+              {
+                "name": "Event",
+                "kind": "interface",
+                "type": "Event",
+                "resolvedType": null,
+                "description": "The **`Event`** interface represents an event which takes place on an EventTarget.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/Event)",
+                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placed",
+            "type": "[]",
+            "parameters": null,
+            "required": true,
+            "description": "Event handler called when the positioner is placed",
+            "sourcePath": "headless/src/components/popper/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "select",
+            "type": "[event: SelectEvent<string>]",
+            "parameters": "event: SelectEvent<string>",
+            "required": true,
+            "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
+            "sourcePath": "headless/src/components/listbox/types.ts",
+            "referencedTypes": [
+              {
+                "name": "SelectEvent",
+                "kind": "typeAlias",
+                "type": "CustomEvent<{ originalEvent: MouseEvent; value?: string | undefined; }>",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/types/event.ts",
+                "typeParameters": ["T"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      },
       "slots": {
         "kind": "slots",
         "name": "ComboboxCompactSlots",
@@ -4230,51 +4230,6 @@
     "ComboboxGroup": {},
     "ComboboxGroupLabel": {},
     "ComboboxInput": {
-      "emits": {
-        "kind": "emits",
-        "name": "ComboboxInputEmits",
-        "type": "TypeAlias ComboboxInputEmits: ListboxFilterEmits",
-        "resolvedType": "{ \"update:modelValue\": [value: string] }",
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[value: string]",
-            "parameters": "value: string",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/input/types.ts",
-            "referencedTypes": []
-          }
-        ],
-        "referencedTypes": [
-          {
-            "name": "InputRootEmits",
-            "kind": "typeAlias",
-            "type": "{ 'update:modelValue': [value: string]; }",
-            "resolvedType": "{ \"update:modelValue\": [value: string] }",
-            "description": "",
-            "sourcePath": "headless/src/components/input/types.ts",
-            "typeParameters": [],
-            "external": false,
-            "members": [],
-            "callables": [
-              {
-                "name": "update:modelValue",
-                "type": "[value: string]",
-                "parameters": "value: string",
-                "required": true,
-                "description": "",
-                "sourcePath": "headless/src/components/input/types.ts",
-                "referencedTypes": []
-              }
-            ]
-          }
-        ]
-      },
       "props": {
         "kind": "props",
         "name": "ComboboxInputProps",
@@ -4463,6 +4418,51 @@
         ],
         "callables": [],
         "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "ComboboxInputEmits",
+        "type": "TypeAlias ComboboxInputEmits: ListboxFilterEmits",
+        "resolvedType": "{ \"update:modelValue\": [value: string] }",
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[value: string]",
+            "parameters": "value: string",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/input/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "referencedTypes": [
+          {
+            "name": "InputRootEmits",
+            "kind": "typeAlias",
+            "type": "{ 'update:modelValue': [value: string]; }",
+            "resolvedType": "{ \"update:modelValue\": [value: string] }",
+            "description": "",
+            "sourcePath": "headless/src/components/input/types.ts",
+            "typeParameters": [],
+            "external": false,
+            "members": [],
+            "callables": [
+              {
+                "name": "update:modelValue",
+                "type": "[value: string]",
+                "parameters": "value: string",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/input/types.ts",
+                "referencedTypes": []
+              }
+            ]
+          }
+        ]
       }
     },
     "ComboboxItem": {
@@ -4612,59 +4612,6 @@
     "ComboboxItemIndicator": {},
     "ComboboxPortal": {},
     "ComboboxRoot": {
-      "emits": {
-        "kind": "emits",
-        "name": "ComboboxRootEmits",
-        "type": "TypeAlias ComboboxRootEmits<M>: Pick<CommandRootEmits<M>, \"update:modelValue\" | \"highlight\"> & { update:open: [value: boolean] }",
-        "resolvedType": "{ \"update:modelValue\": [value: M extends true ? string[] : string]; highlight: [payload?: CollectionItemData<ListboxCollectionItemData> | undefined]; \"update:open\": [value: boolean] }",
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": ["TypeParameter M"],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[value: M extends true ? string[] : string]",
-            "parameters": "value: M extends true ? string[] : string",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/types/common.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "highlight",
-            "type": "[payload?: CollectionItemData<ListboxCollectionItemData> | undefined]",
-            "parameters": "payload?: CollectionItemData<ListboxCollectionItemData> | undefined",
-            "required": true,
-            "description": "Event handler when highlighted element changes.",
-            "sourcePath": "headless/src/components/listbox/types.ts",
-            "referencedTypes": [
-              {
-                "name": "CollectionItemData",
-                "kind": "interface",
-                "type": "CollectionItemData<ListboxCollectionItemData>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/composables/use-collection.ts",
-                "typeParameters": ["ItemData = Record<string, any>"],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "update:open",
-            "type": "[value: boolean]",
-            "parameters": "value: boolean",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/combobox/types.ts",
-            "referencedTypes": []
-          }
-        ],
-        "referencedTypes": []
-      },
       "props": {
         "kind": "props",
         "name": "ComboboxRootProps",
@@ -4859,6 +4806,59 @@
           }
         ],
         "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "ComboboxRootEmits",
+        "type": "TypeAlias ComboboxRootEmits<M>: Pick<CommandRootEmits<M>, \"update:modelValue\" | \"highlight\"> & { update:open: [value: boolean] }",
+        "resolvedType": "{ \"update:modelValue\": [value: M extends true ? string[] : string]; highlight: [payload?: CollectionItemData<ListboxCollectionItemData> | undefined]; \"update:open\": [value: boolean] }",
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[value: M extends true ? string[] : string]",
+            "parameters": "value: M extends true ? string[] : string",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/types/common.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "highlight",
+            "type": "[payload?: CollectionItemData<ListboxCollectionItemData> | undefined]",
+            "parameters": "payload?: CollectionItemData<ListboxCollectionItemData> | undefined",
+            "required": true,
+            "description": "Event handler when highlighted element changes.",
+            "sourcePath": "headless/src/components/listbox/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CollectionItemData",
+                "kind": "interface",
+                "type": "CollectionItemData<ListboxCollectionItemData>",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/composables/use-collection.ts",
+                "typeParameters": ["ItemData = Record<string, any>"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:open",
+            "type": "[value: boolean]",
+            "parameters": "value: boolean",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/combobox/types.ts",
+            "referencedTypes": []
+          }
+        ],
         "referencedTypes": []
       }
     },

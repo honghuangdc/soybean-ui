@@ -675,7 +675,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ProgressOptions.direction",
+            "inheritedFrom": "direction",
             "sourcePath": "headless/src/components/progress/types.ts",
             "referencedTypes": [
               {
@@ -698,7 +698,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ProgressOptions.minimum",
+            "inheritedFrom": "minimum",
             "sourcePath": "headless/src/components/progress/types.ts",
             "referencedTypes": []
           },
@@ -708,7 +708,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ProgressOptions.maximum",
+            "inheritedFrom": "maximum",
             "sourcePath": "headless/src/components/progress/types.ts",
             "referencedTypes": []
           },
@@ -718,7 +718,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ProgressOptions.easing",
+            "inheritedFrom": "easing",
             "sourcePath": "headless/src/components/progress/types.ts",
             "referencedTypes": []
           },
@@ -728,7 +728,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ProgressOptions.speed",
+            "inheritedFrom": "speed",
             "sourcePath": "headless/src/components/progress/types.ts",
             "referencedTypes": []
           },
@@ -738,7 +738,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ProgressOptions.trickle",
+            "inheritedFrom": "trickle",
             "sourcePath": "headless/src/components/progress/types.ts",
             "referencedTypes": []
           },
@@ -748,7 +748,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ProgressOptions.trickleSpeed",
+            "inheritedFrom": "trickleSpeed",
             "sourcePath": "headless/src/components/progress/types.ts",
             "referencedTypes": []
           }

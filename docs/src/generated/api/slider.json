@@ -549,37 +549,6 @@
       }
     },
     "SliderRoot": {
-      "emits": {
-        "kind": "emits",
-        "name": "SliderRootEmits",
-        "type": "TypeAlias SliderRootEmits",
-        "resolvedType": "{ \"update:modelValue\": [value: number[]]; valueCommit: [value: number[]] }",
-        "description": "",
-        "sourcePath": "headless/src/components/slider/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[value: number[]]",
-            "parameters": "value: number[]",
-            "required": true,
-            "description": "Event handler called when the slider value changes.",
-            "sourcePath": "headless/src/components/slider/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "valueCommit",
-            "type": "[value: number[]]",
-            "parameters": "value: number[]",
-            "required": true,
-            "description": "Event handler called when a slider interaction is committed.",
-            "sourcePath": "headless/src/components/slider/types.ts",
-            "referencedTypes": []
-          }
-        ],
-        "referencedTypes": []
-      },
       "props": {
         "kind": "props",
         "name": "SliderRootProps",
@@ -801,6 +770,37 @@
           }
         ],
         "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "SliderRootEmits",
+        "type": "TypeAlias SliderRootEmits",
+        "resolvedType": "{ \"update:modelValue\": [value: number[]]; valueCommit: [value: number[]] }",
+        "description": "",
+        "sourcePath": "headless/src/components/slider/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[value: number[]]",
+            "parameters": "value: number[]",
+            "required": true,
+            "description": "Event handler called when the slider value changes.",
+            "sourcePath": "headless/src/components/slider/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "valueCommit",
+            "type": "[value: number[]]",
+            "parameters": "value: number[]",
+            "required": true,
+            "description": "Event handler called when a slider interaction is committed.",
+            "sourcePath": "headless/src/components/slider/types.ts",
+            "referencedTypes": []
+          }
+        ],
         "referencedTypes": []
       }
     },

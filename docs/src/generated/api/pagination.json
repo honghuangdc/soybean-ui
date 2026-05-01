@@ -678,7 +678,7 @@
             "required": false,
             "description": "The controlled value of the current page. Can be bound as `v-model:page`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "page",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           },
@@ -688,7 +688,7 @@
             "required": false,
             "description": "The value of the page that should be active when initially rendered. Use when you do not need to control the value\nstate.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultPage",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           },
@@ -698,7 +698,7 @@
             "required": false,
             "description": "Number of items per page",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "pageSize",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           },
@@ -708,7 +708,7 @@
             "required": false,
             "description": "The default value of `pageSize` when initially rendered. Use when you do not need to control the value state.",
             "default": "10",
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultPageSize",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           },
@@ -718,7 +718,7 @@
             "required": false,
             "description": "Number of items in your list",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "total",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           },
@@ -728,7 +728,7 @@
             "required": false,
             "description": "Number of sibling should be shown around the current page",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "siblingCount",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           },
@@ -738,7 +738,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with item",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           },
@@ -748,7 +748,7 @@
             "required": false,
             "description": "When `true`, always show first page, last page, and ellipsis",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "showEdges",
             "sourcePath": "headless/src/components/pagination/types.ts",
             "referencedTypes": []
           }
@@ -759,7 +759,7 @@
       "emits": {
         "kind": "emits",
         "name": "PaginationCompactEmits",
-        "type": "TypeAlias PaginationCompactEmits",
+        "type": "TypeAlias PaginationCompactEmits: PaginationRootEmits",
         "resolvedType": "{ \"update:page\": [value: number]; \"update:pageSize\": [value: number] }",
         "description": "",
         "sourcePath": "headless/src/components/pagination/types.ts",

@@ -63,7 +63,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AffixCompactProps.placeholderProps",
+            "inheritedFrom": "placeholderProps",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": [
               {
@@ -86,7 +86,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AffixCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": [
               {
@@ -109,7 +109,7 @@
             "required": false,
             "description": "The offset from the top of the target container when the element becomes affixed.",
             "default": "0",
-            "inheritedFrom": "AffixCompactProps.offsetTop",
+            "inheritedFrom": "offsetTop",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": []
           },
@@ -119,7 +119,7 @@
             "required": false,
             "description": "The offset from the bottom of the target container when the element becomes affixed.",
             "default": null,
-            "inheritedFrom": "AffixCompactProps.offsetBottom",
+            "inheritedFrom": "offsetBottom",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": []
           },
@@ -129,7 +129,7 @@
             "required": false,
             "description": "The element that Affix listens to for scroll position updates.",
             "default": "window",
-            "inheritedFrom": "AffixCompactProps.target",
+            "inheritedFrom": "target",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": []
           }
@@ -245,7 +245,7 @@
             "required": false,
             "description": "The offset from the top of the target container when the element becomes affixed.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "offsetTop",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": []
           },
@@ -255,7 +255,7 @@
             "required": false,
             "description": "The offset from the bottom of the target container when the element becomes affixed.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "offsetBottom",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": []
           },
@@ -265,7 +265,7 @@
             "required": false,
             "description": "The element that Affix listens to for scroll position updates.",
             "default": "window",
-            "inheritedFrom": null,
+            "inheritedFrom": "target",
             "sourcePath": "headless/src/components/affix/types.ts",
             "referencedTypes": []
           }
@@ -276,7 +276,7 @@
       "emits": {
         "kind": "emits",
         "name": "AffixCompactEmits",
-        "type": "TypeAlias AffixCompactEmits",
+        "type": "TypeAlias AffixCompactEmits: AffixRootEmits",
         "resolvedType": "{ change: [affixed: boolean] }",
         "description": "",
         "sourcePath": "headless/src/components/affix/types.ts",

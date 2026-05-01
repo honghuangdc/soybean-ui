@@ -109,7 +109,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -119,7 +119,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.placement",
+            "inheritedFrom": "placement",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -142,7 +142,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.showArrow",
+            "inheritedFrom": "showArrow",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -152,7 +152,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.triggerProps",
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -206,7 +206,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.portalProps",
+            "inheritedFrom": "portalProps",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -270,7 +270,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -514,7 +514,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.popupProps",
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -537,7 +537,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.arrowProps",
+            "inheritedFrom": "arrowProps",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -560,7 +560,7 @@
             "required": false,
             "description": "The controlled value of the menu to open. Can be used as `v-model`.",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -570,7 +570,7 @@
             "required": false,
             "description": "The value of the menu that should be open when initially rendered.",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -580,7 +580,7 @@
             "required": false,
             "description": "The reading direction of the menubar when applicable.",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -603,7 +603,7 @@
             "required": false,
             "description": "When `true`, keyboard navigation loops from last trigger to first and vice versa.",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.loop",
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -613,7 +613,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.asChild",
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -623,7 +623,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "MenubarCompactProps.as",
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -654,7 +654,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -664,7 +664,7 @@
             "required": false,
             "description": "The active value of the menu.",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.activeValue",
+            "inheritedFrom": "activeValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -674,7 +674,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.itemProps",
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -738,7 +738,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.linkProps",
+            "inheritedFrom": "linkProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -962,7 +962,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.groupProps",
+            "inheritedFrom": "groupProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -1006,7 +1006,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.groupLabelProps",
+            "inheritedFrom": "groupLabelProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -1029,7 +1029,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.subProps",
+            "inheritedFrom": "subProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -1073,7 +1073,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.subTriggerProps",
+            "inheritedFrom": "subTriggerProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -1137,7 +1137,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.subContentProps",
+            "inheritedFrom": "subContentProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -1361,7 +1361,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.separatorProps",
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -1405,7 +1405,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "MenubarCompactProps.shortcutProps",
+            "inheritedFrom": "shortcutProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -1825,7 +1825,7 @@
         "resolvedType": "{ disabled?: boolean; placement?: Placement; showArrow?: boolean; triggerProps?: MenubarTriggerProps; portalProps?: MenuPortalProps; contentProps?: MenubarContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; modelValue?: T; defaultValue?: T; dir?: Direction; loop?: boolean; asChild?: boolean; as?: AsTag | Component; items: MenuOptionData<T>[]; activeValue?: T; itemProps?: MenuItemProps; linkProps?: LinkProps; groupProps?: MenuGroupProps; groupLabelProps?: MenuGroupLabelProps; subProps?: MenuSubProps; subTriggerProps?: MenuSubTriggerProps; subContentProps?: MenuSubContentProps; separatorProps?: MenuSeparatorProps; shortcutProps?: MenuShortcutProps }",
         "description": "",
         "sourcePath": "headless/src/components/menubar/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "disabled",
@@ -2284,7 +2284,7 @@
             "required": false,
             "description": "The controlled value of the menu to open. Can be used as `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -2294,7 +2294,7 @@
             "required": false,
             "description": "The value of the menu that should be open when initially rendered.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -2304,7 +2304,7 @@
             "required": false,
             "description": "The reading direction of the menubar when applicable.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": [
               {
@@ -2327,7 +2327,7 @@
             "required": false,
             "description": "When `true`, keyboard navigation loops from last trigger to first and vice versa.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/menubar/types.ts",
             "referencedTypes": []
           },
@@ -2337,7 +2337,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -2347,7 +2347,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -2378,7 +2378,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -2388,7 +2388,7 @@
             "required": false,
             "description": "The active value of the menu.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "activeValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -2398,7 +2398,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -2462,7 +2462,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "linkProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -2686,7 +2686,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "groupProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -2730,7 +2730,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "groupLabelProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -2753,7 +2753,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "subProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -2797,7 +2797,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "subTriggerProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -2861,7 +2861,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "subContentProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3085,7 +3085,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3129,7 +3129,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "shortcutProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3164,11 +3164,11 @@
       "emits": {
         "kind": "emits",
         "name": "MenubarCompactEmits",
-        "type": "TypeAlias MenubarCompactEmits<T>",
+        "type": "TypeAlias MenubarCompactEmits<T>: MenubarRootEmits<T> & MenuContentEmits & MenuOptionsCompactEmits<T>",
         "resolvedType": "{ \"update:modelValue\": [value: T]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event]; \"update:open\": [value: boolean]; select: [item: MenuOptionData<T>, event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/menubar/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -3395,11 +3395,11 @@
       "slots": {
         "kind": "slots",
         "name": "MenubarCompactSlots",
-        "type": "TypeAlias MenubarCompactSlots<T>",
+        "type": "TypeAlias MenubarCompactSlots<T>: MenuOptionsCompactSlots<T> & { trigger: (data: { item: MenuOptionData<T> }) => any }",
         "resolvedType": "{ item?: ((props: { item: MenuOptionData<T>; isTrigger?: boolean; }) => any); \"item-leading\"?: ((props: { item: MenuOptionData<T>; }) => any); \"item-trailing\"?: ((props: { item: MenuOptionData<T>; }) => any); \"item-trigger-icon\"?: ((props: { item: MenuOptionData<T>; }) => any); \"item-link-icon\"?: ((props: { item: MenuOptionData<T>; }) => any); trigger: (data: { item: MenuOptionData<T>; }) => any }",
         "description": "",
         "sourcePath": "headless/src/components/menubar/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -3554,7 +3554,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3577,7 +3577,7 @@
             "required": false,
             "description": "The placement of the floating element.\n\nIf used, it will override the `side` and `align` props.",
             "default": "undefined",
-            "inheritedFrom": null,
+            "inheritedFrom": "placement",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3600,7 +3600,7 @@
             "required": false,
             "description": "The preferred side of the trigger to render against when open. Will be reversed when collisions occur and\navoidCollisions is enabled.",
             "default": "'bottom'",
-            "inheritedFrom": null,
+            "inheritedFrom": "side",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3623,7 +3623,7 @@
             "required": false,
             "description": "The distance in pixels from the trigger.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "sideOffset",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3633,7 +3633,7 @@
             "required": false,
             "description": "Flip to the opposite side when colliding with boundary.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "sideFlip",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3643,7 +3643,7 @@
             "required": false,
             "description": "The preferred alignment against the trigger. May change when collisions occur.",
             "default": "'center'",
-            "inheritedFrom": null,
+            "inheritedFrom": "align",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3666,7 +3666,7 @@
             "required": false,
             "description": "An offset in pixels from the `start` or `end` alignment options.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "alignOffset",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3676,7 +3676,7 @@
             "required": false,
             "description": "Flip alignment when colliding with boundary.\nMay only occur when `prioritizePosition` is true.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "alignFlip",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3686,7 +3686,7 @@
             "required": false,
             "description": "When `true`, overrides the side and align preferences to prevent collisions with boundary edges.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "avoidCollisions",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3696,7 +3696,7 @@
             "required": false,
             "description": "The element used as the collision boundary. By default this is the viewport, though you can provide additional\nelement(s) to be included in this check.",
             "default": "[ ]",
-            "inheritedFrom": null,
+            "inheritedFrom": "collisionBoundary",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3719,7 +3719,7 @@
             "required": false,
             "description": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for\nall sides), or a partial padding object, for example: { top: 20, left: 20 }.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "collisionPadding",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3742,7 +3742,7 @@
             "required": false,
             "description": "The padding between the arrow and the edges of the content. If your content has border-radius, this will prevent it\nfrom overflowing the corners.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "arrowPadding",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3752,7 +3752,7 @@
             "required": false,
             "description": "When `true`, hides the arrow when it cannot be centered\nto the reference element.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "hideShiftedArrow",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3762,7 +3762,7 @@
             "required": false,
             "description": "The sticky behavior on the align axis. `partial` will keep the content in the boundary as long as the trigger is at\nleast partially in the boundary whilst \"always\" will keep the content in the boundary regardless.",
             "default": "'partial'",
-            "inheritedFrom": null,
+            "inheritedFrom": "sticky",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3772,7 +3772,7 @@
             "required": false,
             "description": "Whether to hide the content when the trigger becomes fully occluded.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "hideWhenDetached",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3782,7 +3782,7 @@
             "required": false,
             "description": "The type of CSS position property to use.",
             "default": "'fixed'",
-            "inheritedFrom": null,
+            "inheritedFrom": "positionStrategy",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3792,7 +3792,7 @@
             "required": false,
             "description": "Strategy to update the position of the floating element on every animation frame.",
             "default": "'optimized'",
-            "inheritedFrom": null,
+            "inheritedFrom": "updatePositionStrategy",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3802,7 +3802,7 @@
             "required": false,
             "description": "Whether to disable the update position for the content when the layout shifted.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "disableUpdateOnLayoutShift",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3812,7 +3812,7 @@
             "required": false,
             "description": "Force content to be position within the viewport. Might overlap the reference element, which may not be desired.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "prioritizePosition",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3822,7 +3822,7 @@
             "required": false,
             "description": "The custom element or virtual element that will be set as the reference to position the floating element. If\nprovided, it will replace the default anchor element.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "reference",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3845,7 +3845,7 @@
             "required": false,
             "description": "Used to force mounting when more control is needed.\n\nUseful when controlling animation with Vue animation libraries.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "forceMount",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -3855,7 +3855,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           }
@@ -3866,7 +3866,7 @@
       "emits": {
         "kind": "emits",
         "name": "MenubarContentEmits",
-        "type": "TypeAlias MenubarContentEmits",
+        "type": "TypeAlias MenubarContentEmits: MenuContentEmits",
         "resolvedType": "{ escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/menubar/types.ts",
@@ -4173,7 +4173,7 @@
         "resolvedType": "{ modelValue?: T; defaultValue?: T; dir?: Direction; loop?: boolean; asChild?: boolean; as?: AsTag | Component }",
         "description": "",
         "sourcePath": "headless/src/components/menubar/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "modelValue",
@@ -4234,7 +4234,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -4244,7 +4244,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -4280,7 +4280,7 @@
         "resolvedType": "{ \"update:modelValue\": [value: T] }",
         "description": "",
         "sourcePath": "headless/src/components/menubar/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -4314,7 +4314,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           },
@@ -4324,7 +4324,7 @@
             "required": false,
             "description": "The placement of the floating element.\n\nIf used, it will override the `side` and `align` props.",
             "default": "undefined",
-            "inheritedFrom": null,
+            "inheritedFrom": "placement",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -4347,7 +4347,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -4370,7 +4370,7 @@
             "required": false,
             "description": "The distance in pixels from the trigger.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "sideOffset",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4380,7 +4380,7 @@
             "required": false,
             "description": "The padding between the arrow and the edges of the content. If your content has border-radius, this will prevent it\nfrom overflowing the corners.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "arrowPadding",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4390,7 +4390,7 @@
             "required": false,
             "description": "Strategy to update the position of the floating element on every animation frame.",
             "default": "'optimized'",
-            "inheritedFrom": null,
+            "inheritedFrom": "updatePositionStrategy",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4400,7 +4400,7 @@
             "required": false,
             "description": "Flip to the opposite side when colliding with boundary.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "sideFlip",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4410,7 +4410,7 @@
             "required": false,
             "description": "An offset in pixels from the `start` or `end` alignment options.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "alignOffset",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4420,7 +4420,7 @@
             "required": false,
             "description": "Flip alignment when colliding with boundary.\nMay only occur when `prioritizePosition` is true.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "alignFlip",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4430,7 +4430,7 @@
             "required": false,
             "description": "When `true`, overrides the side and align preferences to prevent collisions with boundary edges.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "avoidCollisions",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4440,7 +4440,7 @@
             "required": false,
             "description": "The element used as the collision boundary. By default this is the viewport, though you can provide additional\nelement(s) to be included in this check.",
             "default": "[ ]",
-            "inheritedFrom": null,
+            "inheritedFrom": "collisionBoundary",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -4463,7 +4463,7 @@
             "required": false,
             "description": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for\nall sides), or a partial padding object, for example: { top: 20, left: 20 }.",
             "default": "0",
-            "inheritedFrom": null,
+            "inheritedFrom": "collisionPadding",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -4486,7 +4486,7 @@
             "required": false,
             "description": "When `true`, hides the arrow when it cannot be centered\nto the reference element.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "hideShiftedArrow",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4496,7 +4496,7 @@
             "required": false,
             "description": "The sticky behavior on the align axis. `partial` will keep the content in the boundary as long as the trigger is at\nleast partially in the boundary whilst \"always\" will keep the content in the boundary regardless.",
             "default": "'partial'",
-            "inheritedFrom": null,
+            "inheritedFrom": "sticky",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4506,7 +4506,7 @@
             "required": false,
             "description": "Whether to hide the content when the trigger becomes fully occluded.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "hideWhenDetached",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4516,7 +4516,7 @@
             "required": false,
             "description": "The type of CSS position property to use.",
             "default": "'fixed'",
-            "inheritedFrom": null,
+            "inheritedFrom": "positionStrategy",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4526,7 +4526,7 @@
             "required": false,
             "description": "Whether to disable the update position for the content when the layout shifted.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "disableUpdateOnLayoutShift",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4536,7 +4536,7 @@
             "required": false,
             "description": "Force content to be position within the viewport. Might overlap the reference element, which may not be desired.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "prioritizePosition",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4546,7 +4546,7 @@
             "required": false,
             "description": "The custom element or virtual element that will be set as the reference to position the floating element. If\nprovided, it will replace the default anchor element.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "reference",
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -4569,7 +4569,7 @@
             "required": false,
             "description": "Used to force mounting when more control is needed.\n\nUseful when controlling animation with Vue animation libraries.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "forceMount",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -4580,7 +4580,7 @@
       "emits": {
         "kind": "emits",
         "name": "MenubarSubContentEmits",
-        "type": "TypeAlias MenubarSubContentEmits",
+        "type": "TypeAlias MenubarSubContentEmits: ContextMenuSubContentEmits",
         "resolvedType": "{ escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/menubar/types.ts",
@@ -4850,7 +4850,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the item.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -4860,7 +4860,7 @@
             "required": false,
             "description": "Optional text used for typeahead purposes. By default the typeahead behavior will use the `.textContent` of the\nitem. <br> Use this when the content is complex, or you have non-textual content inside.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "textValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -4870,7 +4870,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -4880,7 +4880,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -4936,7 +4936,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -4946,7 +4946,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {

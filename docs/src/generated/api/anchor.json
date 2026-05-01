@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "AnchorProps",
         "type": "Interface AnchorProps",
-        "resolvedType": "{ color?: ThemeColor; size?: ThemeSize; ui?: Partial<AnchorExtendedUi>; class?: string | Record<string, boolean> | ClassValue[] | null; sticky?: boolean; items: AnchorItemData[]; linkProps?: AnchorLinkProps; indicatorProps?: HTMLAttributes; titleProps?: HTMLAttributes; subProps?: HTMLAttributes; bounds?: number; dir?: Direction; getContainer?: (() => AnchorContainer | null); getCurrentAnchor?: ((activeHref: string) => string); modelValue?: string; offsetTop?: number; orientation?: DataOrientation; replace?: boolean; targetOffset?: number; asChild?: boolean; as?: AsTag | Component }",
+        "resolvedType": "{ color?: ThemeColor; size?: ThemeSize; ui?: Partial<AnchorExtendedUi>; class?: string | Record<string, boolean> | ClassValue[] | null; sticky?: boolean; items: AnchorOptionData[]; linkProps?: AnchorLinkProps; indicatorProps?: HTMLAttributes; titleProps?: HTMLAttributes; subProps?: HTMLAttributes; bounds?: number; dir?: Direction; getContainer?: (() => AnchorContainer | null); getCurrentAnchor?: ((activeHref: string) => string); modelValue?: string; offsetTop?: number; orientation?: DataOrientation; replace?: boolean; targetOffset?: number; asChild?: boolean; as?: AsTag | Component }",
         "description": "",
         "sourcePath": "src/components/anchor/types.ts",
         "typeParameters": [],
@@ -115,11 +115,11 @@
           },
           {
             "name": "items",
-            "type": "AnchorItemData[]",
+            "type": "AnchorOptionData[]",
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -129,14 +129,14 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.linkProps",
+            "inheritedFrom": "linkProps",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
                 "name": "AnchorLinkProps",
                 "kind": "interface",
                 "type": "AnchorLinkProps",
-                "resolvedType": "{ href: string; asChild?: boolean; as?: AsTag | Component; disabled?: boolean; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
+                "resolvedType": "{ href: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component; to?: string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric; external?: boolean; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
                 "description": "",
                 "sourcePath": "headless/src/components/anchor/types.ts",
                 "typeParameters": [],
@@ -146,6 +146,16 @@
                     "name": "href",
                     "type": "string",
                     "required": true,
+                    "description": "The URL the link should navigate to when clicked on.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
                     "description": "",
                     "default": null,
                     "inheritedFrom": null,
@@ -173,10 +183,20 @@
                     "referencedTypes": []
                   },
                   {
-                    "name": "disabled",
+                    "name": "to",
+                    "type": "string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric",
+                    "required": false,
+                    "description": "Route Location the link should navigate to when clicked on.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/link/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "external",
                     "type": "boolean",
                     "required": false,
-                    "description": "When `true`, the link is disabled.",
+                    "description": "Forces the link to be considered as external (true) or internal (false). This is helpful to handle edge-cases",
                     "default": null,
                     "inheritedFrom": null,
                     "sourcePath": "headless/src/components/link/types.ts",
@@ -203,7 +223,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.indicatorProps",
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
@@ -226,7 +246,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.titleProps",
+            "inheritedFrom": "titleProps",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
@@ -249,7 +269,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.subProps",
+            "inheritedFrom": "subProps",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
@@ -272,7 +292,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.bounds",
+            "inheritedFrom": "bounds",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -282,7 +302,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
@@ -305,7 +325,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.getContainer",
+            "inheritedFrom": "getContainer",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -315,7 +335,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.getCurrentAnchor",
+            "inheritedFrom": "getCurrentAnchor",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -325,7 +345,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -335,7 +355,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.offsetTop",
+            "inheritedFrom": "offsetTop",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -345,7 +365,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.orientation",
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
@@ -368,7 +388,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.replace",
+            "inheritedFrom": "replace",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -378,7 +398,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.targetOffset",
+            "inheritedFrom": "targetOffset",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -388,7 +408,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "AnchorCompactProps.asChild",
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -398,7 +418,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "AnchorCompactProps.as",
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -539,14 +559,14 @@
         "kind": "props",
         "name": "AnchorCompactProps",
         "type": "Interface AnchorCompactProps",
-        "resolvedType": "{ items: AnchorItemData[]; linkProps?: AnchorLinkProps; indicatorProps?: HTMLAttributes; titleProps?: HTMLAttributes; subProps?: HTMLAttributes; bounds?: number; dir?: Direction; getContainer?: (() => AnchorContainer | null); getCurrentAnchor?: ((activeHref: string) => string); modelValue?: string; offsetTop?: number; orientation?: DataOrientation; replace?: boolean; targetOffset?: number; asChild?: boolean; as?: AsTag | Component }",
+        "resolvedType": "{ items: AnchorOptionData[]; linkProps?: AnchorLinkProps; indicatorProps?: HTMLAttributes; titleProps?: HTMLAttributes; subProps?: HTMLAttributes; bounds?: number; dir?: Direction; getContainer?: (() => AnchorContainer | null); getCurrentAnchor?: ((activeHref: string) => string); modelValue?: string; offsetTop?: number; orientation?: DataOrientation; replace?: boolean; targetOffset?: number; asChild?: boolean; as?: AsTag | Component }",
         "description": "",
         "sourcePath": "headless/src/components/anchor/types.ts",
         "typeParameters": [],
         "members": [
           {
             "name": "items",
-            "type": "AnchorItemData[]",
+            "type": "AnchorOptionData[]",
             "required": true,
             "description": "",
             "default": null,
@@ -567,7 +587,7 @@
                 "name": "AnchorLinkProps",
                 "kind": "interface",
                 "type": "AnchorLinkProps",
-                "resolvedType": "{ href: string; asChild?: boolean; as?: AsTag | Component; disabled?: boolean; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
+                "resolvedType": "{ href: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component; to?: string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric; external?: boolean; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
                 "description": "",
                 "sourcePath": "headless/src/components/anchor/types.ts",
                 "typeParameters": [],
@@ -577,6 +597,16 @@
                     "name": "href",
                     "type": "string",
                     "required": true,
+                    "description": "The URL the link should navigate to when clicked on.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
                     "description": "",
                     "default": null,
                     "inheritedFrom": null,
@@ -604,10 +634,20 @@
                     "referencedTypes": []
                   },
                   {
-                    "name": "disabled",
+                    "name": "to",
+                    "type": "string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric",
+                    "required": false,
+                    "description": "Route Location the link should navigate to when clicked on.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/link/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "external",
                     "type": "boolean",
                     "required": false,
-                    "description": "When `true`, the link is disabled.",
+                    "description": "Forces the link to be considered as external (true) or internal (false). This is helpful to handle edge-cases",
                     "default": null,
                     "inheritedFrom": null,
                     "sourcePath": "headless/src/components/link/types.ts",
@@ -703,7 +743,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "bounds",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -713,7 +753,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
@@ -736,7 +776,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "getContainer",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -746,7 +786,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "getCurrentAnchor",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -756,7 +796,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -766,7 +806,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "offsetTop",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -776,7 +816,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": [
               {
@@ -799,7 +839,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "replace",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -809,7 +849,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "targetOffset",
             "sourcePath": "headless/src/components/anchor/types.ts",
             "referencedTypes": []
           },
@@ -819,7 +859,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -829,7 +869,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -861,7 +901,7 @@
       "emits": {
         "kind": "emits",
         "name": "AnchorCompactEmits",
-        "type": "TypeAlias AnchorCompactEmits",
+        "type": "TypeAlias AnchorCompactEmits: AnchorRootEmits",
         "resolvedType": "{ \"update:modelValue\": [value: string]; activeChange: [value: string]; itemSelect: [event: MouseEvent, payload: { href: string; }] }",
         "description": "",
         "sourcePath": "headless/src/components/anchor/types.ts",
@@ -965,12 +1005,274 @@
         ]
       }
     },
+    "AnchorItemCompact": {
+      "props": {
+        "kind": "props",
+        "name": "AnchorItemCompactProps",
+        "type": "Interface AnchorItemCompactProps",
+        "resolvedType": "{ modelValue?: string; item: AnchorOptionData; linkProps?: AnchorLinkProps; indicatorProps?: HTMLAttributes; titleProps?: HTMLAttributes; subProps?: HTMLAttributes }",
+        "description": "",
+        "sourcePath": "headless/src/components/anchor/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "modelValue",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "item",
+            "type": "AnchorOptionData",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": [
+              {
+                "name": "AnchorOptionData",
+                "kind": "interface",
+                "type": "AnchorOptionData",
+                "resolvedType": "{ children?: AnchorOptionData[]; title?: string; disabled?: boolean; href: string; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
+                "description": "",
+                "sourcePath": "headless/src/components/anchor/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "children",
+                    "type": "AnchorOptionData[]",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "title",
+                    "type": "string",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "href",
+                    "type": "string",
+                    "required": true,
+                    "description": "The URL the link should navigate to when clicked on.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "target",
+                    "type": "'_blank' | '_parent' | '_self' | '_top' | (string & {}) | null",
+                    "required": false,
+                    "description": "Where to display the linked URL, as the name for a browsing context.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/link/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "linkProps",
+            "type": "AnchorLinkProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": [
+              {
+                "name": "AnchorLinkProps",
+                "kind": "interface",
+                "type": "AnchorLinkProps",
+                "resolvedType": "{ href: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component; to?: string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric; external?: boolean; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
+                "description": "",
+                "sourcePath": "headless/src/components/anchor/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "href",
+                    "type": "string",
+                    "required": true,
+                    "description": "The URL the link should navigate to when clicked on.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/anchor/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "to",
+                    "type": "string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric",
+                    "required": false,
+                    "description": "Route Location the link should navigate to when clicked on.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/link/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "external",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Forces the link to be considered as external (true) or internal (false). This is helpful to handle edge-cases",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/link/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "target",
+                    "type": "'_blank' | '_parent' | '_self' | '_top' | (string & {}) | null",
+                    "required": false,
+                    "description": "Where to display the linked URL, as the name for a browsing context.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/link/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "indicatorProps",
+            "type": "HTMLAttributes",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": [
+              {
+                "name": "HTMLAttributes",
+                "kind": "interface",
+                "type": "HTMLAttributes",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-dom@3.5.33/node_modules/@vue/runtime-dom/dist/runtime-dom.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "titleProps",
+            "type": "HTMLAttributes",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": [
+              {
+                "name": "HTMLAttributes",
+                "kind": "interface",
+                "type": "HTMLAttributes",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-dom@3.5.33/node_modules/@vue/runtime-dom/dist/runtime-dom.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "subProps",
+            "type": "HTMLAttributes",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": [
+              {
+                "name": "HTMLAttributes",
+                "kind": "interface",
+                "type": "HTMLAttributes",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-dom@3.5.33/node_modules/@vue/runtime-dom/dist/runtime-dom.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "AnchorLink": {
       "props": {
         "kind": "props",
         "name": "AnchorLinkProps",
         "type": "Interface AnchorLinkProps",
-        "resolvedType": "{ href: string; asChild?: boolean; as?: AsTag | Component; disabled?: boolean; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
+        "resolvedType": "{ href: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component; to?: string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric; external?: boolean; target?: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null }",
         "description": "",
         "sourcePath": "headless/src/components/anchor/types.ts",
         "typeParameters": [],
@@ -979,6 +1281,16 @@
             "name": "href",
             "type": "string",
             "required": true,
+            "description": "The URL the link should navigate to when clicked on.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
             "description": "",
             "default": null,
             "inheritedFrom": null,
@@ -1027,12 +1339,35 @@
             ]
           },
           {
-            "name": "disabled",
+            "name": "to",
+            "type": "string | import(\"vue-router\").RouteLocationAsRelativeGeneric | import(\"vue-router\").RouteLocationAsPathGeneric",
+            "required": false,
+            "description": "Route Location the link should navigate to when clicked on.",
+            "default": null,
+            "inheritedFrom": "to",
+            "sourcePath": "headless/src/components/link/types.ts",
+            "referencedTypes": [
+              {
+                "name": "RouteLocationRaw",
+                "kind": "typeAlias",
+                "type": "RouteLocationRaw",
+                "resolvedType": null,
+                "description": "Route location that can be passed to `router.push()` and other user-facing APIs.",
+                "sourcePath": "node_modules/.pnpm/vue-router@5.0.6_@vue+compiler-sfc@3.5.33_pinia@3.0.4_typescript@6.0.3_vue@3.5.33_types_5291f2364aa3c25c31ad23c437ad644c/node_modules/vue-router/dist/index-D_VEAp3P.d.ts",
+                "typeParameters": ["Name extends keyof RouteMap = keyof RouteMap"],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "external",
             "type": "boolean",
             "required": false,
-            "description": "When `true`, the link is disabled.",
+            "description": "Forces the link to be considered as external (true) or internal (false). This is helpful to handle edge-cases",
             "default": null,
-            "inheritedFrom": "disabled",
+            "inheritedFrom": "external",
             "sourcePath": "headless/src/components/link/types.ts",
             "referencedTypes": []
           },
@@ -1052,71 +1387,6 @@
       }
     },
     "AnchorRoot": {
-      "emits": {
-        "kind": "emits",
-        "name": "AnchorRootEmits",
-        "type": "TypeAlias AnchorRootEmits",
-        "resolvedType": "{ \"update:modelValue\": [value: string]; activeChange: [value: string]; itemSelect: [event: MouseEvent, payload: { href: string; }] }",
-        "description": "",
-        "sourcePath": "headless/src/components/anchor/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[value: string]",
-            "parameters": "value: string",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/anchor/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "activeChange",
-            "type": "[value: string]",
-            "parameters": "value: string",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/anchor/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "itemSelect",
-            "type": "[event: MouseEvent, payload: { href: string; }]",
-            "parameters": "event: MouseEvent, payload: { href: string; }",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/anchor/types.ts",
-            "referencedTypes": [
-              {
-                "name": "__type",
-                "kind": "typeLiteral",
-                "type": "{ href: string; }",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/components/anchor/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              },
-              {
-                "name": "MouseEvent",
-                "kind": "interface",
-                "type": "MouseEvent",
-                "resolvedType": null,
-                "description": "The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include click, dblclick, mouseup, mousedown.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/MouseEvent)",
-                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "referencedTypes": []
-      },
       "props": {
         "kind": "props",
         "name": "AnchorRootProps",
@@ -1285,6 +1555,71 @@
           }
         ],
         "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "AnchorRootEmits",
+        "type": "TypeAlias AnchorRootEmits",
+        "resolvedType": "{ \"update:modelValue\": [value: string]; activeChange: [value: string]; itemSelect: [event: MouseEvent, payload: { href: string; }] }",
+        "description": "",
+        "sourcePath": "headless/src/components/anchor/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[value: string]",
+            "parameters": "value: string",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "activeChange",
+            "type": "[value: string]",
+            "parameters": "value: string",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "itemSelect",
+            "type": "[event: MouseEvent, payload: { href: string; }]",
+            "parameters": "event: MouseEvent, payload: { href: string; }",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/anchor/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ href: string; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/anchor/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "MouseEvent",
+                "kind": "interface",
+                "type": "MouseEvent",
+                "resolvedType": null,
+                "description": "The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include click, dblclick, mouseup, mousedown.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/MouseEvent)",
+                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
         "referencedTypes": []
       }
     }

@@ -1007,7 +1007,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1017,7 +1017,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.itemProps",
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1081,7 +1081,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.controlProps",
+            "inheritedFrom": "controlProps",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1115,7 +1115,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.indicatorProps",
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1169,7 +1169,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.labelProps",
+            "inheritedFrom": "labelProps",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1203,7 +1203,7 @@
             "required": false,
             "description": "The controlled value of the radio item to check. Can be bound as `v-model`.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1213,7 +1213,7 @@
             "required": false,
             "description": "The value of the radio item that should be checked when initially rendered. Use when you do not need to control the\nstate of the radio items.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1223,7 +1223,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with radio items.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1233,7 +1233,7 @@
             "required": false,
             "description": "The orientation of the component.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.orientation",
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1256,7 +1256,7 @@
             "required": false,
             "description": "The reading direction of the radio group when applicable.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1279,7 +1279,7 @@
             "required": false,
             "description": "When `true`, keyboard navigation will loop from last item to first, and vice versa.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.loop",
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1289,7 +1289,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.name",
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1299,7 +1299,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": "RadioGroupCompactProps.required",
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -1362,10 +1362,7 @@
         "resolvedType": "{ items: S[]; itemProps?: RadioGroupItemProps; controlProps?: RadioGroupControlProps; indicatorProps?: RadioGroupIndicatorProps; labelProps?: RadioGroupLabelProps; modelValue?: T; defaultValue?: T; disabled?: boolean; orientation?: DataOrientation; dir?: Direction; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/radio-group/types.ts",
-        "typeParameters": [
-          "T extends AcceptableBooleanValue = AcceptableBooleanValue",
-          "S extends RadioGroupOptionData<T> = RadioGroupOptionData<T>"
-        ],
+        "typeParameters": ["TypeParameter T", "TypeParameter S"],
         "members": [
           {
             "name": "items",
@@ -1569,7 +1566,7 @@
             "required": false,
             "description": "The controlled value of the radio item to check. Can be bound as `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1579,7 +1576,7 @@
             "required": false,
             "description": "The value of the radio item that should be checked when initially rendered. Use when you do not need to control the\nstate of the radio items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1589,7 +1586,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with radio items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1599,7 +1596,7 @@
             "required": false,
             "description": "The orientation of the component.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1622,7 +1619,7 @@
             "required": false,
             "description": "The reading direction of the radio group when applicable.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": [
               {
@@ -1645,7 +1642,7 @@
             "required": false,
             "description": "When `true`, keyboard navigation will loop from last item to first, and vice versa.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/radio-group/types.ts",
             "referencedTypes": []
           },
@@ -1655,7 +1652,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1665,7 +1662,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -1676,11 +1673,11 @@
       "emits": {
         "kind": "emits",
         "name": "RadioGroupCompactEmits",
-        "type": "TypeAlias RadioGroupCompactEmits<T>",
+        "type": "TypeAlias RadioGroupCompactEmits<T>: RadioGroupRootEmits<T>",
         "resolvedType": "{ \"update:modelValue\": [payload: NonNullable<T>] }",
         "description": "",
         "sourcePath": "headless/src/components/radio-group/types.ts",
-        "typeParameters": ["T extends AcceptableBooleanValue = AcceptableBooleanValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {

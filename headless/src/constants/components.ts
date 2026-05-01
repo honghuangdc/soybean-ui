@@ -13,11 +13,9 @@ export const components = {
   anchor: ['AnchorCompact', 'AnchorLink', 'AnchorRoot'],
   arrow: ['Arrow'],
   aspectRatio: ['AspectRatio'],
-  avatar: ['AvatarRoot', 'AvatarImage', 'AvatarFallback'],
-  backtop: ['Backtop'],
   autocomplete: [
-    'AutocompleteRoot',
     'AutocompleteCompact',
+    'AutocompleteRoot',
     'AutocompleteAnchor',
     'AutocompleteInput',
     'AutocompleteTrigger',
@@ -30,15 +28,12 @@ export const components = {
     'AutocompleteItemIndicator',
     'AutocompleteSeparator'
   ],
+  avatar: ['AvatarRoot', 'AvatarImage', 'AvatarFallback'],
+  backtop: ['Backtop'],
   badge: ['BadgeRoot', 'BadgeContent'],
   bottomSheet: [
-    'BottomSheetCompact',
-    'BottomSheetRoot',
-    'BottomSheetRootNested',
-    'BottomSheetOverlay',
-    'BottomSheetPortal',
-    'BottomSheetPopup',
     'BottomSheetTrigger',
+    'BottomSheetPortal',
     'BottomSheetHeader',
     'BottomSheetContent',
     'BottomSheetFooter',
@@ -47,6 +42,11 @@ export const components = {
     'BottomSheetClose',
     'BottomSheetCancel',
     'BottomSheetConfirm',
+    'BottomSheetCompact',
+    'BottomSheetRoot',
+    'BottomSheetRootNested',
+    'BottomSheetPopup',
+    'BottomSheetOverlay',
     'BottomSheetHandle'
   ],
   breadcrumb: [
@@ -76,7 +76,6 @@ export const components = {
     'CalendarCellTrigger'
   ],
   card: [
-    'CardCompact',
     'CardRoot',
     'CardHeader',
     'CardTitle',
@@ -84,9 +83,10 @@ export const components = {
     'CardDescription',
     'CardContent',
     'CardFooter',
-    'CardCollapsibleTrigger'
+    'CardCollapsibleTrigger',
+    'CardCompact'
   ],
-  carousel: ['CarouselRoot', 'CarouselContent', 'CarouselItem', 'CarouselPrevious', 'CarouselNext'],
+  carousel: ['CarouselContent', 'CarouselItem', 'CarouselNext', 'CarouselPrevious', 'CarouselRoot'],
   checkbox: [
     'CheckboxCompact',
     'CheckboxCardCompact',
@@ -100,25 +100,6 @@ export const components = {
   ],
   clipboard: ['Clipboard'],
   collapsible: ['CollapsibleRoot', 'CollapsibleContent', 'CollapsibleTrigger'],
-  combobox: [
-    'ComboboxRoot',
-    'ComboboxCompact',
-    'ComboboxAnchor',
-    'ComboboxTrigger',
-    'ComboboxCancel',
-    'ComboboxPortal',
-    'ComboboxContent',
-    'ComboboxArrow',
-    'ComboboxViewport',
-    'ComboboxInput',
-    'ComboboxGroup',
-    'ComboboxGroupLabel',
-    'ComboboxItem',
-    'ComboboxItemIndicator',
-    'ComboboxEmpty',
-    'ComboboxSeparator',
-    'ComboboxVirtualizer'
-  ],
   colorArea: ['ColorAreaRoot', 'ColorAreaArea', 'ColorAreaThumb'],
   colorField: ['ColorFieldRoot', 'ColorFieldInput'],
   colorPicker: ['ColorPickerRoot'],
@@ -129,6 +110,25 @@ export const components = {
     'ColorSwatchPickerItem',
     'ColorSwatchPickerItemIndicator',
     'ColorSwatchPickerItemSwatch'
+  ],
+  combobox: [
+    'ComboboxCompact',
+    'ComboboxRoot',
+    'ComboboxAnchor',
+    'ComboboxTrigger',
+    'ComboboxPortal',
+    'ComboboxViewport',
+    'ComboboxContent',
+    'ComboboxCancel',
+    'ComboboxArrow',
+    'ComboboxGroup',
+    'ComboboxGroupLabel',
+    'ComboboxInput',
+    'ComboboxItem',
+    'ComboboxItemIndicator',
+    'ComboboxEmpty',
+    'ComboboxSeparator',
+    'ComboboxVirtualizer'
   ],
   command: ['CommandCompact'],
   configProvider: ['ConfigProvider'],
@@ -156,9 +156,9 @@ export const components = {
     'ContextMenuRadioCompact',
     'ContextMenuWrapperCompact'
   ],
-  dateField: ['DateFieldRoot', 'DateFieldInput'],
-  datePicker: ['DatePickerRoot', 'DatePickerTrigger', 'DatePickerPopup'],
-  dateRangeField: ['DateRangeFieldCompact', 'DateRangeFieldRoot', 'DateRangeFieldInput'],
+  dateField: ['DateFieldCompact', 'DateFieldInput', 'DateFieldRoot'],
+  datePicker: ['DatePickerCompact', 'DatePickerContent', 'DatePickerRoot', 'DatePickerTrigger'],
+  dateRangeField: ['DateRangeFieldCompact', 'DateRangeFieldInput', 'DateRangeFieldRoot'],
   dateRangePicker: ['DateRangePickerCompact', 'DateRangePickerRoot', 'DateRangePickerTrigger', 'DateRangePickerPopup'],
   dialog: [
     'DialogCompact',
@@ -202,25 +202,25 @@ export const components = {
     'DropdownMenuWrapperCompact'
   ],
   editable: [
-    'EditableCompact',
     'EditableArea',
     'EditableCancelTrigger',
     'EditableEditTrigger',
     'EditableInput',
     'EditablePreview',
     'EditableRoot',
-    'EditableSubmitTrigger'
+    'EditableSubmitTrigger',
+    'EditableCompact'
   ],
   empty: ['EmptyRoot', 'EmptyHeader', 'EmptyMedia', 'EmptyContent', 'EmptyTitle', 'EmptyDescription'],
   form: ['FormField', 'FormLabel', 'FormControl', 'FormDescription', 'FormError'],
   hoverCard: [
-    'HoverCardCompact',
     'HoverCardRoot',
     'HoverCardTrigger',
     'HoverCardPortal',
     'HoverCardPositioner',
     'HoverCardPopup',
-    'HoverCardArrow'
+    'HoverCardArrow',
+    'HoverCardCompact'
   ],
   input: ['InputRoot', 'InputControl'],
   inputNumber: ['InputNumberRoot', 'InputNumberControl', 'InputNumberIncrement', 'InputNumberDecrement'],
@@ -241,6 +241,7 @@ export const components = {
     'LayoutMobile',
     'LayoutTrigger'
   ],
+  link: ['Link'],
   list: ['ListRoot', 'ListItem', 'ListTitle', 'ListDescription', 'ListContent'],
   listbox: [
     'ListboxRoot',
@@ -252,7 +253,6 @@ export const components = {
     'ListboxFilter',
     'ListboxVirtualizer'
   ],
-  link: ['Link'],
   menu: [
     'MenuRoot',
     'MenuPortal',
@@ -297,10 +297,9 @@ export const components = {
     'MenubarRadioGroup',
     'MenubarCompact'
   ],
-  monthPicker: ['MonthPickerRoot', 'MonthPickerTrigger', 'MonthPickerPopup'],
-  monthRangePicker: ['MonthRangePickerRoot', 'MonthRangePickerTrigger', 'MonthRangePickerPopup'],
+  monthPicker: ['MonthPickerPopup', 'MonthPickerRoot', 'MonthPickerTrigger'],
+  monthRangePicker: ['MonthRangePickerPopup', 'MonthRangePickerRoot', 'MonthRangePickerTrigger'],
   navigationMenu: [
-    'NavigationMenuCompact',
     'NavigationMenuRoot',
     'NavigationMenuList',
     'NavigationMenuItem',
@@ -309,11 +308,11 @@ export const components = {
     'NavigationMenuLink',
     'NavigationMenuSubList',
     'NavigationMenuViewport',
-    'NavigationMenuIndicator'
+    'NavigationMenuIndicator',
+    'NavigationMenuCompact'
   ],
   pageTabs: ['PageTabsRoot', 'PageTabsItem', 'PageTabsClose', 'PageTabsPin'],
   pagination: [
-    'PaginationCompact',
     'PaginationRoot',
     'PaginationList',
     'PaginationListItem',
@@ -321,7 +320,8 @@ export const components = {
     'PaginationPrev',
     'PaginationNext',
     'PaginationLast',
-    'PaginationEllipsis'
+    'PaginationEllipsis',
+    'PaginationCompact'
   ],
   popover: [
     'PopoverCompact',
@@ -385,18 +385,18 @@ export const components = {
   ],
   separator: ['SeparatorRoot', 'SeparatorLabel'],
   skeleton: ['Skeleton'],
-  splitter: ['SplitterGroup', 'SplitterPanel', 'SplitterResizeHandle'],
   slider: ['SliderRoot', 'SliderTrack', 'SliderRange', 'SliderThumb'],
   slot: ['Slot'],
+  splitter: ['SplitterGroup', 'SplitterPanel', 'SplitterResizeHandle'],
   stepper: [
-    'StepperCompact',
     'StepperRoot',
     'StepperItem',
     'StepperTrigger',
     'StepperIndicator',
     'StepperSeparator',
     'StepperTitle',
-    'StepperDescription'
+    'StepperDescription',
+    'StepperCompact'
   ],
   switch: ['SwitchRoot', 'SwitchControl', 'SwitchThumb'],
   table: [
@@ -423,10 +423,12 @@ export const components = {
   ],
   textarea: ['TextareaRoot', 'TextareaControl', 'TextareaCounter'],
   timeField: ['TimeFieldRoot', 'TimeFieldInput'],
-  timePicker: ['TimePickerRoot', 'TimePickerTrigger', 'TimePickerPopup'],
+  timePicker: ['TimePickerPopup', 'TimePickerRoot', 'TimePickerTrigger'],
   timeRangeField: ['TimeRangeFieldCompact', 'TimeRangeFieldRoot', 'TimeRangeFieldInput'],
-  timeRangePicker: ['TimeRangePickerCompact', 'TimeRangePickerRoot', 'TimeRangePickerTrigger', 'TimeRangePickerPopup'],
+  timeRangePicker: ['TimeRangePickerCompact', 'TimeRangePickerPopup', 'TimeRangePickerRoot', 'TimeRangePickerTrigger'],
   toast: ['Toaster', 'ToastProvider'],
+  toggle: ['Toggle'],
+  toggleGroup: ['ToggleGroupRoot', 'ToggleGroupItem'],
   toolbar: [
     'ToolbarRoot',
     'ToolbarButton',
@@ -435,8 +437,6 @@ export const components = {
     'ToolbarToggleGroup',
     'ToolbarToggleItem'
   ],
-  toggle: ['Toggle'],
-  toggleGroup: ['ToggleGroupRoot', 'ToggleGroupItem'],
   tooltip: ['TooltipRoot', 'TooltipTrigger', 'TooltipPortal', 'TooltipPositioner', 'TooltipPopup', 'TooltipArrow'],
   tree: ['TreeRoot', 'TreeItem', 'TreeVirtualizerRoot', 'TreeVirtualizerItem'],
   treeMenu: [
@@ -451,6 +451,6 @@ export const components = {
   ],
   virtualizer: ['VirtualizerRoot', 'VirtualizerContent', 'VirtualizerItem'],
   visuallyHidden: ['VisuallyHidden', 'VisuallyHiddenInput'],
-  yearPicker: ['YearPickerRoot', 'YearPickerTrigger', 'YearPickerPopup'],
-  yearRangePicker: ['YearRangePickerRoot', 'YearRangePickerTrigger', 'YearRangePickerPopup']
+  yearPicker: ['YearPickerPopup', 'YearPickerRoot', 'YearPickerTrigger'],
+  yearRangePicker: ['YearRangePickerPopup', 'YearRangePickerRoot', 'YearRangePickerTrigger']
 };

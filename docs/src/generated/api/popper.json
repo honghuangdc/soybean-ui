@@ -15,11 +15,11 @@
         "referencedTypes": []
       }
     },
-    "HoverCardArrow": {
+    "ComboboxArrow": {
       "props": {
         "kind": "props",
-        "name": "HoverCardArrowProps",
-        "type": "Interface HoverCardArrowProps",
+        "name": "ComboboxArrowProps",
+        "type": "Interface ComboboxArrowProps",
         "resolvedType": null,
         "description": "",
         "sourcePath": "headless/src/components/popper/types.ts",

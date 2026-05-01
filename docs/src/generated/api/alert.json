@@ -132,7 +132,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.title",
+            "inheritedFrom": "title",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": []
           },
@@ -142,7 +142,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.description",
+            "inheritedFrom": "description",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": []
           },
@@ -152,7 +152,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.icon",
+            "inheritedFrom": "icon",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": [
               {
@@ -175,7 +175,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.closable",
+            "inheritedFrom": "closable",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": []
           },
@@ -185,7 +185,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": [
               {
@@ -208,7 +208,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.titleProps",
+            "inheritedFrom": "titleProps",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": [
               {
@@ -231,7 +231,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.descriptionProps",
+            "inheritedFrom": "descriptionProps",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": [
               {
@@ -254,7 +254,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AlertCompactProps.closeProps",
+            "inheritedFrom": "closeProps",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": [
               {
@@ -298,7 +298,7 @@
             "required": false,
             "description": "The controlled open state of the alert. Can be bound with `v-model:open`.",
             "default": "true",
-            "inheritedFrom": "AlertCompactProps.open",
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": []
           }
@@ -725,7 +725,7 @@
             "required": false,
             "description": "The controlled open state of the alert. Can be bound with `v-model:open`.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/alert/types.ts",
             "referencedTypes": []
           }
@@ -736,7 +736,7 @@
       "emits": {
         "kind": "emits",
         "name": "AlertCompactEmits",
-        "type": "TypeAlias AlertCompactEmits",
+        "type": "TypeAlias AlertCompactEmits: AlertRootEmits",
         "resolvedType": "{ \"update:open\": [open: boolean] }",
         "description": "",
         "sourcePath": "headless/src/components/alert/types.ts",

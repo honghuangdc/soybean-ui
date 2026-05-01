@@ -1,6 +1,20 @@
 {
   "component": "input",
   "symbols": {
+    "AutocompleteInput": {
+      "emits": {
+        "kind": "emits",
+        "name": "AutocompleteInputEmits",
+        "type": "TypeAlias AutocompleteInputEmits",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/input/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "Input": {
       "props": {
         "kind": "props",
@@ -263,7 +277,7 @@
       "emits": {
         "kind": "emits",
         "name": "InputEmits",
-        "type": "TypeAlias InputEmits: InputRootEmits",
+        "type": "TypeAlias InputEmits: AutocompleteInputEmits",
         "resolvedType": "{ \"update:modelValue\": [value: string] }",
         "description": "",
         "sourcePath": "src/components/input/types.ts",

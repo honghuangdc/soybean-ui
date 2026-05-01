@@ -86,7 +86,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": []
           },
@@ -96,7 +96,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.itemProps",
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -170,7 +170,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.headerProps",
+            "inheritedFrom": "headerProps",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -193,7 +193,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.triggerProps",
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -247,7 +247,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -301,7 +301,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.descriptionProps",
+            "inheritedFrom": "descriptionProps",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -324,7 +324,7 @@
             "required": false,
             "description": "When type is \"single\", allows closing content when clicking trigger for an open item.\n\nWhen type is \"multiple\", this prop has no effect.",
             "default": "false",
-            "inheritedFrom": "AccordionCompactProps.collapsible",
+            "inheritedFrom": "collapsible",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": []
           },
@@ -334,7 +334,7 @@
             "required": false,
             "description": "The reading direction of the accordion when applicable. If omitted, assumes LTR (left-to-right) reading mode.",
             "default": "'ltr'",
-            "inheritedFrom": "AccordionCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -357,7 +357,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the accordion and all its items",
             "default": "false",
-            "inheritedFrom": "AccordionCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": []
           },
@@ -367,7 +367,7 @@
             "required": false,
             "description": "The orientation of the accordion.",
             "default": "'vertical'",
-            "inheritedFrom": "AccordionCompactProps.orientation",
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -390,7 +390,7 @@
             "required": false,
             "description": "When `true`, the element will be unmounted on closed state.",
             "default": "`true`",
-            "inheritedFrom": "AccordionCompactProps.unmountOnHide",
+            "inheritedFrom": "unmountOnHide",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": []
           },
@@ -400,7 +400,7 @@
             "required": false,
             "description": "The controlled value of the selected item(s).\n\nUse this when you need to control the state of the items. Can be bound with `v-model`",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -410,7 +410,7 @@
             "required": false,
             "description": "The default value of the selected item(s).\n\nUse this when you need to set the initial state of the items.",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -420,7 +420,7 @@
             "required": false,
             "description": "Determines whether a \"single\" or \"multiple\" items can be selected at a time.\n\nThis prop will overwrite the inferred type from `modelValue` and `defaultValue`.",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.multiple",
+            "inheritedFrom": "multiple",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -430,7 +430,7 @@
             "required": false,
             "description": "Whether selected item can be cleared when `multiple` is false.",
             "default": null,
-            "inheritedFrom": "AccordionCompactProps.clearable",
+            "inheritedFrom": "clearable",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -440,7 +440,7 @@
             "required": false,
             "description": "How multiple selection should behave in the collection.",
             "default": "'toggle'",
-            "inheritedFrom": "AccordionCompactProps.selectionBehavior",
+            "inheritedFrom": "selectionBehavior",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": [
               {
@@ -615,7 +615,7 @@
         "resolvedType": "{ items: T[]; itemProps?: AccordionItemProps; headerProps?: AccordionHeaderProps; triggerProps?: AccordionTriggerProps; contentProps?: AccordionContentProps; descriptionProps?: AccordionDescriptionProps; collapsible?: boolean; dir?: Direction; disabled?: boolean; orientation?: DataOrientation; unmountOnHide?: boolean; modelValue?: (M extends true ? string[] : string); defaultValue?: (M extends true ? string[] : string); multiple?: M; clearable?: boolean; selectionBehavior?: SelectionBehavior }",
         "description": "",
         "sourcePath": "headless/src/components/accordion/types.ts",
-        "typeParameters": ["T extends AccordionOptionData = AccordionOptionData", "M extends boolean = false"],
+        "typeParameters": ["TypeParameter T", "TypeParameter M"],
         "members": [
           {
             "name": "items",
@@ -861,7 +861,7 @@
             "required": false,
             "description": "When type is \"single\", allows closing content when clicking trigger for an open item.\n\nWhen type is \"multiple\", this prop has no effect.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "collapsible",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": []
           },
@@ -871,7 +871,7 @@
             "required": false,
             "description": "The reading direction of the accordion when applicable. If omitted, assumes LTR (left-to-right) reading mode.",
             "default": "'ltr'",
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -894,7 +894,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the accordion and all its items",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": []
           },
@@ -904,7 +904,7 @@
             "required": false,
             "description": "The orientation of the accordion.",
             "default": "'vertical'",
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": [
               {
@@ -927,7 +927,7 @@
             "required": false,
             "description": "When `true`, the element will be unmounted on closed state.",
             "default": "`true`",
-            "inheritedFrom": null,
+            "inheritedFrom": "unmountOnHide",
             "sourcePath": "headless/src/components/accordion/types.ts",
             "referencedTypes": []
           },
@@ -937,7 +937,7 @@
             "required": false,
             "description": "The controlled value of the selected item(s).\n\nUse this when you need to control the state of the items. Can be bound with `v-model`",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -947,7 +947,7 @@
             "required": false,
             "description": "The default value of the selected item(s).\n\nUse this when you need to set the initial state of the items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -957,7 +957,7 @@
             "required": false,
             "description": "Determines whether a \"single\" or \"multiple\" items can be selected at a time.\n\nThis prop will overwrite the inferred type from `modelValue` and `defaultValue`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "multiple",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -967,7 +967,7 @@
             "required": false,
             "description": "Whether selected item can be cleared when `multiple` is false.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "clearable",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -977,7 +977,7 @@
             "required": false,
             "description": "How multiple selection should behave in the collection.",
             "default": "'toggle'",
-            "inheritedFrom": null,
+            "inheritedFrom": "selectionBehavior",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": [
               {
@@ -1001,11 +1001,11 @@
       "emits": {
         "kind": "emits",
         "name": "AccordionCompactEmits",
-        "type": "TypeAlias AccordionCompactEmits<M>",
+        "type": "TypeAlias AccordionCompactEmits<M>: AccordionRootEmits<M>",
         "resolvedType": "{ \"update:modelValue\": [value: M extends true ? string[] : string] }",
         "description": "",
         "sourcePath": "headless/src/components/accordion/types.ts",
-        "typeParameters": ["M extends boolean = false"],
+        "typeParameters": ["TypeParameter M"],
         "members": [],
         "callables": [
           {
@@ -1027,7 +1027,7 @@
         "resolvedType": "{ item?: ((props: AccordionCompactSlotProps<T, M>) => any); leading?: ((props: AccordionCompactSlotProps<T, M>) => any); title?: ((props: AccordionCompactSlotProps<T, M>) => any); \"trigger-icon\"?: ((props: AccordionCompactSlotProps<T, M>) => any); content?: ((props: AccordionCompactSlotProps<T, M>) => any) }",
         "description": "",
         "sourcePath": "headless/src/components/accordion/types.ts",
-        "typeParameters": ["T extends AccordionOptionData = AccordionOptionData", "M extends boolean = false"],
+        "typeParameters": ["TypeParameter T", "TypeParameter M"],
         "members": [],
         "callables": [
           {
@@ -1150,7 +1150,7 @@
         "resolvedType": "{ item: T; index: number; modelValue: (M extends true ? string[] : string) | undefined; open: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/accordion/types.ts",
-        "typeParameters": ["T extends AccordionOptionData = AccordionOptionData", "M extends boolean = false"],
+        "typeParameters": ["TypeParameter T", "TypeParameter M"],
         "members": [
           {
             "name": "item",

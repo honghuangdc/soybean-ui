@@ -2,7 +2,6 @@ import { mount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 import { describe, expect, it } from 'vitest';
 import { Backtop } from '@soybeanjs/headless/backtop';
-import type { BacktopExposed } from '@soybeanjs/headless/backtop';
 import SBacktop from '../../../src/components/backtop/backtop.vue';
 import { getA11yViolations } from '../../shared/a11y';
 
@@ -61,7 +60,7 @@ async function waitForBacktopUpdate() {
 }
 
 function getBacktop(wrapper: ReturnType<typeof mount>) {
-  return wrapper.findComponent({ name: 'Backtop' }).vm as BacktopExposed;
+  return wrapper.findComponent({ name: 'Backtop' }).vm;
 }
 
 describe('SBacktop', () => {

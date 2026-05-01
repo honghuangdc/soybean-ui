@@ -1,3 +1,4 @@
+export * from '@soybeanjs/headless/config-provider';
 export { default as SConfigProvider } from './config-provider.vue';
 export { useConfigProvider } from './context';
 

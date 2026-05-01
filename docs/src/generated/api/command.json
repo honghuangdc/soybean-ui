@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "CommandProps",
         "type": "Interface CommandProps<T>",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<HeadlessCommandUi>; items: CommandOptionData<T>[]; placeholder?: string; searchTerm?: string; clearable?: boolean; fuseOptions?: UseFuseOptions<CommandSearchOptionData<T>>; listProps?: CommandListProps; itemProps?: CommandItemProps; itemLabelProps?: CommandItemLabelProps; groupProps?: CommandGroupProps; groupLabelProps?: CommandGroupLabelProps; shortcutProps?: CommandShortcutProps; separatorProps?: CommandSeparatorProps; inputProps?: CommandInputProps; emptyProps?: CommandEmptyProps; emptyLabel?: string; disabled?: boolean; dir?: Direction; name?: string; defaultValue?: string; modelValue?: string; highlightOnHover?: boolean; required?: boolean; orientation?: DataOrientation; selectionBehavior?: SelectionBehavior; multiple?: false }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<CommandUi>; items: CommandOptionData<T>[]; placeholder?: string; searchTerm?: string; clearable?: boolean; fuseOptions?: UseFuseOptions<CommandSearchOptionData<T>>; listProps?: CommandListProps; itemProps?: CommandItemProps; itemLabelProps?: CommandItemLabelProps; groupProps?: CommandGroupProps; groupLabelProps?: CommandGroupLabelProps; shortcutProps?: CommandShortcutProps; separatorProps?: CommandSeparatorProps; inputProps?: CommandInputProps; emptyProps?: CommandEmptyProps; emptyLabel?: string; disabled?: boolean; dir?: Direction; name?: string; defaultValue?: string; modelValue?: string; highlightOnHover?: boolean; required?: boolean; orientation?: DataOrientation; selectionBehavior?: SelectionBehavior; multiple?: false }",
         "description": "",
         "sourcePath": "src/components/command/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -59,7 +59,7 @@
           },
           {
             "name": "ui",
-            "type": "Partial<HeadlessCommandUi>",
+            "type": "Partial<CommandUi>",
             "required": false,
             "description": "",
             "default": null,
@@ -86,7 +86,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": []
           },
@@ -96,7 +96,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.placeholder",
+            "inheritedFrom": "placeholder",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": []
           },
@@ -106,7 +106,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.searchTerm",
+            "inheritedFrom": "searchTerm",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": []
           },
@@ -116,7 +116,7 @@
             "required": false,
             "description": "Whether selected item can be cleared when `multiple` is false.",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.clearable",
+            "inheritedFrom": "clearable",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": []
           },
@@ -126,7 +126,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.fuseOptions",
+            "inheritedFrom": "fuseOptions",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -149,7 +149,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.listProps",
+            "inheritedFrom": "listProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -172,7 +172,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.itemProps",
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -236,7 +236,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.itemLabelProps",
+            "inheritedFrom": "itemLabelProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -259,7 +259,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.groupProps",
+            "inheritedFrom": "groupProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -282,7 +282,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.groupLabelProps",
+            "inheritedFrom": "groupLabelProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -305,7 +305,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.shortcutProps",
+            "inheritedFrom": "shortcutProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -339,7 +339,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.separatorProps",
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -383,7 +383,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.inputProps",
+            "inheritedFrom": "inputProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -547,7 +547,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.emptyProps",
+            "inheritedFrom": "emptyProps",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": [
               {
@@ -570,7 +570,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.emptyLabel",
+            "inheritedFrom": "emptyLabel",
             "sourcePath": "headless/src/components/command/types.ts",
             "referencedTypes": []
           },
@@ -623,7 +623,7 @@
             "required": false,
             "description": "The default value of the selected item(s).\n\nUse this when you need to set the initial state of the items.",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -633,7 +633,7 @@
             "required": false,
             "description": "The controlled value of the selected item(s).\n\nUse this when you need to control the state of the items. Can be bound with `v-model`",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -709,7 +709,7 @@
             "required": false,
             "description": "Determines whether a \"single\" or \"multiple\" items can be selected at a time.\n\nThis prop will overwrite the inferred type from `modelValue` and `defaultValue`.",
             "default": null,
-            "inheritedFrom": "CommandCompactProps.multiple",
+            "inheritedFrom": "multiple",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           }
@@ -838,7 +838,7 @@
           {
             "name": "CommandCompactEmits",
             "kind": "typeAlias",
-            "type": "import(\"@soybeanjs/headless\").SelectionEmits<false> & { highlight: [payload?: import(\"@soybeanjs/headless/composables\").CollectionItemData<import(\"@soybeanjs/headless\").ListboxCollectionItemData>]; entryFocus: [event: CustomEvent]; leave: [event: Event]; } & CommandItemEmits & import(\"../../../node_modules/@soybeanjs/headless/src/components/command/types\").CommandSearchTermEmits",
+            "type": "import(\"@soybeanjs/headless\").SelectionEmits<false> & { highlight: [payload?: import(\"@soybeanjs/headless/composables\").CollectionItemData<import(\"@soybeanjs/headless\").ListboxCollectionItemData>]; entryFocus: [event: CustomEvent]; leave: [event: Event]; } & import(\"@soybeanjs/headless\").CommandItemEmits & import(\"../../../node_modules/@soybeanjs/headless/src/components/command/types\").CommandSearchTermEmits",
             "resolvedType": "{ \"update:modelValue\": [value: string]; highlight: [payload?: CollectionItemData<ListboxCollectionItemData> | undefined]; entryFocus: [event: CustomEvent<any>]; leave: [event: Event]; select: [event: SelectEvent<string>]; \"update:searchTerm\": [value: string] }",
             "description": "",
             "sourcePath": "headless/src/components/command/types.ts",
@@ -1054,7 +1054,7 @@
         "resolvedType": "{ items: CommandOptionData<T>[]; placeholder?: string; searchTerm?: string; clearable?: boolean; fuseOptions?: UseFuseOptions<CommandSearchOptionData<T>>; listProps?: CommandListProps; itemProps?: CommandItemProps; itemLabelProps?: CommandItemLabelProps; groupProps?: CommandGroupProps; groupLabelProps?: CommandGroupLabelProps; shortcutProps?: CommandShortcutProps; separatorProps?: CommandSeparatorProps; inputProps?: CommandInputProps; emptyProps?: CommandEmptyProps; emptyLabel?: string; disabled?: boolean; dir?: Direction; name?: string; defaultValue?: string; modelValue?: string; highlightOnHover?: boolean; required?: boolean; orientation?: DataOrientation; selectionBehavior?: SelectionBehavior; multiple?: false }",
         "description": "",
         "sourcePath": "headless/src/components/command/types.ts",
-        "typeParameters": ["T extends CommandSingleOptionData = CommandSingleOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "items",
@@ -1556,7 +1556,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with listbox",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/listbox/types.ts",
             "referencedTypes": []
           },
@@ -1566,7 +1566,7 @@
             "required": false,
             "description": "The reading direction of the listbox when applicable. <br> If omitted, inherits globally from `ConfigProvider` or\nassumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/listbox/types.ts",
             "referencedTypes": [
               {
@@ -1589,7 +1589,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1599,7 +1599,7 @@
             "required": false,
             "description": "The default value of the selected item(s).\n\nUse this when you need to set the initial state of the items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "Omit.defaultValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -1609,7 +1609,7 @@
             "required": false,
             "description": "The controlled value of the selected item(s).\n\nUse this when you need to control the state of the items. Can be bound with `v-model`",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "Omit.modelValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -1619,7 +1619,7 @@
             "required": false,
             "description": "When `true`, hover over item will trigger highlight",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "highlightOnHover",
             "sourcePath": "headless/src/components/listbox/types.ts",
             "referencedTypes": []
           },
@@ -1629,7 +1629,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1639,7 +1639,7 @@
             "required": false,
             "description": "The orientation of the listbox. <br>Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/listbox/types.ts",
             "referencedTypes": [
               {
@@ -1662,7 +1662,7 @@
             "required": false,
             "description": "How multiple selection should behave in the collection.",
             "default": "'toggle'",
-            "inheritedFrom": null,
+            "inheritedFrom": "selectionBehavior",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": [
               {
@@ -1685,7 +1685,7 @@
             "required": false,
             "description": "Determines whether a \"single\" or \"multiple\" items can be selected at a time.\n\nThis prop will overwrite the inferred type from `modelValue` and `defaultValue`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "Omit.multiple",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           }
@@ -1696,7 +1696,7 @@
       "emits": {
         "kind": "emits",
         "name": "CommandCompactEmits",
-        "type": "TypeAlias CommandCompactEmits",
+        "type": "TypeAlias CommandCompactEmits: CommandRootEmits & CommandItemEmits & CommandSearchTermEmits",
         "resolvedType": "{ \"update:modelValue\": [value: string]; highlight: [payload?: CollectionItemData<ListboxCollectionItemData> | undefined]; entryFocus: [event: CustomEvent<any>]; leave: [event: Event]; select: [event: SelectEvent<string>]; \"update:searchTerm\": [value: string] }",
         "description": "",
         "sourcePath": "headless/src/components/command/types.ts",
@@ -1819,7 +1819,7 @@
         "resolvedType": "{ \"input-leading\"?: ((props: CommandCompactInputSlotProps) => any); \"input-trailing\"?: ((props: CommandCompactInputSlotProps) => any); empty?: (() => any); \"item-leading\"?: ((props: CommandCompactItemSlotProps<T>) => any); \"item-trailing\"?: ((props: CommandCompactItemSlotProps<T>) => any); \"item-label\"?: ((props: CommandCompactItemSlotProps<T>) => any); bottom?: (() => any) }",
         "description": "",
         "sourcePath": "headless/src/components/command/types.ts",
-        "typeParameters": ["T extends CommandSingleOptionData = CommandSingleOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
