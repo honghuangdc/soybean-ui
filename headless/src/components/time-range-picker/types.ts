@@ -90,5 +90,14 @@ export type TimeRangePickerCompactSlots = {
     open: boolean;
   }) => any;
   trigger?: (props: { displayValue: string; modelValue: TimeRange; open: boolean }) => any;
-  time?: (props: { label: string; value: TimeValue; disabled: boolean }) => any;
+  time?: (props: {
+    label: string;
+    time: TimeValue;
+    disabled: boolean;
+    focused: boolean;
+    highlighted: boolean;
+    selected: boolean;
+    rangeStart: boolean;
+    rangeEnd: boolean;
+  }) => any;
 };

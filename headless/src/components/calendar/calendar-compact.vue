@@ -1,7 +1,6 @@
 <script setup lang="ts" generic="M extends boolean = false">
 import { useForwardListeners, useOmitProps } from '../../composables';
 import Icon from '../_icon/icon.vue';
-import { useCalendarUi } from './context';
 import CalendarRoot from './calendar-root.vue';
 import CalendarHeader from './calendar-header.vue';
 import CalendarHeading from './calendar-heading.vue';
@@ -41,8 +40,6 @@ const forwardedProps = useOmitProps(props, [
 ]);
 
 const listeners = useForwardListeners(emit);
-
-const ui = useCalendarUi();
 </script>
 
 <template>

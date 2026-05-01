@@ -90,6 +90,11 @@ export type DateRangePickerCompactSlots = {
     setRange: (range: DateRange) => void;
     open: boolean;
   }) => any;
-  trigger?: (props: { open: boolean }) => any;
-  calendar?: (props: { modelValue: DateRange; placeholder: DateValue }) => any;
+  trigger?: (props: { modelValue: DateRange; open: boolean }) => any;
+  calendar?: (props: {
+    modelValue: DateRange;
+    placeholder: DateValue;
+    setPlaceholder: (date: DateValue) => void;
+    setRange: (range: DateRange) => void;
+  }) => any;
 };

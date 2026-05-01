@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useForwardListeners, useOmitProps } from '../../composables';
 import Icon from '../_icon/icon.vue';
-import { useRangeCalendarUi } from './context';
 import RangeCalendarRoot from './range-calendar-root.vue';
 import RangeCalendarHeader from './range-calendar-header.vue';
 import RangeCalendarHeading from './range-calendar-heading.vue';
@@ -41,8 +40,6 @@ const forwardedProps = useOmitProps(props, [
 ]);
 
 const listeners = useForwardListeners(emit);
-
-const ui = useRangeCalendarUi();
 </script>
 
 <template>

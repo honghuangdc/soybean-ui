@@ -23,10 +23,16 @@ const listeners = useForwardListeners(emit);
 <template>
   <DateRangePickerRoot v-slot="slotProps" v-bind="forwardedProps" v-on="listeners">
     <DateRangePickerTrigger v-bind="triggerProps">
-      <slot name="trigger" :open="slotProps.open" />
+      <slot name="trigger" :open="slotProps.open" :model-value="slotProps.modelValue" />
     </DateRangePickerTrigger>
     <DateRangePickerPopup v-bind="popupProps">
-      <slot name="calendar" :model-value="slotProps.modelValue" :placeholder="slotProps.placeholder" />
+      <slot
+        name="calendar"
+        :model-value="slotProps.modelValue"
+        :placeholder="slotProps.placeholder"
+        :set-range="slotProps.setRange"
+        :set-placeholder="slotProps.setPlaceholder"
+      />
     </DateRangePickerPopup>
     <slot v-bind="slotProps" />
   </DateRangePickerRoot>
