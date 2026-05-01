@@ -34,7 +34,25 @@ All components support tree-shaking, so you only bundle what you actually use—
 
 ## Architecture
 
-SoybeanUI consists of two core packages, each with its own purpose and value:
+SoybeanUI is built on a strict **two-layer separation** model:
+
+```
+┌─────────────────────────────────────────┐
+│           @soybeanjs/ui (src/)          │
+│  S-prefixed components   (SButton…)     │
+│  UnoCSS classes · tailwind-variants     │
+│  provideXUi(ui)  ──────────────────┐    │
+└────────────────────────────────────┼────┘
+                                     │ style injection
+┌────────────────────────────────────▼────┐
+│        @soybeanjs/headless (headless/)  │
+│  Logic · State · A11y · Keyboard nav    │
+│  useUiContext() reads injected classes  │
+│  Zero styles — works with any CSS       │
+└─────────────────────────────────────────┘
+```
+
+**Data flow is strictly one-way**: `headless` → `src`. The styled layer never imports from headless's internals — it injects style tokens via `provideXUi(computedUi)` which headless components read through `useUiContext()`.
 
 ### @soybeanjs/headless - Logic layer
 
@@ -45,6 +63,7 @@ This is the core foundation of SoybeanUI, responsible for handling all component
 - **Keyboard interactions**: comprehensive keyboard navigation
 - **Focus management**: intelligent focus trapping and restoration
 - **Event handling**: a unified event handling mechanism
+- **Compact aggregators**: ready-to-use aggregated components for data-driven scenarios
 
 Headless components contain no styles at all, giving you maximum freedom to build your own design system. If you want full control over the look and feel—or need a unique design system—`@soybeanjs/headless` is the best choice.
 
@@ -56,14 +75,45 @@ This is the styled component library built on top of Headless:
 - **Ready to use**: works out of the box with minimal setup
 - **Theme support**: built-in theme presets, including light/dark mode
 - **Responsive design**: optimized for different screen sizes
+- **Flexible customization**: override any slot's style classes via the `ui` prop
 
-If you want to get started quickly or prefer SoybeanUI’s default look, `@soybeanjs/ui` is the recommended choice.
+If you want to get started quickly or prefer SoybeanUI's default look, `@soybeanjs/ui` is the recommended choice.
+
+### Component Patterns
+
+SoybeanUI supports three component patterns:
+
+#### 1. Multi-slot Base Components
+
+For complex components that need fine-grained control over each part (like Accordion, Dialog, Card):
+
+- Headless exposes multiple primitive components (Root, Trigger, Content, etc.)
+- Uses `UiSlot` + `UiClass` to define style slots
+- UI layer injects styles via `provide{Name}Ui(ui)`
+
+#### 2. Compact Aggregators
+
+For data-driven scenarios with stable structures (like lists, tables, form groups):
+
+- Headless handles data iteration, default content, and structure composition
+- Exposes `{Name}Compact` component with corresponding Props/Emits/Slots types
+- UI wrapper focuses on style variants and prop/slot forwarding
+- Examples: `AccordionCompact`, `TableCompact`, `CheckboxGroupCompact`
+
+When you have a stable data list to render, Compact components let you accomplish the task with more concise code.
+
+#### 3. Single-class Components
+
+For simple atomic components (like Button, Link, Badge):
+
+- No UiContext
+- UI layer directly uses `cn(variants(...), props.class)` to merge styles
 
 ## Key features
 
 ### ✨ Rich component ecosystem
 
-SoybeanUI provides 46+ high-quality components covering most common web application scenarios:
+SoybeanUI provides 74+ high-quality components covering most common web application scenarios:
 
 - **Basic**: Button, Input, Card, Badge, etc.
 - **Forms**: Form, Select, Checkbox, RadioGroup, Switch, etc.
@@ -76,11 +126,12 @@ SoybeanUI provides 46+ high-quality components covering most common web applicat
 
 SoybeanUI includes a powerful theme system that supports:
 
-- **Multiple color schemes**: primary, destructive, success, warning, info, carbon, secondary, accent, etc.
-- **Multiple sizes**: xs, sm, md, lg, xl, 2xl
-- **Multiple variants**: solid, outline, ghost, link, plain, dashed, soft, raw
+- **8 semantic colors**: `primary` · `destructive` · `success` · `warning` · `info` · `carbon` · `secondary` · `accent`
+- **6 sizes**: `xs` · `sm` · `md` · `lg` · `xl` · `2xl` (base `md` = 16px)
+- **Multiple variants**: `solid`, `outline`, `ghost`, `link`, `plain`, `dashed`, `soft`, `raw`
 - **Dark mode**: full dark theme support
-- **Custom themes**: easily extend and customize theme configuration
+- **ConfigProvider**: unified configuration for `dir`, `locale`, `nonce`, and global tooltip options
+- **cn() utility**: Tailwind-aware class merge (`clsx` + `tailwind-merge`) for conflict-free composition
 
 ### 🚀 Performance
 

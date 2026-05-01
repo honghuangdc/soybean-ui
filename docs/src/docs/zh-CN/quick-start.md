@@ -134,7 +134,11 @@ export default defineNuxtConfig({
 
 ## 使用 Headless 组件
 
-如果你选择使用 `@soybeanjs/headless`，你需要自己编写样式。以下是一个简单的示例：
+如果你选择使用 `@soybeanjs/headless`，你需要自己编写样式。Headless 组件提供两种使用方式：
+
+### 方式一：使用基础组件（精细控制）
+
+适用于需要完全自定义结构和样式的场景：
 
 ```vue
 <script setup>
@@ -158,6 +162,78 @@ import { AccordionRoot, AccordionItem, AccordionTrigger, AccordionContent } from
 /* 在这里添加你的自定义样式 */
 </style>
 ```
+
+### 方式二：使用 Compact 组件（数据驱动）
+
+适用于结构稳定、数据驱动的场景，代码更简洁：
+
+```vue
+<script setup>
+import { AccordionCompact } from '@soybeanjs/headless';
+
+const items = [
+  {
+    value: 'item-1',
+    title: '这是标题',
+    description: '这是内容区域，你可以在这里放置任何内容。'
+  },
+  {
+    value: 'item-2',
+    title: '另一个标题',
+    description: '另一个内容区域。'
+  }
+];
+</script>
+
+<template>
+  <AccordionCompact :items="items" />
+</template>
+
+<style scoped>
+/* 在这里添加你的自定义样式 */
+</style>
+```
+
+Compact 组件由 headless 层负责数据遍历和默认内容渲染，让你用更少的代码完成常见任务。目前支持 Compact 模式的组件包括：
+
+- `AccordionCompact` - 手风琴
+- `AffixCompact` - 固钉
+- `AlertCompact` - 警告提示
+- `AnchorCompact` - 锚点
+- `AutocompleteCompact` - 自动完成
+- `BottomSheetCompact` - 底部抽屉
+- `BreadcrumbCompact` - 面包屑
+- `CalendarCompact` - 日历
+- `CardCompact` - 卡片
+- `CheckboxCompact` / `CheckboxGroupCompact` / `CheckboxCardCompact` / `CheckboxCardGroupCompact` - 复选框
+- `ComboboxCompact` - 组合框
+- `CommandCompact` - 命令面板
+- `ContextMenuCompact` / `ContextMenuCheckboxCompact` / `ContextMenuRadioCompact` - 右键菜单
+- `DateFieldCompact` - 日期输入
+- `DateRangeFieldCompact` - 日期范围输入
+- `DateRangePickerCompact` - 日期范围选择器
+- `DialogCompact` - 对话框
+- `DropdownMenuCompact` / `DropdownMenuCheckboxCompact` / `DropdownMenuRadioCompact` - 下拉菜单
+- `EditableCompact` - 可编辑文本
+- `HoverCardCompact` - 悬浮卡片
+- `InputOtpCompact` - OTP 输入
+- `LayoutCompact` / `LayoutClassicCompact` - 布局
+- `MenuOptionCompact` / `MenuOptionsCompact` / `MenuCheckboxOptionsCompact` / `MenuRadioOptionsCompact` - 菜单
+- `MenubarCompact` - 菜单栏
+- `NavigationMenuCompact` - 导航菜单
+- `PaginationCompact` - 分页
+- `PopoverCompact` - 气泡卡片
+- `RadioGroupCompact` - 单选框组
+- `RangeCalendarCompact` - 日期范围日历
+- `SegmentCompact` - 分段控制器
+- `SelectCompact` - 选择器
+- `StepperCompact` - 步进器
+- `TableCompact` - 表格
+- `TabsCompact` - 标签页
+- `TimeRangeFieldCompact` - 时间范围输入
+- `TimeRangePickerCompact` - 时间范围选择器
+
+共 36 个组件支持 Compact 模式，覆盖大部分数据驱动的使用场景。
 
 ## 主题配置
 

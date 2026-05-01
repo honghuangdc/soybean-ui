@@ -134,7 +134,11 @@ After that, you can use all SoybeanUI components in your Nuxt project without ad
 
 ## Using Headless components
 
-If you choose `@soybeanjs/headless`, you’ll need to write your own styles. Here is a simple example:
+If you choose `@soybeanjs/headless`, you'll need to write your own styles. Headless components offer two usage patterns:
+
+### Option 1: Using Base Components (Fine-grained Control)
+
+For scenarios that need complete control over structure and styling:
 
 ```vue
 <script setup>
@@ -158,6 +162,78 @@ import { AccordionRoot, AccordionItem, AccordionTrigger, AccordionContent } from
 /* Add your custom styles here */
 </style>
 ```
+
+### Option 2: Using Compact Components (Data-driven)
+
+For stable structures with data-driven scenarios, offering more concise code:
+
+```vue
+<script setup>
+import { AccordionCompact } from '@soybeanjs/headless';
+
+const items = [
+  {
+    value: 'item-1',
+    title: 'Title',
+    description: 'This is the content area. You can put anything here.'
+  },
+  {
+    value: 'item-2',
+    title: 'Another title',
+    description: 'Another content area.'
+  }
+];
+</script>
+
+<template>
+  <AccordionCompact :items="items" />
+</template>
+
+<style scoped>
+/* Add your custom styles here */
+</style>
+```
+
+Compact components are managed by the headless layer for data iteration and default content rendering, letting you accomplish common tasks with less code. Currently supported Compact components include:
+
+- `AccordionCompact` - Accordion
+- `AffixCompact` - Affix
+- `AlertCompact` - Alert
+- `AnchorCompact` - Anchor
+- `AutocompleteCompact` - Autocomplete
+- `BottomSheetCompact` - Bottom Sheet
+- `BreadcrumbCompact` - Breadcrumb
+- `CalendarCompact` - Calendar
+- `CardCompact` - Card
+- `CheckboxCompact` / `CheckboxGroupCompact` / `CheckboxCardCompact` / `CheckboxCardGroupCompact` - Checkbox
+- `ComboboxCompact` - Combobox
+- `CommandCompact` - Command
+- `ContextMenuCompact` / `ContextMenuCheckboxCompact` / `ContextMenuRadioCompact` - Context Menu
+- `DateFieldCompact` - Date Field
+- `DateRangeFieldCompact` - Date Range Field
+- `DateRangePickerCompact` - Date Range Picker
+- `DialogCompact` - Dialog
+- `DropdownMenuCompact` / `DropdownMenuCheckboxCompact` / `DropdownMenuRadioCompact` - Dropdown Menu
+- `EditableCompact` - Editable
+- `HoverCardCompact` - Hover Card
+- `InputOtpCompact` - Input OTP
+- `LayoutCompact` / `LayoutClassicCompact` - Layout
+- `MenuOptionCompact` / `MenuOptionsCompact` / `MenuCheckboxOptionsCompact` / `MenuRadioOptionsCompact` - Menu
+- `MenubarCompact` - Menubar
+- `NavigationMenuCompact` - Navigation Menu
+- `PaginationCompact` - Pagination
+- `PopoverCompact` - Popover
+- `RadioGroupCompact` - Radio Group
+- `RangeCalendarCompact` - Range Calendar
+- `SegmentCompact` - Segment
+- `SelectCompact` - Select
+- `StepperCompact` - Stepper
+- `TableCompact` - Table
+- `TabsCompact` - Tabs
+- `TimeRangeFieldCompact` - Time Range Field
+- `TimeRangePickerCompact` - Time Range Picker
+
+A total of 36 components support Compact mode, covering most data-driven usage scenarios.
 
 ## Theme configuration
 
