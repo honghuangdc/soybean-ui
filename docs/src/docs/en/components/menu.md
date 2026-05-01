@@ -47,35 +47,4 @@ function handleSelect(item: MenuOptionData) {
 
 ## API
 
-### SMenuOptions Props
-
-<DataTable preset="props" :data="[
-  { name: 'items', type: 'MenuOptionData[]', required: true, description: 'Menu data array' },
-  { name: 'groupProps', type: 'MenuGroupProps', default: '-', description: 'Props for the menu group' }
-]"/>
-
-### SMenuOptions Events
-
-<DataTable preset="emits" :data="[
-  { name: 'select', parameters: '(item: MenuOptionData, event: Event) => void', description: 'Triggered when an item is selected' }
-]"/>
-
-### MenuOptionData Type
-
-<TypeTable :data="[
-  {
-    name: 'MenuOptionData',
-    description: 'Data structure for menu items',
-    fields: [
-      { name: 'label', type: 'string', description: 'Display label' },
-      { name: 'value', type: 'any', description: 'Unique value' },
-      { name: 'icon', type: 'string', description: 'Icon name (Iconify)' },
-      { name: 'shortcut', type: 'string', description: 'Keyboard shortcut' },
-      { name: 'disabled', type: 'boolean', description: 'Disabled state' },
-      { name: 'separator', type: 'boolean', description: 'Show separator before this item' },
-      { name: 'isGroupLabel', type: 'boolean', description: 'Render as group label' },
-      { name: 'children', type: 'MenuOptionData[]', description: 'Submenu items' },
-      { name: 'linkProps', type: 'LinkProps', description: 'Render as link' }
-    ]
-  }
-]"/>
+<ComponentApi component="menu" />

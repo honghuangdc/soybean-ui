@@ -47,35 +47,4 @@ function handleSelect(item: MenuOptionData) {
 
 ## API
 
-### SMenuOptions Props
-
-<DataTable preset="props" :data="[
-  { name: 'items', type: 'MenuOptionData[]', required: true, description: '菜单数据数组' },
-  { name: 'groupProps', type: 'MenuGroupProps', default: '-', description: '菜单分组的属性' }
-]"/>
-
-### SMenuOptions Events
-
-<DataTable preset="emits" :data="[
-  { name: 'select', parameters: '(item: MenuOptionData, event: Event) => void', description: '选择菜单项时触发' }
-]"/>
-
-### MenuOptionData Type
-
-<TypeTable :data="[
-  {
-    name: 'MenuOptionData',
-    description: 'Data structure for menu items',
-    fields: [
-      { name: 'label', type: 'string', description: 'Display label' },
-      { name: 'value', type: 'any', description: 'Unique value' },
-      { name: 'icon', type: 'string', description: 'Icon name (Iconify)' },
-      { name: 'shortcut', type: 'string', description: 'Keyboard shortcut' },
-      { name: 'disabled', type: 'boolean', description: 'Disabled state' },
-      { name: 'separator', type: 'boolean', description: 'Show separator before this item' },
-      { name: 'isGroupLabel', type: 'boolean', description: 'Render as group label' },
-      { name: 'children', type: 'MenuOptionData[]', description: 'Submenu items' },
-      { name: 'linkProps', type: 'LinkProps', description: 'Render as link' }
-    ]
-  }
-]"/>
+<ComponentApi component="menu" />
