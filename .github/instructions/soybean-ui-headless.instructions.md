@@ -43,7 +43,7 @@ applyTo: 'headless/src/components/**/*.{ts,vue}'
 3. 基础分片组件 SFC
 4. 必要时新增 `{Name}Compact`
 5. `index.ts`
-6. 接入 `headless/src/index.ts`、`headless/src/constants/components.ts`、`headless/src/namespaced/index.ts`
+6. 接入 `headless/src/index.ts`，然后运行 `pnpm gen:headless` 更新 `headless/src/constants/components.ts` 和 `headless/src/namespaced/index.ts`
 
 ## Step 1：types.ts
 
@@ -114,8 +114,7 @@ applyTo: 'headless/src/components/**/*.{ts,vue}'
 
 - `index.ts` 导出组件、`provide{Name}Ui` 和相关 types
 - 正式出口还要同步接入 `headless/src/index.ts`
-- 同步更新 `headless/src/constants/components.ts`
-- 同步更新 `headless/src/namespaced/index.ts`
+- 接入后运行 `pnpm gen:headless` 自动更新 `headless/src/constants/components.ts` 与 `headless/src/namespaced/index.ts`（这两个文件由脚本生成，不要手动编辑）
 
 场景 B 与场景 C 里，只要组件仍是正式公开组件，这一步就不能跳过。
 

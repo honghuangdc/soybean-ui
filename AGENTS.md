@@ -6,10 +6,29 @@ This repository keeps the normative AI coding rules under `.github/`.
 
 For any AI assistant working in this repository:
 
-1. Read `.github/assistant-rules.md` first.
-2. Then follow `.github/copilot-instructions.md` and the relevant files under `.github/instructions/`.
-3. If multiple `AGENTS.md` files apply, the nearest scoped file only narrows which `.github` rules to read for the current path.
-4. If any bridge file conflicts with `.github`, `.github` wins.
+- If any bridge file conflicts with `.github/`, `.github/` wins.
+- If multiple `AGENTS.md` files apply, the nearest scoped file only narrows which `.github` rules to read for the current path.
+
+**Universal rules (read for every edit):**
+
+- `.github/instructions/import-order.instructions.md`
+- `.github/instructions/typescript-functional-style.instructions.md`
+- `.github/instructions/vue-sfc.instructions.md` (for .vue files)
+
+**Component work (editing `headless/` or `src/components/`):**
+
+- `.github/instructions/soybean-ui-component-overview.instructions.md`
+- `.github/instructions/soybean-ui-headless.instructions.md` (for `headless/src/components/`)
+- `.github/instructions/soybean-ui-ui-layer.instructions.md` (for `src/components/`)
+- `.github/instructions/soybean-ui-accessibility-rtl.instructions.md`
+
+**Delivery surfaces:**
+
+- `.github/instructions/soybean-ui-playground.instructions.md` (for `playground/`)
+- `.github/instructions/soybean-ui-docs.instructions.md` (for `docs/`)
+- `.github/instructions/soybean-ui-testing.instructions.md` (for `test/`)
+
+**Commit / changelog:** `.github/instructions/git-commit-convention.instructions.md`
 
 The remaining content in this file is repository knowledge and project context. It is informative, but the rule source of truth stays in `.github/`.
 
@@ -61,6 +80,8 @@ pnpm test             # vitest run (happy-dom, @vue/test-utils)
 pnpm typecheck        # vue-tsc --noEmit --skipLibCheck
 pnpm release          # Publish packages (soy release)
 pnpm stub             # tsx scripts/stub.ts — link src to dist for local dev
+pnpm gen:headless     # Regenerate headless/src/constants/components.ts + headless/src/namespaced/index.ts from headless/src/index.ts
+pnpm gen:ui           # Regenerate src/constants/components.ts from src/index.ts
 ```
 
 - **Pre-commit hook** (simple-git-hooks): `pnpm typecheck && pnpm lint-staged`

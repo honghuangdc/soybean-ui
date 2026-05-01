@@ -1,5 +1,5 @@
 ---
-applyTo: '**/*.{ts,tsx,js,jsx,vue,md}'
+applyTo: '{headless/src/components,src/components,playground/examples,test/specs/components,docs/src/docs}/**/*.{ts,vue,md}'
 ---
 
 # SoybeanUI 组件开发总览
@@ -162,9 +162,8 @@ headless 稳定后，再完成 UI 层。默认顺序：
 
 - `headless/src/index.ts`
 - `src/index.ts`
-- `headless/src/constants/components.ts`
-- `src/constants/components.ts`
-- `headless/src/namespaced/index.ts`
+- 运行 `pnpm gen:headless` → 自动更新 `headless/src/constants/components.ts` 与 `headless/src/namespaced/index.ts`
+- 运行 `pnpm gen:ui` → 自动更新 `src/constants/components.ts`
 
 不要把这些出口面留到最后忘记补。
 
@@ -209,11 +208,8 @@ headless 稳定后，再完成 UI 层。默认顺序：
 
 - `headless/src/components/{component}/`
 - `src/components/{component}/`
-- `headless/src/index.ts`
-- `src/index.ts`
-- `headless/src/constants/components.ts`
-- `src/constants/components.ts`
-- `headless/src/namespaced/index.ts`
+- `headless/src/index.ts`（更新后运行 `pnpm gen:headless`）
+- `src/index.ts`（更新后运行 `pnpm gen:ui`）
 - `playground/examples/{component}/`
 - `docs/src/docs/zh-CN/components/{component}.md`
 - `docs/src/docs/en/components/{component}.md`
@@ -227,10 +223,7 @@ headless 稳定后，再完成 UI 层。默认顺序：
 ## 出口面规则
 
 - `headless/src/index.ts` 与 `src/index.ts` 必须 re-export 新组件
-- 两侧 `constants/components.ts` 的 key 使用 camelCase，按字母顺序插入
-- headless 侧常量值使用无 `S` 前缀的 PascalCase 组件名数组；存在聚合入口时包含 `{Name}Compact`
-- UI 侧常量值使用带 `S` 前缀的组件名数组
-- `headless/src/namespaced/index.ts` 的 import 和 namespace 对象都按字母顺序维护；存在聚合入口时同步暴露 `Compact`
+- `headless/src/constants/components.ts`、`src/constants/components.ts`、`headless/src/namespaced/index.ts` 均为脚本生成文件，不要手动编辑；更新 index.ts 后运行对应命令：`pnpm gen:headless`（headless 侧）、`pnpm gen:ui`（UI 侧）
 
 ## 结果说明
 

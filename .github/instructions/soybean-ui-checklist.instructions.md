@@ -1,5 +1,5 @@
 ---
-applyTo: '**/*.{ts,tsx,js,jsx,vue,md}'
+applyTo: '{headless/src/components,src/components}/**/*.{ts,vue}'
 ---
 
 # SoybeanUI 组件任务收尾清单
@@ -34,8 +34,8 @@ applyTo: '**/*.{ts,tsx,js,jsx,vue,md}'
 ## 集成出口
 
 - `headless/src/index.ts` 与 `src/index.ts` 已更新
-- 两侧 `constants/components.ts` 已按字母顺序更新
-- `headless/src/namespaced/index.ts` 已同步更新
+- `pnpm gen:headless` 已运行（更新 `headless/src/constants/components.ts` 与 `headless/src/namespaced/index.ts`）
+- `pnpm gen:ui` 已运行（更新 `src/constants/components.ts`）
 
 - 新建组件时，已检查并补齐完整交付面的其余入口
 - 为现有组件加功能或修 bug 时，已同步更新所有受影响层和出口面

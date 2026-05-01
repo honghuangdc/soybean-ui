@@ -39,7 +39,7 @@ headless 稳定后，再按下面顺序做 UI：
 2. `types.ts`
 3. wrapper `.vue`
 4. `index.ts`
-5. 接入 `src/index.ts` 与 `src/constants/components.ts`
+5. 接入 `src/index.ts`，然后运行 `pnpm gen:ui` 更新 `src/constants/components.ts`
 
 ## Step 1：variants.ts
 
@@ -108,7 +108,7 @@ headless 稳定后，再按下面顺序做 UI：
 ## Step 5：注册到 UI 出口
 
 - 更新 `src/index.ts`
-- 更新 `src/constants/components.ts`
+- 运行 `pnpm gen:ui` 更新 `src/constants/components.ts`（该文件由脚本生成，不要手动编辑）
 
 完成 UI 阶段后，再进入 playground、docs、tests。
 
