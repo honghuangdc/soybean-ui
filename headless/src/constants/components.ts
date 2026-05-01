@@ -183,6 +183,7 @@ export const components = {
     'DropdownMenuWrapperCompact'
   ],
   editable: [
+    'EditableCompact',
     'EditableArea',
     'EditableCancelTrigger',
     'EditableEditTrigger',
@@ -194,6 +195,7 @@ export const components = {
   empty: ['EmptyRoot', 'EmptyHeader', 'EmptyMedia', 'EmptyContent', 'EmptyTitle', 'EmptyDescription'],
   form: ['FormField', 'FormLabel', 'FormControl', 'FormDescription', 'FormError'],
   hoverCard: [
+    'HoverCardCompact',
     'HoverCardRoot',
     'HoverCardTrigger',
     'HoverCardPortal',
@@ -289,6 +291,7 @@ export const components = {
   ],
   pageTabs: ['PageTabsRoot', 'PageTabsItem', 'PageTabsClose', 'PageTabsPin'],
   pagination: [
+    'PaginationCompact',
     'PaginationRoot',
     'PaginationList',
     'PaginationListItem',
@@ -299,6 +302,7 @@ export const components = {
     'PaginationEllipsis'
   ],
   popover: [
+    'PopoverCompact',
     'PopoverRoot',
     'PopoverTrigger',
     'PopoverAnchor',
@@ -348,6 +352,7 @@ export const components = {
   slider: ['SliderRoot', 'SliderTrack', 'SliderRange', 'SliderThumb'],
   slot: ['Slot'],
   stepper: [
+    'StepperCompact',
     'StepperRoot',
     'StepperItem',
     'StepperTrigger',
