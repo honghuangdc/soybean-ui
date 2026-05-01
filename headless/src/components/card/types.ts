@@ -45,7 +45,6 @@ export type CardCompactEmits = CardRootEmits;
 export interface CardCompactSlots {
   default?: () => any;
   header?: () => any;
-  'title-root'?: () => any;
   title?: () => any;
   'title-leading'?: () => any;
   'title-trailing'?: () => any;

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useForwardListeners, useOmitProps } from '../../composables';
-import { useHoverCardUi } from './context';
 import HoverCardRoot from './hover-card-root.vue';
 import HoverCardTrigger from './hover-card-trigger.vue';
 import HoverCardPortal from '../portal/portal.vue';
@@ -35,8 +34,6 @@ const forwardedProps = useOmitProps(props, [
 ]);
 
 const listeners = useForwardListeners(emit);
-
-const ui = useHoverCardUi();
 
 const positionerProps = computed(() => {
   return {

@@ -54,7 +54,7 @@ const ui = usePaginationUi();
           <Icon icon="lucide:chevron-left" />
         </slot>
       </PaginationPrev>
-      <template v-for="item in items" :key="item">
+      <template v-for="(item, index) in items" :key="item.type === 'page' ? `page-${item.value}` : `ellipsis-${index}`">
         <PaginationListItem v-if="item.type === 'page'" v-bind="listItemProps" :value="item.value" />
         <PaginationEllipsis v-else-if="item.type === 'ellipsis'" v-bind="ellipsisProps">
           <slot name="ellipsis">

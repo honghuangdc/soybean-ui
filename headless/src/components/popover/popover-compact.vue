@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useForwardListeners, usePickProps } from '../../composables';
-import { usePopoverUi } from './context';
+import { useForwardListeners, useOmitProps } from '../../composables';
 import PopoverRoot from './popover-root.vue';
 import PopoverTrigger from './popover-trigger.vue';
 import PopoverPortal from '../portal/portal.vue';
@@ -25,11 +24,18 @@ const emit = defineEmits<PopoverCompactEmits>();
 
 const slots = defineSlots<PopoverCompactSlots>();
 
-const forwardedRootProps = usePickProps(props, ['defaultOpen', 'open', 'modal']);
+const forwardedRootProps = useOmitProps(props, [
+  'placement',
+  'showArrow',
+  'triggerProps',
+  'portalProps',
+  'positionerProps',
+  'popupProps',
+  'arrowProps',
+  'closeProps'
+]);
 
 const listeners = useForwardListeners(emit);
-
-const ui = usePopoverUi();
 
 const positionerProps = computed(() => {
   return {

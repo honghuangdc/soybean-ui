@@ -9,7 +9,8 @@ import type {
 } from '../../types';
 import type { PrimitiveProps } from '../primitive/types';
 import type { DialogRootEmits, DialogRootProps } from '../dialog/types';
-import type { PopperPopupProps, PopperPositionerProps } from '../popper/types';
+import type { PopperPopupProps, PopperPositionerProps, PopperArrowProps } from '../popper/types';
+import type { PortalProps } from '../portal/types';
 
 export interface PopoverRootProps extends DialogRootProps {}
 
@@ -43,10 +44,10 @@ export interface PopoverCompactProps extends PopoverRootProps {
   placement?: PopperPositionerProps['placement'];
   showArrow?: boolean;
   triggerProps?: PopoverTriggerProps;
-  portalProps?: ForceMountProps;
+  portalProps?: PortalProps;
   positionerProps?: PopoverPositionerProps;
   popupProps?: PopoverPopupProps;
-  arrowProps?: PopperPopupProps;
+  arrowProps?: PopperArrowProps;
   closeProps?: PopoverCloseProps;
 }
 

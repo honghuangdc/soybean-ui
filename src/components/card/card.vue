@@ -36,7 +36,7 @@ type Slots = {
   description: () => any;
 };
 
-defineSlots<Slots>();
+const slots = defineSlots<Slots>();
 
 const ui = computed(() => {
   const variants = cardVariants({
@@ -53,28 +53,28 @@ provideCardUi(ui);
 
 <template>
   <CardCompact v-bind="forwardedProps">
-    <template #header>
+    <template v-if="slots.header" #header>
       <slot name="header" />
     </template>
-    <template #title-leading>
+    <template v-if="slots['title-leading']" #title-leading>
       <slot name="title-leading" />
     </template>
-    <template #title>
+    <template v-if="slots.title" #title>
       <slot name="title" />
     </template>
-    <template #title-trailing>
+    <template v-if="slots['title-trailing']" #title-trailing>
       <slot name="title-trailing" />
     </template>
-    <template #extra>
+    <template v-if="slots.extra" #extra>
       <slot name="extra" />
     </template>
-    <template #description>
+    <template v-if="slots.description" #description>
       <slot name="description" />
     </template>
     <template #default>
       <slot />
     </template>
-    <template #footer>
+    <template v-if="slots.footer" #footer>
       <slot name="footer" />
     </template>
   </CardCompact>

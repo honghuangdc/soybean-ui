@@ -91,7 +91,7 @@ function hasChildren(item: NavigationMenuItemData) {
         <!-- Item with children (trigger + content) -->
         <template v-else>
           <NavigationMenuTrigger v-bind="triggerProps" :disabled="item.disabled" :as-child="isLink(item)">
-            <component :is="isLink(item) ? NavigationMenuLink : 'template'" v-bind="getLinkProps(item)" @select="emit('select', $event)">
+            <NavigationMenuLink v-if="isLink(item)" v-bind="getLinkProps(item)" @select="emit('select', $event)">
               <slot name="item" :item="item" :is-trigger="true">
                 <slot name="item-leading" :item="item" />
                 <span>{{ item.label }}</span>
@@ -100,7 +100,17 @@ function hasChildren(item: NavigationMenuItemData) {
                   <Icon icon="lucide:chevron-down" :aria-hidden="true" />
                 </slot>
               </slot>
-            </component>
+            </NavigationMenuLink>
+            <template v-else>
+              <slot name="item" :item="item" :is-trigger="true">
+                <slot name="item-leading" :item="item" />
+                <span>{{ item.label }}</span>
+                <slot name="item-trailing" :item="item" />
+                <slot name="item-trigger-icon" :item="item">
+                  <Icon icon="lucide:chevron-down" :aria-hidden="true" />
+                </slot>
+              </slot>
+            </template>
           </NavigationMenuTrigger>
           <NavigationMenuContent
             v-bind="contentProps"
