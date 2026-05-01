@@ -10,7 +10,8 @@ defineOptions({
 });
 
 const props = withDefaults(defineProps<HoverCardPositionerProps>(), {
-  avoidCollisions: true
+  avoidCollisions: true,
+  prioritizePosition: true
 });
 
 const emit = defineEmits<HoverCardPositionerEmits>();
