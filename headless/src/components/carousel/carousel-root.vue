@@ -4,7 +4,7 @@ import { computed, shallowRef, watch, watchEffect } from 'vue';
 import { useOmitProps } from '../../composables';
 import { useDirection } from '../config-provider/context';
 import { provideCarouselRootContext, useCarouselUi } from './context';
-import type { CarouselApi, CarouselOptions, CarouselPlugins, CarouselRootEmits, CarouselRootProps } from './types';
+import type { CarouselApi, CarouselOptions, CarouselPlugin, CarouselRootEmits, CarouselRootProps } from './types';
 
 defineOptions({
   name: 'CarouselRoot'
@@ -24,7 +24,7 @@ const orientation = computed(() => props.orientation);
 const ariaLabel = computed(() => (props['aria-labelledby'] ? undefined : (props['aria-label'] ?? 'Carousel')));
 const resolvedTabindex = computed(() => props.tabindex ?? 0);
 const emblaOptions = shallowRef<CarouselOptions>({});
-const emblaPlugins = shallowRef<CarouselPlugins>([]);
+const emblaPlugins = shallowRef<CarouselPlugin[]>([]);
 
 watchEffect(() => {
   emblaOptions.value = {

@@ -1,22 +1,17 @@
-import type emblaCarouselVue from 'embla-carousel-vue';
+import type { EmblaOptionsType as CarouselOptions, EmblaPluginType as CarouselPlugin } from 'embla-carousel';
 import type { EmblaCarouselVueType } from 'embla-carousel-vue';
-import type { MaybeRef } from 'vue';
 import type { ButtonProps } from '../button/types';
 import type { ComputedRef, HTMLAttributes, Ref, ShallowRef } from 'vue';
 import type { DataOrientation, Direction, UiClass } from '../../types';
 
-export type CarouselApi = NonNullable<EmblaCarouselVueType[1]['value']>;
-export type CarouselOptions =
-  NonNullable<Parameters<typeof emblaCarouselVue>[0]> extends MaybeRef<infer Value> ? Value : never;
-export type CarouselPlugins =
-  NonNullable<Parameters<typeof emblaCarouselVue>[1]> extends MaybeRef<infer Value> ? Value : never;
-
 export interface CarouselRootProps extends /** @vue-ignore */ Omit<HTMLAttributes, 'onSelect'> {
   opts?: CarouselOptions;
-  plugins?: CarouselPlugins;
+  plugins?: CarouselPlugin[];
   orientation?: DataOrientation;
   dir?: Direction;
 }
+
+export type CarouselApi = NonNullable<EmblaCarouselVueType[1]['value']>;
 
 export type CarouselRootEmits = {
   initApi: [api: CarouselApi];
@@ -49,3 +44,5 @@ export interface CarouselRootContext {
 export type CarouselUiSlot = 'root' | 'content' | 'container' | 'item' | 'previous' | 'next';
 
 export type CarouselUi = UiClass<CarouselUiSlot>;
+
+export type { CarouselOptions, CarouselPlugin };

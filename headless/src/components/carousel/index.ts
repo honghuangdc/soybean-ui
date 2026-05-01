@@ -12,7 +12,7 @@ export type {
   CarouselItemProps,
   CarouselNextProps,
   CarouselOptions,
-  CarouselPlugins,
+  CarouselPlugin,
   CarouselPreviousProps,
   CarouselRootEmits,
   CarouselRootProps,
