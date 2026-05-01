@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useOmitProps } from '../../composables';
-import AnchorCompactItem from './anchor-compact-item.vue';
+import AnchorCompactItem from './anchor-item-compact.vue';
 import AnchorRoot from './anchor-root.vue';
 import type { AnchorCompactEmits, AnchorCompactProps } from './types';
 

@@ -1,6 +1,6 @@
 import type { HTMLAttributes, ShallowRef } from 'vue';
 import type { PrimitiveProps } from '../primitive/types';
-import type { LinkProps } from '../link/types';
+import type { LinkBaseProps } from '../link/types';
 import type { DataOrientation, Direction, PropsToContext, UiClass } from '../../types';
 
 export type AnchorContainer = HTMLElement | Window;
@@ -10,11 +10,6 @@ export type AnchorHistoryMode = 'push' | 'replace';
 export interface AnchorSection {
   href: string;
   top: number;
-}
-
-export interface AnchorItemData extends Pick<AnchorLinkProps, 'disabled' | 'href' | 'target'> {
-  children?: AnchorItemData[];
-  title?: string;
 }
 
 export interface AnchorRootProps extends PrimitiveProps, /** @vue-ignore */ HTMLAttributes {
@@ -35,14 +30,19 @@ export type AnchorRootEmits = {
   itemSelect: [event: MouseEvent, payload: { href: string }];
 };
 
-export interface AnchorLinkProps
-  extends PrimitiveProps, Pick<LinkProps, 'disabled' | 'target'>, /** @vue-ignore */ HTMLAttributes {
+export interface AnchorLinkProps extends PrimitiveProps, LinkBaseProps, /** @vue-ignore */ HTMLAttributes {
   href: string;
+  disabled?: boolean;
 }
 
-export interface AnchorCompactItemProps extends /** @vue-ignore */ HTMLAttributes {
+export interface AnchorOptionData extends Pick<AnchorLinkProps, 'disabled' | 'href' | 'target'> {
+  children?: AnchorOptionData[];
+  title?: string;
+}
+
+export interface AnchorItemCompactProps extends /** @vue-ignore */ HTMLAttributes {
   modelValue?: string;
-  item: AnchorItemData;
+  item: AnchorOptionData;
   linkProps?: AnchorLinkProps;
   indicatorProps?: HTMLAttributes;
   titleProps?: HTMLAttributes;
@@ -50,7 +50,7 @@ export interface AnchorCompactItemProps extends /** @vue-ignore */ HTMLAttribute
 }
 
 export interface AnchorCompactProps extends AnchorRootProps {
-  items: AnchorItemData[];
+  items: AnchorOptionData[];
   linkProps?: AnchorLinkProps;
   indicatorProps?: HTMLAttributes;
   titleProps?: HTMLAttributes;
