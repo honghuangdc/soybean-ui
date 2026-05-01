@@ -14,6 +14,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppHeader: typeof import('./../components/app-header.vue')['default']
     AppLogo: typeof import('./../components/app-logo.vue')['default']
+    CallableTypeTable: typeof import('./../components/tables/callable-type-table.vue')['default']
     CodeBlock: typeof import('./../components/code-block.vue')['default']
     CommonTypeCatalog: typeof import('./../components/common-type-catalog.vue')['default']
     ComponentApi: typeof import('./../components/component-api.vue')['default']
@@ -59,6 +60,9 @@ declare module 'vue' {
     ThemeSchemaToggler: typeof import('./../components/theme-schema-toggler.vue')['default']
     ToolBar: typeof import('./../components/tool-bar.vue')['default']
     TypeData: typeof import('./../components/tables/type-data.vue')['default']
+    TypePreviewCard: typeof import('./../components/tables/type-preview-card.vue')['default']
+    TypePreviewCode: typeof import('./../components/tables/type-preview-code.vue')['default']
+    TypeReference: typeof import('./../components/tables/type-reference.vue')['default']
     TypeTable: typeof import('./../components/tables/type-table.vue')['default']
     UnionType: typeof import('./../components/tables/union-type.vue')['default']
   }
@@ -68,6 +72,7 @@ declare module 'vue' {
 declare global {
   const AppHeader: typeof import('./../components/app-header.vue')['default']
   const AppLogo: typeof import('./../components/app-logo.vue')['default']
+  const CallableTypeTable: typeof import('./../components/tables/callable-type-table.vue')['default']
   const CodeBlock: typeof import('./../components/code-block.vue')['default']
   const CommonTypeCatalog: typeof import('./../components/common-type-catalog.vue')['default']
   const ComponentApi: typeof import('./../components/component-api.vue')['default']
@@ -113,6 +118,9 @@ declare global {
   const ThemeSchemaToggler: typeof import('./../components/theme-schema-toggler.vue')['default']
   const ToolBar: typeof import('./../components/tool-bar.vue')['default']
   const TypeData: typeof import('./../components/tables/type-data.vue')['default']
+  const TypePreviewCard: typeof import('./../components/tables/type-preview-card.vue')['default']
+  const TypePreviewCode: typeof import('./../components/tables/type-preview-code.vue')['default']
+  const TypeReference: typeof import('./../components/tables/type-reference.vue')['default']
   const TypeTable: typeof import('./../components/tables/type-table.vue')['default']
   const UnionType: typeof import('./../components/tables/union-type.vue')['default']
 }

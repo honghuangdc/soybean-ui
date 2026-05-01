@@ -92,7 +92,7 @@
               {
                 "name": "DialogUi",
                 "kind": "typeAlias",
-                "type": "{ header: ClassValue; content: ClassValue; description: ClassValue; title: ClassValue; icon: ClassValue; close: ClassValue; overlay: ClassValue; popup: ClassValue; footer: ClassValue; cancel: ClassValue; confirm: ClassValue; }",
+                "type": "{ header: ClassValue; content: ClassValue; description: ClassValue; title: ClassValue; icon: ClassValue; close: ClassValue; popup: ClassValue; cancel: ClassValue; overlay: ClassValue; footer: ClassValue; confirm: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
                 "sourcePath": "headless/src/components/dialog/types.ts",

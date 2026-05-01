@@ -1,0 +1,1074 @@
+{
+  "component": "month-range-picker",
+  "symbols": {
+    "MonthRangePicker": {
+      "props": {
+        "kind": "props",
+        "name": "MonthRangePickerProps",
+        "type": "Interface MonthRangePickerProps",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<MonthRangePickerUi>; triggerProps?: MonthRangePickerTriggerProps; popupProps?: MonthRangePickerPopupProps }",
+        "description": "",
+        "sourcePath": "src/components/month-range-picker/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "class",
+            "type": "string | Record<string, boolean> | ClassValue[] | null",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "ClassValue",
+                "kind": "typeAlias",
+                "type": "string | Record<string, boolean> | ClassValue[] | null | undefined",
+                "resolvedType": "string | Record<string, boolean> | ClassValue[] | null | undefined",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "size",
+            "type": "ThemeSize",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "ThemeSize",
+                "kind": "typeAlias",
+                "type": "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'",
+                "resolvedType": "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'",
+                "description": "",
+                "sourcePath": "src/theme/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "ui",
+            "type": "Partial<MonthRangePickerUi>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "MonthRangePickerUi",
+                "kind": "typeAlias",
+                "type": "{ root: ClassValue; header: ClassValue; trigger: ClassValue; popup: ClassValue; heading: ClassValue; prev: ClassValue; next: ClassValue; grid: ClassValue; cellTrigger: ClassValue; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "triggerProps",
+            "type": "MonthRangePickerTriggerProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "MonthRangePickerTriggerProps",
+                "kind": "interface",
+                "type": "MonthRangePickerTriggerProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "popupProps",
+            "type": "MonthRangePickerPopupProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "MonthRangePickerPopupProps",
+                "kind": "interface",
+                "type": "MonthRangePickerPopupProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "MonthRangePickerEmits",
+        "type": "TypeAlias MonthRangePickerEmits: MonthRangePickerRootEmits",
+        "resolvedType": "{ \"update:modelValue\": [range: DateRange]; \"update:placeholder\": [date: DateValue]; \"update:startValue\": [date: DateValue | undefined]; \"update:endValue\": [date: DateValue | undefined]; \"update:open\": [open: boolean] }",
+        "description": "",
+        "sourcePath": "src/components/month-range-picker/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[range: DateRange]",
+            "parameters": "range: DateRange",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateRange",
+                "kind": "interface",
+                "type": "DateRange",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:placeholder",
+            "type": "[date: DateValue]",
+            "parameters": "date: DateValue",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:startValue",
+            "type": "[date: DateValue | undefined]",
+            "parameters": "date: DateValue | undefined",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:endValue",
+            "type": "[date: DateValue | undefined]",
+            "parameters": "date: DateValue | undefined",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:open",
+            "type": "[open: boolean]",
+            "parameters": "open: boolean",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "referencedTypes": [
+          {
+            "name": "MonthRangePickerRootEmits",
+            "kind": "typeAlias",
+            "type": "{ 'update:modelValue': [range: DateRange]; 'update:placeholder': [date: DateValue]; 'update:startValue': [date: DateValue | undefined]; 'update:endValue': [date: DateValue | undefined]; 'update:open': [open: boolean]; }",
+            "resolvedType": "{ \"update:modelValue\": [range: DateRange]; \"update:placeholder\": [date: DateValue]; \"update:startValue\": [date: DateValue | undefined]; \"update:endValue\": [date: DateValue | undefined]; \"update:open\": [open: boolean] }",
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "typeParameters": [],
+            "external": false,
+            "members": [],
+            "callables": [
+              {
+                "name": "update:modelValue",
+                "type": "[range: DateRange]",
+                "parameters": "range: DateRange",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:placeholder",
+                "type": "[date: DateValue]",
+                "parameters": "date: DateValue",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:startValue",
+                "type": "[date: DateValue | undefined]",
+                "parameters": "date: DateValue | undefined",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:endValue",
+                "type": "[date: DateValue | undefined]",
+                "parameters": "date: DateValue | undefined",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:open",
+                "type": "[open: boolean]",
+                "parameters": "open: boolean",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/month-range-picker/types.ts",
+                "referencedTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "slots": {
+        "kind": "slots",
+        "name": "MonthRangePickerSlots",
+        "type": "Interface MonthRangePickerSlots",
+        "resolvedType": "{ trigger?: ((props: { displayValue: string; modelValue: DateRange; open: boolean; }) => any); heading?: ((props: { headingValue: string; }) => any); prev?: ((props: { disabled: boolean; }) => any); next?: ((props: { disabled: boolean; }) => any); month?: ((props: { date: DateValue; label: string; disabled: boolean; focused: boolean; highlighted: boolean; rangeEnd: boolean; rangeStart: boolean; selected: boolean; }) => any); default?: ((props: { displayValue: string; modelValue: DateRange; open: boolean; }) => any) }",
+        "description": "",
+        "sourcePath": "src/components/month-range-picker/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "trigger",
+            "type": "((props: { displayValue: string; modelValue: DateRange; open: boolean; }) => any) | undefined",
+            "parameters": "((props: { displayValue: string; modelValue: DateRange; open: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ displayValue: string; modelValue: DateRange; open: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "heading",
+            "type": "((props: { headingValue: string; }) => any) | undefined",
+            "parameters": "((props: { headingValue: string; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ headingValue: string; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prev",
+            "type": "((props: { disabled: boolean; }) => any) | undefined",
+            "parameters": "((props: { disabled: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ disabled: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "next",
+            "type": "((props: { disabled: boolean; }) => any) | undefined",
+            "parameters": "((props: { disabled: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ disabled: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "month",
+            "type": "((props: { date: DateValue; label: string; disabled: boolean; focused: boolean; highlighted: boolean; rangeEnd: boolean; rangeStart: boolean; selected: boolean; }) => any) | undefined",
+            "parameters": "((props: { date: DateValue; label: string; disabled: boolean; focused: boolean; highlighted: boolean; rangeEnd: boolean; rangeStart: boolean; selected: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ date: DateValue; label: string; disabled: boolean; focused: boolean; highlighted: boolean; rangeEnd: boolean; rangeStart: boolean; selected: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "default",
+            "type": "((props: { displayValue: string; modelValue: DateRange; open: boolean; }) => any) | undefined",
+            "parameters": "((props: { displayValue: string; modelValue: DateRange; open: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ displayValue: string; modelValue: DateRange; open: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "src/components/month-range-picker/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      }
+    },
+    "MonthRangePickerPopup": {
+      "props": {
+        "kind": "props",
+        "name": "MonthRangePickerPopupProps",
+        "type": "Interface MonthRangePickerPopupProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/month-range-picker/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "MonthRangePickerRoot": {
+      "emits": {
+        "kind": "emits",
+        "name": "MonthRangePickerRootEmits",
+        "type": "TypeAlias MonthRangePickerRootEmits",
+        "resolvedType": "{ \"update:modelValue\": [range: DateRange]; \"update:placeholder\": [date: DateValue]; \"update:startValue\": [date: DateValue | undefined]; \"update:endValue\": [date: DateValue | undefined]; \"update:open\": [open: boolean] }",
+        "description": "",
+        "sourcePath": "headless/src/components/month-range-picker/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[range: DateRange]",
+            "parameters": "range: DateRange",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateRange",
+                "kind": "interface",
+                "type": "DateRange",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:placeholder",
+            "type": "[date: DateValue]",
+            "parameters": "date: DateValue",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:startValue",
+            "type": "[date: DateValue | undefined]",
+            "parameters": "date: DateValue | undefined",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:endValue",
+            "type": "[date: DateValue | undefined]",
+            "parameters": "date: DateValue | undefined",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:open",
+            "type": "[open: boolean]",
+            "parameters": "open: boolean",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "referencedTypes": []
+      },
+      "props": {
+        "kind": "props",
+        "name": "MonthRangePickerRootProps",
+        "type": "Interface MonthRangePickerRootProps",
+        "resolvedType": "{ defaultValue?: DateRange; defaultPlaceholder?: DateValue; placeholder?: DateValue; modelValue?: DateRange; minValue?: DateValue; maxValue?: DateValue; locale?: string; disabled?: boolean; readonly?: boolean; id?: string; dir?: Direction; defaultOpen?: boolean; open?: boolean; modal?: boolean; asChild?: boolean; as?: AsTag | Component; name?: string; required?: boolean }",
+        "description": "",
+        "sourcePath": "headless/src/components/month-range-picker/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "defaultValue",
+            "type": "DateRange",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateRange",
+                "kind": "interface",
+                "type": "DateRange",
+                "resolvedType": "{ start?: DateValue; end?: DateValue }",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "start",
+                    "type": "DateValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "end",
+                    "type": "DateValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultPlaceholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placeholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "modelValue",
+            "type": "DateRange",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateRange",
+                "kind": "interface",
+                "type": "DateRange",
+                "resolvedType": "{ start?: DateValue; end?: DateValue }",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "start",
+                    "type": "DateValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "end",
+                    "type": "DateValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "minValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "maxValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "readonly",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "id",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultOpen",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "open",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modal",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/month-range-picker/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "required": false,
+            "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
+            "default": null,
+            "inheritedFrom": "name",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "required",
+            "type": "boolean",
+            "required": false,
+            "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
+            "default": null,
+            "inheritedFrom": "required",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "MonthRangePickerTrigger": {
+      "props": {
+        "kind": "props",
+        "name": "MonthRangePickerTriggerProps",
+        "type": "Interface MonthRangePickerTriggerProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/month-range-picker/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    }
+  }
+}

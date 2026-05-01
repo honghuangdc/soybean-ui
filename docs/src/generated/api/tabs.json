@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "TabsProps",
         "type": "Interface TabsProps<T>",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<TabsUi>; fill?: TabsFill; items: T[]; enableIndicator?: boolean; listProps?: TabsListProps; triggerProps?: TabsTriggerProps; contentProps?: TabsContentProps; indicatorProps?: TabsIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<TabsUi>; fill?: TabsFill; items: T[]; enableIndicator?: boolean; listProps?: TabsListProps; triggerProps?: TabsTriggerProps; contentProps?: TabsContentProps; indicatorProps?: TabsIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean }",
         "description": "",
         "sourcePath": "src/components/tabs/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -375,16 +375,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": "loop",
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -406,6 +396,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": "loop",
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],
@@ -505,7 +505,7 @@
         "kind": "props",
         "name": "TabsCompactProps",
         "type": "Interface TabsCompactProps<T>",
-        "resolvedType": "{ items: T[]; enableIndicator?: boolean; listProps?: TabsListProps; triggerProps?: TabsTriggerProps; contentProps?: TabsContentProps; indicatorProps?: TabsIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation }",
+        "resolvedType": "{ items: T[]; enableIndicator?: boolean; listProps?: TabsListProps; triggerProps?: TabsTriggerProps; contentProps?: TabsContentProps; indicatorProps?: TabsIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/tabs/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -782,16 +782,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": "loop",
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -813,6 +803,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": "loop",
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],
@@ -1030,7 +1030,7 @@
         "kind": "props",
         "name": "TabsRootProps",
         "type": "Interface TabsRootProps<T>",
-        "resolvedType": "{ modelValue?: T; defaultValue?: T; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation }",
+        "resolvedType": "{ modelValue?: T; defaultValue?: T; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/tabs/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -1112,16 +1112,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": "Omit.loop",
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -1143,6 +1133,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": "Omit.loop",
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],

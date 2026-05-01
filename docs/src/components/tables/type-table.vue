@@ -3,6 +3,7 @@ import TypeData, { type TypeFieldDef } from './type-data.vue';
 
 export type TypeDataDef = {
   name: string;
+  displayName?: string;
   description?: string;
   fields: TypeFieldDef[];
 };

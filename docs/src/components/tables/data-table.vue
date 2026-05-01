@@ -83,7 +83,8 @@ function buildPresetColumns(preset: PropsPreset | undefined): DataTableColumn<an
       },
       {
         key: 'description',
-        title: 'Description'
+        title: 'Description',
+        cellWrapperClass: 'max-w-[20rem] whitespace-pre-wrap break-words'
       }
     ];
 
@@ -107,7 +108,8 @@ function buildPresetColumns(preset: PropsPreset | undefined): DataTableColumn<an
       },
       {
         key: 'description',
-        title: 'Description'
+        title: 'Description',
+        cellWrapperClass: 'max-w-[20rem] whitespace-pre-wrap break-words'
       }
     ];
     return cols;
@@ -124,12 +126,20 @@ const resolvedColumns = computed<DataTableColumn<any>[]>(() => {
   return buildPresetColumns(props.preset);
 });
 
+const columnMinWidthMap: Record<string, string> = {
+  name: '144px',
+  type: '176px',
+  parameters: '176px',
+  default: '136px',
+  description: '240px'
+};
+
 const tableColumns = computed<TableColumn<TableRow>[]>(() => {
   return resolvedColumns.value.map(column => ({
     key: column.key,
     dataIndex: column.key,
     title: column.title,
-    minWidth: column.key === 'description' ? '320px' : '160px'
+    minWidth: columnMinWidthMap[column.key] ?? '140px'
   }));
 });
 
@@ -146,12 +156,14 @@ function getColumnRender(column: DataTableColumn<any>) {
 </script>
 
 <template>
-  <STable :columns="tableColumns" :data="tableData" :row-key="row => row.__rowKey" size="sm" bordered>
-    <template v-for="col in resolvedColumns" :key="col.key" #[col.key]="{ row }">
-      <div v-if="col.cellWrapperClass" :class="col.cellWrapperClass">
-        <CellRenderer :render="getColumnRender(col)" :row="row" />
-      </div>
-      <CellRenderer v-else :render="getColumnRender(col)" :row="row" />
-    </template>
-  </STable>
+  <div class="min-w-0 overflow-x-auto">
+    <STable :columns="tableColumns" :data="tableData" :row-key="row => row.__rowKey" size="sm" bordered>
+      <template v-for="col in resolvedColumns" :key="col.key" #[col.key]="{ row }">
+        <div v-if="col.cellWrapperClass" :class="col.cellWrapperClass">
+          <CellRenderer :render="getColumnRender(col)" :row="row" />
+        </div>
+        <CellRenderer v-else :render="getColumnRender(col)" :row="row" />
+      </template>
+    </STable>
+  </div>
 </template>

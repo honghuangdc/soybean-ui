@@ -92,7 +92,7 @@
               {
                 "name": "InputOtpUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; placeholder: ClassValue; input: ClassValue; group: ClassValue; positioner: ClassValue; slot: ClassValue; char: ClassValue; caret: ClassValue; }",
+                "type": "{ root: ClassValue; placeholder: ClassValue; input: ClassValue; positioner: ClassValue; group: ClassValue; slot: ClassValue; char: ClassValue; caret: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
                 "sourcePath": "headless/src/components/input-otp/types.ts",

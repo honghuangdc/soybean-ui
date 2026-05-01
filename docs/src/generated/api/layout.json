@@ -686,7 +686,7 @@
         "kind": "props",
         "name": "LayoutClassicProps",
         "type": "Interface LayoutClassicProps",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<LayoutClassicUi>; orientation?: DataOrientation; scrollBehavior?: LayoutClassicScrollBehavior; scrollId?: string; baseZIndex?: number; fixedTop?: boolean; fullContent?: boolean; sidebarVisible?: boolean; headerVisible?: boolean; tabVisible?: boolean; footerVisible?: boolean; fixedFooter?: boolean; stretchFooter?: boolean; open?: boolean; defaultOpen?: boolean; side?: HorizontalSide; sidebarWidth?: number; collapsedSidebarWidth?: number; isMobile?: boolean; mobileSidebarWidth?: number; headerHeight?: number; tabHeight?: number; footerHeight?: number; pxToRem?: ((px: number) => number); sidebarProps?: LayoutSidebarProps; railProps?: LayoutRailProps; mainProps?: LayoutMainProps; headerProps?: LayoutHeaderProps; tabProps?: LayoutTabProps; contentProps?: LayoutContentProps; footerProps?: LayoutFooterProps; mobileProps?: LayoutMobileProps }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<LayoutClassicUi>; orientation?: DataOrientation; scrollBehavior?: LayoutClassicScrollBehavior; scrollId?: string; baseZIndex?: number; fixedTop?: boolean; fixedFooter?: boolean; stretchFooter?: boolean; open?: boolean; defaultOpen?: boolean; side?: HorizontalSide; sidebarVisible?: boolean; sidebarWidth?: number; collapsedSidebarWidth?: number; isMobile?: boolean; mobileSidebarWidth?: number; headerVisible?: boolean; headerHeight?: number; tabVisible?: boolean; tabHeight?: number; footerVisible?: boolean; footerHeight?: number; fullContent?: boolean; pxToRem?: ((px: number) => number); sidebarProps?: LayoutSidebarProps; railProps?: LayoutRailProps; mainProps?: LayoutMainProps; headerProps?: LayoutHeaderProps; tabProps?: LayoutTabProps; contentProps?: LayoutContentProps; footerProps?: LayoutFooterProps; mobileProps?: LayoutMobileProps }",
         "description": "",
         "sourcePath": "src/components/layout/types.ts",
         "typeParameters": [],
@@ -837,56 +837,6 @@
             "referencedTypes": []
           },
           {
-            "name": "fullContent",
-            "type": "boolean",
-            "required": false,
-            "description": "whether the content takes the full height of the layout (include).",
-            "default": "false",
-            "inheritedFrom": "LayoutClassicCompactProps.fullContent",
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "sidebarVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the sidebar.",
-            "default": "true",
-            "inheritedFrom": "LayoutClassicCompactProps.sidebarVisible",
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "headerVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the header.",
-            "default": "true",
-            "inheritedFrom": "LayoutClassicCompactProps.headerVisible",
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "tabVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the tab.",
-            "default": "true",
-            "inheritedFrom": "LayoutClassicCompactProps.tabVisible",
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "footerVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the footer.",
-            "default": "true",
-            "inheritedFrom": "LayoutClassicCompactProps.footerVisible",
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "fixedFooter",
             "type": "boolean",
             "required": false,
@@ -950,6 +900,16 @@
             ]
           },
           {
+            "name": "sidebarVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the sidebar.",
+            "default": "true",
+            "inheritedFrom": "sidebarVisible",
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "sidebarWidth",
             "type": "number",
             "required": false,
@@ -990,12 +950,32 @@
             "referencedTypes": []
           },
           {
+            "name": "headerVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the header.",
+            "default": "true",
+            "inheritedFrom": "headerVisible",
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "headerHeight",
             "type": "number",
             "required": false,
             "description": "The height of the header. (px)",
             "default": "56",
             "inheritedFrom": "headerHeight",
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "tabVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the tab.",
+            "default": "true",
+            "inheritedFrom": "tabVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1010,12 +990,32 @@
             "referencedTypes": []
           },
           {
+            "name": "footerVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the footer.",
+            "default": "true",
+            "inheritedFrom": "footerVisible",
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "footerHeight",
             "type": "number",
             "required": false,
             "description": "The height of the footer. (px)",
             "default": "48",
             "inheritedFrom": "footerHeight",
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "fullContent",
+            "type": "boolean",
+            "required": false,
+            "description": "whether the content takes the full height of the layout (include).",
+            "default": "false",
+            "inheritedFrom": "fullContent",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1416,7 +1416,7 @@
         "kind": "props",
         "name": "LayoutClassicCompactProps",
         "type": "Interface LayoutClassicCompactProps",
-        "resolvedType": "{ orientation?: DataOrientation; scrollBehavior?: LayoutClassicScrollBehavior; scrollId?: string; baseZIndex?: number; fixedTop?: boolean; fullContent?: boolean; sidebarVisible?: boolean; headerVisible?: boolean; tabVisible?: boolean; footerVisible?: boolean; fixedFooter?: boolean; stretchFooter?: boolean; open?: boolean; defaultOpen?: boolean; side?: HorizontalSide; sidebarWidth?: number; collapsedSidebarWidth?: number; isMobile?: boolean; mobileSidebarWidth?: number; headerHeight?: number; tabHeight?: number; footerHeight?: number; pxToRem?: ((px: number) => number); sidebarProps?: LayoutSidebarProps; railProps?: LayoutRailProps; mainProps?: LayoutMainProps; headerProps?: LayoutHeaderProps; tabProps?: LayoutTabProps; contentProps?: LayoutContentProps; footerProps?: LayoutFooterProps; mobileProps?: LayoutMobileProps }",
+        "resolvedType": "{ orientation?: DataOrientation; scrollBehavior?: LayoutClassicScrollBehavior; scrollId?: string; baseZIndex?: number; fixedTop?: boolean; fixedFooter?: boolean; stretchFooter?: boolean; open?: boolean; defaultOpen?: boolean; side?: HorizontalSide; sidebarVisible?: boolean; sidebarWidth?: number; collapsedSidebarWidth?: number; isMobile?: boolean; mobileSidebarWidth?: number; headerVisible?: boolean; headerHeight?: number; tabVisible?: boolean; tabHeight?: number; footerVisible?: boolean; footerHeight?: number; fullContent?: boolean; pxToRem?: ((px: number) => number); sidebarProps?: LayoutSidebarProps; railProps?: LayoutRailProps; mainProps?: LayoutMainProps; headerProps?: LayoutHeaderProps; tabProps?: LayoutTabProps; contentProps?: LayoutContentProps; footerProps?: LayoutFooterProps; mobileProps?: LayoutMobileProps }",
         "description": "",
         "sourcePath": "headless/src/components/layout/types.ts",
         "typeParameters": [],
@@ -1498,56 +1498,6 @@
             "referencedTypes": []
           },
           {
-            "name": "fullContent",
-            "type": "boolean",
-            "required": false,
-            "description": "whether the content takes the full height of the layout (include).",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "sidebarVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the sidebar.",
-            "default": "true",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "headerVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the header.",
-            "default": "true",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "tabVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the tab.",
-            "default": "true",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "footerVisible",
-            "type": "boolean",
-            "required": false,
-            "description": "whether to show the footer.",
-            "default": "true",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/layout/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "fixedFooter",
             "type": "boolean",
             "required": false,
@@ -1611,6 +1561,16 @@
             ]
           },
           {
+            "name": "sidebarVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the sidebar.",
+            "default": "true",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "sidebarWidth",
             "type": "number",
             "required": false,
@@ -1651,11 +1611,31 @@
             "referencedTypes": []
           },
           {
+            "name": "headerVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the header.",
+            "default": "true",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "headerHeight",
             "type": "number",
             "required": false,
             "description": "The height of the header. (px)",
             "default": "56",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "tabVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the tab.",
+            "default": "true",
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
@@ -1671,11 +1651,31 @@
             "referencedTypes": []
           },
           {
+            "name": "footerVisible",
+            "type": "boolean",
+            "required": false,
+            "description": "whether to show the footer.",
+            "default": "true",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "footerHeight",
             "type": "number",
             "required": false,
             "description": "The height of the footer. (px)",
             "default": "48",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/layout/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "fullContent",
+            "type": "boolean",
+            "required": false,
+            "description": "whether the content takes the full height of the layout (include).",
+            "default": "false",
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []

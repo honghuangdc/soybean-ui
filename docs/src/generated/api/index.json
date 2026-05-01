@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-29T13:41:28.066Z",
+  "generatedAt": "2026-05-01T12:59:27.757Z",
   "schemaVersion": 3,
   "components": {
     "accordion": {
@@ -119,12 +119,33 @@
       "file": "button.json",
       "symbols": ["Button", "ButtonGroup", "ButtonIcon", "ButtonLink", "ButtonLoading"]
     },
+    "calendar": {
+      "component": "calendar",
+      "file": "calendar.json",
+      "symbols": [
+        "Calendar",
+        "CalendarCell",
+        "CalendarCellTrigger",
+        "CalendarCompact",
+        "CalendarGrid",
+        "CalendarGridBody",
+        "CalendarGridHead",
+        "CalendarGridRow",
+        "CalendarHeadCell",
+        "CalendarHeader",
+        "CalendarHeading",
+        "CalendarNext",
+        "CalendarPrev",
+        "CalendarRoot"
+      ]
+    },
     "card": {
       "component": "card",
       "file": "card.json",
       "symbols": [
         "Card",
         "CardCollapsibleTrigger",
+        "CardCompact",
         "CardContent",
         "CardDescription",
         "CardFooter",
@@ -208,6 +229,11 @@
       "component": "combobox",
       "file": "combobox.json",
       "symbols": [
+        "AutocompleteContent",
+        "AutocompleteItem",
+        "AutocompleteSeparator",
+        "AutocompleteTrigger",
+        "AutocompleteViewport",
         "Combobox",
         "ComboboxAnchor",
         "ComboboxArrow",
@@ -277,6 +303,32 @@
         "ContextMenuWrapperCompact"
       ]
     },
+    "date-field": {
+      "component": "date-field",
+      "file": "date-field.json",
+      "symbols": ["DateField", "DateFieldInput", "DateFieldRoot"]
+    },
+    "date-picker": {
+      "component": "date-picker",
+      "file": "date-picker.json",
+      "symbols": ["DatePicker", "DatePickerPopup", "DatePickerRoot", "DatePickerTrigger"]
+    },
+    "date-range-field": {
+      "component": "date-range-field",
+      "file": "date-range-field.json",
+      "symbols": ["DateRangeField", "DateRangeFieldCompact", "DateRangeFieldInput", "DateRangeFieldRoot"]
+    },
+    "date-range-picker": {
+      "component": "date-range-picker",
+      "file": "date-range-picker.json",
+      "symbols": [
+        "DateRangePicker",
+        "DateRangePickerCompact",
+        "DateRangePickerPopup",
+        "DateRangePickerRoot",
+        "DateRangePickerTrigger"
+      ]
+    },
     "dialog": {
       "component": "dialog",
       "file": "dialog.json",
@@ -343,6 +395,7 @@
         "Editable",
         "EditableArea",
         "EditableCancelTrigger",
+        "EditableCompact",
         "EditableEditTrigger",
         "EditableInput",
         "EditablePreview",
@@ -375,6 +428,7 @@
       "symbols": [
         "HoverCard",
         "HoverCardArrow",
+        "HoverCardCompact",
         "HoverCardPopup",
         "HoverCardPortal",
         "HoverCardPositioner",
@@ -452,8 +506,9 @@
       "component": "listbox",
       "file": "listbox.json",
       "symbols": [
-        "CommandGroup",
-        "CommandGroupLabel",
+        "AutocompleteGroup",
+        "AutocompleteGroupLabel",
+        "AutocompleteItemIndicator",
         "CommandInput",
         "CommandItem",
         "CommandList",
@@ -494,11 +549,22 @@
         "MenubarTrigger"
       ]
     },
+    "month-picker": {
+      "component": "month-picker",
+      "file": "month-picker.json",
+      "symbols": ["MonthPicker", "MonthPickerPopup", "MonthPickerRoot", "MonthPickerTrigger"]
+    },
+    "month-range-picker": {
+      "component": "month-range-picker",
+      "file": "month-range-picker.json",
+      "symbols": ["MonthRangePicker", "MonthRangePickerPopup", "MonthRangePickerRoot", "MonthRangePickerTrigger"]
+    },
     "navigation-menu": {
       "component": "navigation-menu",
       "file": "navigation-menu.json",
       "symbols": [
         "NavigationMenu",
+        "NavigationMenuCompact",
         "NavigationMenuContent",
         "NavigationMenuIndicator",
         "NavigationMenuItem",
@@ -524,6 +590,7 @@
       "symbols": [
         "Pagination",
         "PaginationButton",
+        "PaginationCompact",
         "PaginationEllipsis",
         "PaginationFirst",
         "PaginationLast",
@@ -566,6 +633,7 @@
         "PopoverAnchor",
         "PopoverArrow",
         "PopoverClose",
+        "PopoverCompact",
         "PopoverPopup",
         "PopoverPortal",
         "PopoverPositioner",
@@ -577,8 +645,8 @@
       "component": "popper",
       "file": "popper.json",
       "symbols": [
+        "AutocompleteAnchor",
         "HoverCardArrow",
-        "HoverCardTrigger",
         "PopperAnchor",
         "PopperArrow",
         "PopperPopup",
@@ -611,6 +679,27 @@
         "RadioGroupItem",
         "RadioGroupLabel",
         "RadioGroupRoot"
+      ]
+    },
+    "range-calendar": {
+      "component": "range-calendar",
+      "file": "range-calendar.json",
+      "symbols": [
+        "RangeCalendar",
+        "RangeCalendarCell",
+        "RangeCalendarCellTrigger",
+        "RangeCalendarCompact",
+        "RangeCalendarDay",
+        "RangeCalendarGrid",
+        "RangeCalendarGridBody",
+        "RangeCalendarGridHead",
+        "RangeCalendarGridRow",
+        "RangeCalendarHeadCell",
+        "RangeCalendarHeader",
+        "RangeCalendarHeading",
+        "RangeCalendarNext",
+        "RangeCalendarPrev",
+        "RangeCalendarRoot"
       ]
     },
     "scroll-area": {
@@ -684,6 +773,7 @@
       "file": "stepper.json",
       "symbols": [
         "Stepper",
+        "StepperCompact",
         "StepperDescription",
         "StepperIndicator",
         "StepperItem",
@@ -744,6 +834,32 @@
       "component": "textarea",
       "file": "textarea.json",
       "symbols": ["Textarea", "TextareaControl", "TextareaCounter", "TextareaRoot"]
+    },
+    "time-field": {
+      "component": "time-field",
+      "file": "time-field.json",
+      "symbols": ["TimeField", "TimeFieldInput", "TimeFieldRoot"]
+    },
+    "time-picker": {
+      "component": "time-picker",
+      "file": "time-picker.json",
+      "symbols": ["TimePicker", "TimePickerPopup", "TimePickerRoot", "TimePickerTrigger"]
+    },
+    "time-range-field": {
+      "component": "time-range-field",
+      "file": "time-range-field.json",
+      "symbols": ["TimeRangeField", "TimeRangeFieldCompact", "TimeRangeFieldInput", "TimeRangeFieldRoot"]
+    },
+    "time-range-picker": {
+      "component": "time-range-picker",
+      "file": "time-range-picker.json",
+      "symbols": [
+        "TimeRangePicker",
+        "TimeRangePickerCompact",
+        "TimeRangePickerPopup",
+        "TimeRangePickerRoot",
+        "TimeRangePickerTrigger"
+      ]
     },
     "toast": {
       "component": "toast",
@@ -820,6 +936,16 @@
         "VirtualizerItem",
         "VirtualizerRoot"
       ]
+    },
+    "year-picker": {
+      "component": "year-picker",
+      "file": "year-picker.json",
+      "symbols": ["YearPicker", "YearPickerPopup", "YearPickerRoot", "YearPickerTrigger"]
+    },
+    "year-range-picker": {
+      "component": "year-range-picker",
+      "file": "year-range-picker.json",
+      "symbols": ["YearRangePicker", "YearRangePickerPopup", "YearRangePickerRoot", "YearRangePickerTrigger"]
     }
   }
 }

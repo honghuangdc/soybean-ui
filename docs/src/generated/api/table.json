@@ -69,7 +69,7 @@
               {
                 "name": "TableExtendedUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; cell: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }",
+                "type": "{ root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; cell: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
                 "sourcePath": "src/components/table/types.ts",
@@ -2365,7 +2365,7 @@
         "kind": "props",
         "name": "TableFilterPopoverProps",
         "type": "Interface TableFilterPopoverProps<T>",
-        "resolvedType": "{ size?: ThemeSize; ui: { root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; cell: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }; filterOptions: TableColumnFilterOption[]; column: TableTypeColumn | TableDataColumn<T> | TableGroupColumn<T>; filterValue: string; filterValues: string[]; filterState?: TableFilterValue; filtered: boolean; setFilterValue: (value: string) => void; setFilterValues: (values: string[]) => void; setFilterState: (value: TableFilterValue | undefined) => void; toggleFilterOption: (value: string) => void; isFilterOptionSelected: (value: string) => boolean; clearFilter: () => void }",
+        "resolvedType": "{ size?: ThemeSize; ui: { root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; cell: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }; filterOptions: TableColumnFilterOption[]; column: TableTypeColumn | TableDataColumn<T> | TableGroupColumn<T>; filterValue: string; filterValues: string[]; filterState?: TableFilterValue; filtered: boolean; setFilterValue: (value: string) => void; setFilterValues: (values: string[]) => void; setFilterState: (value: TableFilterValue | undefined) => void; toggleFilterOption: (value: string) => void; isFilterOptionSelected: (value: string) => boolean; clearFilter: () => void }",
         "description": "",
         "sourcePath": "src/components/table/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -2395,7 +2395,7 @@
           },
           {
             "name": "ui",
-            "type": "{ root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; cell: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }",
+            "type": "{ root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; cell: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }",
             "required": true,
             "description": "",
             "default": null,
@@ -2405,8 +2405,8 @@
               {
                 "name": "TableExtendedUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; cell: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }",
-                "resolvedType": "{ root: string | Record<string, boolean> | ClassValue[] | null | undefined; header: string | Record<string, boolean> | ClassValue[] | null | undefined; content: string | Record<string, boolean> | ClassValue[] | null | undefined; fixed: string | Record<string, boolean> | ClassValue[] | null | undefined; footer: string | Record<string, boolean> | ClassValue[] | null | undefined; scroll: string | Record<string, boolean> | ClassValue[] | null | undefined; body: string | Record<string, boolean> | ClassValue[] | null | undefined; row: string | Record<string, boolean> | ClassValue[] | null | undefined; head: string | Record<string, boolean> | ClassValue[] | null | undefined; cell: string | Record<string, boolean> | ClassValue[] | null | undefined; sortTrigger: string | Record<string, boolean> | ClassValue[] | null | undefined; filterInput: string | Record<string, boolean> | ClassValue[] | null | undefined; resizeHandle: string | Record<string, boolean> | ClassValue[] | null | undefined; treeCell: string | Record<string, boolean> | ClassValue[] | null | undefined; treeToggle: string | Record<string, boolean> | ClassValue[] | null | undefined; treeTogglePlaceholder: string | Record<string, boolean> | ClassValue[] | null | undefined; selection: string | Record<string, boolean> | ClassValue[] | null | undefined; filterTrigger: string | Record<string, boolean> | ClassValue[] | null | undefined; filterPopup: string | Record<string, boolean> | ClassValue[] | null | undefined; filterSearch: string | Record<string, boolean> | ClassValue[] | null | undefined; filterOptions: string | Record<string, boolean> | ClassValue[] | null | undefined; filterOption: string | Record<string, boolean> | ClassValue[] | null | undefined; filterOptionLabel: string | Record<string, boolean> | ClassValue[] | null | undefined; filterFooter: string | Record<string, boolean> | ClassValue[] | null | undefined; filterCount: string | Record<string, boolean> | ClassValue[] | null | undefined; filterAction: string | Record<string, boolean> | ClassValue[] | null | undefined; filterEmpty: string | Record<string, boolean> | ClassValue[] | null | undefined }",
+                "type": "{ root: ClassValue; header: ClassValue; content: ClassValue; fixed: ClassValue; footer: ClassValue; cell: ClassValue; scroll: ClassValue; body: ClassValue; row: ClassValue; head: ClassValue; sortTrigger: ClassValue; filterInput: ClassValue; resizeHandle: ClassValue; treeCell: ClassValue; treeToggle: ClassValue; treeTogglePlaceholder: ClassValue; selection: ClassValue; filterTrigger: ClassValue; filterPopup: ClassValue; filterSearch: ClassValue; filterOptions: ClassValue; filterOption: ClassValue; filterOptionLabel: ClassValue; filterFooter: ClassValue; filterCount: ClassValue; filterAction: ClassValue; filterEmpty: ClassValue; }",
+                "resolvedType": "{ root: string | Record<string, boolean> | ClassValue[] | null | undefined; header: string | Record<string, boolean> | ClassValue[] | null | undefined; content: string | Record<string, boolean> | ClassValue[] | null | undefined; fixed: string | Record<string, boolean> | ClassValue[] | null | undefined; footer: string | Record<string, boolean> | ClassValue[] | null | undefined; cell: string | Record<string, boolean> | ClassValue[] | null | undefined; scroll: string | Record<string, boolean> | ClassValue[] | null | undefined; body: string | Record<string, boolean> | ClassValue[] | null | undefined; row: string | Record<string, boolean> | ClassValue[] | null | undefined; head: string | Record<string, boolean> | ClassValue[] | null | undefined; sortTrigger: string | Record<string, boolean> | ClassValue[] | null | undefined; filterInput: string | Record<string, boolean> | ClassValue[] | null | undefined; resizeHandle: string | Record<string, boolean> | ClassValue[] | null | undefined; treeCell: string | Record<string, boolean> | ClassValue[] | null | undefined; treeToggle: string | Record<string, boolean> | ClassValue[] | null | undefined; treeTogglePlaceholder: string | Record<string, boolean> | ClassValue[] | null | undefined; selection: string | Record<string, boolean> | ClassValue[] | null | undefined; filterTrigger: string | Record<string, boolean> | ClassValue[] | null | undefined; filterPopup: string | Record<string, boolean> | ClassValue[] | null | undefined; filterSearch: string | Record<string, boolean> | ClassValue[] | null | undefined; filterOptions: string | Record<string, boolean> | ClassValue[] | null | undefined; filterOption: string | Record<string, boolean> | ClassValue[] | null | undefined; filterOptionLabel: string | Record<string, boolean> | ClassValue[] | null | undefined; filterFooter: string | Record<string, boolean> | ClassValue[] | null | undefined; filterCount: string | Record<string, boolean> | ClassValue[] | null | undefined; filterAction: string | Record<string, boolean> | ClassValue[] | null | undefined; filterEmpty: string | Record<string, boolean> | ClassValue[] | null | undefined }",
                 "description": "",
                 "sourcePath": "src/components/table/types.ts",
                 "typeParameters": [],
@@ -2463,6 +2463,16 @@
                     "referencedTypes": []
                   },
                   {
+                    "name": "cell",
+                    "type": "string | Record<string, boolean> | ClassValue[] | null | undefined",
+                    "required": true,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": null,
+                    "referencedTypes": []
+                  },
+                  {
                     "name": "scroll",
                     "type": "string | Record<string, boolean> | ClassValue[] | null | undefined",
                     "required": true,
@@ -2494,16 +2504,6 @@
                   },
                   {
                     "name": "head",
-                    "type": "string | Record<string, boolean> | ClassValue[] | null | undefined",
-                    "required": true,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": null,
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "cell",
                     "type": "string | Record<string, boolean> | ClassValue[] | null | undefined",
                     "required": true,
                     "description": "",

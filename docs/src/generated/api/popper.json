@@ -1,11 +1,11 @@
 {
   "component": "popper",
   "symbols": {
-    "HoverCardArrow": {
+    "AutocompleteAnchor": {
       "props": {
         "kind": "props",
-        "name": "HoverCardArrowProps",
-        "type": "Interface HoverCardArrowProps",
+        "name": "AutocompleteAnchorProps",
+        "type": "Interface AutocompleteAnchorProps",
         "resolvedType": null,
         "description": "",
         "sourcePath": "headless/src/components/popper/types.ts",
@@ -15,11 +15,11 @@
         "referencedTypes": []
       }
     },
-    "HoverCardTrigger": {
+    "HoverCardArrow": {
       "props": {
         "kind": "props",
-        "name": "HoverCardTriggerProps",
-        "type": "Interface HoverCardTriggerProps",
+        "name": "HoverCardArrowProps",
+        "type": "Interface HoverCardArrowProps",
         "resolvedType": null,
         "description": "",
         "sourcePath": "headless/src/components/popper/types.ts",

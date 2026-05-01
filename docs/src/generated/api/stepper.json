@@ -92,7 +92,7 @@
               {
                 "name": "StepperExtendedUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; item: ClassValue; trigger: ClassValue; description: ClassValue; title: ClassValue; indicator: ClassValue; separator: ClassValue; itemContent: ClassValue; indicatorIcon: ClassValue; }",
+                "type": "{ root: ClassValue; item: ClassValue; trigger: ClassValue; description: ClassValue; title: ClassValue; indicator: ClassValue; separator: ClassValue; indicatorIcon: ClassValue; itemContent: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
                 "sourcePath": "src/components/stepper/types.ts",
@@ -572,6 +572,670 @@
             ]
           }
         ]
+      }
+    },
+    "StepperCompact": {
+      "props": {
+        "kind": "props",
+        "name": "StepperCompactProps",
+        "type": "Interface StepperCompactProps",
+        "resolvedType": "{ items: StepperItemData[]; itemProps?: StepperItemProps; triggerProps?: StepperTriggerProps; indicatorProps?: StepperIndicatorProps; separatorProps?: SeparatorRootProps; titleProps?: StepperTitleProps; descriptionProps?: StepperDescriptionProps; defaultValue?: number; modelValue?: number; orientation?: DataOrientation; dir?: Direction; linear?: boolean; asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/stepper/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "items",
+            "type": "StepperItemData[]",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "itemProps",
+            "type": "StepperItemProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "StepperItemProps",
+                "kind": "interface",
+                "type": "StepperItemProps",
+                "resolvedType": "{ step: number; disabled?: boolean; completed?: boolean; asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "step",
+                    "type": "number",
+                    "required": true,
+                    "description": "The step index, starting from `1`.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/stepper/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "When `true`, prevents the user from interacting with the step.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/stepper/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "completed",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Shows whether the step is completed.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/stepper/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "triggerProps",
+            "type": "StepperTriggerProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "StepperTriggerProps",
+                "kind": "interface",
+                "type": "StepperTriggerProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "indicatorProps",
+            "type": "StepperIndicatorProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "StepperIndicatorProps",
+                "kind": "interface",
+                "type": "StepperIndicatorProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "separatorProps",
+            "type": "SeparatorRootProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "SeparatorRootProps",
+                "kind": "interface",
+                "type": "SeparatorRootProps",
+                "resolvedType": "{ orientation?: DataOrientation; decorative?: boolean }",
+                "description": "",
+                "sourcePath": "headless/src/components/separator/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "orientation",
+                    "type": "DataOrientation",
+                    "required": false,
+                    "description": "Orientation of the component.\n\nEither `vertical` or `horizontal`. Defaults to `horizontal`.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/separator/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "decorative",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Whether or not the component is purely decorative. <br>When `true`, accessibility-related attributes are updated so\nthat that the rendered element is removed from the accessibility tree.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/separator/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "titleProps",
+            "type": "StepperTitleProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "StepperTitleProps",
+                "kind": "interface",
+                "type": "StepperTitleProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "descriptionProps",
+            "type": "StepperDescriptionProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "StepperDescriptionProps",
+                "kind": "interface",
+                "type": "StepperDescriptionProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultValue",
+            "type": "number",
+            "required": false,
+            "description": "The value of the step that should be active when initially rendered.",
+            "default": "1",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modelValue",
+            "type": "number",
+            "required": false,
+            "description": "The controlled value of the step to activate. Can be bind as `v-model`.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "orientation",
+            "type": "DataOrientation",
+            "required": false,
+            "description": "The orientation of the stepper.",
+            "default": "'horizontal'",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DataOrientation",
+                "kind": "typeAlias",
+                "type": "'vertical' | 'horizontal'",
+                "resolvedType": "'vertical' | 'horizontal'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "The reading direction of the stepper.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "linear",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether the steps must be completed in order.",
+            "default": "true",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "StepperCompactEmits",
+        "type": "TypeAlias StepperCompactEmits",
+        "resolvedType": "{ \"update:modelValue\": [payload: number] }",
+        "description": "",
+        "sourcePath": "headless/src/components/stepper/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[payload: number]",
+            "parameters": "payload: number",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "referencedTypes": [
+          {
+            "name": "StepperRootEmits",
+            "kind": "typeAlias",
+            "type": "{ 'update:modelValue': [payload: number]; }",
+            "resolvedType": "{ \"update:modelValue\": [payload: number] }",
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "typeParameters": [],
+            "external": false,
+            "members": [],
+            "callables": [
+              {
+                "name": "update:modelValue",
+                "type": "[payload: number]",
+                "parameters": "payload: number",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "referencedTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "slots": {
+        "kind": "slots",
+        "name": "StepperCompactSlots",
+        "type": "Interface StepperCompactSlots",
+        "resolvedType": "{ item?: ((props: StepperItemData & { step: number; state: StepperState; }) => any); indicator?: ((props: StepperItemData & { step: number; state: StepperState; }) => any); title?: ((props: StepperItemData & { step: number; state: StepperState; }) => any); description?: ((props: StepperItemData & { step: number; state: StepperState; }) => any); separator?: ((props: StepperItemData & { step: number; state: StepperState; }) => any) }",
+        "description": "",
+        "sourcePath": "headless/src/components/stepper/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "item",
+            "type": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "parameters": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ step: number; state: StepperState; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "StepperItemData",
+                "kind": "interface",
+                "type": "StepperItemData",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "indicator",
+            "type": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "parameters": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ step: number; state: StepperState; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "StepperItemData",
+                "kind": "interface",
+                "type": "StepperItemData",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "title",
+            "type": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "parameters": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ step: number; state: StepperState; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "StepperItemData",
+                "kind": "interface",
+                "type": "StepperItemData",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "description",
+            "type": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "parameters": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ step: number; state: StepperState; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "StepperItemData",
+                "kind": "interface",
+                "type": "StepperItemData",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "separator",
+            "type": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "parameters": "((props: StepperItemData & { step: number; state: StepperState; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ step: number; state: StepperState; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "StepperItemData",
+                "kind": "interface",
+                "type": "StepperItemData",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/stepper/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
       }
     },
     "StepperDescription": {

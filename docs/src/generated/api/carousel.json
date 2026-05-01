@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "CarouselProps",
         "type": "Interface CarouselProps",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<CarouselUi>; opts?: Partial<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Options\").OptionsType>; plugins?: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").CreatePluginType<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]; orientation?: DataOrientation; dir?: Direction }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<CarouselUi>; opts?: Partial<import(\"../../../../node_modules/embla-carousel/esm/components/Options\").OptionsType>; plugins?: import(\"embla-carousel\").CreatePluginType<import(\"../../../../node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]; orientation?: DataOrientation; dir?: Direction }",
         "description": "",
         "sourcePath": "src/components/carousel/types.ts",
         "typeParameters": [],
@@ -46,7 +46,7 @@
               {
                 "name": "CarouselUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; item: ClassValue; content: ClassValue; container: ClassValue; previous: ClassValue; next: ClassValue; }",
+                "type": "{ root: ClassValue; item: ClassValue; content: ClassValue; next: ClassValue; container: ClassValue; previous: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
                 "sourcePath": "headless/src/components/carousel/types.ts",
@@ -59,23 +59,49 @@
           },
           {
             "name": "opts",
-            "type": "Partial<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Options\").OptionsType>",
+            "type": "Partial<import(\"../../../../node_modules/embla-carousel/esm/components/Options\").OptionsType>",
             "required": false,
             "description": "",
             "default": null,
             "inheritedFrom": "opts",
             "sourcePath": "headless/src/components/carousel/types.ts",
-            "referencedTypes": []
+            "referencedTypes": [
+              {
+                "name": "CarouselOptions",
+                "kind": "typeAlias",
+                "type": "CarouselOptions",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Options.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
           },
           {
             "name": "plugins",
-            "type": "import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").CreatePluginType<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]",
+            "type": "import(\"embla-carousel\").CreatePluginType<import(\"../../../../node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]",
             "required": false,
             "description": "",
             "default": null,
             "inheritedFrom": "plugins",
             "sourcePath": "headless/src/components/carousel/types.ts",
-            "referencedTypes": []
+            "referencedTypes": [
+              {
+                "name": "CarouselPlugin",
+                "kind": "typeAlias",
+                "type": "CarouselPlugin",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Plugins.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
           },
           {
             "name": "orientation",
@@ -131,7 +157,7 @@
         "kind": "emits",
         "name": "CarouselEmits",
         "type": "TypeAlias CarouselEmits: CarouselRootEmits",
-        "resolvedType": "{ initApi: [api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType] }",
+        "resolvedType": "{ initApi: [api: import(\"embla-carousel\").EmblaCarouselType] }",
         "description": "",
         "sourcePath": "src/components/carousel/types.ts",
         "typeParameters": [],
@@ -139,8 +165,8 @@
         "callables": [
           {
             "name": "initApi",
-            "type": "[api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType]",
-            "parameters": "api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType",
+            "type": "[api: import(\"embla-carousel\").EmblaCarouselType]",
+            "parameters": "api: import(\"embla-carousel\").EmblaCarouselType",
             "required": true,
             "description": "",
             "sourcePath": "headless/src/components/carousel/types.ts",
@@ -152,7 +178,7 @@
             "name": "CarouselRootEmits",
             "kind": "typeAlias",
             "type": "{ initApi: [api: import(\"@soybeanjs/headless\").CarouselApi]; }",
-            "resolvedType": "{ initApi: [api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType] }",
+            "resolvedType": "{ initApi: [api: import(\"embla-carousel\").EmblaCarouselType] }",
             "description": "",
             "sourcePath": "headless/src/components/carousel/types.ts",
             "typeParameters": [],
@@ -161,8 +187,8 @@
             "callables": [
               {
                 "name": "initApi",
-                "type": "[api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType]",
-                "parameters": "api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType",
+                "type": "[api: import(\"embla-carousel\").EmblaCarouselType]",
+                "parameters": "api: import(\"embla-carousel\").EmblaCarouselType",
                 "required": true,
                 "description": "",
                 "sourcePath": "headless/src/components/carousel/types.ts",
@@ -384,7 +410,7 @@
         "kind": "emits",
         "name": "CarouselRootEmits",
         "type": "TypeAlias CarouselRootEmits",
-        "resolvedType": "{ initApi: [api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType] }",
+        "resolvedType": "{ initApi: [api: import(\"embla-carousel\").EmblaCarouselType] }",
         "description": "",
         "sourcePath": "headless/src/components/carousel/types.ts",
         "typeParameters": [],
@@ -392,8 +418,8 @@
         "callables": [
           {
             "name": "initApi",
-            "type": "[api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType]",
-            "parameters": "api: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").EmblaCarouselType",
+            "type": "[api: import(\"embla-carousel\").EmblaCarouselType]",
+            "parameters": "api: import(\"embla-carousel\").EmblaCarouselType",
             "required": true,
             "description": "",
             "sourcePath": "headless/src/components/carousel/types.ts",
@@ -406,30 +432,56 @@
         "kind": "props",
         "name": "CarouselRootProps",
         "type": "Interface CarouselRootProps",
-        "resolvedType": "{ opts?: Partial<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Options\").OptionsType>; plugins?: import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").CreatePluginType<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]; orientation?: DataOrientation; dir?: Direction }",
+        "resolvedType": "{ opts?: Partial<import(\"../../../../node_modules/embla-carousel/esm/components/Options\").OptionsType>; plugins?: import(\"embla-carousel\").CreatePluginType<import(\"../../../../node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]; orientation?: DataOrientation; dir?: Direction }",
         "description": "",
         "sourcePath": "headless/src/components/carousel/types.ts",
         "typeParameters": [],
         "members": [
           {
             "name": "opts",
-            "type": "Partial<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Options\").OptionsType>",
+            "type": "Partial<import(\"../../../../node_modules/embla-carousel/esm/components/Options\").OptionsType>",
             "required": false,
             "description": "",
             "default": null,
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/carousel/types.ts",
-            "referencedTypes": []
+            "referencedTypes": [
+              {
+                "name": "CarouselOptions",
+                "kind": "typeAlias",
+                "type": "CarouselOptions",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Options.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
           },
           {
             "name": "plugins",
-            "type": "import(\".pnpm/embla-carousel@8.6.0/node_modules/embla-carousel\").CreatePluginType<import(\"../../../../node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]",
+            "type": "import(\"embla-carousel\").CreatePluginType<import(\"../../../../node_modules/embla-carousel/esm/components/Plugins\").LoosePluginType, {}>[]",
             "required": false,
             "description": "",
             "default": null,
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/carousel/types.ts",
-            "referencedTypes": []
+            "referencedTypes": [
+              {
+                "name": "CarouselPlugin",
+                "kind": "typeAlias",
+                "type": "CarouselPlugin",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/embla-carousel@8.6.0/node_modules/embla-carousel/esm/components/Plugins.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
           },
           {
             "name": "orientation",

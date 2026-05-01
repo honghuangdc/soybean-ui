@@ -1,0 +1,4095 @@
+{
+  "component": "calendar",
+  "symbols": {
+    "Calendar": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarProps",
+        "type": "Interface CalendarProps<M>",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<CalendarUi>; headerProps?: CalendarHeaderProps; headingProps?: CalendarHeadingProps; prevProps?: CalendarPrevProps; nextProps?: CalendarNextProps; gridProps?: CalendarGridProps; gridHeadProps?: CalendarGridHeadProps; gridBodyProps?: CalendarGridBodyProps; gridRowProps?: CalendarGridRowProps; headCellProps?: CalendarHeadCellProps; cellProps?: Omit<CalendarCellProps, 'date'>; cellTriggerProps?: Omit<CalendarCellTriggerProps, 'day' | 'month'>; defaultValue?: CalendarModelValue<M>; defaultPlaceholder?: DateValue; placeholder?: DateValue; pagedNavigation?: boolean; preventDeselect?: boolean; weekStartsOn?: WeekStartsOn; weekdayFormat?: WeekDayFormat; calendarLabel?: string; fixedWeeks?: boolean; maxValue?: DateValue; minValue?: DateValue; locale?: string; numberOfMonths?: number; disabled?: boolean; readonly?: boolean; initialFocus?: boolean; isDateDisabled?: Matcher; isDateUnavailable?: Matcher; dir?: Direction; nextPage?: ((placeholder: DateValue) => DateValue); prevPage?: ((placeholder: DateValue) => DateValue); modelValue?: CalendarModelValue<M>; multiple?: M; disableDaysOutsideCurrentView?: boolean; asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "src/components/calendar/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [
+          {
+            "name": "class",
+            "type": "string | Record<string, boolean> | ClassValue[] | null",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "ClassValue",
+                "kind": "typeAlias",
+                "type": "string | Record<string, boolean> | ClassValue[] | null | undefined",
+                "resolvedType": "string | Record<string, boolean> | ClassValue[] | null | undefined",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "size",
+            "type": "ThemeSize",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "ThemeSize",
+                "kind": "typeAlias",
+                "type": "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'",
+                "resolvedType": "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'",
+                "description": "",
+                "sourcePath": "src/theme/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "ui",
+            "type": "Partial<CalendarUi>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarUi",
+                "kind": "typeAlias",
+                "type": "{ root: ClassValue; header: ClassValue; heading: ClassValue; prev: ClassValue; next: ClassValue; grid: ClassValue; gridHead: ClassValue; gridBody: ClassValue; gridRow: ClassValue; headCell: ClassValue; cell: ClassValue; cellTrigger: ClassValue; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "headerProps",
+            "type": "CalendarHeaderProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.headerProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeaderProps",
+                "kind": "interface",
+                "type": "CalendarHeaderProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "headingProps",
+            "type": "CalendarHeadingProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.headingProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeadingProps",
+                "kind": "interface",
+                "type": "CalendarHeadingProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prevProps",
+            "type": "CalendarPrevProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.prevProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarPrevProps",
+                "kind": "interface",
+                "type": "CalendarPrevProps",
+                "resolvedType": "{ prevPage?: ((placeholder: DateValue) => DateValue); asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": [
+                  {
+                    "name": "prevPage",
+                    "type": "((placeholder: DateValue) => DateValue) | undefined",
+                    "parameters": "((placeholder: DateValue) => DateValue) | undefined",
+                    "required": false,
+                    "description": "",
+                    "sourcePath": "headless/src/components/calendar/types.ts",
+                    "referencedTypes": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "nextProps",
+            "type": "CalendarNextProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.nextProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarNextProps",
+                "kind": "interface",
+                "type": "CalendarNextProps",
+                "resolvedType": "{ nextPage?: ((placeholder: DateValue) => DateValue); asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": [
+                  {
+                    "name": "nextPage",
+                    "type": "((placeholder: DateValue) => DateValue) | undefined",
+                    "parameters": "((placeholder: DateValue) => DateValue) | undefined",
+                    "required": false,
+                    "description": "",
+                    "sourcePath": "headless/src/components/calendar/types.ts",
+                    "referencedTypes": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "gridProps",
+            "type": "CalendarGridProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.gridProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridProps",
+                "kind": "interface",
+                "type": "CalendarGridProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "gridHeadProps",
+            "type": "CalendarGridHeadProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.gridHeadProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridHeadProps",
+                "kind": "interface",
+                "type": "CalendarGridHeadProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "gridBodyProps",
+            "type": "CalendarGridBodyProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.gridBodyProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridBodyProps",
+                "kind": "interface",
+                "type": "CalendarGridBodyProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "gridRowProps",
+            "type": "CalendarGridRowProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.gridRowProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridRowProps",
+                "kind": "interface",
+                "type": "CalendarGridRowProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "headCellProps",
+            "type": "CalendarHeadCellProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.headCellProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeadCellProps",
+                "kind": "interface",
+                "type": "CalendarHeadCellProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "cellProps",
+            "type": "Omit<CalendarCellProps, 'date'>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.cellProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarCellProps",
+                "kind": "interface",
+                "type": "CalendarCellProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "cellTriggerProps",
+            "type": "Omit<CalendarCellTriggerProps, 'day' | 'month'>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.cellTriggerProps",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarCellTriggerProps",
+                "kind": "interface",
+                "type": "CalendarCellTriggerProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultValue",
+            "type": "CalendarModelValue<M>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.defaultValue",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultPlaceholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.defaultPlaceholder",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placeholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.placeholder",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "pagedNavigation",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.pagedNavigation",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "preventDeselect",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.preventDeselect",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "weekStartsOn",
+            "type": "WeekStartsOn",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.weekStartsOn",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "WeekStartsOn",
+                "kind": "typeAlias",
+                "type": "0 | 1 | 2 | 3 | 4 | 5 | 6",
+                "resolvedType": "0 | 1 | 2 | 3 | 4 | 5 | 6",
+                "description": "",
+                "sourcePath": "headless/src/date/calendar.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "weekdayFormat",
+            "type": "WeekDayFormat",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.weekdayFormat",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "WeekDayFormat",
+                "kind": "typeAlias",
+                "type": "'narrow' | 'short' | 'long'",
+                "resolvedType": "'narrow' | 'short' | 'long'",
+                "description": "",
+                "sourcePath": "headless/src/date/calendar.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "calendarLabel",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.calendarLabel",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "fixedWeeks",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.fixedWeeks",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "maxValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.maxValue",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "minValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.minValue",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.locale",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "numberOfMonths",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.numberOfMonths",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.disabled",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "readonly",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.readonly",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "initialFocus",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.initialFocus",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "isDateDisabled",
+            "type": "Matcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.isDateDisabled",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Matcher",
+                "kind": "typeAlias",
+                "type": "(date: DateValue) => boolean",
+                "resolvedType": "(date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "isDateUnavailable",
+            "type": "Matcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.isDateUnavailable",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Matcher",
+                "kind": "typeAlias",
+                "type": "(date: DateValue) => boolean",
+                "resolvedType": "(date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.dir",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "nextPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.nextPage",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prevPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.prevPage",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "modelValue",
+            "type": "CalendarModelValue<M>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.modelValue",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "multiple",
+            "type": "M",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.multiple",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disableDaysOutsideCurrentView",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.disableDaysOutsideCurrentView",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "CalendarCompactProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "CalendarCompactProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "CalendarEmits",
+        "type": "TypeAlias CalendarEmits<M>: CalendarCompactEmits<M>",
+        "resolvedType": "{ \"update:modelValue\": [date: CalendarModelValue<M>]; \"update:placeholder\": [date: DateValue] }",
+        "description": "",
+        "sourcePath": "src/components/calendar/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[date: CalendarModelValue<M>]",
+            "parameters": "date: CalendarModelValue<M>",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:placeholder",
+            "type": "[date: DateValue]",
+            "parameters": "date: DateValue",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      },
+      "slots": {
+        "kind": "slots",
+        "name": "CalendarSlots",
+        "type": "TypeAlias CalendarSlots<M>: CalendarCompactSlots<M>",
+        "resolvedType": "{ default?: ((props: { modelValue: CalendarModelValue<M>; }) => any); prev?: ((props: { disabled: boolean; }) => any); heading?: ((props: CalendarHeadingSlotProps) => any); next?: ((props: { disabled: boolean; }) => any); \"head-cell\"?: ((props: { date: DateValue; index: number; label: string; }) => any); day?: ((props: { day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }) => any) }",
+        "description": "",
+        "sourcePath": "src/components/calendar/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [],
+        "callables": [
+          {
+            "name": "default",
+            "type": "((props: { modelValue: CalendarModelValue<M>; }) => any) | undefined",
+            "parameters": "((props: { modelValue: CalendarModelValue<M>; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ modelValue: CalendarModelValue<M>; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prev",
+            "type": "((props: { disabled: boolean; }) => any) | undefined",
+            "parameters": "((props: { disabled: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ disabled: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "heading",
+            "type": "((props: CalendarHeadingSlotProps) => any) | undefined",
+            "parameters": "((props: CalendarHeadingSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeadingSlotProps",
+                "kind": "interface",
+                "type": "CalendarHeadingSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "next",
+            "type": "((props: { disabled: boolean; }) => any) | undefined",
+            "parameters": "((props: { disabled: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ disabled: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "head-cell",
+            "type": "((props: { date: DateValue; index: number; label: string; }) => any) | undefined",
+            "parameters": "((props: { date: DateValue; index: number; label: string; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ date: DateValue; index: number; label: string; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "day",
+            "type": "((props: { day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }) => any) | undefined",
+            "parameters": "((props: { day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      }
+    },
+    "CalendarCell": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarCellProps",
+        "type": "Interface CalendarCellProps",
+        "resolvedType": "{ date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime; asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "date",
+            "type": "import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarCellTrigger": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarCellTriggerProps",
+        "type": "Interface CalendarCellTriggerProps",
+        "resolvedType": "{ day: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime; month: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime; asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "day",
+            "type": "import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "month",
+            "type": "import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarCompact": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarCompactProps",
+        "type": "Interface CalendarCompactProps<M>",
+        "resolvedType": "{ headerProps?: CalendarHeaderProps; headingProps?: CalendarHeadingProps; prevProps?: CalendarPrevProps; nextProps?: CalendarNextProps; gridProps?: CalendarGridProps; gridHeadProps?: CalendarGridHeadProps; gridBodyProps?: CalendarGridBodyProps; gridRowProps?: CalendarGridRowProps; headCellProps?: CalendarHeadCellProps; cellProps?: Omit<CalendarCellProps, 'date'>; cellTriggerProps?: Omit<CalendarCellTriggerProps, 'day' | 'month'>; defaultValue?: CalendarModelValue<M>; defaultPlaceholder?: DateValue; placeholder?: DateValue; pagedNavigation?: boolean; preventDeselect?: boolean; weekStartsOn?: WeekStartsOn; weekdayFormat?: WeekDayFormat; calendarLabel?: string; fixedWeeks?: boolean; maxValue?: DateValue; minValue?: DateValue; locale?: string; numberOfMonths?: number; disabled?: boolean; readonly?: boolean; initialFocus?: boolean; isDateDisabled?: Matcher; isDateUnavailable?: Matcher; dir?: Direction; nextPage?: ((placeholder: DateValue) => DateValue); prevPage?: ((placeholder: DateValue) => DateValue); modelValue?: CalendarModelValue<M>; multiple?: M; disableDaysOutsideCurrentView?: boolean; asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": ["M extends boolean = false"],
+        "members": [
+          {
+            "name": "headerProps",
+            "type": "CalendarHeaderProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeaderProps",
+                "kind": "interface",
+                "type": "CalendarHeaderProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "headingProps",
+            "type": "CalendarHeadingProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeadingProps",
+                "kind": "interface",
+                "type": "CalendarHeadingProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prevProps",
+            "type": "CalendarPrevProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarPrevProps",
+                "kind": "interface",
+                "type": "CalendarPrevProps",
+                "resolvedType": "{ prevPage?: ((placeholder: DateValue) => DateValue); asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": [
+                  {
+                    "name": "prevPage",
+                    "type": "((placeholder: DateValue) => DateValue) | undefined",
+                    "parameters": "((placeholder: DateValue) => DateValue) | undefined",
+                    "required": false,
+                    "description": "",
+                    "sourcePath": "headless/src/components/calendar/types.ts",
+                    "referencedTypes": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "nextProps",
+            "type": "CalendarNextProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarNextProps",
+                "kind": "interface",
+                "type": "CalendarNextProps",
+                "resolvedType": "{ nextPage?: ((placeholder: DateValue) => DateValue); asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": [
+                  {
+                    "name": "nextPage",
+                    "type": "((placeholder: DateValue) => DateValue) | undefined",
+                    "parameters": "((placeholder: DateValue) => DateValue) | undefined",
+                    "required": false,
+                    "description": "",
+                    "sourcePath": "headless/src/components/calendar/types.ts",
+                    "referencedTypes": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "gridProps",
+            "type": "CalendarGridProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridProps",
+                "kind": "interface",
+                "type": "CalendarGridProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "gridHeadProps",
+            "type": "CalendarGridHeadProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridHeadProps",
+                "kind": "interface",
+                "type": "CalendarGridHeadProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "gridBodyProps",
+            "type": "CalendarGridBodyProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridBodyProps",
+                "kind": "interface",
+                "type": "CalendarGridBodyProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "gridRowProps",
+            "type": "CalendarGridRowProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarGridRowProps",
+                "kind": "interface",
+                "type": "CalendarGridRowProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "headCellProps",
+            "type": "CalendarHeadCellProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeadCellProps",
+                "kind": "interface",
+                "type": "CalendarHeadCellProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "cellProps",
+            "type": "Omit<CalendarCellProps, 'date'>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarCellProps",
+                "kind": "interface",
+                "type": "CalendarCellProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "cellTriggerProps",
+            "type": "Omit<CalendarCellTriggerProps, 'day' | 'month'>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarCellTriggerProps",
+                "kind": "interface",
+                "type": "CalendarCellTriggerProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultValue",
+            "type": "CalendarModelValue<M>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultPlaceholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placeholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "pagedNavigation",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "preventDeselect",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "weekStartsOn",
+            "type": "WeekStartsOn",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "WeekStartsOn",
+                "kind": "typeAlias",
+                "type": "0 | 1 | 2 | 3 | 4 | 5 | 6",
+                "resolvedType": "0 | 1 | 2 | 3 | 4 | 5 | 6",
+                "description": "",
+                "sourcePath": "headless/src/date/calendar.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "weekdayFormat",
+            "type": "WeekDayFormat",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "WeekDayFormat",
+                "kind": "typeAlias",
+                "type": "'narrow' | 'short' | 'long'",
+                "resolvedType": "'narrow' | 'short' | 'long'",
+                "description": "",
+                "sourcePath": "headless/src/date/calendar.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "calendarLabel",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "fixedWeeks",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "maxValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "minValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "numberOfMonths",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "readonly",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "initialFocus",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "isDateDisabled",
+            "type": "Matcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Matcher",
+                "kind": "typeAlias",
+                "type": "(date: DateValue) => boolean",
+                "resolvedType": "(date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "isDateUnavailable",
+            "type": "Matcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Matcher",
+                "kind": "typeAlias",
+                "type": "(date: DateValue) => boolean",
+                "resolvedType": "(date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "nextPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prevPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "modelValue",
+            "type": "CalendarModelValue<M>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "multiple",
+            "type": "M",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disableDaysOutsideCurrentView",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "CalendarCompactEmits",
+        "type": "TypeAlias CalendarCompactEmits<M>",
+        "resolvedType": "{ \"update:modelValue\": [date: CalendarModelValue<M>]; \"update:placeholder\": [date: DateValue] }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": ["M extends boolean = false"],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[date: CalendarModelValue<M>]",
+            "parameters": "date: CalendarModelValue<M>",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:placeholder",
+            "type": "[date: DateValue]",
+            "parameters": "date: DateValue",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      },
+      "slots": {
+        "kind": "slots",
+        "name": "CalendarCompactSlots",
+        "type": "TypeAlias CalendarCompactSlots<M>",
+        "resolvedType": "{ default?: ((props: { modelValue: CalendarModelValue<M>; }) => any); prev?: ((props: { disabled: boolean; }) => any); heading?: ((props: CalendarHeadingSlotProps) => any); next?: ((props: { disabled: boolean; }) => any); \"head-cell\"?: ((props: { date: DateValue; index: number; label: string; }) => any); day?: ((props: { day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }) => any) }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": ["M extends boolean = false"],
+        "members": [],
+        "callables": [
+          {
+            "name": "default",
+            "type": "((props: { modelValue: CalendarModelValue<M>; }) => any) | undefined",
+            "parameters": "((props: { modelValue: CalendarModelValue<M>; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ modelValue: CalendarModelValue<M>; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prev",
+            "type": "((props: { disabled: boolean; }) => any) | undefined",
+            "parameters": "((props: { disabled: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ disabled: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "heading",
+            "type": "((props: CalendarHeadingSlotProps) => any) | undefined",
+            "parameters": "((props: CalendarHeadingSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarHeadingSlotProps",
+                "kind": "interface",
+                "type": "CalendarHeadingSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "next",
+            "type": "((props: { disabled: boolean; }) => any) | undefined",
+            "parameters": "((props: { disabled: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ disabled: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "head-cell",
+            "type": "((props: { date: DateValue; index: number; label: string; }) => any) | undefined",
+            "parameters": "((props: { date: DateValue; index: number; label: string; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ date: DateValue; index: number; label: string; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "day",
+            "type": "((props: { day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }) => any) | undefined",
+            "parameters": "((props: { day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "__type",
+                "kind": "typeLiteral",
+                "type": "{ day: DateValue; month: DateValue; dayValue: string; disabled: boolean; selected: boolean; unavailable: boolean; today: boolean; outsideView: boolean; outsideVisibleView: boolean; }",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              },
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      }
+    },
+    "CalendarGrid": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarGridProps",
+        "type": "Interface CalendarGridProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarGridBody": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarGridBodyProps",
+        "type": "Interface CalendarGridBodyProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarGridHead": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarGridHeadProps",
+        "type": "Interface CalendarGridHeadProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarGridRow": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarGridRowProps",
+        "type": "Interface CalendarGridRowProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarHeadCell": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarHeadCellProps",
+        "type": "Interface CalendarHeadCellProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarHeader": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarHeaderProps",
+        "type": "Interface CalendarHeaderProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarHeading": {
+      "slotProps": {
+        "kind": "slotProps",
+        "name": "CalendarHeadingSlotProps",
+        "type": "Interface CalendarHeadingSlotProps",
+        "resolvedType": "{ headingValue: string; monthValue: string; yearValue: string; selectedMonth: number; selectedYear: number; monthOptions: SelectOptionData<number>[]; yearOptions: SelectOptionData<number>[]; onMonthChange: (value: number | undefined) => void; onYearChange: (value: number | undefined) => void }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "headingValue",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "monthValue",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "yearValue",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "selectedMonth",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "selectedYear",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "monthOptions",
+            "type": "SelectOptionData<number>[]",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "yearOptions",
+            "type": "SelectOptionData<number>[]",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "onMonthChange",
+            "type": "(value: number | undefined) => void",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "onYearChange",
+            "type": "(value: number | undefined) => void",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "props": {
+        "kind": "props",
+        "name": "CalendarHeadingProps",
+        "type": "Interface CalendarHeadingProps",
+        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarNext": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarNextProps",
+        "type": "Interface CalendarNextProps",
+        "resolvedType": "{ nextPage?: ((placeholder: DateValue) => DateValue); asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "nextPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarPrev": {
+      "props": {
+        "kind": "props",
+        "name": "CalendarPrevProps",
+        "type": "Interface CalendarPrevProps",
+        "resolvedType": "{ prevPage?: ((placeholder: DateValue) => DateValue); asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "prevPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "CalendarRoot": {
+      "emits": {
+        "kind": "emits",
+        "name": "CalendarRootEmits",
+        "type": "TypeAlias CalendarRootEmits<M>",
+        "resolvedType": "{ \"update:modelValue\": [date: CalendarModelValue<M>]; \"update:placeholder\": [date: DateValue] }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[date: CalendarModelValue<M>]",
+            "parameters": "date: CalendarModelValue<M>",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:placeholder",
+            "type": "[date: DateValue]",
+            "parameters": "date: DateValue",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      },
+      "props": {
+        "kind": "props",
+        "name": "CalendarRootProps",
+        "type": "Interface CalendarRootProps<M>",
+        "resolvedType": "{ defaultValue?: CalendarModelValue<M>; defaultPlaceholder?: DateValue; placeholder?: DateValue; pagedNavigation?: boolean; preventDeselect?: boolean; weekStartsOn?: WeekStartsOn; weekdayFormat?: WeekDayFormat; calendarLabel?: string; fixedWeeks?: boolean; maxValue?: DateValue; minValue?: DateValue; locale?: string; numberOfMonths?: number; disabled?: boolean; readonly?: boolean; initialFocus?: boolean; isDateDisabled?: Matcher; isDateUnavailable?: Matcher; dir?: Direction; nextPage?: ((placeholder: DateValue) => DateValue); prevPage?: ((placeholder: DateValue) => DateValue); modelValue?: CalendarModelValue<M>; multiple?: M; disableDaysOutsideCurrentView?: boolean; asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [
+          {
+            "name": "defaultValue",
+            "type": "CalendarModelValue<M>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultPlaceholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placeholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "pagedNavigation",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "preventDeselect",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "weekStartsOn",
+            "type": "WeekStartsOn",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "WeekStartsOn",
+                "kind": "typeAlias",
+                "type": "0 | 1 | 2 | 3 | 4 | 5 | 6",
+                "resolvedType": "0 | 1 | 2 | 3 | 4 | 5 | 6",
+                "description": "",
+                "sourcePath": "headless/src/date/calendar.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "weekdayFormat",
+            "type": "WeekDayFormat",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "WeekDayFormat",
+                "kind": "typeAlias",
+                "type": "'narrow' | 'short' | 'long'",
+                "resolvedType": "'narrow' | 'short' | 'long'",
+                "description": "",
+                "sourcePath": "headless/src/date/calendar.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "calendarLabel",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "fixedWeeks",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "maxValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "minValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "numberOfMonths",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "readonly",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "initialFocus",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "isDateDisabled",
+            "type": "Matcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Matcher",
+                "kind": "typeAlias",
+                "type": "(date: DateValue) => boolean",
+                "resolvedType": "(date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "isDateUnavailable",
+            "type": "Matcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Matcher",
+                "kind": "typeAlias",
+                "type": "(date: DateValue) => boolean",
+                "resolvedType": "(date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "nextPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "prevPage",
+            "type": "((placeholder: DateValue) => DateValue)",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "modelValue",
+            "type": "CalendarModelValue<M>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "multiple",
+            "type": "M",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disableDaysOutsideCurrentView",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "PrimitiveProps.as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "slotProps": {
+        "kind": "slotProps",
+        "name": "CalendarRootSlotProps",
+        "type": "Interface CalendarRootSlotProps<M>",
+        "resolvedType": "{ date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime; placeholder: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime; grid: Grid<DateValue>[]; weekDays: string[]; weekStartsOn: number; locale: string; fixedWeeks: boolean; modelValue: M extends true ? DateValue[] | undefined : DateValue | undefined; formatter: Formatter; minValue: DateValue | undefined; maxValue: DateValue | undefined; disabled: boolean; onPlaceholderChange: (date: DateValue) => void }",
+        "description": "",
+        "sourcePath": "headless/src/components/calendar/types.ts",
+        "typeParameters": ["TypeParameter M"],
+        "members": [
+          {
+            "name": "date",
+            "type": "import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placeholder",
+            "type": "import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "grid",
+            "type": "Grid<DateValue>[]",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "weekDays",
+            "type": "string[]",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "weekStartsOn",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "fixedWeeks",
+            "type": "boolean",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modelValue",
+            "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "CalendarModelValue",
+                "kind": "typeAlias",
+                "type": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "resolvedType": "M extends true ? DateValue[] | undefined : DateValue | undefined",
+                "description": "",
+                "sourcePath": "headless/src/components/calendar/types.ts",
+                "typeParameters": ["M extends boolean = false"],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "formatter",
+            "type": "Formatter",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Formatter",
+                "kind": "interface",
+                "type": "Formatter",
+                "resolvedType": "{ getLocale: () => string; setLocale: (newLocale: string) => void; custom: (date: Date, options: DateFormatterOptions) => string; selectedDate: (date: DateValue | TimeValue, includeTime?: boolean) => string; dayOfWeek: (date: Date, length?: DateFormatterOptions['weekday']) => string; fullMonthAndYear: (date: Date, options?: DateFormatterOptions) => string; fullMonth: (date: Date, options?: DateFormatterOptions) => string; fullYear: (date: Date, options?: DateFormatterOptions) => string; dayPeriod: (date: Date) => string; part: (dateObj: DateValue | TimeValue, type: Intl.DateTimeFormatPartTypes, options?: DateFormatterOptions) => string; toParts: (date: DateValue | TimeValue, options?: DateFormatterOptions) => Intl.DateTimeFormatPart[]; getMonths: () => { label: string; value: number; }[] }",
+                "description": "",
+                "sourcePath": "headless/src/date/formatter.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "getLocale",
+                    "type": "() => string",
+                    "required": true,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "getMonths",
+                    "type": "() => { label: string; value: number; }[]",
+                    "required": true,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": [
+                  {
+                    "name": "setLocale",
+                    "type": "(newLocale: string) => void",
+                    "parameters": "newLocale: string",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "custom",
+                    "type": "(date: Date, options: DateFormatterOptions) => string",
+                    "parameters": "date: Date, options: DateFormatterOptions",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "selectedDate",
+                    "type": "(date: DateValue | TimeValue, includeTime?: boolean) => string",
+                    "parameters": "date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | ZonedDateTime | import(\"@internationalized/date\").Time, includeTime?: boolean | undefined",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "dayOfWeek",
+                    "type": "(date: Date, length?: DateFormatterOptions['weekday']) => string",
+                    "parameters": "date: Date, length?: 'narrow' | 'short' | 'long' | undefined",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "fullMonthAndYear",
+                    "type": "(date: Date, options?: DateFormatterOptions) => string",
+                    "parameters": "date: Date, options?: DateFormatterOptions | undefined",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "fullMonth",
+                    "type": "(date: Date, options?: DateFormatterOptions) => string",
+                    "parameters": "date: Date, options?: DateFormatterOptions | undefined",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "fullYear",
+                    "type": "(date: Date, options?: DateFormatterOptions) => string",
+                    "parameters": "date: Date, options?: DateFormatterOptions | undefined",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "dayPeriod",
+                    "type": "(date: Date) => string",
+                    "parameters": "date: Date",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "part",
+                    "type": "(dateObj: DateValue | TimeValue, type: Intl.DateTimeFormatPartTypes, options?: DateFormatterOptions) => string",
+                    "parameters": "dateObj: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | ZonedDateTime | import(\"@internationalized/date\").Time, type: keyof Intl.DateTimeFormatPartTypesRegistry, options?: DateFormatterOptions | undefined",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "toParts",
+                    "type": "(date: DateValue | TimeValue, options?: DateFormatterOptions) => Intl.DateTimeFormatPart[]",
+                    "parameters": "date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | ZonedDateTime | import(\"@internationalized/date\").Time, options?: DateFormatterOptions | undefined",
+                    "required": true,
+                    "description": "",
+                    "sourcePath": "headless/src/date/formatter.ts",
+                    "referencedTypes": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "minValue",
+            "type": "DateValue | undefined",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "maxValue",
+            "type": "DateValue | undefined",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "onPlaceholderChange",
+            "type": "(date: DateValue) => void",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/calendar/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    }
+  }
+}

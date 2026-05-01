@@ -1,6 +1,88 @@
 {
   "component": "combobox",
   "symbols": {
+    "AutocompleteContent": {
+      "props": {
+        "kind": "props",
+        "name": "AutocompleteContentProps",
+        "type": "Interface AutocompleteContentProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "AutocompleteItem": {
+      "props": {
+        "kind": "props",
+        "name": "AutocompleteItemProps",
+        "type": "Interface AutocompleteItemProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "AutocompleteItemEmits",
+        "type": "TypeAlias AutocompleteItemEmits: CommandItemEmits",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "AutocompleteSeparator": {
+      "props": {
+        "kind": "props",
+        "name": "AutocompleteSeparatorProps",
+        "type": "Interface AutocompleteSeparatorProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "AutocompleteTrigger": {
+      "props": {
+        "kind": "props",
+        "name": "AutocompleteTriggerProps",
+        "type": "Interface AutocompleteTriggerProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "AutocompleteViewport": {
+      "props": {
+        "kind": "props",
+        "name": "AutocompleteViewportProps",
+        "type": "Interface AutocompleteViewportProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "Combobox": {
       "props": {
         "kind": "props",
@@ -69,7 +151,7 @@
               {
                 "name": "ComboboxUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; item: ClassValue; trigger: ClassValue; triggerIcon: ClassValue; anchor: ClassValue; inputRoot: ClassValue; inputControl: ClassValue; viewport: ClassValue; group: ClassValue; groupLabel: ClassValue; itemIndicator: ClassValue; separator: ClassValue; empty: ClassValue; popup: ClassValue; cancel: ClassValue; positioner: ClassValue; arrow: ClassValue; virtualizer: ClassValue; }",
+                "type": "{ root: ClassValue; item: ClassValue; trigger: ClassValue; triggerIcon: ClassValue; anchor: ClassValue; positioner: ClassValue; popup: ClassValue; arrow: ClassValue; cancel: ClassValue; viewport: ClassValue; inputRoot: ClassValue; inputControl: ClassValue; group: ClassValue; groupLabel: ClassValue; itemIndicator: ClassValue; empty: ClassValue; separator: ClassValue; virtualizer: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
                 "sourcePath": "headless/src/components/combobox/types.ts",
@@ -140,12 +222,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxAnchorProps",
+                "name": "PopperAnchorProps",
                 "kind": "interface",
                 "type": "ComboboxAnchorProps",
                 "resolvedType": "{ reference?: ReferenceElement; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/popper/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -901,12 +983,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxGroupProps",
+                "name": "ListboxGroupProps",
                 "kind": "interface",
                 "type": "ComboboxGroupProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -924,12 +1006,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxGroupLabelProps",
+                "name": "ListboxGroupLabelProps",
                 "kind": "interface",
                 "type": "ComboboxGroupLabelProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -950,32 +1032,12 @@
                 "name": "ComboboxItemProps",
                 "kind": "interface",
                 "type": "ComboboxItemProps",
-                "resolvedType": "{ value: string; disabled?: boolean; textValue?: string; asChild?: boolean; as?: AsTag | Component }",
+                "resolvedType": "{ textValue?: string; value: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
                 "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
-                  {
-                    "name": "value",
-                    "type": "string",
-                    "required": true,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/combobox/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "disabled",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/combobox/types.ts",
-                    "referencedTypes": []
-                  },
                   {
                     "name": "textValue",
                     "type": "string",
@@ -984,6 +1046,26 @@
                     "default": null,
                     "inheritedFrom": null,
                     "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "value",
+                    "type": "string",
+                    "required": true,
+                    "description": "The value given as data when submitted with a `name`.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/listbox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "When `true`, prevents the user from interacting with the item.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/listbox/types.ts",
                     "referencedTypes": []
                   },
                   {
@@ -1021,12 +1103,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxItemIndicatorProps",
+                "name": "ListboxItemIndicatorProps",
                 "kind": "interface",
                 "type": "ComboboxItemIndicatorProps",
                 "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -1494,8 +1576,8 @@
             "type": "[event: SelectEvent<string>]",
             "parameters": "event: SelectEvent<string>",
             "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/combobox/types.ts",
+            "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
+            "sourcePath": "headless/src/components/listbox/types.ts",
             "referencedTypes": [
               {
                 "name": "SelectEvent",
@@ -1740,99 +1822,8 @@
         "referencedTypes": []
       }
     },
-    "ComboboxAnchor": {
-      "props": {
-        "kind": "props",
-        "name": "ComboboxAnchorProps",
-        "type": "Interface ComboboxAnchorProps",
-        "resolvedType": "{ reference?: ReferenceElement; asChild?: boolean; as?: AsTag | Component }",
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "reference",
-            "type": "ReferenceElement",
-            "required": false,
-            "description": "The reference (or anchor) element that is being referred to for positioning. If not provided will use the current\ncomponent as anchor.",
-            "default": null,
-            "inheritedFrom": "reference",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "ReferenceElement",
-                "kind": "typeAlias",
-                "type": "ReferenceElement",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "node_modules/.pnpm/@floating-ui+dom@1.7.6/node_modules/@floating-ui/dom/dist/floating-ui.dom.d.mts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": "asChild",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": "as",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "ComboboxArrow": {
-      "props": {
-        "kind": "props",
-        "name": "ComboboxArrowProps",
-        "type": "Interface ComboboxArrowProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
+    "ComboboxAnchor": {},
+    "ComboboxArrow": {},
     "ComboboxCancel": {
       "props": {
         "kind": "props",
@@ -1903,7 +1894,7 @@
       "emits": {
         "kind": "emits",
         "name": "ComboboxCompactEmits",
-        "type": "TypeAlias ComboboxCompactEmits<M>: ComboboxRootEmits<M> & ComboboxContentEmits & ComboboxItemEmits",
+        "type": "TypeAlias ComboboxCompactEmits<M>: ComboboxRootEmits<M> & ComboboxContentEmits & AutocompleteItemEmits",
         "resolvedType": "{ \"update:modelValue\": [value: M extends true ? string[] : string]; highlight: [payload?: CollectionItemData<ListboxCollectionItemData> | undefined]; \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; placed: []; select: [event: SelectEvent<string>] }",
         "description": "",
         "sourcePath": "headless/src/components/combobox/types.ts",
@@ -2108,8 +2099,8 @@
             "type": "[event: SelectEvent<string>]",
             "parameters": "event: SelectEvent<string>",
             "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/combobox/types.ts",
+            "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
+            "sourcePath": "headless/src/components/listbox/types.ts",
             "referencedTypes": [
               {
                 "name": "SelectEvent",
@@ -2197,12 +2188,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxAnchorProps",
+                "name": "PopperAnchorProps",
                 "kind": "interface",
                 "type": "ComboboxAnchorProps",
                 "resolvedType": "{ reference?: ReferenceElement; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/popper/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -2958,12 +2949,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxGroupProps",
+                "name": "ListboxGroupProps",
                 "kind": "interface",
                 "type": "ComboboxGroupProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -2981,12 +2972,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxGroupLabelProps",
+                "name": "ListboxGroupLabelProps",
                 "kind": "interface",
                 "type": "ComboboxGroupLabelProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -3007,32 +2998,12 @@
                 "name": "ComboboxItemProps",
                 "kind": "interface",
                 "type": "ComboboxItemProps",
-                "resolvedType": "{ value: string; disabled?: boolean; textValue?: string; asChild?: boolean; as?: AsTag | Component }",
+                "resolvedType": "{ textValue?: string; value: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
                 "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
-                  {
-                    "name": "value",
-                    "type": "string",
-                    "required": true,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/combobox/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "disabled",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/combobox/types.ts",
-                    "referencedTypes": []
-                  },
                   {
                     "name": "textValue",
                     "type": "string",
@@ -3041,6 +3012,26 @@
                     "default": null,
                     "inheritedFrom": null,
                     "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "value",
+                    "type": "string",
+                    "required": true,
+                    "description": "The value given as data when submitted with a `name`.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/listbox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "When `true`, prevents the user from interacting with the item.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/listbox/types.ts",
                     "referencedTypes": []
                   },
                   {
@@ -3078,12 +3069,12 @@
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
-                "name": "ComboboxItemIndicatorProps",
+                "name": "ListboxItemIndicatorProps",
                 "kind": "interface",
                 "type": "ComboboxItemIndicatorProps",
                 "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/combobox/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -3830,7 +3821,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "position",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": []
           },
@@ -3840,7 +3831,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ComboboxContentImplProps.bodyLock",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": []
           },
@@ -3850,7 +3841,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ComboboxContentImplProps.hideWhenEmpty",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": []
           },
@@ -3860,7 +3851,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ComboboxContentImplProps.popupProps",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/combobox/types.ts",
             "referencedTypes": [
               {
@@ -3883,7 +3874,7 @@
             "required": false,
             "description": "The placement of the floating element.\n\nIf used, it will override the `side` and `align` props.",
             "default": "undefined",
-            "inheritedFrom": "ComboboxContentImplProps.placement",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3906,7 +3897,7 @@
             "required": false,
             "description": "The preferred side of the trigger to render against when open. Will be reversed when collisions occur and\navoidCollisions is enabled.",
             "default": "'bottom'",
-            "inheritedFrom": "ComboboxContentImplProps.side",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3929,7 +3920,7 @@
             "required": false,
             "description": "The distance in pixels from the trigger.",
             "default": "0",
-            "inheritedFrom": "ComboboxContentImplProps.sideOffset",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3939,7 +3930,7 @@
             "required": false,
             "description": "Flip to the opposite side when colliding with boundary.",
             "default": "true",
-            "inheritedFrom": "ComboboxContentImplProps.sideFlip",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3949,7 +3940,7 @@
             "required": false,
             "description": "The preferred alignment against the trigger. May change when collisions occur.",
             "default": "'center'",
-            "inheritedFrom": "ComboboxContentImplProps.align",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -3972,7 +3963,7 @@
             "required": false,
             "description": "An offset in pixels from the `start` or `end` alignment options.",
             "default": "0",
-            "inheritedFrom": "ComboboxContentImplProps.alignOffset",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3982,7 +3973,7 @@
             "required": false,
             "description": "Flip alignment when colliding with boundary.\nMay only occur when `prioritizePosition` is true.",
             "default": "true",
-            "inheritedFrom": "ComboboxContentImplProps.alignFlip",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -3992,7 +3983,7 @@
             "required": false,
             "description": "When `true`, overrides the side and align preferences to prevent collisions with boundary edges.",
             "default": "true",
-            "inheritedFrom": "ComboboxContentImplProps.avoidCollisions",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4002,7 +3993,7 @@
             "required": false,
             "description": "The element used as the collision boundary. By default this is the viewport, though you can provide additional\nelement(s) to be included in this check.",
             "default": "[ ]",
-            "inheritedFrom": "ComboboxContentImplProps.collisionBoundary",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -4025,7 +4016,7 @@
             "required": false,
             "description": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for\nall sides), or a partial padding object, for example: { top: 20, left: 20 }.",
             "default": "0",
-            "inheritedFrom": "ComboboxContentImplProps.collisionPadding",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -4048,7 +4039,7 @@
             "required": false,
             "description": "The padding between the arrow and the edges of the content. If your content has border-radius, this will prevent it\nfrom overflowing the corners.",
             "default": "0",
-            "inheritedFrom": "ComboboxContentImplProps.arrowPadding",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4058,7 +4049,7 @@
             "required": false,
             "description": "When `true`, hides the arrow when it cannot be centered\nto the reference element.",
             "default": "true",
-            "inheritedFrom": "ComboboxContentImplProps.hideShiftedArrow",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4068,7 +4059,7 @@
             "required": false,
             "description": "The sticky behavior on the align axis. `partial` will keep the content in the boundary as long as the trigger is at\nleast partially in the boundary whilst \"always\" will keep the content in the boundary regardless.",
             "default": "'partial'",
-            "inheritedFrom": "ComboboxContentImplProps.sticky",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4078,7 +4069,7 @@
             "required": false,
             "description": "Whether to hide the content when the trigger becomes fully occluded.",
             "default": "false",
-            "inheritedFrom": "ComboboxContentImplProps.hideWhenDetached",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4088,7 +4079,7 @@
             "required": false,
             "description": "The type of CSS position property to use.",
             "default": "'fixed'",
-            "inheritedFrom": "ComboboxContentImplProps.positionStrategy",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4098,7 +4089,7 @@
             "required": false,
             "description": "Strategy to update the position of the floating element on every animation frame.",
             "default": "'optimized'",
-            "inheritedFrom": "ComboboxContentImplProps.updatePositionStrategy",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4108,7 +4099,7 @@
             "required": false,
             "description": "Whether to disable the update position for the content when the layout shifted.",
             "default": "false",
-            "inheritedFrom": "ComboboxContentImplProps.disableUpdateOnLayoutShift",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4118,7 +4109,7 @@
             "required": false,
             "description": "Force content to be position within the viewport. Might overlap the reference element, which may not be desired.",
             "default": "false",
-            "inheritedFrom": "ComboboxContentImplProps.prioritizePosition",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": []
           },
@@ -4128,7 +4119,7 @@
             "required": false,
             "description": "The custom element or virtual element that will be set as the reference to position the floating element. If\nprovided, it will replace the default anchor element.",
             "default": null,
-            "inheritedFrom": "ComboboxContentImplProps.reference",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/popper/types.ts",
             "referencedTypes": [
               {
@@ -4151,7 +4142,7 @@
             "required": false,
             "description": "When `true`, focus cannot escape the content via keyboard, pointer, or a programmatic focus.",
             "default": "false",
-            "inheritedFrom": "ComboboxContentImplProps.trapFocus",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -4161,7 +4152,7 @@
             "required": false,
             "description": "When `true`, hover/focus/click interactions will be disabled on elements outside the `DismissableLayer`. Users will\nneed to click twice on outside elements to interact with them: once to close the `DismissableLayer`, and again to\ntrigger the element.",
             "default": null,
-            "inheritedFrom": "ComboboxContentImplProps.disableOutsidePointerEvents",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -4171,7 +4162,7 @@
             "required": false,
             "description": "Used to force mounting when more control is needed.\n\nUseful when controlling animation with Vue animation libraries.",
             "default": null,
-            "inheritedFrom": "ComboboxContentImplProps.forceMount",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -4236,34 +4227,8 @@
         "referencedTypes": []
       }
     },
-    "ComboboxGroup": {
-      "props": {
-        "kind": "props",
-        "name": "ComboboxGroupProps",
-        "type": "Interface ComboboxGroupProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "ComboboxGroupLabel": {
-      "props": {
-        "kind": "props",
-        "name": "ComboboxGroupLabelProps",
-        "type": "Interface ComboboxGroupLabelProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
+    "ComboboxGroup": {},
+    "ComboboxGroupLabel": {},
     "ComboboxInput": {
       "emits": {
         "kind": "emits",
@@ -4501,6 +4466,90 @@
       }
     },
     "ComboboxItem": {
+      "props": {
+        "kind": "props",
+        "name": "ComboboxItemProps",
+        "type": "Interface ComboboxItemProps",
+        "resolvedType": "{ textValue?: string; value: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component }",
+        "description": "",
+        "sourcePath": "headless/src/components/combobox/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "textValue",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/combobox/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "required": true,
+            "description": "The value given as data when submitted with a `name`.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/listbox/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "When `true`, prevents the user from interacting with the item.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/listbox/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
       "emits": {
         "kind": "emits",
         "name": "ComboboxItemEmits",
@@ -4516,8 +4565,8 @@
             "type": "[event: SelectEvent<string>]",
             "parameters": "event: SelectEvent<string>",
             "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/combobox/types.ts",
+            "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
+            "sourcePath": "headless/src/components/listbox/types.ts",
             "referencedTypes": [
               {
                 "name": "SelectEvent",
@@ -4534,149 +4583,33 @@
             ]
           }
         ],
-        "referencedTypes": []
-      },
-      "props": {
-        "kind": "props",
-        "name": "ComboboxItemProps",
-        "type": "Interface ComboboxItemProps",
-        "resolvedType": "{ value: string; disabled?: boolean; textValue?: string; asChild?: boolean; as?: AsTag | Component }",
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": [],
-        "members": [
+        "referencedTypes": [
           {
-            "name": "value",
-            "type": "string",
-            "required": true,
+            "name": "ListboxItemEmits",
+            "kind": "typeAlias",
+            "type": "{ select: [event: import(\"@/index\").SelectEvent<string>]; }",
+            "resolvedType": "{ select: [event: SelectEvent<string>] }",
             "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/combobox/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "disabled",
-            "type": "boolean",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/combobox/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "textValue",
-            "type": "string",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/combobox/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": "PrimitiveProps.asChild",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": "PrimitiveProps.as",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
+            "sourcePath": "headless/src/components/listbox/types.ts",
+            "typeParameters": [],
+            "external": false,
+            "members": [],
+            "callables": [
               {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
+                "name": "select",
+                "type": "[event: SelectEvent<string>]",
+                "parameters": "event: SelectEvent<string>",
+                "required": true,
+                "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
+                "sourcePath": "headless/src/components/listbox/types.ts",
+                "referencedTypes": []
               }
             ]
           }
-        ],
-        "callables": [],
-        "referencedTypes": []
+        ]
       }
     },
-    "ComboboxItemIndicator": {
-      "props": {
-        "kind": "props",
-        "name": "ComboboxItemIndicatorProps",
-        "type": "Interface ComboboxItemIndicatorProps",
-        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
-        "description": "",
-        "sourcePath": "headless/src/components/combobox/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": "PrimitiveProps.asChild",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": "PrimitiveProps.as",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
+    "ComboboxItemIndicator": {},
     "ComboboxPortal": {},
     "ComboboxRoot": {
       "emits": {
@@ -4945,7 +4878,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "PrimitiveProps.asChild",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -4955,7 +4888,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "PrimitiveProps.as",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -5011,7 +4944,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "PrimitiveProps.asChild",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -5021,7 +4954,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "PrimitiveProps.as",
+            "inheritedFrom": null,
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {

@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "SegmentProps",
         "type": "Interface SegmentProps<T>",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<SegmentUi>; size?: ThemeSize; shape?: SegmentShape; fill?: SegmentFill; items: T[]; enableIndicator?: boolean; listProps?: SegmentListProps; triggerProps?: SegmentTriggerProps; indicatorProps?: SegmentIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<SegmentUi>; size?: ThemeSize; shape?: SegmentShape; fill?: SegmentFill; items: T[]; enableIndicator?: boolean; listProps?: SegmentListProps; triggerProps?: SegmentTriggerProps; indicatorProps?: SegmentIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean }",
         "description": "",
         "sourcePath": "src/components/segment/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -354,16 +354,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": "SegmentCompactProps.loop",
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -385,6 +375,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": "SegmentCompactProps.loop",
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],
@@ -462,7 +462,7 @@
         "kind": "props",
         "name": "SegmentCompactProps",
         "type": "Interface SegmentCompactProps<T>",
-        "resolvedType": "{ items: T[]; enableIndicator?: boolean; listProps?: SegmentListProps; triggerProps?: SegmentTriggerProps; indicatorProps?: SegmentIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation }",
+        "resolvedType": "{ items: T[]; enableIndicator?: boolean; listProps?: SegmentListProps; triggerProps?: SegmentTriggerProps; indicatorProps?: SegmentIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/segment/types.ts",
         "typeParameters": ["T extends SegmentOptionData"],
@@ -695,16 +695,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -726,6 +716,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],

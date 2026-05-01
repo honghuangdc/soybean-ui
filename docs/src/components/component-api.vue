@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { SLink } from '@soybeanjs/ui';
-import { getComponentApiSections, getComponentLocalTypes } from './tables/generated-api';
+import CallableTypeTable from './tables/callable-type-table.vue';
+import { getComponentApiSections } from './tables/generated-api';
+import { provideTypeRenderContext, typeToVNode } from './tables/type-anchor';
 
 interface Props {
   component: string;
@@ -12,7 +13,9 @@ const { t } = useI18n();
 
 const apiLayers = computed(() => getComponentApiSections(props.component));
 
-const localTypes = computed(() => getComponentLocalTypes(props.component));
+provideTypeRenderContext(() => ({
+  component: props.component
+}));
 
 const layerTitleMap: Record<'ui' | 'headless', string> = {
   ui: 'api.ui_layer',
@@ -26,7 +29,9 @@ const layerTitleMap: Record<'ui' | 'headless', string> = {
       <h3 class="text-xl font-semibold scroll-mt-24">{{ t(layerTitleMap[layer.key]) }}</h3>
 
       <div v-for="symbol in layer.symbols" :key="symbol.key" class="space-y-4">
-        <h4 class="text-lg font-semibold scroll-mt-24">{{ symbol.displayName }}</h4>
+        <h4 class="text-lg font-semibold scroll-mt-24">
+          <component :is="typeToVNode(symbol.displayName)" />
+        </h4>
 
         <div v-if="symbol.propsRows.length" class="space-y-3">
           <h5 class="text-base font-medium">{{ t('api.props') }}</h5>
@@ -43,26 +48,6 @@ const layerTitleMap: Record<'ui' | 'headless', string> = {
           <DataTable preset="slots" :data="symbol.slotsRows" />
         </div>
       </div>
-    </section>
-
-    <section v-if="localTypes.tables.length || localTypes.unions.length" class="space-y-4">
-      <div class="space-y-2">
-        <h3 class="text-xl font-semibold scroll-mt-24">{{ t('api.local_types') }}</h3>
-        <p v-if="localTypes.commonTypeNames.length" class="text-sm text-muted-foreground">
-          {{ t('api.common_types_note') }}
-          <SLink href="/overview/common-types" class="ml-1">{{ t('api.common_types_link') }}</SLink>
-        </p>
-      </div>
-
-      <TypeTable :data="localTypes.tables" />
-
-      <UnionType
-        v-for="typeItem in localTypes.unions"
-        :key="typeItem.name"
-        :name="typeItem.name"
-        :description="typeItem.description"
-        :type="typeItem.type"
-      />
     </section>
   </div>
 </template>

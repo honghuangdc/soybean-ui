@@ -689,7 +689,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "ListboxItemIndicatorProps.asChild",
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -699,7 +699,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "ListboxItemIndicatorProps.as",
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {

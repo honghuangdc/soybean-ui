@@ -1,5 +1,6 @@
-import { SLink } from '@soybeanjs/ui';
-import { isCommonTypeName } from './generated-api';
+import { computed, provide, toValue } from 'vue';
+import type { ComputedRef, InjectionKey, MaybeRefOrGetter } from 'vue';
+import TypeReference from './type-reference.vue';
 
 export function toTypeAnchorId(typeName: string) {
   const normalized = typeName
@@ -14,10 +15,19 @@ export function toTypeAnchorId(typeName: string) {
   return `type-${normalized}`;
 }
 
-type TypePart = { text: string; isLink?: boolean };
+type TypePart = { text: string; hasPreview?: boolean };
 
-interface TypeRenderOptions {
-  localTypeNames?: string[];
+export interface TypeRenderContext {
+  component: string | null;
+}
+
+export const typeRenderContextKey: InjectionKey<ComputedRef<TypeRenderContext>> = Symbol('type-render-context');
+
+export function provideTypeRenderContext(context: MaybeRefOrGetter<TypeRenderContext>) {
+  provide(
+    typeRenderContextKey,
+    computed(() => toValue(context))
+  );
 }
 
 const BUILTIN_TYPE_NAMES = new Set([
@@ -40,7 +50,8 @@ const BUILTIN_TYPE_NAMES = new Set([
   'Component',
   'IconifyIcon',
   'MaybePromise',
-  'HTMLAttributes'
+  'HTMLAttributes',
+  'HTMLElement'
 ]);
 
 function splitTypeParts(typeText: string): TypePart[] {
@@ -62,8 +73,7 @@ function splitTypeParts(typeText: string): TypePart[] {
       parts.push({ text: typeText.slice(lastIndex, start) });
     }
 
-    const isLink = !BUILTIN_TYPE_NAMES.has(word) && checkFirstLetterIsUpperCase(word);
-    parts.push({ text: word, isLink });
+    parts.push({ text: word, hasPreview: isTypeReferenceCandidate(word) });
     lastIndex = start + word.length;
   }
 
@@ -74,39 +84,18 @@ function splitTypeParts(typeText: string): TypePart[] {
   return parts.length ? parts : [{ text: typeText }];
 }
 
-function checkFirstLetterIsUpperCase(word: string) {
-  return word.charAt(0).toUpperCase() === word.charAt(0);
+function isTypeReferenceCandidate(typeName: string) {
+  return !BUILTIN_TYPE_NAMES.has(typeName);
 }
 
-export function typeToVNode(type?: string, options?: TypeRenderOptions) {
+export function typeToVNode(type?: string) {
   if (!type) return <>-</>;
-
-  const localTypeNames = new Set(options?.localTypeNames ?? []);
 
   return (
     <>
       {splitTypeParts(type).map((part, idx) =>
-        part.isLink ? (
-          <SLink
-            key={idx}
-            href={resolveTypeHref(part.text, localTypeNames)}
-            target="_self"
-            class="text-primary border-b-2 border-dashed border-primary/30 hover:border-primary duration-200"
-          >
-            {part.text}
-          </SLink>
-        ) : (
-          <span key={idx}>{part.text}</span>
-        )
+        part.hasPreview ? <TypeReference key={idx} name={part.text} /> : <span key={idx}>{part.text}</span>
       )}
     </>
   );
-}
-
-function resolveTypeHref(typeName: string, localTypeNames: Set<string>) {
-  if (!localTypeNames.has(typeName) && isCommonTypeName(typeName)) {
-    return `/overview/common-types#${toTypeAnchorId(typeName)}`;
-  }
-
-  return `#${toTypeAnchorId(typeName)}`;
 }

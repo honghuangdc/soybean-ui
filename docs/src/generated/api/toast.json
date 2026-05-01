@@ -517,8 +517,8 @@
               {
                 "name": "ToastUi",
                 "kind": "typeAlias",
-                "type": "{ content: import(\"@soybeanjs/headless\").ClassValue; description: import(\"@soybeanjs/headless\").ClassValue; title: import(\"@soybeanjs/headless\").ClassValue; icon: import(\"@soybeanjs/headless\").ClassValue; close: import(\"@soybeanjs/headless\").ClassValue; footer: import(\"@soybeanjs/headless\").ClassValue; cancel: import(\"@soybeanjs/headless\").ClassValue; wrapper: import(\"@soybeanjs/headless\").ClassValue; toaster: import(\"@soybeanjs/headless\").ClassValue; toast: import(\"@soybeanjs/headless\").ClassValue; action: import(\"@soybeanjs/headless\").ClassValue; }",
-                "resolvedType": "{ content: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; description: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; title: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; icon: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; close: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; footer: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; cancel: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; wrapper: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; toaster: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; toast: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; action: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined }",
+                "type": "{ content: import(\"@soybeanjs/headless\").ClassValue; description: import(\"@soybeanjs/headless\").ClassValue; title: import(\"@soybeanjs/headless\").ClassValue; icon: import(\"@soybeanjs/headless\").ClassValue; close: import(\"@soybeanjs/headless\").ClassValue; cancel: import(\"@soybeanjs/headless\").ClassValue; footer: import(\"@soybeanjs/headless\").ClassValue; wrapper: import(\"@soybeanjs/headless\").ClassValue; toaster: import(\"@soybeanjs/headless\").ClassValue; toast: import(\"@soybeanjs/headless\").ClassValue; action: import(\"@soybeanjs/headless\").ClassValue; }",
+                "resolvedType": "{ content: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; description: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; title: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; icon: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; close: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; cancel: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; footer: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; wrapper: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; toaster: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; toast: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined; action: string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined }",
                 "description": "",
                 "sourcePath": "headless/src/components/toast/types.ts",
                 "typeParameters": [],
@@ -575,7 +575,7 @@
                     "referencedTypes": []
                   },
                   {
-                    "name": "footer",
+                    "name": "cancel",
                     "type": "string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined",
                     "required": true,
                     "description": "",
@@ -585,7 +585,7 @@
                     "referencedTypes": []
                   },
                   {
-                    "name": "cancel",
+                    "name": "footer",
                     "type": "string | Record<string, boolean> | import(\"@/index\").ClassValue[] | null | undefined",
                     "required": true,
                     "description": "",

@@ -1153,7 +1153,7 @@
         "kind": "props",
         "name": "CheckboxCardGroupProps",
         "type": "Interface CheckboxCardGroupProps<T>",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<CheckboxCardUi>; color?: ThemeColor; size?: ThemeSize; shape?: CheckboxShape; items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation; name?: string; required?: boolean }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<CheckboxCardUi>; color?: ThemeColor; size?: ThemeSize; shape?: CheckboxShape; items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "src/components/checkbox/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -1563,16 +1563,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": "CheckboxCardGroupCompactProps.loop",
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -1594,6 +1584,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": "CheckboxCardGroupCompactProps.loop",
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           },
           {
             "name": "name",
@@ -1647,7 +1647,7 @@
         "kind": "props",
         "name": "CheckboxCardGroupCompactProps",
         "type": "Interface CheckboxCardGroupCompactProps<T>",
-        "resolvedType": "{ items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation; name?: string; required?: boolean }",
+        "resolvedType": "{ items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
         "typeParameters": ["T extends CheckboxCardGroupOptionData = CheckboxCardGroupOptionData"],
@@ -1942,16 +1942,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -1973,6 +1963,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           },
           {
             "name": "name",
@@ -2339,7 +2339,7 @@
         "kind": "props",
         "name": "CheckboxGroupProps",
         "type": "Interface CheckboxGroupProps<T>",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<CheckboxUi>; color?: ThemeColor; size?: ThemeSize; shape?: CheckboxShape; items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation; name?: string; required?: boolean }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; ui?: Partial<CheckboxUi>; color?: ThemeColor; size?: ThemeSize; shape?: CheckboxShape; items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "src/components/checkbox/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -2749,16 +2749,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": "CheckboxGroupCompactProps.loop",
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -2780,6 +2770,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": "CheckboxGroupCompactProps.loop",
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           },
           {
             "name": "name",
@@ -2833,7 +2833,7 @@
         "kind": "props",
         "name": "CheckboxGroupCompactProps",
         "type": "Interface CheckboxGroupCompactProps<T>",
-        "resolvedType": "{ items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation; name?: string; required?: boolean }",
+        "resolvedType": "{ items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
         "typeParameters": ["T extends CheckboxGroupOptionData = CheckboxGroupOptionData"],
@@ -3128,16 +3128,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -3159,6 +3149,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           },
           {
             "name": "name",
@@ -3212,7 +3212,7 @@
         "kind": "props",
         "name": "CheckboxGroupRootProps",
         "type": "Interface CheckboxGroupRootProps<T>",
-        "resolvedType": "{ modelValue?: T[]; defaultValue?: T[]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; loop?: boolean; orientation?: DataOrientation; name?: string; required?: boolean }",
+        "resolvedType": "{ modelValue?: T[]; defaultValue?: T[]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
         "typeParameters": ["T extends DefinedValue = DefinedValue"],
@@ -3281,16 +3281,6 @@
             ]
           },
           {
-            "name": "loop",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether keyboard navigation should loop around",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/roving-focus/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "orientation",
             "type": "DataOrientation",
             "required": false,
@@ -3312,6 +3302,16 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "loop",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether keyboard navigation should loop around",
+            "default": "false",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/roving-focus/types.ts",
+            "referencedTypes": []
           },
           {
             "name": "name",

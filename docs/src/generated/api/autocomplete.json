@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "AutocompleteProps",
         "type": "Interface AutocompleteProps<T>",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<HeadlessAutocompleteUi>; modelValue?: string; defaultValue?: string; items: AutocompleteOptionData<T>[]; placeholder?: string; clearable?: boolean; clearLabel?: string; emptyLabel?: string; fuseOptions?: UseFuseOptions<AutocompleteSearchOptionData>; anchorProps?: AutocompleteAnchorProps; inputProps?: AutocompleteInputProps; triggerProps?: AutocompleteTriggerProps; portalProps?: PortalProps; contentProps?: AutocompleteContentProps; viewportProps?: AutocompleteViewportProps; groupProps?: AutocompleteGroupProps; groupLabelProps?: AutocompleteGroupLabelProps; itemProps?: Omit<AutocompleteItemProps, 'disabled' | 'value'>; itemIndicatorProps?: AutocompleteItemIndicatorProps; separatorProps?: AutocompleteSeparatorProps; open?: boolean; defaultOpen?: boolean; disabled?: boolean; dir?: Direction; name?: string; highlightOnHover?: boolean; openOnFocus?: boolean; openOnClick?: boolean; required?: boolean }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<HeadlessAutocompleteUi>; modelValue?: string; defaultValue?: string; items: AutocompleteOptionData<T>[]; placeholder?: string; clearable?: boolean; clearLabel?: string; emptyLabel?: string; fuseOptions?: UseFuseOptions<AutocompleteSearchOptionData>; anchorProps?: AutocompleteAnchorProps; inputProps?: AutocompleteInputProps; triggerProps?: AutocompleteTriggerProps; portalProps?: AutocompletePortalProps; contentProps?: AutocompleteContentProps; viewportProps?: AutocompleteViewportProps; groupProps?: AutocompleteGroupProps; groupLabelProps?: AutocompleteGroupLabelProps; itemProps?: Omit<AutocompleteItemProps, 'disabled' | 'value'>; itemIndicatorProps?: AutocompleteItemIndicatorProps; separatorProps?: AutocompleteSeparatorProps; open?: boolean; defaultOpen?: boolean; disabled?: boolean; dir?: Direction; name?: string; highlightOnHover?: boolean; openOnFocus?: boolean; openOnClick?: boolean; required?: boolean }",
         "description": "",
         "sourcePath": "src/components/autocomplete/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -67,12 +67,12 @@
             "sourcePath": "src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteUi",
+                "name": "ComboboxUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; item: ClassValue; trigger: ClassValue; content: ClassValue; triggerIcon: ClassValue; anchor: ClassValue; inputRoot: ClassValue; inputControl: ClassValue; inputIcon: ClassValue; inputClearable: ClassValue; viewport: ClassValue; group: ClassValue; groupLabel: ClassValue; itemText: ClassValue; itemIcon: ClassValue; itemIndicator: ClassValue; separator: ClassValue; empty: ClassValue; }",
+                "type": "{ root: ClassValue; item: ClassValue; trigger: ClassValue; triggerIcon: ClassValue; anchor: ClassValue; positioner: ClassValue; popup: ClassValue; arrow: ClassValue; cancel: ClassValue; viewport: ClassValue; inputRoot: ClassValue; inputControl: ClassValue; group: ClassValue; groupLabel: ClassValue; itemIndicator: ClassValue; empty: ClassValue; separator: ClassValue; virtualizer: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -165,7 +165,7 @@
                 "type": "UseFuseOptions<AutocompleteSearchOptionData>",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "node_modules/.pnpm/@vueuse+integrations@14.2.1_fuse.js@7.3.0_nprogress@0.2.0_vue@3.5.33_typescript@6.0.3_/node_modules/@vueuse/integrations/dist/index-CH8jSu5J.d.ts",
+                "sourcePath": "node_modules/.pnpm/@vueuse+integrations@14.3.0_fuse.js@7.3.0_nprogress@0.2.0_vue@3.5.33_typescript@6.0.3_/node_modules/@vueuse/integrations/dist/useFuse.d.ts",
                 "typeParameters": ["T"],
                 "external": true,
                 "members": [],
@@ -183,12 +183,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteAnchorProps",
+                "name": "PopperAnchorProps",
                 "kind": "interface",
                 "type": "AutocompleteAnchorProps",
                 "resolvedType": "{ reference?: ReferenceElement; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/popper/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -381,15 +381,25 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteTriggerProps",
+                "name": "ComboboxTriggerProps",
                 "kind": "interface",
                 "type": "AutocompleteTriggerProps",
-                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "resolvedType": "{ disabled?: boolean; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
                   {
                     "name": "asChild",
                     "type": "boolean",
@@ -417,7 +427,7 @@
           },
           {
             "name": "portalProps",
-            "type": "PortalProps",
+            "type": "AutocompletePortalProps",
             "required": false,
             "description": "",
             "default": null,
@@ -427,7 +437,7 @@
               {
                 "name": "PortalProps",
                 "kind": "interface",
-                "type": "PortalProps",
+                "type": "AutocompletePortalProps",
                 "resolvedType": "{ to?: string | HTMLElement; disabled?: boolean; defer?: boolean; forceMount?: boolean }",
                 "description": "",
                 "sourcePath": "headless/src/components/portal/types.ts",
@@ -489,15 +499,55 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteContentProps",
+                "name": "ComboboxContentProps",
                 "kind": "interface",
                 "type": "AutocompleteContentProps",
-                "resolvedType": "{ placement?: Placement; side?: Side; sideOffset?: number; sideFlip?: boolean; align?: Align; alignOffset?: number; alignFlip?: boolean; avoidCollisions?: boolean; collisionBoundary?: Element | (Element | null)[] | null; collisionPadding?: Padding; arrowPadding?: number; hideShiftedArrow?: boolean; sticky?: 'partial' | 'always'; hideWhenDetached?: boolean; positionStrategy?: 'fixed' | 'absolute'; updatePositionStrategy?: 'always' | 'optimized'; disableUpdateOnLayoutShift?: boolean; prioritizePosition?: boolean; reference?: ReferenceElement; forceMount?: boolean }",
+                "resolvedType": "{ position?: 'inline' | 'popper'; bodyLock?: boolean; hideWhenEmpty?: boolean; popupProps?: PopperPopupProps; placement?: Placement; side?: Side; sideOffset?: number; sideFlip?: boolean; align?: Align; alignOffset?: number; alignFlip?: boolean; avoidCollisions?: boolean; collisionBoundary?: Element | (Element | null)[] | null; collisionPadding?: Padding; arrowPadding?: number; hideShiftedArrow?: boolean; sticky?: 'partial' | 'always'; hideWhenDetached?: boolean; positionStrategy?: 'fixed' | 'absolute'; updatePositionStrategy?: 'always' | 'optimized'; disableUpdateOnLayoutShift?: boolean; prioritizePosition?: boolean; reference?: ReferenceElement; trapFocus?: boolean; disableOutsidePointerEvents?: boolean; forceMount?: boolean }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
+                  {
+                    "name": "position",
+                    "type": "'inline' | 'popper'",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "bodyLock",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "hideWhenEmpty",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "popupProps",
+                    "type": "PopperPopupProps",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
                   {
                     "name": "placement",
                     "type": "Placement",
@@ -689,6 +739,26 @@
                     "referencedTypes": []
                   },
                   {
+                    "name": "trapFocus",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "When `true`, focus cannot escape the content via keyboard, pointer, or a programmatic focus.",
+                    "default": "false",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/types/component.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disableOutsidePointerEvents",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "When `true`, hover/focus/click interactions will be disabled on elements outside the `DismissableLayer`. Users will\nneed to click twice on outside elements to interact with them: once to close the `DismissableLayer`, and again to\ntrigger the element.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/types/component.ts",
+                    "referencedTypes": []
+                  },
+                  {
                     "name": "forceMount",
                     "type": "boolean",
                     "required": false,
@@ -713,15 +783,26 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteViewportProps",
+                "name": "ComboboxViewportProps",
                 "kind": "interface",
                 "type": "AutocompleteViewportProps",
-                "resolvedType": null,
+                "resolvedType": "{ nonce?: string }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
-                "members": [],
+                "members": [
+                  {
+                    "name": "nonce",
+                    "type": "string",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
                 "callables": []
               }
             ]
@@ -736,12 +817,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteGroupProps",
+                "name": "ListboxGroupProps",
                 "kind": "interface",
                 "type": "AutocompleteGroupProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -759,12 +840,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteGroupLabelProps",
+                "name": "ListboxGroupLabelProps",
                 "kind": "interface",
                 "type": "AutocompleteGroupLabelProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -782,12 +863,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteItemProps",
+                "name": "ComboboxItemProps",
                 "kind": "interface",
                 "type": "AutocompleteItemProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -805,12 +886,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteItemIndicatorProps",
+                "name": "ListboxItemIndicatorProps",
                 "kind": "interface",
                 "type": "AutocompleteItemIndicatorProps",
                 "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -849,33 +930,33 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteSeparatorProps",
+                "name": "ComboboxSeparatorProps",
                 "kind": "interface",
                 "type": "AutocompleteSeparatorProps",
-                "resolvedType": "{ orientation?: DataOrientation; decorative?: boolean }",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
                   {
-                    "name": "orientation",
-                    "type": "DataOrientation",
+                    "name": "asChild",
+                    "type": "boolean",
                     "required": false,
-                    "description": "Orientation of the component.\n\nEither `vertical` or `horizontal`. Defaults to `horizontal`.",
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
                     "default": null,
                     "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/separator/types.ts",
+                    "sourcePath": "headless/src/components/primitive/types.ts",
                     "referencedTypes": []
                   },
                   {
-                    "name": "decorative",
-                    "type": "boolean",
+                    "name": "as",
+                    "type": "AsTag | Component",
                     "required": false,
-                    "description": "Whether or not the component is purely decorative. <br>When `true`, accessibility-related attributes are updated so\nthat that the rendered element is removed from the accessibility tree.",
-                    "default": null,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
                     "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/separator/types.ts",
+                    "sourcePath": "headless/src/components/primitive/types.ts",
                     "referencedTypes": []
                   }
                 ],
@@ -1056,7 +1137,7 @@
         "kind": "slots",
         "name": "AutocompleteSlots",
         "type": "TypeAlias AutocompleteSlots<T>: AutocompleteCompactSlots<T>",
-        "resolvedType": "{ \"input-leading\"?: (() => any); \"input-trailing\"?: (() => any); \"trigger-icon\"?: (() => any); empty?: (() => any); \"group-label\"?: ((props: { item: AutocompleteGroupOptionData<T> | Extract<T, { items: T[]; }>; }) => any); \"item-leading\"?: ((props: { item: T; }) => any); \"item-label\"?: ((props: { item: T; }) => any); \"item-trailing\"?: ((props: { item: T; }) => any); \"item-indicator\"?: ((props: { item: T; }) => any) }",
+        "resolvedType": "{ \"input-leading\"?: (() => any); \"input-trailing\"?: (() => any); \"trigger-icon\"?: (() => any); empty?: (() => any); \"group-label\"?: ((props: { item: AutocompleteGroupOptionData<T> | Extract<T, { items: T[]; }>; }) => any); \"item-leading\"?: ((props: { item: T; }) => any); \"item-text\"?: ((props: { item: T; }) => any); \"item-trailing\"?: ((props: { item: T; }) => any); \"item-indicator\"?: ((props: { item: T; }) => any) }",
         "description": "",
         "sourcePath": "src/components/autocomplete/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -1143,7 +1224,7 @@
             ]
           },
           {
-            "name": "item-label",
+            "name": "item-text",
             "type": "((props: { item: T; }) => any) | undefined",
             "parameters": "((props: { item: T; }) => any) | undefined",
             "required": false,
@@ -1212,91 +1293,13 @@
         "referencedTypes": []
       }
     },
-    "AutocompleteAnchor": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteAnchorProps",
-        "type": "Interface AutocompleteAnchorProps",
-        "resolvedType": "{ reference?: ReferenceElement; asChild?: boolean; as?: AsTag | Component }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "reference",
-            "type": "ReferenceElement",
-            "required": false,
-            "description": "The reference (or anchor) element that is being referred to for positioning. If not provided will use the current\ncomponent as anchor.",
-            "default": null,
-            "inheritedFrom": "reference",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "ReferenceElement",
-                "kind": "typeAlias",
-                "type": "ReferenceElement",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "node_modules/.pnpm/@floating-ui+dom@1.7.6/node_modules/@floating-ui/dom/dist/floating-ui.dom.d.mts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": "asChild",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": "as",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
+    "AutocompleteAnchor": {},
     "AutocompleteCompact": {
       "props": {
         "kind": "props",
         "name": "AutocompleteCompactProps",
         "type": "Interface AutocompleteCompactProps<T>",
-        "resolvedType": "{ modelValue?: string; defaultValue?: string; items: AutocompleteOptionData<T>[]; placeholder?: string; clearable?: boolean; clearLabel?: string; emptyLabel?: string; fuseOptions?: UseFuseOptions<AutocompleteSearchOptionData>; anchorProps?: AutocompleteAnchorProps; inputProps?: AutocompleteInputProps; triggerProps?: AutocompleteTriggerProps; portalProps?: PortalProps; contentProps?: AutocompleteContentProps; viewportProps?: AutocompleteViewportProps; groupProps?: AutocompleteGroupProps; groupLabelProps?: AutocompleteGroupLabelProps; itemProps?: Omit<AutocompleteItemProps, 'disabled' | 'value'>; itemIndicatorProps?: AutocompleteItemIndicatorProps; separatorProps?: AutocompleteSeparatorProps; open?: boolean; defaultOpen?: boolean; disabled?: boolean; dir?: Direction; name?: string; highlightOnHover?: boolean; openOnFocus?: boolean; openOnClick?: boolean; required?: boolean }",
+        "resolvedType": "{ modelValue?: string; defaultValue?: string; items: AutocompleteOptionData<T>[]; placeholder?: string; clearable?: boolean; clearLabel?: string; emptyLabel?: string; fuseOptions?: UseFuseOptions<AutocompleteSearchOptionData>; anchorProps?: AutocompleteAnchorProps; inputProps?: AutocompleteInputProps; triggerProps?: AutocompleteTriggerProps; portalProps?: AutocompletePortalProps; contentProps?: AutocompleteContentProps; viewportProps?: AutocompleteViewportProps; groupProps?: AutocompleteGroupProps; groupLabelProps?: AutocompleteGroupLabelProps; itemProps?: Omit<AutocompleteItemProps, 'disabled' | 'value'>; itemIndicatorProps?: AutocompleteItemIndicatorProps; separatorProps?: AutocompleteSeparatorProps; open?: boolean; defaultOpen?: boolean; disabled?: boolean; dir?: Direction; name?: string; highlightOnHover?: boolean; openOnFocus?: boolean; openOnClick?: boolean; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/autocomplete/types.ts",
         "typeParameters": ["T extends AutocompleteSingleOptionData = AutocompleteSingleOptionData"],
@@ -1386,7 +1389,7 @@
                 "type": "UseFuseOptions<AutocompleteSearchOptionData>",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "node_modules/.pnpm/@vueuse+integrations@14.2.1_fuse.js@7.3.0_nprogress@0.2.0_vue@3.5.33_typescript@6.0.3_/node_modules/@vueuse/integrations/dist/index-CH8jSu5J.d.ts",
+                "sourcePath": "node_modules/.pnpm/@vueuse+integrations@14.3.0_fuse.js@7.3.0_nprogress@0.2.0_vue@3.5.33_typescript@6.0.3_/node_modules/@vueuse/integrations/dist/useFuse.d.ts",
                 "typeParameters": ["T"],
                 "external": true,
                 "members": [],
@@ -1404,12 +1407,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteAnchorProps",
+                "name": "PopperAnchorProps",
                 "kind": "interface",
                 "type": "AutocompleteAnchorProps",
                 "resolvedType": "{ reference?: ReferenceElement; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/popper/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -1602,15 +1605,25 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteTriggerProps",
+                "name": "ComboboxTriggerProps",
                 "kind": "interface",
                 "type": "AutocompleteTriggerProps",
-                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "resolvedType": "{ disabled?: boolean; asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
+                  {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
                   {
                     "name": "asChild",
                     "type": "boolean",
@@ -1638,7 +1651,7 @@
           },
           {
             "name": "portalProps",
-            "type": "PortalProps",
+            "type": "AutocompletePortalProps",
             "required": false,
             "description": "",
             "default": null,
@@ -1648,7 +1661,7 @@
               {
                 "name": "PortalProps",
                 "kind": "interface",
-                "type": "PortalProps",
+                "type": "AutocompletePortalProps",
                 "resolvedType": "{ to?: string | HTMLElement; disabled?: boolean; defer?: boolean; forceMount?: boolean }",
                 "description": "",
                 "sourcePath": "headless/src/components/portal/types.ts",
@@ -1710,15 +1723,55 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteContentProps",
+                "name": "ComboboxContentProps",
                 "kind": "interface",
                 "type": "AutocompleteContentProps",
-                "resolvedType": "{ placement?: Placement; side?: Side; sideOffset?: number; sideFlip?: boolean; align?: Align; alignOffset?: number; alignFlip?: boolean; avoidCollisions?: boolean; collisionBoundary?: Element | (Element | null)[] | null; collisionPadding?: Padding; arrowPadding?: number; hideShiftedArrow?: boolean; sticky?: 'partial' | 'always'; hideWhenDetached?: boolean; positionStrategy?: 'fixed' | 'absolute'; updatePositionStrategy?: 'always' | 'optimized'; disableUpdateOnLayoutShift?: boolean; prioritizePosition?: boolean; reference?: ReferenceElement; forceMount?: boolean }",
+                "resolvedType": "{ position?: 'inline' | 'popper'; bodyLock?: boolean; hideWhenEmpty?: boolean; popupProps?: PopperPopupProps; placement?: Placement; side?: Side; sideOffset?: number; sideFlip?: boolean; align?: Align; alignOffset?: number; alignFlip?: boolean; avoidCollisions?: boolean; collisionBoundary?: Element | (Element | null)[] | null; collisionPadding?: Padding; arrowPadding?: number; hideShiftedArrow?: boolean; sticky?: 'partial' | 'always'; hideWhenDetached?: boolean; positionStrategy?: 'fixed' | 'absolute'; updatePositionStrategy?: 'always' | 'optimized'; disableUpdateOnLayoutShift?: boolean; prioritizePosition?: boolean; reference?: ReferenceElement; trapFocus?: boolean; disableOutsidePointerEvents?: boolean; forceMount?: boolean }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
+                  {
+                    "name": "position",
+                    "type": "'inline' | 'popper'",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "bodyLock",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "hideWhenEmpty",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "popupProps",
+                    "type": "PopperPopupProps",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  },
                   {
                     "name": "placement",
                     "type": "Placement",
@@ -1910,6 +1963,26 @@
                     "referencedTypes": []
                   },
                   {
+                    "name": "trapFocus",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "When `true`, focus cannot escape the content via keyboard, pointer, or a programmatic focus.",
+                    "default": "false",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/types/component.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "disableOutsidePointerEvents",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "When `true`, hover/focus/click interactions will be disabled on elements outside the `DismissableLayer`. Users will\nneed to click twice on outside elements to interact with them: once to close the `DismissableLayer`, and again to\ntrigger the element.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/types/component.ts",
+                    "referencedTypes": []
+                  },
+                  {
                     "name": "forceMount",
                     "type": "boolean",
                     "required": false,
@@ -1934,15 +2007,26 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteViewportProps",
+                "name": "ComboboxViewportProps",
                 "kind": "interface",
                 "type": "AutocompleteViewportProps",
-                "resolvedType": null,
+                "resolvedType": "{ nonce?: string }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
-                "members": [],
+                "members": [
+                  {
+                    "name": "nonce",
+                    "type": "string",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/combobox/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
                 "callables": []
               }
             ]
@@ -1957,12 +2041,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteGroupProps",
+                "name": "ListboxGroupProps",
                 "kind": "interface",
                 "type": "AutocompleteGroupProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -1980,12 +2064,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteGroupLabelProps",
+                "name": "ListboxGroupLabelProps",
                 "kind": "interface",
                 "type": "AutocompleteGroupLabelProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -2003,12 +2087,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteItemProps",
+                "name": "ComboboxItemProps",
                 "kind": "interface",
                 "type": "AutocompleteItemProps",
                 "resolvedType": null,
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [],
@@ -2026,12 +2110,12 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteItemIndicatorProps",
+                "name": "ListboxItemIndicatorProps",
                 "kind": "interface",
                 "type": "AutocompleteItemIndicatorProps",
                 "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/listbox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
@@ -2070,33 +2154,33 @@
             "sourcePath": "headless/src/components/autocomplete/types.ts",
             "referencedTypes": [
               {
-                "name": "AutocompleteSeparatorProps",
+                "name": "ComboboxSeparatorProps",
                 "kind": "interface",
                 "type": "AutocompleteSeparatorProps",
-                "resolvedType": "{ orientation?: DataOrientation; decorative?: boolean }",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
                 "description": "",
-                "sourcePath": "headless/src/components/autocomplete/types.ts",
+                "sourcePath": "headless/src/components/combobox/types.ts",
                 "typeParameters": [],
                 "external": false,
                 "members": [
                   {
-                    "name": "orientation",
-                    "type": "DataOrientation",
+                    "name": "asChild",
+                    "type": "boolean",
                     "required": false,
-                    "description": "Orientation of the component.\n\nEither `vertical` or `horizontal`. Defaults to `horizontal`.",
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
                     "default": null,
                     "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/separator/types.ts",
+                    "sourcePath": "headless/src/components/primitive/types.ts",
                     "referencedTypes": []
                   },
                   {
-                    "name": "decorative",
-                    "type": "boolean",
+                    "name": "as",
+                    "type": "AsTag | Component",
                     "required": false,
-                    "description": "Whether or not the component is purely decorative. <br>When `true`, accessibility-related attributes are updated so\nthat that the rendered element is removed from the accessibility tree.",
-                    "default": null,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
                     "inheritedFrom": null,
-                    "sourcePath": "headless/src/components/separator/types.ts",
+                    "sourcePath": "headless/src/components/primitive/types.ts",
                     "referencedTypes": []
                   }
                 ],
@@ -2277,7 +2361,7 @@
         "kind": "slots",
         "name": "AutocompleteCompactSlots",
         "type": "TypeAlias AutocompleteCompactSlots<T>",
-        "resolvedType": "{ \"input-leading\"?: (() => any); \"input-trailing\"?: (() => any); \"trigger-icon\"?: (() => any); empty?: (() => any); \"group-label\"?: ((props: { item: Extract<AutocompleteOptionData<T>, { items: T[]; }>; }) => any); \"item-leading\"?: ((props: { item: T; }) => any); \"item-label\"?: ((props: { item: T; }) => any); \"item-trailing\"?: ((props: { item: T; }) => any); \"item-indicator\"?: ((props: { item: T; }) => any) }",
+        "resolvedType": "{ \"input-leading\"?: (() => any); \"input-trailing\"?: (() => any); \"trigger-icon\"?: (() => any); empty?: (() => any); \"group-label\"?: ((props: { item: Extract<AutocompleteOptionData<T>, { items: T[]; }>; }) => any); \"item-leading\"?: ((props: { item: T; }) => any); \"item-text\"?: ((props: { item: T; }) => any); \"item-trailing\"?: ((props: { item: T; }) => any); \"item-indicator\"?: ((props: { item: T; }) => any) }",
         "description": "",
         "sourcePath": "headless/src/components/autocomplete/types.ts",
         "typeParameters": ["T extends AutocompleteSingleOptionData = AutocompleteSingleOptionData"],
@@ -2364,7 +2448,7 @@
             ]
           },
           {
-            "name": "item-label",
+            "name": "item-text",
             "type": "((props: { item: T; }) => any) | undefined",
             "parameters": "((props: { item: T; }) => any) | undefined",
             "required": false,
@@ -2433,327 +2517,9 @@
         "referencedTypes": []
       }
     },
-    "AutocompleteContent": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteContentProps",
-        "type": "Interface AutocompleteContentProps",
-        "resolvedType": "{ placement?: Placement; side?: Side; sideOffset?: number; sideFlip?: boolean; align?: Align; alignOffset?: number; alignFlip?: boolean; avoidCollisions?: boolean; collisionBoundary?: Element | (Element | null)[] | null; collisionPadding?: Padding; arrowPadding?: number; hideShiftedArrow?: boolean; sticky?: 'partial' | 'always'; hideWhenDetached?: boolean; positionStrategy?: 'fixed' | 'absolute'; updatePositionStrategy?: 'always' | 'optimized'; disableUpdateOnLayoutShift?: boolean; prioritizePosition?: boolean; reference?: ReferenceElement; forceMount?: boolean }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "placement",
-            "type": "Placement",
-            "required": false,
-            "description": "The placement of the floating element.\n\nIf used, it will override the `side` and `align` props.",
-            "default": "undefined",
-            "inheritedFrom": "PopperPositionerProps.placement",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Placement",
-                "kind": "typeAlias",
-                "type": "'top' | 'right' | 'bottom' | 'left' | 'top-start' | 'top-end' | 'right-start' | 'right-end' | 'bottom-start' | 'bottom-end' | 'left-start' | 'left-end'",
-                "resolvedType": "'top' | 'right' | 'bottom' | 'left' | 'top-start' | 'top-end' | 'right-start' | 'right-end' | 'bottom-start' | 'bottom-end' | 'left-start' | 'left-end'",
-                "description": "",
-                "sourcePath": "headless/src/types/common.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "side",
-            "type": "Side",
-            "required": false,
-            "description": "The preferred side of the trigger to render against when open. Will be reversed when collisions occur and\navoidCollisions is enabled.",
-            "default": "'bottom'",
-            "inheritedFrom": "PopperPositionerProps.side",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Side",
-                "kind": "typeAlias",
-                "type": "Side",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "node_modules/.pnpm/@floating-ui+utils@0.2.11/node_modules/@floating-ui/utils/dist/floating-ui.utils.d.mts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "sideOffset",
-            "type": "number",
-            "required": false,
-            "description": "The distance in pixels from the trigger.",
-            "default": "0",
-            "inheritedFrom": "PopperPositionerProps.sideOffset",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "sideFlip",
-            "type": "boolean",
-            "required": false,
-            "description": "Flip to the opposite side when colliding with boundary.",
-            "default": "true",
-            "inheritedFrom": "PopperPositionerProps.sideFlip",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "align",
-            "type": "Align",
-            "required": false,
-            "description": "The preferred alignment against the trigger. May change when collisions occur.",
-            "default": "'center'",
-            "inheritedFrom": "PopperPositionerProps.align",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Align",
-                "kind": "typeAlias",
-                "type": "'start' | 'center' | 'end'",
-                "resolvedType": "'start' | 'center' | 'end'",
-                "description": "",
-                "sourcePath": "headless/src/types/common.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "alignOffset",
-            "type": "number",
-            "required": false,
-            "description": "An offset in pixels from the `start` or `end` alignment options.",
-            "default": "0",
-            "inheritedFrom": "PopperPositionerProps.alignOffset",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alignFlip",
-            "type": "boolean",
-            "required": false,
-            "description": "Flip alignment when colliding with boundary.\nMay only occur when `prioritizePosition` is true.",
-            "default": "true",
-            "inheritedFrom": "PopperPositionerProps.alignFlip",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "avoidCollisions",
-            "type": "boolean",
-            "required": false,
-            "description": "When `true`, overrides the side and align preferences to prevent collisions with boundary edges.",
-            "default": "true",
-            "inheritedFrom": "PopperPositionerProps.avoidCollisions",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "collisionBoundary",
-            "type": "Element | (Element | null)[] | null",
-            "required": false,
-            "description": "The element used as the collision boundary. By default this is the viewport, though you can provide additional\nelement(s) to be included in this check.",
-            "default": "[ ]",
-            "inheritedFrom": "collisionBoundary",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Element",
-                "kind": "interface",
-                "type": "Element",
-                "resolvedType": null,
-                "description": "**`Element`** is the most general base class from which all element objects (i.e., objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/API/Element)",
-                "sourcePath": "node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/lib/lib.dom.d.ts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "collisionPadding",
-            "type": "Padding",
-            "required": false,
-            "description": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for\nall sides), or a partial padding object, for example: { top: 20, left: 20 }.",
-            "default": "0",
-            "inheritedFrom": "PopperPositionerProps.collisionPadding",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Padding",
-                "kind": "typeAlias",
-                "type": "Padding",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "node_modules/.pnpm/@floating-ui+utils@0.2.11/node_modules/@floating-ui/utils/dist/floating-ui.utils.d.mts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "arrowPadding",
-            "type": "number",
-            "required": false,
-            "description": "The padding between the arrow and the edges of the content. If your content has border-radius, this will prevent it\nfrom overflowing the corners.",
-            "default": "0",
-            "inheritedFrom": "PopperPositionerProps.arrowPadding",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "hideShiftedArrow",
-            "type": "boolean",
-            "required": false,
-            "description": "When `true`, hides the arrow when it cannot be centered\nto the reference element.",
-            "default": "true",
-            "inheritedFrom": "PopperPositionerProps.hideShiftedArrow",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "sticky",
-            "type": "'partial' | 'always'",
-            "required": false,
-            "description": "The sticky behavior on the align axis. `partial` will keep the content in the boundary as long as the trigger is at\nleast partially in the boundary whilst \"always\" will keep the content in the boundary regardless.",
-            "default": "'partial'",
-            "inheritedFrom": "sticky",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "hideWhenDetached",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether to hide the content when the trigger becomes fully occluded.",
-            "default": "false",
-            "inheritedFrom": "PopperPositionerProps.hideWhenDetached",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "positionStrategy",
-            "type": "'fixed' | 'absolute'",
-            "required": false,
-            "description": "The type of CSS position property to use.",
-            "default": "'fixed'",
-            "inheritedFrom": "positionStrategy",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "updatePositionStrategy",
-            "type": "'always' | 'optimized'",
-            "required": false,
-            "description": "Strategy to update the position of the floating element on every animation frame.",
-            "default": "'optimized'",
-            "inheritedFrom": "updatePositionStrategy",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "disableUpdateOnLayoutShift",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether to disable the update position for the content when the layout shifted.",
-            "default": "false",
-            "inheritedFrom": "PopperPositionerProps.disableUpdateOnLayoutShift",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "prioritizePosition",
-            "type": "boolean",
-            "required": false,
-            "description": "Force content to be position within the viewport. Might overlap the reference element, which may not be desired.",
-            "default": "false",
-            "inheritedFrom": "PopperPositionerProps.prioritizePosition",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "reference",
-            "type": "ReferenceElement",
-            "required": false,
-            "description": "The custom element or virtual element that will be set as the reference to position the floating element. If\nprovided, it will replace the default anchor element.",
-            "default": null,
-            "inheritedFrom": "PopperPositionerProps.reference",
-            "sourcePath": "headless/src/components/popper/types.ts",
-            "referencedTypes": [
-              {
-                "name": "ReferenceElement",
-                "kind": "typeAlias",
-                "type": "ReferenceElement",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "node_modules/.pnpm/@floating-ui+dom@1.7.6/node_modules/@floating-ui/dom/dist/floating-ui.dom.d.mts",
-                "typeParameters": [],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "forceMount",
-            "type": "boolean",
-            "required": false,
-            "description": "Used to force mounting when more control is needed.\n\nUseful when controlling animation with Vue animation libraries.",
-            "default": null,
-            "inheritedFrom": "forceMount",
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": []
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "AutocompleteGroup": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteGroupProps",
-        "type": "Interface AutocompleteGroupProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "AutocompleteGroupLabel": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteGroupLabelProps",
-        "type": "Interface AutocompleteGroupLabelProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
+    "AutocompleteContent": {},
+    "AutocompleteGroup": {},
+    "AutocompleteGroupLabel": {},
     "AutocompleteInput": {
       "props": {
         "kind": "props",
@@ -2913,243 +2679,10 @@
         ],
         "callables": [],
         "referencedTypes": []
-      },
-      "emits": {
-        "kind": "emits",
-        "name": "AutocompleteInputEmits",
-        "type": "TypeAlias AutocompleteInputEmits",
-        "resolvedType": "{ \"update:modelValue\": [value: string] }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[value: string]",
-            "parameters": "value: string",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/input/types.ts",
-            "referencedTypes": []
-          }
-        ],
-        "referencedTypes": [
-          {
-            "name": "InputRootEmits",
-            "kind": "typeAlias",
-            "type": "{ 'update:modelValue': [value: string]; }",
-            "resolvedType": "{ \"update:modelValue\": [value: string] }",
-            "description": "",
-            "sourcePath": "headless/src/components/input/types.ts",
-            "typeParameters": [],
-            "external": false,
-            "members": [],
-            "callables": [
-              {
-                "name": "update:modelValue",
-                "type": "[value: string]",
-                "parameters": "value: string",
-                "required": true,
-                "description": "",
-                "sourcePath": "headless/src/components/input/types.ts",
-                "referencedTypes": []
-              }
-            ]
-          }
-        ]
       }
     },
-    "AutocompleteItem": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteItemProps",
-        "type": "Interface AutocompleteItemProps",
-        "resolvedType": "{ value: string; disabled?: boolean; asChild?: boolean; as?: AsTag | Component }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "value",
-            "type": "string",
-            "required": true,
-            "description": "The value given as data when submitted with a `name`.",
-            "default": null,
-            "inheritedFrom": "value",
-            "sourcePath": "headless/src/components/listbox/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "disabled",
-            "type": "boolean",
-            "required": false,
-            "description": "When `true`, prevents the user from interacting with the item.",
-            "default": null,
-            "inheritedFrom": "disabled",
-            "sourcePath": "headless/src/components/listbox/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": "asChild",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": "as",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      },
-      "emits": {
-        "kind": "emits",
-        "name": "AutocompleteItemEmits",
-        "type": "TypeAlias AutocompleteItemEmits: CommandItemEmits",
-        "resolvedType": "{ select: [event: SelectEvent<string>] }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "select",
-            "type": "[event: SelectEvent<string>]",
-            "parameters": "event: SelectEvent<string>",
-            "required": true,
-            "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
-            "sourcePath": "headless/src/components/listbox/types.ts",
-            "referencedTypes": [
-              {
-                "name": "SelectEvent",
-                "kind": "typeAlias",
-                "type": "CustomEvent<{ originalEvent: MouseEvent; value?: string | undefined; }>",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/types/event.ts",
-                "typeParameters": ["T"],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "referencedTypes": [
-          {
-            "name": "ListboxItemEmits",
-            "kind": "typeAlias",
-            "type": "{ select: [event: import(\"@/index\").SelectEvent<string>]; }",
-            "resolvedType": "{ select: [event: SelectEvent<string>] }",
-            "description": "",
-            "sourcePath": "headless/src/components/listbox/types.ts",
-            "typeParameters": [],
-            "external": false,
-            "members": [],
-            "callables": [
-              {
-                "name": "select",
-                "type": "[event: SelectEvent<string>]",
-                "parameters": "event: SelectEvent<string>",
-                "required": true,
-                "description": "Event handler called when the selecting item. <br> It can be prevented by calling `event.preventDefault`.",
-                "sourcePath": "headless/src/components/listbox/types.ts",
-                "referencedTypes": []
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "AutocompleteItemIndicator": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteItemIndicatorProps",
-        "type": "Interface AutocompleteItemIndicatorProps",
-        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": "ListboxItemIndicatorProps.asChild",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": "ListboxItemIndicatorProps.as",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
+    "AutocompleteItem": {},
+    "AutocompleteItemIndicator": {},
     "AutocompletePortal": {},
     "AutocompleteRoot": {
       "props": {
@@ -3342,123 +2875,8 @@
         "referencedTypes": []
       }
     },
-    "AutocompleteSeparator": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteSeparatorProps",
-        "type": "Interface AutocompleteSeparatorProps",
-        "resolvedType": "{ orientation?: DataOrientation; decorative?: boolean }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "orientation",
-            "type": "DataOrientation",
-            "required": false,
-            "description": "Orientation of the component.\n\nEither `vertical` or `horizontal`. Defaults to `horizontal`.",
-            "default": null,
-            "inheritedFrom": "orientation",
-            "sourcePath": "headless/src/components/separator/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DataOrientation",
-                "kind": "typeAlias",
-                "type": "'vertical' | 'horizontal'",
-                "resolvedType": "'vertical' | 'horizontal'",
-                "description": "",
-                "sourcePath": "headless/src/types/common.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "decorative",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether or not the component is purely decorative. <br>When `true`, accessibility-related attributes are updated so\nthat that the rendered element is removed from the accessibility tree.",
-            "default": null,
-            "inheritedFrom": "decorative",
-            "sourcePath": "headless/src/components/separator/types.ts",
-            "referencedTypes": []
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "AutocompleteTrigger": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteTriggerProps",
-        "type": "Interface AutocompleteTriggerProps",
-        "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": "PrimitiveProps.asChild",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": "PrimitiveProps.as",
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "AutocompleteViewport": {
-      "props": {
-        "kind": "props",
-        "name": "AutocompleteViewportProps",
-        "type": "Interface AutocompleteViewportProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/autocomplete/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [],
-        "referencedTypes": []
-      }
-    }
+    "AutocompleteSeparator": {},
+    "AutocompleteTrigger": {},
+    "AutocompleteViewport": {}
   }
 }

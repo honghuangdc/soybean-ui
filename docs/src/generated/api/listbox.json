@@ -1,11 +1,11 @@
 {
   "component": "listbox",
   "symbols": {
-    "CommandGroup": {
+    "AutocompleteGroup": {
       "props": {
         "kind": "props",
-        "name": "CommandGroupProps",
-        "type": "Interface CommandGroupProps",
+        "name": "AutocompleteGroupProps",
+        "type": "Interface AutocompleteGroupProps",
         "resolvedType": null,
         "description": "",
         "sourcePath": "headless/src/components/listbox/types.ts",
@@ -15,11 +15,25 @@
         "referencedTypes": []
       }
     },
-    "CommandGroupLabel": {
+    "AutocompleteGroupLabel": {
       "props": {
         "kind": "props",
-        "name": "CommandGroupLabelProps",
-        "type": "Interface CommandGroupLabelProps",
+        "name": "AutocompleteGroupLabelProps",
+        "type": "Interface AutocompleteGroupLabelProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/listbox/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "AutocompleteItemIndicator": {
+      "props": {
+        "kind": "props",
+        "name": "AutocompleteItemIndicatorProps",
+        "type": "Interface AutocompleteItemIndicatorProps",
         "resolvedType": null,
         "description": "",
         "sourcePath": "headless/src/components/listbox/types.ts",

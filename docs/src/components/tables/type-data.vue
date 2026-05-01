@@ -12,8 +12,10 @@ export type TypeFieldDef = {
 
 interface Props {
   name: string;
+  displayName?: string;
   description?: string;
   fields: TypeFieldDef[];
+  hideHeader?: boolean;
 }
 
 const props = defineProps<Props>();
@@ -29,19 +31,19 @@ const columns = computed<TableColumn<TableRow>[]>(() => [
     key: 'name',
     dataIndex: 'name',
     title: 'Field',
-    minWidth: '180px'
+    minWidth: '144px'
   },
   {
     key: 'type',
     dataIndex: 'type',
     title: 'Type',
-    minWidth: '200px'
+    minWidth: '176px'
   },
   {
     key: 'description',
     dataIndex: 'description',
     title: 'Description',
-    minWidth: '320px'
+    minWidth: '240px'
   }
 ]);
 
@@ -55,30 +57,34 @@ const tableData = computed<TableRow[]>(() => {
 
 <template>
   <div>
-    <h4 :id="anchorId" class="text-lg font-semibold my-3 scroll-mt-24">
-      {{ name }}
+    <h4 v-if="!hideHeader" :id="anchorId" class="text-lg font-semibold my-3 scroll-mt-24">
+      <component :is="typeToVNode(displayName || name)" />
     </h4>
-    <p v-if="description" class="text-sm text-muted-foreground">
+    <p v-if="description && !hideHeader" class="text-sm text-muted-foreground">
       {{ description }}
     </p>
 
-    <STable :columns="columns" :data="tableData" :row-key="row => row.__rowKey" size="sm" bordered>
-      <template #name="{ row }">
-        <div class="code-btn">
-          <span>{{ row.name }}</span>
-          <span v-if="row.required" class="ml-1 text-destructive/80">*</span>
-        </div>
-      </template>
+    <div class="min-w-0 overflow-x-auto">
+      <STable :columns="columns" :data="tableData" :row-key="row => row.__rowKey" size="sm" bordered>
+        <template #name="{ row }">
+          <div class="code-btn">
+            <span>{{ row.name }}</span>
+            <span v-if="row.required" class="ml-1 text-destructive/80">*</span>
+          </div>
+        </template>
 
-      <template #type="{ row }">
-        <div class="code-btn-outline">
-          <component :is="typeToVNode(row.type)" />
-        </div>
-      </template>
+        <template #type="{ row }">
+          <div class="code-btn-outline">
+            <component :is="typeToVNode(row.type)" />
+          </div>
+        </template>
 
-      <template #description="{ row }">
-        {{ row.description || '—' }}
-      </template>
-    </STable>
+        <template #description="{ row }">
+          <div class="max-w-[20rem] whitespace-pre-wrap break-words">
+            {{ row.description || '—' }}
+          </div>
+        </template>
+      </STable>
+    </div>
   </div>
 </template>

@@ -69,7 +69,7 @@
               {
                 "name": "EditableExtendedUi",
                 "kind": "typeAlias",
-                "type": "{ root: ClassValue; input: ClassValue; area: ClassValue; preview: ClassValue; editTrigger: ClassValue; submitTrigger: ClassValue; cancelTrigger: ClassValue; controls: ClassValue; }",
+                "type": "{ root: ClassValue; input: ClassValue; area: ClassValue; preview: ClassValue; controls: ClassValue; editTrigger: ClassValue; submitTrigger: ClassValue; cancelTrigger: ClassValue; }",
                 "resolvedType": null,
                 "description": "",
                 "sourcePath": "src/components/editable/types.ts",
@@ -823,6 +823,881 @@
                 "callables": []
               }
             ]
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "EditableCompact": {
+      "props": {
+        "kind": "props",
+        "name": "EditableCompactProps",
+        "type": "Interface EditableCompactProps",
+        "resolvedType": "{ areaProps?: EditableAreaProps; previewProps?: EditablePreviewProps; inputProps?: EditableInputProps; editTriggerProps?: EditableEditTriggerProps; submitTriggerProps?: EditableSubmitTriggerProps; cancelTriggerProps?: EditableCancelTriggerProps; defaultValue?: string; modelValue?: string; placeholder?: string | EditablePlaceholder; dir?: Direction; disabled?: boolean; readonly?: boolean; activationMode?: EditableActivationMode; selectOnFocus?: boolean; submitMode?: EditableSubmitMode; startWithEditMode?: boolean; maxLength?: number; autoResize?: boolean; id?: string; asChild?: boolean; as?: AsTag | Component; name?: string; required?: boolean }",
+        "description": "",
+        "sourcePath": "headless/src/components/editable/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "areaProps",
+            "type": "EditableAreaProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableAreaProps",
+                "kind": "interface",
+                "type": "EditableAreaProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "previewProps",
+            "type": "EditablePreviewProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditablePreviewProps",
+                "kind": "interface",
+                "type": "EditablePreviewProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "inputProps",
+            "type": "EditableInputProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableInputProps",
+                "kind": "interface",
+                "type": "EditableInputProps",
+                "resolvedType": "{ id?: string; asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "id",
+                    "type": "string",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/editable/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "editTriggerProps",
+            "type": "EditableEditTriggerProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableEditTriggerProps",
+                "kind": "interface",
+                "type": "EditableEditTriggerProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "submitTriggerProps",
+            "type": "EditableSubmitTriggerProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableSubmitTriggerProps",
+                "kind": "interface",
+                "type": "EditableSubmitTriggerProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "cancelTriggerProps",
+            "type": "EditableCancelTriggerProps",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableCancelTriggerProps",
+                "kind": "interface",
+                "type": "EditableCancelTriggerProps",
+                "resolvedType": "{ asChild?: boolean; as?: AsTag | Component }",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "asChild",
+                    "type": "boolean",
+                    "required": false,
+                    "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "as",
+                    "type": "AsTag | Component",
+                    "required": false,
+                    "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+                    "default": "'div'",
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/primitive/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultValue",
+            "type": "string",
+            "required": false,
+            "description": "The default value of the editable field.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modelValue",
+            "type": "string",
+            "required": false,
+            "description": "The controlled value of the editable field.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "placeholder",
+            "type": "string | EditablePlaceholder",
+            "required": false,
+            "description": "The placeholder for the editable field.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditablePlaceholder",
+                "kind": "interface",
+                "type": "EditablePlaceholder",
+                "resolvedType": "{ edit?: string; preview?: string }",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "edit",
+                    "type": "string",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/editable/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "preview",
+                    "type": "string",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/components/editable/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "The reading direction of the editable field when applicable.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "When `true`, prevents the user from interacting with the editable field.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "readonly",
+            "type": "boolean",
+            "required": false,
+            "description": "When `true`, prevents the user from editing the value.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "activationMode",
+            "type": "EditableActivationMode",
+            "required": false,
+            "description": "The activation event of the editable field.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableActivationMode",
+                "kind": "typeAlias",
+                "type": "'none' | 'focus' | 'dblclick'",
+                "resolvedType": "'none' | 'focus' | 'dblclick'",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "selectOnFocus",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether to select the text in the input when it is focused.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "submitMode",
+            "type": "EditableSubmitMode",
+            "required": false,
+            "description": "The submit event of the editable field.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableSubmitMode",
+                "kind": "typeAlias",
+                "type": "'none' | 'enter' | 'both' | 'blur'",
+                "resolvedType": "'none' | 'enter' | 'both' | 'blur'",
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "startWithEditMode",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether to start with the edit mode active.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "maxLength",
+            "type": "number",
+            "required": false,
+            "description": "The maximum number of characters allowed.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "autoResize",
+            "type": "boolean",
+            "required": false,
+            "description": "Whether the editable field should auto resize.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "id",
+            "type": "string",
+            "required": false,
+            "description": "The id of the field.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "required": false,
+            "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "required",
+            "type": "boolean",
+            "required": false,
+            "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "EditableCompactEmits",
+        "type": "TypeAlias EditableCompactEmits",
+        "resolvedType": "{ \"update:modelValue\": [value: string]; submit: [value: string]; \"update:state\": [state: EditableEventState] }",
+        "description": "",
+        "sourcePath": "headless/src/components/editable/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[value: string]",
+            "parameters": "value: string",
+            "required": true,
+            "description": "Event handler called whenever the model value changes.",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "submit",
+            "type": "[value: string]",
+            "parameters": "value: string",
+            "required": true,
+            "description": "Event handler called when a value is submitted.",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "update:state",
+            "type": "[state: EditableEventState]",
+            "parameters": "state: EditableEventState",
+            "required": true,
+            "description": "Event handler called when the editable field changes state.",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableEventState",
+                "kind": "typeAlias",
+                "type": "'submit' | 'cancel' | 'edit'",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": [
+          {
+            "name": "EditableRootEmits",
+            "kind": "typeAlias",
+            "type": "{ 'update:modelValue': [value: string]; submit: [value: string]; 'update:state': [state: EditableEventState]; }",
+            "resolvedType": "{ \"update:modelValue\": [value: string]; submit: [value: string]; \"update:state\": [state: EditableEventState] }",
+            "description": "",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "typeParameters": [],
+            "external": false,
+            "members": [],
+            "callables": [
+              {
+                "name": "update:modelValue",
+                "type": "[value: string]",
+                "parameters": "value: string",
+                "required": true,
+                "description": "Event handler called whenever the model value changes.",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "submit",
+                "type": "[value: string]",
+                "parameters": "value: string",
+                "required": true,
+                "description": "Event handler called when a value is submitted.",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:state",
+                "type": "[state: EditableEventState]",
+                "parameters": "state: EditableEventState",
+                "required": true,
+                "description": "Event handler called when the editable field changes state.",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "referencedTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "slots": {
+        "kind": "slots",
+        "name": "EditableCompactSlots",
+        "type": "Interface EditableCompactSlots",
+        "resolvedType": "{ default?: ((props: EditableCompactSlotProps) => any); preview?: ((props: EditableCompactSlotProps) => any); input?: ((props: EditableCompactSlotProps) => any); \"edit-trigger\"?: ((props: EditableCompactSlotProps) => any); \"submit-trigger\"?: ((props: EditableCompactSlotProps) => any); \"cancel-trigger\"?: ((props: EditableCompactSlotProps) => any) }",
+        "description": "",
+        "sourcePath": "headless/src/components/editable/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "default",
+            "type": "((props: EditableCompactSlotProps) => any) | undefined",
+            "parameters": "((props: EditableCompactSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableCompactSlotProps",
+                "kind": "interface",
+                "type": "EditableCompactSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "preview",
+            "type": "((props: EditableCompactSlotProps) => any) | undefined",
+            "parameters": "((props: EditableCompactSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableCompactSlotProps",
+                "kind": "interface",
+                "type": "EditableCompactSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "input",
+            "type": "((props: EditableCompactSlotProps) => any) | undefined",
+            "parameters": "((props: EditableCompactSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableCompactSlotProps",
+                "kind": "interface",
+                "type": "EditableCompactSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "edit-trigger",
+            "type": "((props: EditableCompactSlotProps) => any) | undefined",
+            "parameters": "((props: EditableCompactSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableCompactSlotProps",
+                "kind": "interface",
+                "type": "EditableCompactSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "submit-trigger",
+            "type": "((props: EditableCompactSlotProps) => any) | undefined",
+            "parameters": "((props: EditableCompactSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableCompactSlotProps",
+                "kind": "interface",
+                "type": "EditableCompactSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "cancel-trigger",
+            "type": "((props: EditableCompactSlotProps) => any) | undefined",
+            "parameters": "((props: EditableCompactSlotProps) => any) | undefined",
+            "required": false,
+            "description": "",
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": [
+              {
+                "name": "EditableCompactSlotProps",
+                "kind": "interface",
+                "type": "EditableCompactSlotProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/editable/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": []
+      },
+      "slotProps": {
+        "kind": "slotProps",
+        "name": "EditableCompactSlotProps",
+        "type": "Interface EditableCompactSlotProps",
+        "resolvedType": "{ modelValue: string | undefined; inputValue: string; isEditing: boolean; isEmpty: boolean; edit: () => void; cancel: () => void; submit: () => void }",
+        "description": "",
+        "sourcePath": "headless/src/components/editable/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "modelValue",
+            "type": "string | undefined",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "inputValue",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "isEditing",
+            "type": "boolean",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "isEmpty",
+            "type": "boolean",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "edit",
+            "type": "() => void",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "cancel",
+            "type": "() => void",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "submit",
+            "type": "() => void",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/editable/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],
