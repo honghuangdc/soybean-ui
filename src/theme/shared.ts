@@ -16,7 +16,7 @@ export function mergeSlotVariants<
       const key = $key as keyof T;
 
       acc[key] = cn(
-        variant(),
+        variant() ?? '',
         ...uis
           .filter(Boolean)
           .map(u => u?.[key])
@@ -60,7 +60,7 @@ export function mergeBaseVariants<T extends Record<string, () => string>, B exte
       const key = $key as keyof T;
       const base = baseVariants[key];
 
-      acc[key] = () => `${base ?? ''} ${variant()}`.trim();
+      acc[key] = () => `${base ?? ''} ${variant() ?? ''}`.trim();
 
       return acc;
     },
