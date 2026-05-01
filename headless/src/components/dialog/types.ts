@@ -15,7 +15,7 @@ import type { PrimitiveProps } from '../primitive/types';
 
 export type DialogAlertType = 'default' | 'info' | 'success' | 'warning' | 'error';
 
-export interface DialogRootProps {
+export interface DialogBaseProps {
   /**
    * The controlled open state of the dialog. Can be bound with `v-model:open`.
    *
@@ -35,6 +35,9 @@ export interface DialogRootProps {
    * @defaultValue true
    */
   modal?: boolean;
+}
+
+export interface DialogRootProps extends DialogBaseProps {
   /**
    * Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.
    *
