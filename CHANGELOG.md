@@ -1,5 +1,61 @@
 # Changelog
 
+## [v0.16.0](https://github.com/soybeanjs/soybean-ui/compare/v0.15.5...v0.16.0) (2026-05-01)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **components**:
+  - implement Compact components for Card, Popover, Editable, HoverCard, NavigationMenu, Pagination and Stepper &nbsp;-&nbsp; by @soybeanjs [<samp>(6cbdc)</samp>](https://github.com/soybeanjs/soybean-ui/commit/6cbdcee7)
+  - Implement calendar, date, month, time and year components &nbsp;-&nbsp; by @soybeanjs, @claude, @MicrosoftCopilot and **soybeanfe** [<samp>(28241)</samp>](https://github.com/soybeanjs/soybean-ui/commit/28241896)
+- **scripts**:
+  - add script to generate UI components file &nbsp;-&nbsp; by @soybeanjs [<samp>(5dbd0)</samp>](https://github.com/soybeanjs/soybean-ui/commit/5dbd0ef5)
+- **skills**:
+  - add new skills for issue tracking, TDD, and triage processes &nbsp;-&nbsp; by @soybeanjs [<samp>(9a282)</samp>](https://github.com/soybeanjs/soybean-ui/commit/9a282174)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **shared**: handle undefined variant return values in merge functions &nbsp;-&nbsp; by **soybeanfe** [<samp>(7249b)</samp>](https://github.com/soybeanjs/soybean-ui/commit/7249bc8d)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **calendar**:
+  - add compact header with month/year select and improve calendar functionality &nbsp;-&nbsp; by **soybeanfe** and **Copilot** [<samp>(2d4e6)</samp>](https://github.com/soybeanjs/soybean-ui/commit/2d4e61af)
+- **carousel**:
+  - rename CarouselPlugins to CarouselPlugin for consistency &nbsp;-&nbsp; by **soybeanfe** [<samp>(85e45)</samp>](https://github.com/soybeanjs/soybean-ui/commit/85e454c1)
+- **combobox**:
+  - reorganize component imports and remove unused files &nbsp;-&nbsp; by **soybeanfe** [<samp>(d58a6)</samp>](https://github.com/soybeanjs/soybean-ui/commit/d58a6dc3)
+  - add parentElement reference and integrate useHideOthers for improved accessibility &nbsp;-&nbsp; by **soybeanfe** [<samp>(b83ef)</samp>](https://github.com/soybeanjs/soybean-ui/commit/b83ef7dd)
+- **date-field**:
+  - add DateFieldCompact component and integrate into SDateField &nbsp;-&nbsp; by **soybeanfe** and **Copilot** [<samp>(2633d)</samp>](https://github.com/soybeanjs/soybean-ui/commit/2633d279)
+- **hover-card**:
+  - add prioritizePosition prop to HoverCardPositioner &nbsp;-&nbsp; by **soybeanfe** [<samp>(e53db)</samp>](https://github.com/soybeanjs/soybean-ui/commit/e53db03c)
+- **popper**:
+  - add class binding for anchor element and update PopperUiSlot type &nbsp;-&nbsp; by **soybeanfe** [<samp>(21d02)</samp>](https://github.com/soybeanjs/soybean-ui/commit/21d02afb)
+- **scripts**:
+  - sort component groups before generating components file &nbsp;-&nbsp; by @soybeanjs [<samp>(1066a)</samp>](https://github.com/soybeanjs/soybean-ui/commit/1066abbe)
+- **useHideOthers**:
+  - update target parameter type to support multiple elements &nbsp;-&nbsp; by **soybeanfe** [<samp>(0d0d5)</samp>](https://github.com/soybeanjs/soybean-ui/commit/0d0d5b2f)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **autocomplete**: migrate components to use combobox structure and remove unused files &nbsp;-&nbsp; by **soybeanfe** [<samp>(b1396)</samp>](https://github.com/soybeanjs/soybean-ui/commit/b13965cd)
+- **docs**: refactor docs components api &nbsp;-&nbsp; by **soybeanfe** [<samp>(d5b89)</samp>](https://github.com/soybeanjs/soybean-ui/commit/d5b89730)
+
+### &nbsp;&nbsp;&nbsp;📖 Documentation
+
+- **AGENTS**: update instructions and add CLAUDE files for components and playground &nbsp;-&nbsp; by @soybeanjs [<samp>(6711d)</samp>](https://github.com/soybeanjs/soybean-ui/commit/6711da50)
+- **components**: update API documentation for various components to use ComponentApi &nbsp;-&nbsp; by **soybeanfe** [<samp>(d9510)</samp>](https://github.com/soybeanjs/soybean-ui/commit/d951003f)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**: update deps &nbsp;-&nbsp; by **soybeanfe** [<samp>(af9c9)</samp>](https://github.com/soybeanjs/soybean-ui/commit/af9c9ea0)
+- **lint**: remove duplicate rule for no-underscore-dangle &nbsp;-&nbsp; by **soybeanfe** [<samp>(ce1ba)</samp>](https://github.com/soybeanjs/soybean-ui/commit/ce1bab31)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;[![claude](https://github.com/claude.png?size=48)](https://github.com/claude)&nbsp;&nbsp;[![MicrosoftCopilot](https://github.com/MicrosoftCopilot.png?size=48)](https://github.com/MicrosoftCopilot)&nbsp;&nbsp;[![MicrosoftCopilot](https://github.com/MicrosoftCopilot.png?size=48)](https://github.com/MicrosoftCopilot)&nbsp;&nbsp;
+[soybeanfe](mailto:honghuangdc@gmail.com),&nbsp;[Copilot](mailto:copilot@github.com),&nbsp;
+
 ## [v0.15.5](https://github.com/soybeanjs/soybean-ui/compare/v0.15.4...v0.15.5) (2026-04-30)
 
 ### &nbsp;&nbsp;&nbsp;🛠 Optimizations
