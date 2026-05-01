@@ -1,18 +1,22 @@
-import type { ButtonHTMLAttributes, ComputedRef, ShallowRef } from 'vue';
+import type { ButtonHTMLAttributes, ShallowRef } from 'vue';
 import type {
   DismissableLayerEmits,
   DismissableLayerProps,
   FocusScopeEmits,
   ForceMountProps,
   TrapFocusProps,
-  MaybePromise
+  MaybePromise,
+  PropsToContext,
+  UiClass
 } from '../../types';
 import type { PrimitiveProps } from '../primitive/types';
-import type { DialogRootEmits, DialogRootProps } from '../dialog/types';
-import type { PopperPopupProps, PopperPositionerProps, PopperArrowProps } from '../popper/types';
+import type { DialogRootEmits, DialogBaseProps } from '../dialog/types';
+import type { PopperPopupProps, PopperPositionerProps, PopperArrowProps, PopperUiSlot } from '../popper/types';
 import type { PortalProps } from '../portal/types';
 
-export interface PopoverRootProps extends DialogRootProps {}
+export interface PopoverRootProps extends DialogBaseProps {
+  disabled?: boolean;
+}
 
 export type PopoverRootEmits = DialogRootEmits;
 
@@ -33,8 +37,7 @@ export interface PopoverPopupProps extends PopperPopupProps {}
 
 export interface PopoverTriggerProps extends PrimitiveProps, /** @vue-ignore */ ButtonHTMLAttributes {}
 
-export interface PopoverRootContextParams {
-  modal: ComputedRef<boolean | undefined>;
+export interface PopoverRootContextParams extends PropsToContext<PopoverRootProps, 'modal' | 'disabled'> {
   open: ShallowRef<boolean | undefined>;
 }
 
@@ -59,4 +62,6 @@ export interface PopoverCompactSlots {
   close?: () => any;
 }
 
-export type { PopperUiSlot as PopoverUiSlot, PopperUi as PopoverUi } from '../popper/types';
+export type PopoverUiSlot = PopperUiSlot | 'trigger';
+
+export type PopoverUi = UiClass<PopoverUiSlot>;
