@@ -279,6 +279,7 @@ export const components = {
     'MenubarCompact'
   ],
   navigationMenu: [
+    'NavigationMenuCompact',
     'NavigationMenuRoot',
     'NavigationMenuList',
     'NavigationMenuItem',

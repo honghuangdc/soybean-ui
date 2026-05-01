@@ -288,6 +288,7 @@ import {
   MenuSub,
   MenuSubContent,
   MenuSubTrigger,
+  NavigationMenuCompact,
   NavigationMenuContent,
   NavigationMenuIndicator,
   NavigationMenuItem,
@@ -1160,6 +1161,7 @@ export const Menubar = {
 };
 
 export const NavigationMenu = {
+  Compact: NavigationMenuCompact,
   Root: NavigationMenuRoot,
   List: NavigationMenuList,
   Item: NavigationMenuItem,
@@ -1170,6 +1172,7 @@ export const NavigationMenu = {
   Viewport: NavigationMenuViewport,
   Indicator: NavigationMenuIndicator
 } as {
+  Compact: typeof NavigationMenuCompact;
   Root: typeof NavigationMenuRoot;
   List: typeof NavigationMenuList;
   Item: typeof NavigationMenuItem;
