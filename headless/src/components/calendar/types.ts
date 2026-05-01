@@ -3,6 +3,7 @@ import type { ButtonHTMLAttributes, ComputedRef, HTMLAttributes, ShallowRef } fr
 import type { Formatter, Grid, Matcher, WeekDayFormat, WeekStartsOn } from '../../date';
 import type { Direction, PropsToContext, UiClass } from '../../types';
 import type { PrimitiveProps } from '../primitive/types';
+import type { SelectOptionData } from '../select/types';
 
 export type CalendarModelValue<M extends boolean = false> = M extends true
   ? DateValue[] | undefined
@@ -109,6 +110,34 @@ export interface CalendarRootContext extends PropsToContext<
   isNextButtonDisabled: (nextPageFunc?: (date: DateValue) => DateValue) => boolean;
 }
 
+export interface CalendarRootSlotProps<M extends boolean = false> {
+  date: DateValue;
+  placeholder: DateValue;
+  grid: Grid<DateValue>[];
+  weekDays: string[];
+  weekStartsOn: number;
+  locale: string;
+  fixedWeeks: boolean;
+  modelValue: CalendarModelValue<M>;
+  formatter: Formatter;
+  minValue: DateValue | undefined;
+  maxValue: DateValue | undefined;
+  disabled: boolean;
+  onPlaceholderChange: (date: DateValue) => void;
+}
+
+export interface CalendarHeadingSlotProps {
+  headingValue: string;
+  monthValue: string;
+  yearValue: string;
+  selectedMonth: number;
+  selectedYear: number;
+  monthOptions: SelectOptionData<number>[];
+  yearOptions: SelectOptionData<number>[];
+  onMonthChange: (value: number | undefined) => void;
+  onYearChange: (value: number | undefined) => void;
+}
+
 export type CalendarUiSlot =
   | 'root'
   | 'header'
@@ -144,7 +173,7 @@ export type CalendarCompactEmits<M extends boolean = false> = CalendarRootEmits<
 export type CalendarCompactSlots<M extends boolean = false> = {
   default?: (props: { modelValue: CalendarModelValue<M> }) => any;
   prev?: (props: { disabled: boolean }) => any;
-  heading?: (props: { headingValue: string }) => any;
+  heading?: (props: CalendarHeadingSlotProps) => any;
   next?: (props: { disabled: boolean }) => any;
   'head-cell'?: (props: { date: DateValue; index: number; label: string }) => any;
   day?: (props: {

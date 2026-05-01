@@ -11,7 +11,6 @@ import { SCalendar } from '@soybeanjs/ui';
       :default-placeholder="new CalendarDate(2026, 4, 18)"
       :ui="{
         root: 'rounded-lg border border-border p-4 shadow-sm',
-        header: 'mb-2',
         cellTrigger: 'data-[today]:border data-[today]:border-primary data-[selected]:rounded-full'
       }"
     />

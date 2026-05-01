@@ -26,6 +26,7 @@ export type {
   CalendarGridRowProps,
   CalendarHeadCellProps,
   CalendarHeaderProps,
+  CalendarHeadingSlotProps,
   CalendarHeadingProps,
   CalendarModelValue,
   CalendarNextProps,
@@ -33,6 +34,7 @@ export type {
   CalendarRootContext,
   CalendarRootEmits,
   CalendarRootProps,
+  CalendarRootSlotProps,
   CalendarUi,
   CalendarUiSlot
 } from './types';

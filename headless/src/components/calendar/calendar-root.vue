@@ -4,13 +4,14 @@ import type { DateValue } from '@internationalized/date';
 import { computed, onMounted, watch } from 'vue';
 import { useControllableState, useForwardElement } from '../../composables';
 import { getDefaultDate, getWeekStartsOn, handleCalendarInitialFocus } from '../../date';
-import { transformPropsToContext } from '../../shared';
+import { getVueBooleanCasting, transformPropsToContext } from '../../shared';
 import { useDirection, useLocale } from '../config-provider/context';
 import { Primitive } from '../primitive';
 import { VisuallyHidden } from '../visually-hidden';
 import { provideCalendarRootContext, useCalendarUi } from './context';
 import type { CalendarModelValue, CalendarRootEmits, CalendarRootProps } from './types';
 import { useCalendar, useCalendarState } from './use-calendar';
+import type { CalendarRootSlotProps } from './types';
 
 defineOptions({
   name: 'CalendarRoot'
@@ -36,15 +37,7 @@ const props = withDefaults(defineProps<CalendarRootProps<M>>(), {
 const emit = defineEmits<CalendarRootEmits<M>>();
 
 defineSlots<{
-  default?: (props: {
-    date: CalendarRootProps<M>['placeholder'];
-    grid: ReturnType<typeof useCalendar>['grid']['value'];
-    weekDays: string[];
-    weekStartsOn: number;
-    locale: string;
-    fixedWeeks: boolean;
-    modelValue: CalendarModelValue<M>;
-  }) => any;
+  default?: (props: CalendarRootSlotProps<M>) => any;
 }>();
 
 const cls = useCalendarUi('root');
@@ -54,7 +47,7 @@ const locale = useLocale(() => props.locale);
 const dir = useDirection(() => props.dir);
 const weekStartsOn = computed(() => props.weekStartsOn ?? getWeekStartsOn(locale.value));
 const isModelValueControlled = computed(() => props.modelValue !== undefined);
-const multiple = computed(() => Boolean(props.multiple));
+const multiple = computed(() => getVueBooleanCasting(props.multiple));
 
 const modelValue = useControllableState<CalendarModelValue<M>>(
   () => props.modelValue as CalendarModelValue<M>,
@@ -255,10 +248,16 @@ onMounted(() => {
   >
     <slot
       :date="placeholder"
+      :disabled="disabled"
+      :formatter="formatter"
       :fixed-weeks="fixedWeeks"
       :grid="grid"
       :locale="locale"
+      :max-value="maxValue"
+      :min-value="minValue"
       :model-value="modelValue"
+      :on-placeholder-change="onPlaceholderChange"
+      :placeholder="placeholder"
       :week-days="weekdays"
       :week-starts-on="weekStartsOn"
     />

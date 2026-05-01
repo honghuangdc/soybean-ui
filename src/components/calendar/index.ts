@@ -9,12 +9,14 @@ export type {
   CalendarGridRowProps,
   CalendarHeaderProps,
   CalendarHeadCellProps,
+  CalendarHeadingSlotProps,
   CalendarHeadingProps,
   CalendarModelValue,
   CalendarNextProps,
   CalendarPrevProps,
   CalendarRootEmits,
   CalendarRootProps,
+  CalendarRootSlotProps,
   CalendarUi,
   CalendarUiSlot
 } from '@soybeanjs/headless/calendar';
