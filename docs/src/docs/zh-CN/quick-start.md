@@ -134,7 +134,11 @@ export default defineNuxtConfig({
 
 ## 使用 Headless 组件
 
-如果你选择使用 `@soybeanjs/headless`，你需要自己编写样式。以下是一个简单的示例：
+如果你选择使用 `@soybeanjs/headless`，你需要自己编写样式。Headless 组件提供两种使用方式：
+
+### 方式一：使用基础组件（精细控制）
+
+适用于需要完全自定义结构和样式的场景：
 
 ```vue
 <script setup>
@@ -158,6 +162,48 @@ import { AccordionRoot, AccordionItem, AccordionTrigger, AccordionContent } from
 /* 在这里添加你的自定义样式 */
 </style>
 ```
+
+### 方式二：使用 Compact 组件（数据驱动）
+
+适用于结构稳定、数据驱动的场景，代码更简洁：
+
+```vue
+<script setup>
+import { AccordionCompact } from '@soybeanjs/headless';
+
+const items = [
+  {
+    value: 'item-1',
+    title: '这是标题',
+    description: '这是内容区域，你可以在这里放置任何内容。'
+  },
+  {
+    value: 'item-2',
+    title: '另一个标题',
+    description: '另一个内容区域。'
+  }
+];
+</script>
+
+<template>
+  <AccordionCompact :items="items" />
+</template>
+
+<style scoped>
+/* 在这里添加你的自定义样式 */
+</style>
+```
+
+Compact 组件由 headless 层负责数据遍历和默认内容渲染，让你用更少的代码完成常见任务。目前支持 Compact 模式的组件包括：
+
+- `AccordionCompact`
+- `TableCompact`
+- `CheckboxGroupCompact`
+- `CheckboxCardGroupCompact`
+- `RadioGroupCompact`
+- `EditableCompact`
+
+更多组件的 Compact 版本正在持续添加中。
 
 ## 主题配置
 
