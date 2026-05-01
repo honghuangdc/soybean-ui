@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue';
+import { computed, useAttrs, watch } from 'vue';
 import { useControllableState, useForwardElement } from '../../composables';
 import { getDefaultDate, isBefore, normalizeDateStep, normalizeHourCycle, useDateFormatter } from '../../date';
 import type { DateValue } from '../../date';
 import { isNullish } from '../../shared';
 import { useDirection, useLocale } from '../config-provider/context';
+import PopoverRoot from '../popover/popover-root.vue';
 import { Primitive } from '../primitive';
 import { provideDatePickerRootContext, useDatePickerUi } from './context';
-import type { DatePickerRootEmits, DatePickerRootProps } from './types';
+import type { DatePickerRootEmits, DatePickerRootProps, DatePickerRootSlots } from './types';
 
 defineOptions({
-  name: 'DatePickerRoot'
+  name: 'DatePickerRoot',
+  inheritAttrs: false
 });
 
 const props = withDefaults(defineProps<DatePickerRootProps>(), {
@@ -31,9 +33,9 @@ const props = withDefaults(defineProps<DatePickerRootProps>(), {
 
 const emit = defineEmits<DatePickerRootEmits>();
 
-defineSlots<{
-  default?: (props: { modelValue: DateValue | undefined; open: boolean }) => any;
-}>();
+defineSlots<DatePickerRootSlots>();
+
+const attrs = useAttrs();
 
 const cls = useDatePickerUi('root');
 const [_, setRootElement] = useForwardElement();
@@ -150,9 +152,12 @@ watch(modelValue, value => {
   }
 });
 
-const onDateChange = (date: DateValue) => {
-  modelValue.value = date.copy();
-  open.value = false;
+const onDateChange = (date: DateValue | undefined) => {
+  modelValue.value = date?.copy();
+
+  if (date) {
+    open.value = false;
+  }
 };
 
 const onPlaceholderChange = (date: DateValue) => {
@@ -171,7 +176,6 @@ provideDatePickerRootContext({
   formatter,
   hourCycle: props.hourCycle,
   step,
-  open,
   isPlaceholderFocusable,
   hasSelectedDate,
   isSelectedDateDisabled,
@@ -181,6 +185,7 @@ provideDatePickerRootContext({
   onPlaceholderChange,
   isDateDisabled,
   isDateSelected,
+  open,
   setOpen(value: boolean) {
     open.value = value;
   }
@@ -188,17 +193,26 @@ provideDatePickerRootContext({
 </script>
 
 <template>
-  <Primitive
-    :ref="setRootElement"
-    :as="as"
-    :as-child="asChild"
-    :class="cls"
-    :data-disabled="disabled ? '' : undefined"
-    :data-invalid="isInvalid ? '' : undefined"
-    :data-readonly="readonly ? '' : undefined"
-    :dir="dir"
-    data-slot="root"
-  >
-    <slot :model-value="modelValue" :open="Boolean(open)" />
-  </Primitive>
+  <PopoverRoot v-model:open="open" :modal="modal">
+    <Primitive
+      :ref="setRootElement"
+      v-bind="attrs"
+      :as="as"
+      :as-child="asChild"
+      :class="cls"
+      :data-disabled="disabled ? '' : undefined"
+      :data-invalid="isInvalid ? '' : undefined"
+      :data-readonly="readonly ? '' : undefined"
+      :dir="dir"
+      data-slot="root"
+    >
+      <slot
+        :model-value="modelValue"
+        :placeholder="placeholder"
+        :set-date="onDateChange"
+        :set-placeholder="onPlaceholderChange"
+        :open="Boolean(open)"
+      />
+    </Primitive>
+  </PopoverRoot>
 </template>

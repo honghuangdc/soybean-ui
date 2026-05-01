@@ -1,65 +1,55 @@
 // @unocss-include
 import { tv } from 'tailwind-variants';
-import type { VariantProps } from 'tailwind-variants';
 
 export const datePickerVariants = tv({
   slots: {
-    root: 'inline-flex w-full flex-col gap-2',
+    root: 'inline-flex',
     trigger: [
-      'inline-flex w-full items-center justify-start gap-2 rounded-md border border-input bg-background px-3 py-0 text-start font-normal shadow-xs transition-[background-color,color,box-shadow]',
+      'inline-flex items-center justify-start rounded-md border border-input bg-background  shadow-sm transition-colors',
       'hover:bg-accent/50 hover:text-accent-foreground',
-      'focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-offset-background focus-visible:ring-primary/30',
-      'data-[disabled]:opacity-60 data-[disabled]:cursor-not-allowed data-[disabled]:pointer-events-none',
+      'outline-none focus-visible:ring-3 focus-visible:ring-offset-background focus-visible:ring-primary/30',
+      'data-[disabled]:cursor-not-allowed data-[disabled]:opacity-60',
       'data-[state=open]:bg-accent/50 data-[state=open]:text-accent-foreground'
     ],
+    positioner: 'w-max',
     popup: [
-      'z-50 overflow-hidden rounded-lg border border-border bg-popover p-0 text-popover-foreground shadow-md',
-      'data-[state=open]:animate-in data-[state=closed]:animate-out',
-      'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
-      'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95'
-    ],
-    input: [
-      'inline-flex min-w-5 items-center justify-center rounded-sm px-0.5 text-center outline-none',
-      'tabular-nums leading-none',
-      'data-[segment=literal]:min-w-0 data-[segment=literal]:px-0 data-[segment=literal]:text-muted-foreground',
-      'data-[segment=timeZoneName]:min-w-fit data-[segment=timeZoneName]:px-1 data-[segment=timeZoneName]:text-muted-foreground',
-      'data-[placeholder]:text-muted-foreground',
-      'focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:ring-2 focus-visible:ring-primary/20',
-      'data-[disabled]:cursor-not-allowed data-[readonly]:cursor-default'
-    ],
-    calendar: ''
+      `w-auto rounded-md border bg-popover text-popover-foreground outline-none z-50 will-change-transform`,
+      `data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95`,
+      `data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95`,
+      `data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2`
+    ]
   },
   variants: {
     size: {
       xs: {
         root: 'text-2xs',
-        trigger: 'h-6 px-2 text-2xs',
-        input: 'min-h-4.5 min-w-4.5'
+        popup: 'text-2xs',
+        trigger: 'gap-1 h-6 px-1.5'
       },
       sm: {
         root: 'text-xs',
-        trigger: 'h-7 px-2.5 text-xs',
-        input: 'min-h-5 min-w-5'
+        popup: 'text-xs',
+        trigger: 'gap-1.5 h-7 px-2'
       },
       md: {
         root: 'text-sm',
-        trigger: 'h-8 px-3 text-sm',
-        input: 'min-h-5.5 min-w-5.5'
+        popup: 'text-sm',
+        trigger: 'gap-2 h-8 px-2.5'
       },
       lg: {
         root: 'text-base',
-        trigger: 'h-9 px-3.5 text-base',
-        input: 'min-h-6 min-w-6'
+        popup: 'text-base',
+        trigger: 'gap-2.5 h-9 px-3'
       },
       xl: {
         root: 'text-lg',
-        trigger: 'h-10 px-4 text-lg',
-        input: 'min-h-6.5 min-w-6.5'
+        popup: 'text-lg',
+        trigger: 'gap-3 h-10 px-3.5'
       },
       '2xl': {
         root: 'text-xl',
-        trigger: 'h-12 px-5 text-xl',
-        input: 'min-h-8 min-w-8'
+        popup: 'text-xl',
+        trigger: 'gap-3.5 h-12 px-4'
       }
     }
   },
@@ -67,7 +57,3 @@ export const datePickerVariants = tv({
     size: 'md'
   }
 });
-
-type DatePickerVariants = VariantProps<typeof datePickerVariants>;
-
-export type DatePickerVariantProps = DatePickerVariants;

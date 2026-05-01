@@ -1,26 +1,18 @@
-import type { DateValue } from '@internationalized/date';
-
 import type {
   ClassValue,
-  DatePickerPopupProps,
-  DatePickerRootEmits,
-  DatePickerRootProps,
-  DatePickerTriggerProps,
-  DatePickerUi
+  DatePickerUi,
+  DatePickerCompactProps,
+  DatePickerCompactEmits,
+  DatePickerCompactSlots
 } from '@soybeanjs/headless';
 import type { ThemeSize } from '@/theme';
 
-export interface DatePickerProps extends /* @vue-ignore */ DatePickerRootProps {
+export interface DatePickerProps extends DatePickerCompactProps {
   class?: ClassValue;
   size?: ThemeSize;
   ui?: Partial<DatePickerUi>;
-  triggerProps?: DatePickerTriggerProps;
-  popupProps?: DatePickerPopupProps;
 }
 
-export type DatePickerEmits = DatePickerRootEmits;
+export type DatePickerEmits = DatePickerCompactEmits;
 
-export interface DatePickerSlots {
-  trigger?: (props: { open: boolean }) => any;
-  default?: (props: { modelValue: DateValue | undefined; open: boolean }) => any;
-}
+export type DatePickerSlots = DatePickerCompactSlots;

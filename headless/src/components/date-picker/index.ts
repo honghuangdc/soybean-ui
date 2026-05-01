@@ -1,15 +1,21 @@
+export { default as DatePickerCompact } from './date-picker-compact.vue';
+export { default as DatePickerContent } from './date-picker-content.vue';
 export { default as DatePickerRoot } from './date-picker-root.vue';
-export { default as DatePickerTrigger } from './date-picker-trigger.vue';
-export { default as DatePickerPopup } from './date-picker-popup.vue';
+export { default as DatePickerTrigger } from '../popover/popover-trigger.vue';
 
 export { provideDatePickerUi } from './context';
 
 export type {
-  DatePickerPopupProps,
+  DatePickerCompactProps,
+  DatePickerCompactEmits,
+  DatePickerCompactSlots,
+  DatePickerContentProps,
   DatePickerRootContext,
-  DatePickerRootEmits,
   DatePickerRootProps,
+  DatePickerRootEmits,
   DatePickerTriggerProps,
   DatePickerUi,
   DatePickerUiSlot
 } from './types';
+
+export type { PopperPopupProps } from '../popper/types';

@@ -20,6 +20,7 @@ const emit = defineEmits<CalendarEmits<M>>();
 defineSlots<CalendarSlots<M>>();
 
 const forwardedProps = useOmitProps(props, ['class', 'size', 'ui']);
+
 const listeners = useForwardListeners(emit);
 
 const ui = computed(() => {
@@ -53,6 +54,7 @@ provideCalendarUi(ui);
     <template v-else #heading="slotProps">
       <SSelect
         :size="miniSize"
+        :disabled="disabled"
         :clearable="false"
         :items="slotProps.monthOptions"
         :model-value="slotProps.selectedMonth"
@@ -62,6 +64,7 @@ provideCalendarUi(ui);
       />
       <SSelect
         :size="miniSize"
+        :disabled="disabled"
         :clearable="false"
         :items="slotProps.yearOptions"
         :model-value="slotProps.selectedYear"

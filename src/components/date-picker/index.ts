@@ -1,7 +1,7 @@
 export { default as SDatePicker } from './date-picker.vue';
 
 export type {
-  DatePickerPopupProps,
+  PopperPopupProps,
   DatePickerRootEmits,
   DatePickerRootProps,
   DatePickerTriggerProps,

@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-
-import { DatePickerPopup, DatePickerRoot, DatePickerTrigger, provideDatePickerUi } from '@soybeanjs/headless/date-picker';
-import { useForwardListeners, useOmitProps } from '@soybeanjs/headless/composables';
-
+import { DatePickerCompact, provideDatePickerUi } from '@soybeanjs/headless/date-picker';
+import { useForwardListeners, useOmitProps, usePickProps } from '@soybeanjs/headless/composables';
 import { mergeSlotVariants } from '@/theme';
-
-import Icon from '../icon/icon.vue';
 import SCalendar from '../calendar/calendar.vue';
-
 import { datePickerVariants } from './variants';
 import type { DatePickerEmits, DatePickerProps, DatePickerSlots } from './types';
 
@@ -16,7 +11,9 @@ defineOptions({
   name: 'SDatePicker'
 });
 
-const props = defineProps<DatePickerProps>();
+const props = withDefaults(defineProps<DatePickerProps>(), {
+  open: undefined
+});
 
 const emit = defineEmits<DatePickerEmits>();
 
@@ -24,7 +21,17 @@ defineSlots<DatePickerSlots>();
 
 const listeners = useForwardListeners(emit);
 
-const forwardedProps = useOmitProps(props, ['class', 'size', 'ui', 'triggerProps', 'popupProps']);
+const forwardedProps = useOmitProps(props, ['class', 'size', 'ui']);
+
+const calendarProps = usePickProps(props, [
+  'locale',
+  'dir',
+  'disabled',
+  'readonly',
+  'minValue',
+  'maxValue',
+  'isDateUnavailable'
+]);
 
 const ui = computed(() => {
   const variants = datePickerVariants({ size: props.size });
@@ -36,28 +43,19 @@ provideDatePickerUi(ui);
 </script>
 
 <template>
-  <DatePickerRoot v-slot="slotProps" v-bind="forwardedProps" v-on="listeners">
-    <DatePickerTrigger v-bind="triggerProps">
-      <slot name="trigger" :open="slotProps.open">
-        <Icon class="size-4" icon="lucide:calendar" />
-        <span v-if="slotProps.modelValue">{{ slotProps.modelValue.toString() }}</span>
-        <span v-else class="text-muted-foreground">Pick a date</span>
-      </slot>
-    </DatePickerTrigger>
-    <DatePickerPopup v-bind="popupProps">
+  <DatePickerCompact v-bind="forwardedProps" v-on="listeners">
+    <template #trigger="slotProps">
+      <slot name="trigger" v-bind="slotProps" />
+    </template>
+    <template #default="slotProps">
       <SCalendar
+        v-bind="calendarProps"
         :model-value="slotProps.modelValue"
-        :placeholder="forwardedProps.placeholder"
-        :locale="forwardedProps.locale"
-        :dir="forwardedProps.dir"
-        :disabled="forwardedProps.disabled"
-        :readonly="forwardedProps.readonly"
-        :min-value="forwardedProps.minValue"
-        :max-value="forwardedProps.maxValue"
-        :is-date-unavailable="forwardedProps.isDateUnavailable"
-        @update:model-value="$emit('update:modelValue', $event)"
+        :placeholder="slotProps.placeholder"
+        data-slot="calendar"
+        @update:model-value="slotProps.setDate"
+        @update:placeholder="slotProps.setPlaceholder"
       />
-    </DatePickerPopup>
-    <slot v-bind="slotProps" />
-  </DatePickerRoot>
+    </template>
+  </DatePickerCompact>
 </template>

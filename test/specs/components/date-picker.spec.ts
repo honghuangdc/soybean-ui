@@ -1,10 +1,14 @@
 import { mount } from '@vue/test-utils';
 import { CalendarDate } from '@internationalized/date';
 import { describe, expect, it } from 'vitest';
+import { h, nextTick } from 'vue';
 
 import { SDatePicker } from '@soybeanjs/ui';
 
 describe('sDatePicker', () => {
+  const findPopup = () => document.body.querySelector('[data-slot="popup"]');
+  const waitForDismissableLayer = async () => new Promise(resolve => window.setTimeout(resolve, 0));
+
   describe('rendering', () => {
     it('should render with default slot', () => {
       const wrapper = mount(SDatePicker, {
@@ -44,7 +48,7 @@ describe('sDatePicker', () => {
         }
       });
 
-      expect(wrapper.find('[data-slot="popup"]').exists()).toBe(false);
+      expect(findPopup()).toBeNull();
 
       wrapper.unmount();
     });
@@ -62,7 +66,7 @@ describe('sDatePicker', () => {
 
       await wrapper.vm.$nextTick();
 
-      expect(wrapper.find('[data-slot="popup"]').exists()).toBe(true);
+      expect(findPopup()).not.toBeNull();
 
       wrapper.unmount();
     });
@@ -80,7 +84,7 @@ describe('sDatePicker', () => {
       await trigger.trigger('click');
       await wrapper.vm.$nextTick();
 
-      expect(wrapper.find('[data-slot="popup"]').exists()).toBe(true);
+      expect(findPopup()).not.toBeNull();
 
       wrapper.unmount();
     });
@@ -99,6 +103,30 @@ describe('sDatePicker', () => {
 
       expect(wrapper.emitted('update:open')).toBeTruthy();
       expect(wrapper.emitted('update:open')?.[0]).toEqual([true]);
+
+      wrapper.unmount();
+    });
+
+    it('should close popup when clicking outside', async () => {
+      const wrapper = mount(SDatePicker, {
+        attachTo: document.body,
+        props: {
+          defaultPlaceholder: new CalendarDate(2024, 1, 1),
+          defaultOpen: true
+        }
+      });
+
+      await nextTick();
+      await waitForDismissableLayer();
+
+      expect(findPopup()).not.toBeNull();
+
+      document.body.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+      document.body.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      await nextTick();
+
+      expect(findPopup()).toBeNull();
+      expect(wrapper.emitted('update:open')).toBeTruthy();
 
       wrapper.unmount();
     });
@@ -151,32 +179,44 @@ describe('sDatePicker', () => {
       await trigger.trigger('click');
       await wrapper.vm.$nextTick();
 
-      expect(wrapper.find('[data-slot="popup"]').exists()).toBe(false);
+      expect(findPopup()).toBeNull();
 
       wrapper.unmount();
     });
   });
 
   describe('modelValue', () => {
-    it('should emit update:modelValue when date is selected', async () => {
+    it('should emit update:modelValue and close popup when date is selected', async () => {
       const wrapper = mount(SDatePicker, {
         attachTo: document.body,
         props: {
           defaultPlaceholder: new CalendarDate(2024, 1, 1),
           defaultOpen: true
+        },
+        slots: {
+          calendar: ({ setDate }: { setDate: (date: CalendarDate) => void }) =>
+            h(
+              'button',
+              {
+                'data-slot': 'calendarAction',
+                onClick: () => setDate(new CalendarDate(2024, 1, 2))
+              },
+              'Pick'
+            )
         }
       });
 
-      await wrapper.vm.$nextTick();
+      await nextTick();
 
-      const cellTrigger = wrapper.find('[data-slot="cellTrigger"]');
+      const calendarAction = document.body.querySelector('[data-slot="calendarAction"]');
 
-      if (cellTrigger.exists()) {
-        await cellTrigger.trigger('click');
-        await wrapper.vm.$nextTick();
+      expect(calendarAction).not.toBeNull();
 
-        expect(wrapper.emitted('update:modelValue')).toBeTruthy();
-      }
+      calendarAction?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      await nextTick();
+
+      expect(wrapper.emitted('update:modelValue')).toBeTruthy();
+      expect(findPopup()).toBeNull();
 
       wrapper.unmount();
     });
