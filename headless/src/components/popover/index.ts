@@ -1,3 +1,4 @@
+export { default as PopoverCompact } from './popover-compact.vue';
 export { default as PopoverRoot } from './popover-root.vue';
 export { default as PopoverTrigger } from './popover-trigger.vue';
 export { default as PopoverAnchor } from './popover-anchor.vue';
@@ -6,9 +7,8 @@ export { default as PopoverPositioner } from './popover-positioner.vue';
 export { default as PopoverPopup } from './popover-popup.vue';
 export { default as PopoverArrow } from '../popper/popper-arrow.vue';
 export { default as PopoverClose } from './popover-close.vue';
-export { default as PopoverCompact } from './popover-compact.vue';
 
-export { providePopperUi as providePopoverUi } from '../popper/context';
+export { providePopoverUi } from './context';
 
 export type {
   PopoverRootProps,
@@ -22,11 +22,9 @@ export type {
   PopoverTriggerProps,
   PopoverCompactProps,
   PopoverCompactEmits,
-  PopoverCompactSlots
+  PopoverCompactSlots,
+  PopoverUiSlot,
+  PopoverUi
 } from './types';
-export type {
-  PopperArrowProps as PopoverArrowProps,
-  PopperUiSlot as PopoverUiSlot,
-  PopperUi as PopoverUi
-} from '../popper/types';
+export type { PopperArrowProps as PopoverArrowProps } from '../popper/types';
 export type { PortalProps as PopoverPortalProps } from '../portal/types';

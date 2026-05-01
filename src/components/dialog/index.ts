@@ -1,4 +1,4 @@
-export { dialog } from '@soybeanjs/headless';
+export * from '@soybeanjs/headless/dialog';
 export { default as SDialog } from './dialog.vue';
 export { default as SDialogProvider } from './dialog-provider.vue';
 

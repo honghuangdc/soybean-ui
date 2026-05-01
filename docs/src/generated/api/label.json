@@ -1,6 +1,20 @@
 {
   "component": "label",
   "symbols": {
+    "CheckboxLabel": {
+      "props": {
+        "kind": "props",
+        "name": "CheckboxLabelProps",
+        "type": "Interface CheckboxLabelProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/label/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "Label": {
       "props": {
         "kind": "props",
@@ -68,20 +82,6 @@
             "referencedTypes": []
           }
         ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "RadioGroupLabel": {
-      "props": {
-        "kind": "props",
-        "name": "RadioGroupLabelProps",
-        "type": "Interface RadioGroupLabelProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/label/types.ts",
-        "typeParameters": [],
-        "members": [],
         "callables": [],
         "referencedTypes": []
       }

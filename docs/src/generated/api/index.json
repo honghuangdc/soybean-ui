@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-01T12:59:27.757Z",
+  "generatedAt": "2026-05-01T18:08:53.880Z",
   "schemaVersion": 3,
   "components": {
     "accordion": {
@@ -29,7 +29,7 @@
     "anchor": {
       "component": "anchor",
       "file": "anchor.json",
-      "symbols": ["Anchor", "AnchorCompact", "AnchorLink", "AnchorRoot"]
+      "symbols": ["Anchor", "AnchorCompact", "AnchorItemCompact", "AnchorLink", "AnchorRoot"]
     },
     "arrow": {
       "component": "arrow",
@@ -212,7 +212,7 @@
     "color-swatch": {
       "component": "color-swatch",
       "file": "color-swatch.json",
-      "symbols": ["ColorSwatch", "HeadlessColorSwatch"]
+      "symbols": ["ColorSwatch"]
     },
     "color-swatch-picker": {
       "component": "color-swatch-picker",
@@ -306,12 +306,12 @@
     "date-field": {
       "component": "date-field",
       "file": "date-field.json",
-      "symbols": ["DateField", "DateFieldInput", "DateFieldRoot"]
+      "symbols": ["DateField", "DateFieldCompact", "DateFieldInput", "DateFieldRoot"]
     },
     "date-picker": {
       "component": "date-picker",
       "file": "date-picker.json",
-      "symbols": ["DatePicker", "DatePickerPopup", "DatePickerRoot", "DatePickerTrigger"]
+      "symbols": ["DatePicker", "DatePickerCompact", "DatePickerContent", "DatePickerRoot", "DatePickerTrigger"]
     },
     "date-range-field": {
       "component": "date-range-field",
@@ -333,10 +333,22 @@
       "component": "dialog",
       "file": "dialog.json",
       "symbols": [
+        "BottomSheetCancel",
+        "BottomSheetClose",
+        "BottomSheetConfirm",
+        "BottomSheetContent",
+        "BottomSheetDescription",
+        "BottomSheetFooter",
+        "BottomSheetHeader",
+        "BottomSheetOverlay",
+        "BottomSheetPopup",
+        "BottomSheetTitle",
+        "BottomSheetTrigger",
         "Dialog",
         "DialogCancel",
         "DialogClose",
         "DialogCompact",
+        "DialogCompactBase",
         "DialogConfirm",
         "DialogContent",
         "DialogDescription",
@@ -411,16 +423,7 @@
     "form": {
       "component": "form",
       "file": "form.json",
-      "symbols": [
-        "Form",
-        "FormControl",
-        "FormDescription",
-        "FormError",
-        "FormField",
-        "FormFieldArray",
-        "FormFieldBase",
-        "FormLabel"
-      ]
+      "symbols": ["Form", "FormControl", "FormDescription", "FormError", "FormField", "FormFieldBase", "FormLabel"]
     },
     "hover-card": {
       "component": "hover-card",
@@ -444,7 +447,7 @@
     "input": {
       "component": "input",
       "file": "input.json",
-      "symbols": ["Input", "InputControl", "InputRoot"]
+      "symbols": ["AutocompleteInput", "Input", "InputControl", "InputRoot"]
     },
     "input-number": {
       "component": "input-number",
@@ -470,7 +473,7 @@
     "label": {
       "component": "label",
       "file": "label.json",
-      "symbols": ["Label", "RadioGroupLabel"]
+      "symbols": ["CheckboxLabel", "Label"]
     },
     "layout": {
       "component": "layout",
@@ -495,7 +498,7 @@
     "link": {
       "component": "link",
       "file": "link.json",
-      "symbols": ["Link"]
+      "symbols": ["Link", "LinkBase", "LinkExtra"]
     },
     "list": {
       "component": "list",
@@ -521,6 +524,50 @@
         "ListboxItemIndicator",
         "ListboxRoot",
         "ListboxVirtualizer"
+      ]
+    },
+    "menu": {
+      "component": "menu",
+      "file": "menu.json",
+      "symbols": [
+        "ContextMenuCheckboxGroup",
+        "ContextMenuCheckboxItem",
+        "ContextMenuGroup",
+        "ContextMenuGroupLabel",
+        "ContextMenuItem",
+        "ContextMenuItemIndicator",
+        "ContextMenuPopup",
+        "ContextMenuRadioGroup",
+        "ContextMenuRadioItem",
+        "ContextMenuSub",
+        "ContextMenuSubContent",
+        "ContextMenuSubTrigger",
+        "MenuAnchor",
+        "MenuArrow",
+        "MenuCheckboxGroup",
+        "MenuCheckboxItem",
+        "MenuCheckboxOptionsCompact",
+        "MenuCheckboxOptionsCompactSelect",
+        "MenuContent",
+        "MenuGroup",
+        "MenuGroupLabel",
+        "MenuItem",
+        "MenuItemIndicator",
+        "MenuOptionCompact",
+        "MenuOptionCompactSelect",
+        "MenuOptionsCompact",
+        "MenuPortal",
+        "MenuRadioGroup",
+        "MenuRadioItem",
+        "MenuRadioOptionsCompact",
+        "MenuRadioOptionsCompactSelect",
+        "MenuRoot",
+        "MenuSeparator",
+        "MenuShortcut",
+        "MenuSub",
+        "MenuSubContent",
+        "MenuSubTrigger",
+        "MenuTrigger"
       ]
     },
     "menubar": {
@@ -624,11 +671,11 @@
       "component": "popover",
       "file": "popover.json",
       "symbols": [
+        "DatePickerTrigger",
         "PopconfirmClose",
         "PopconfirmPopup",
         "PopconfirmPositioner",
         "PopconfirmRoot",
-        "PopconfirmTrigger",
         "Popover",
         "PopoverAnchor",
         "PopoverArrow",
@@ -646,7 +693,7 @@
       "file": "popper.json",
       "symbols": [
         "AutocompleteAnchor",
-        "HoverCardArrow",
+        "ComboboxArrow",
         "PopperAnchor",
         "PopperArrow",
         "PopperPopup",
@@ -732,6 +779,7 @@
         "SelectItem",
         "SelectItemIndicator",
         "SelectItemText",
+        "SelectPopup",
         "SelectPortal",
         "SelectRoot",
         "SelectScrollDownButton",
@@ -746,7 +794,7 @@
     "separator": {
       "component": "separator",
       "file": "separator.json",
-      "symbols": ["Separator", "SeparatorLabel", "SeparatorRoot"]
+      "symbols": ["ContextMenuSeparator", "Separator", "SeparatorLabel", "SeparatorRoot"]
     },
     "skeleton": {
       "component": "skeleton",
@@ -796,21 +844,48 @@
         "TableBody",
         "TableCell",
         "TableCompact",
+        "TableCompactCell",
+        "TableCompactExpandedRow",
+        "TableCompactHead",
+        "TableCompactRow",
         "TableContent",
+        "TableDataCell",
+        "TableEmpty",
+        "TableExpand",
+        "TableExpandedRow",
         "TableFilterPopover",
         "TableFooter",
         "TableHead",
         "TableHeader",
+        "TableHeaderFilter",
+        "TableHeaderResize",
+        "TableHeaderSelection",
+        "TableHeaderSort",
+        "TableIndex",
         "TableRadio",
         "TableRoot",
         "TableRow",
-        "TableScroll"
+        "TableScroll",
+        "TableSelection",
+        "TableTreeToggle"
       ]
     },
     "tabs": {
       "component": "tabs",
       "file": "tabs.json",
-      "symbols": ["Tabs", "TabsCompact", "TabsContent", "TabsIndicator", "TabsList", "TabsRoot", "TabsTrigger"]
+      "symbols": [
+        "SegmentIndicator",
+        "SegmentList",
+        "SegmentRoot",
+        "SegmentTrigger",
+        "Tabs",
+        "TabsCompact",
+        "TabsContent",
+        "TabsIndicator",
+        "TabsList",
+        "TabsRoot",
+        "TabsTrigger"
+      ]
     },
     "tag": {
       "component": "tag",
@@ -913,6 +988,7 @@
       "file": "tree-menu.json",
       "symbols": [
         "TreeMenu",
+        "TreeMenuBaseItem",
         "TreeMenuButton",
         "TreeMenuCollapsible",
         "TreeMenuGroup",

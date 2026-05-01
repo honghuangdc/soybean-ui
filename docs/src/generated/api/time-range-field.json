@@ -375,553 +375,10 @@
       }
     },
     "TimeRangeFieldCompact": {
-      "props": {
-        "kind": "props",
-        "name": "TimeRangeFieldCompactProps",
-        "type": "Interface TimeRangeFieldCompactProps",
-        "resolvedType": "{ inputProps?: Omit<TimeRangeFieldInputProps, 'part' | 'type'>; separator?: string; defaultValue?: TimeRange; defaultPlaceholder?: TimeValue; placeholder?: TimeValue; modelValue?: TimeRange; hourCycle?: 12 | 24; step?: DateStep; granularity?: TimeGranularity; hideTimeZone?: boolean; maxValue?: TimeValue; minValue?: TimeValue; locale?: string; disabled?: boolean; readonly?: boolean; isTimeUnavailable?: TimeMatcher; id?: string; dir?: Direction; startName?: string; endName?: string; asChild?: boolean; as?: AsTag | Component; name?: string; required?: boolean }",
-        "description": "",
-        "sourcePath": "headless/src/components/time-range-field/types.ts",
-        "typeParameters": [],
-        "members": [
-          {
-            "name": "inputProps",
-            "type": "Omit<TimeRangeFieldInputProps, 'part' | 'type'>",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeRangeFieldInputProps",
-                "kind": "interface",
-                "type": "TimeRangeFieldInputProps",
-                "resolvedType": null,
-                "description": "",
-                "sourcePath": "headless/src/components/time-range-field/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "separator",
-            "type": "string",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "defaultValue",
-            "type": "TimeRange",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeRange",
-                "kind": "interface",
-                "type": "TimeRange",
-                "resolvedType": "{ start?: TimeValue; end?: TimeValue }",
-                "description": "",
-                "sourcePath": "headless/src/date/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [
-                  {
-                    "name": "start",
-                    "type": "TimeValue",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "end",
-                    "type": "TimeValue",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  }
-                ],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "defaultPlaceholder",
-            "type": "TimeValue",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeValue",
-                "kind": "typeAlias",
-                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
-                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
-                "description": "",
-                "sourcePath": "headless/src/date/comparators.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "placeholder",
-            "type": "TimeValue",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeValue",
-                "kind": "typeAlias",
-                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
-                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
-                "description": "",
-                "sourcePath": "headless/src/date/comparators.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "modelValue",
-            "type": "TimeRange",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeRange",
-                "kind": "interface",
-                "type": "TimeRange",
-                "resolvedType": "{ start?: TimeValue; end?: TimeValue }",
-                "description": "",
-                "sourcePath": "headless/src/date/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [
-                  {
-                    "name": "start",
-                    "type": "TimeValue",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "end",
-                    "type": "TimeValue",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  }
-                ],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "hourCycle",
-            "type": "12 | 24",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "HourCycle",
-                "kind": "typeAlias",
-                "type": "12 | 24 | undefined",
-                "resolvedType": "12 | 24 | undefined",
-                "description": "",
-                "sourcePath": "headless/src/date/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "step",
-            "type": "DateStep",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DateStep",
-                "kind": "interface",
-                "type": "DateStep",
-                "resolvedType": "{ year?: number; month?: number; day?: number; hour?: number; minute?: number; second?: number; millisecond?: number }",
-                "description": "",
-                "sourcePath": "headless/src/date/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [
-                  {
-                    "name": "year",
-                    "type": "number",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "month",
-                    "type": "number",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "day",
-                    "type": "number",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "hour",
-                    "type": "number",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "minute",
-                    "type": "number",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "second",
-                    "type": "number",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  },
-                  {
-                    "name": "millisecond",
-                    "type": "number",
-                    "required": false,
-                    "description": "",
-                    "default": null,
-                    "inheritedFrom": null,
-                    "sourcePath": "headless/src/date/types.ts",
-                    "referencedTypes": []
-                  }
-                ],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "granularity",
-            "type": "TimeGranularity",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeGranularity",
-                "kind": "typeAlias",
-                "type": "'hour' | 'minute' | 'second'",
-                "resolvedType": "'hour' | 'minute' | 'second'",
-                "description": "",
-                "sourcePath": "headless/src/date/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "hideTimeZone",
-            "type": "boolean",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "maxValue",
-            "type": "TimeValue",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeValue",
-                "kind": "typeAlias",
-                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
-                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
-                "description": "",
-                "sourcePath": "headless/src/date/comparators.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "minValue",
-            "type": "TimeValue",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeValue",
-                "kind": "typeAlias",
-                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
-                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
-                "description": "",
-                "sourcePath": "headless/src/date/comparators.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "locale",
-            "type": "string",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "disabled",
-            "type": "boolean",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "readonly",
-            "type": "boolean",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "isTimeUnavailable",
-            "type": "TimeMatcher",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "TimeMatcher",
-                "kind": "typeAlias",
-                "type": "(time: TimeValue) => boolean",
-                "resolvedType": "(time: import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time) => boolean",
-                "description": "",
-                "sourcePath": "headless/src/date/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "id",
-            "type": "string",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "dir",
-            "type": "Direction",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Direction",
-                "kind": "typeAlias",
-                "type": "'ltr' | 'rtl'",
-                "resolvedType": "'ltr' | 'rtl'",
-                "description": "",
-                "sourcePath": "headless/src/types/common.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "startName",
-            "type": "string",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "endName",
-            "type": "string",
-            "required": false,
-            "description": "",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/time-range-field/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "asChild",
-            "type": "boolean",
-            "required": false,
-            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "as",
-            "type": "AsTag | Component",
-            "required": false,
-            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
-            "default": "'div'",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/primitive/types.ts",
-            "referencedTypes": [
-              {
-                "name": "Component",
-                "kind": "typeAlias",
-                "type": "Component",
-                "resolvedType": null,
-                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
-                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
-                "typeParameters": [
-                  "PropsOrInstance = any",
-                  "RawBindings = any",
-                  "D = any",
-                  "C extends ComputedOptions = ComputedOptions",
-                  "M extends MethodOptions = MethodOptions",
-                  "E extends EmitsOptions | Record<string, any[]> = {}",
-                  "S extends Record<string, any> = any"
-                ],
-                "external": true,
-                "members": [],
-                "callables": []
-              }
-            ]
-          },
-          {
-            "name": "name",
-            "type": "string",
-            "required": false,
-            "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "required",
-            "type": "boolean",
-            "required": false,
-            "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/types/component.ts",
-            "referencedTypes": []
-          }
-        ],
-        "callables": [],
-        "referencedTypes": []
-      },
       "emits": {
         "kind": "emits",
         "name": "TimeRangeFieldCompactEmits",
-        "type": "TypeAlias TimeRangeFieldCompactEmits",
+        "type": "TypeAlias TimeRangeFieldCompactEmits: TimeRangeFieldRootEmits",
         "resolvedType": "{ \"update:modelValue\": [range: TimeRange]; \"update:placeholder\": [time: TimeValue]; \"update:startValue\": [time: TimeValue | undefined]; \"update:endValue\": [time: TimeValue | undefined] }",
         "description": "",
         "sourcePath": "headless/src/components/time-range-field/types.ts",
@@ -1042,6 +499,549 @@
             ]
           }
         ]
+      },
+      "props": {
+        "kind": "props",
+        "name": "TimeRangeFieldCompactProps",
+        "type": "Interface TimeRangeFieldCompactProps",
+        "resolvedType": "{ inputProps?: Omit<TimeRangeFieldInputProps, 'part' | 'type'>; separator?: string; defaultValue?: TimeRange; defaultPlaceholder?: TimeValue; placeholder?: TimeValue; modelValue?: TimeRange; hourCycle?: 12 | 24; step?: DateStep; granularity?: TimeGranularity; hideTimeZone?: boolean; maxValue?: TimeValue; minValue?: TimeValue; locale?: string; disabled?: boolean; readonly?: boolean; isTimeUnavailable?: TimeMatcher; id?: string; dir?: Direction; startName?: string; endName?: string; asChild?: boolean; as?: AsTag | Component; name?: string; required?: boolean }",
+        "description": "",
+        "sourcePath": "headless/src/components/time-range-field/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "inputProps",
+            "type": "Omit<TimeRangeFieldInputProps, 'part' | 'type'>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeRangeFieldInputProps",
+                "kind": "interface",
+                "type": "TimeRangeFieldInputProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/time-range-field/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "separator",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "defaultValue",
+            "type": "TimeRange",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "defaultValue",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeRange",
+                "kind": "interface",
+                "type": "TimeRange",
+                "resolvedType": "{ start?: TimeValue; end?: TimeValue }",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "start",
+                    "type": "TimeValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "end",
+                    "type": "TimeValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultPlaceholder",
+            "type": "TimeValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "defaultPlaceholder",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeValue",
+                "kind": "typeAlias",
+                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
+                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
+                "description": "",
+                "sourcePath": "headless/src/date/comparators.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placeholder",
+            "type": "TimeValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "placeholder",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeValue",
+                "kind": "typeAlias",
+                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
+                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
+                "description": "",
+                "sourcePath": "headless/src/date/comparators.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "modelValue",
+            "type": "TimeRange",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "modelValue",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeRange",
+                "kind": "interface",
+                "type": "TimeRange",
+                "resolvedType": "{ start?: TimeValue; end?: TimeValue }",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "start",
+                    "type": "TimeValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "end",
+                    "type": "TimeValue",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "hourCycle",
+            "type": "12 | 24",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "hourCycle",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "HourCycle",
+                "kind": "typeAlias",
+                "type": "12 | 24 | undefined",
+                "resolvedType": "12 | 24 | undefined",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "step",
+            "type": "DateStep",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "step",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateStep",
+                "kind": "interface",
+                "type": "DateStep",
+                "resolvedType": "{ year?: number; month?: number; day?: number; hour?: number; minute?: number; second?: number; millisecond?: number }",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "year",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "month",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "day",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "hour",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "minute",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "second",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "millisecond",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "granularity",
+            "type": "TimeGranularity",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "granularity",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeGranularity",
+                "kind": "typeAlias",
+                "type": "'hour' | 'minute' | 'second'",
+                "resolvedType": "'hour' | 'minute' | 'second'",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "hideTimeZone",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "hideTimeZone",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "maxValue",
+            "type": "TimeValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "maxValue",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeValue",
+                "kind": "typeAlias",
+                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
+                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
+                "description": "",
+                "sourcePath": "headless/src/date/comparators.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "minValue",
+            "type": "TimeValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "minValue",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeValue",
+                "kind": "typeAlias",
+                "type": "import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time",
+                "resolvedType": "CalendarDateTime | ZonedDateTime | Time",
+                "description": "",
+                "sourcePath": "headless/src/date/comparators.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "locale",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "disabled",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "readonly",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "readonly",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "isTimeUnavailable",
+            "type": "TimeMatcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "isTimeUnavailable",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "TimeMatcher",
+                "kind": "typeAlias",
+                "type": "(time: TimeValue) => boolean",
+                "resolvedType": "(time: import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime | import(\"@internationalized/date\").Time) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "id",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "id",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "dir",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "startName",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "startName",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "endName",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "endName",
+            "sourcePath": "headless/src/components/time-range-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "required": false,
+            "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
+            "default": null,
+            "inheritedFrom": "name",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "required",
+            "type": "boolean",
+            "required": false,
+            "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
+            "default": null,
+            "inheritedFrom": "required",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
       },
       "slots": {
         "kind": "slots",

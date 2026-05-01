@@ -1,6 +1,20 @@
 {
   "component": "separator",
   "symbols": {
+    "ContextMenuSeparator": {
+      "props": {
+        "kind": "props",
+        "name": "ContextMenuSeparatorProps",
+        "type": "Interface ContextMenuSeparatorProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/separator/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "Separator": {
       "props": {
         "kind": "props",

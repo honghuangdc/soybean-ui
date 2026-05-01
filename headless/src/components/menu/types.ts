@@ -17,13 +17,13 @@ import type { KbdProps, KbdValue } from '../kbd/types';
 import type { LinkBaseProps, LinkProps } from '../link/types';
 import type { PortalProps as MenuPortalProps } from '../portal/types';
 import type { PrimitiveProps } from '../primitive/types';
-import type { DialogRootEmits, DialogRootProps } from '../dialog/types';
+import type { DialogRootEmits, DialogBaseProps } from '../dialog/types';
 import type { PopperPopupProps, PopperPositionerProps } from '../popper/types';
 import type { RovingFocusGroupEmits, RovingFocusGroupProps } from '../roving-focus/types';
 import type { SeparatorRootProps as MenuSeparatorProps } from '../separator/types';
 
 // MenuRoot
-export interface MenuRootProps extends DialogRootProps {
+export interface MenuRootProps extends DialogBaseProps {
   /**
    * The reading direction of the combobox when applicable.
    *

@@ -1,11 +1,12 @@
 <script setup lang="ts" generic="T extends AutocompleteSingleOptionData = AutocompleteSingleOptionData">
 import { computed } from 'vue';
-import { AutocompleteCompact, provideAutocompleteUi } from '@soybeanjs/headless';
+import { AutocompleteCompact, provideAutocompleteUi } from '@soybeanjs/headless/autocomplete';
+import type { AutocompleteSingleOptionData } from '@soybeanjs/headless/autocomplete';
 import { useForwardListeners, useOmitProps } from '@soybeanjs/headless/composables';
 import { keysOf } from '@soybeanjs/utils';
 import { mergeSlotVariants } from '@/theme';
 import { autocompleteVariants } from './variants';
-import type { AutocompleteEmits, AutocompleteProps, AutocompleteSlots, AutocompleteSingleOptionData } from './types';
+import type { AutocompleteEmits, AutocompleteProps, AutocompleteSlots } from './types';
 
 defineOptions({
   name: 'SAutocomplete'

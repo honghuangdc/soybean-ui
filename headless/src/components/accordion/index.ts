@@ -13,7 +13,6 @@ export type {
   AccordionCompactEmits,
   AccordionCompactSlots,
   AccordionCompactSlotProps,
-  AccordionOptionData,
   AccordionRootProps,
   AccordionRootEmits,
   AccordionItemProps,
@@ -21,6 +20,7 @@ export type {
   AccordionTriggerProps,
   AccordionContentProps,
   AccordionDescriptionProps,
+  AccordionOptionData,
   AccordionUiSlot,
   AccordionUi
 } from './types';

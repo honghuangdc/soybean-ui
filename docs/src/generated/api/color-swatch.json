@@ -109,7 +109,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "color",
+            "inheritedFrom": "HeadlessColorSwatchProps.color",
             "sourcePath": "headless/src/components/color-swatch/types.ts",
             "referencedTypes": []
           },
@@ -119,7 +119,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "label",
+            "inheritedFrom": "HeadlessColorSwatchProps.label",
             "sourcePath": "headless/src/components/color-swatch/types.ts",
             "referencedTypes": []
           },
@@ -129,7 +129,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "asChild",
+            "inheritedFrom": "HeadlessColorSwatchProps.asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -139,7 +139,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "as",
+            "inheritedFrom": "HeadlessColorSwatchProps.as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -165,20 +165,6 @@
             ]
           }
         ],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
-    "HeadlessColorSwatch": {
-      "props": {
-        "kind": "props",
-        "name": "HeadlessColorSwatchProps",
-        "type": "Interface HeadlessColorSwatchProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/color-swatch/types.ts",
-        "typeParameters": [],
-        "members": [],
         "callables": [],
         "referencedTypes": []
       }

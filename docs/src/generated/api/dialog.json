@@ -1,12 +1,214 @@
 {
   "component": "dialog",
   "symbols": {
+    "BottomSheetCancel": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetCancelProps",
+        "type": "Interface BottomSheetCancelProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "BottomSheetCancelEmits",
+        "type": "TypeAlias BottomSheetCancelEmits",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetClose": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetCloseProps",
+        "type": "Interface BottomSheetCloseProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "BottomSheetCloseEmits",
+        "type": "TypeAlias BottomSheetCloseEmits",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetConfirm": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetConfirmProps",
+        "type": "Interface BottomSheetConfirmProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "BottomSheetConfirmEmits",
+        "type": "TypeAlias BottomSheetConfirmEmits",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetContent": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetContentProps",
+        "type": "Interface BottomSheetContentProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetDescription": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetDescriptionProps",
+        "type": "Interface BottomSheetDescriptionProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetFooter": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetFooterProps",
+        "type": "Interface BottomSheetFooterProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetHeader": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetHeaderProps",
+        "type": "Interface BottomSheetHeaderProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetOverlay": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetOverlayProps",
+        "type": "Interface BottomSheetOverlayProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetPopup": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetPopupProps",
+        "type": "Interface BottomSheetPopupProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "BottomSheetPopupEmits",
+        "type": "TypeAlias BottomSheetPopupEmits: DialogPopupImplEmits",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetTitle": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetTitleProps",
+        "type": "Interface BottomSheetTitleProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "BottomSheetTrigger": {
+      "props": {
+        "kind": "props",
+        "name": "BottomSheetTriggerProps",
+        "type": "Interface BottomSheetTriggerProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "Dialog": {
       "props": {
         "kind": "props",
         "name": "DialogProps",
         "type": "Interface DialogProps",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<DialogUi>; title?: string; description?: string; icon?: string | import(\"vue\").Component | VNode<import(\"vue\").RendererNode, import(\"vue\").RendererElement, { [key: string]: any; }> | null; showClose?: boolean; pure?: boolean; showCancel?: boolean | 'onlyWarning'; cancelText?: string; showConfirm?: boolean; confirmText?: string; triggerProps?: DialogTriggerProps; overlayProps?: DialogOverlayProps; portalProps?: DialogPortalProps; popupProps?: DialogPopupProps; headerProps?: DialogHeaderProps; contentProps?: DialogContentProps; footerProps?: DialogFooterProps; titleProps?: DialogTitleProps; descriptionProps?: DialogDescriptionProps; closeProps?: DialogCloseProps; cancelProps?: DialogCancelProps; confirmProps?: DialogConfirmProps; open?: boolean; defaultOpen?: boolean; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<DialogUi>; title?: string; description?: string; icon?: string | import(\"vue\").Component | VNode<import(\"vue\").RendererNode, import(\"vue\").RendererElement, { [key: string]: any; }> | null; showClose?: boolean; pure?: boolean; showCancel?: boolean | 'onlyWarning'; cancelText?: string; showConfirm?: boolean; confirmText?: string; triggerProps?: DialogTriggerProps; overlayProps?: DialogOverlayProps; portalProps?: DialogPortalProps; popupProps?: DialogPopupProps; headerProps?: DialogHeaderProps; contentProps?: DialogContentProps; footerProps?: DialogFooterProps; titleProps?: DialogTitleProps; descriptionProps?: DialogDescriptionProps; closeProps?: DialogCloseProps; cancelProps?: DialogCancelProps; confirmProps?: DialogConfirmProps; isAlert?: boolean; alertType?: DialogAlertType; open?: boolean; defaultOpen?: boolean; modal?: boolean }",
         "description": "",
         "sourcePath": "src/components/dialog/types.ts",
         "typeParameters": [],
@@ -86,7 +288,7 @@
             "required": false,
             "description": "The title of the dialog. This is used for accessibility purposes and will be rendered in the header of the dialog if the `title` slot is not provided.",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.title",
+            "inheritedFrom": "title",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -96,7 +298,7 @@
             "required": false,
             "description": "The description of the dialog. This is used for accessibility purposes and will be rendered in the content of the dialog if the `description` slot is not provided.",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.description",
+            "inheritedFrom": "description",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -106,7 +308,7 @@
             "required": false,
             "description": "The icon of the dialog. This is used for accessibility purposes and will be rendered in the header of the dialog if the `icon` slot is not provided.",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.icon",
+            "inheritedFrom": "icon",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -129,7 +331,7 @@
             "required": false,
             "description": "Whether show the close button in the header of the dialog.",
             "default": "true",
-            "inheritedFrom": "DialogCompactProps.showClose",
+            "inheritedFrom": "showClose",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -139,7 +341,7 @@
             "required": false,
             "description": "Whether to use the pure version of the dialog, which does not include the header and footer.\nThis is useful when you want to fully control the content of the dialog and do not need the built-in header and footer.",
             "default": "false",
-            "inheritedFrom": "DialogCompactProps.pure",
+            "inheritedFrom": "pure",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -149,7 +351,7 @@
             "required": false,
             "description": "Whether to show the cancel button.\n\nWhen set to `onlyWarning`, the cancel button will only be shown when the dialog is an alert dialog with `alertType=\"warning\"`.\nWhen set to `true`, the cancel button will always be shown.",
             "default": "'onlyWarning'",
-            "inheritedFrom": "DialogCompactProps.showCancel",
+            "inheritedFrom": "showCancel",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -159,7 +361,7 @@
             "required": false,
             "description": "The text of the cancel button. This is used for accessibility purposes and will be rendered in the footer of the dialog if the `cancel` slot is not provided.",
             "default": "'Cancel'",
-            "inheritedFrom": "DialogCompactProps.cancelText",
+            "inheritedFrom": "cancelText",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -169,7 +371,7 @@
             "required": false,
             "description": "Whether to show the confirm button when the dialog is an alert dialog.\n\nThe default value is `true` when the dialog is an alert dialog.",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.showConfirm",
+            "inheritedFrom": "showConfirm",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -179,7 +381,7 @@
             "required": false,
             "description": "The text of the confirm button. This is used for accessibility purposes and will be rendered in the footer of the dialog if the `confirm` slot is not provided.",
             "default": "'Confirm'",
-            "inheritedFrom": "DialogCompactProps.confirmText",
+            "inheritedFrom": "confirmText",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -189,7 +391,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.triggerProps",
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -233,7 +435,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.overlayProps",
+            "inheritedFrom": "overlayProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -267,7 +469,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.portalProps",
+            "inheritedFrom": "portalProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -331,7 +533,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.popupProps",
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -385,7 +587,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.headerProps",
+            "inheritedFrom": "headerProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -408,7 +610,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -431,7 +633,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.footerProps",
+            "inheritedFrom": "footerProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -454,7 +656,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.titleProps",
+            "inheritedFrom": "titleProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -477,7 +679,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.descriptionProps",
+            "inheritedFrom": "descriptionProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -500,7 +702,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.closeProps",
+            "inheritedFrom": "closeProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -564,7 +766,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.cancelProps",
+            "inheritedFrom": "cancelProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -628,7 +830,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.confirmProps",
+            "inheritedFrom": "confirmProps",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -687,42 +889,12 @@
             ]
           },
           {
-            "name": "open",
-            "type": "boolean",
-            "required": false,
-            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
-            "default": "undefined",
-            "inheritedFrom": "DialogCompactProps.open",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "defaultOpen",
-            "type": "boolean",
-            "required": false,
-            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
-            "default": "false",
-            "inheritedFrom": "DialogCompactProps.defaultOpen",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "modal",
-            "type": "boolean",
-            "required": false,
-            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
-            "default": "true",
-            "inheritedFrom": "DialogCompactProps.modal",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "isAlert",
             "type": "boolean",
             "required": false,
             "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
             "default": "false",
-            "inheritedFrom": "DialogCompactProps.isAlert",
+            "inheritedFrom": "isAlert",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -732,7 +904,7 @@
             "required": false,
             "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
             "default": null,
-            "inheritedFrom": "DialogCompactProps.alertType",
+            "inheritedFrom": "alertType",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -748,6 +920,36 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "open",
+            "type": "boolean",
+            "required": false,
+            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
+            "default": "undefined",
+            "inheritedFrom": "open",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "defaultOpen",
+            "type": "boolean",
+            "required": false,
+            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
+            "default": "false",
+            "inheritedFrom": "defaultOpen",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modal",
+            "type": "boolean",
+            "required": false,
+            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
+            "default": "true",
+            "inheritedFrom": "modal",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],
@@ -1618,7 +1820,7 @@
         "kind": "props",
         "name": "DialogCompactProps",
         "type": "Interface DialogCompactProps",
-        "resolvedType": "{ title?: string; description?: string; icon?: string | import(\"vue\").Component | VNode<import(\"vue\").RendererNode, import(\"vue\").RendererElement, { [key: string]: any; }> | null; showClose?: boolean; pure?: boolean; showCancel?: boolean | 'onlyWarning'; cancelText?: string; showConfirm?: boolean; confirmText?: string; triggerProps?: DialogTriggerProps; overlayProps?: DialogOverlayProps; portalProps?: DialogPortalProps; popupProps?: DialogPopupProps; headerProps?: DialogHeaderProps; contentProps?: DialogContentProps; footerProps?: DialogFooterProps; titleProps?: DialogTitleProps; descriptionProps?: DialogDescriptionProps; closeProps?: DialogCloseProps; cancelProps?: DialogCancelProps; confirmProps?: DialogConfirmProps; open?: boolean; defaultOpen?: boolean; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ title?: string; description?: string; icon?: string | import(\"vue\").Component | VNode<import(\"vue\").RendererNode, import(\"vue\").RendererElement, { [key: string]: any; }> | null; showClose?: boolean; pure?: boolean; showCancel?: boolean | 'onlyWarning'; cancelText?: string; showConfirm?: boolean; confirmText?: string; triggerProps?: DialogTriggerProps; overlayProps?: DialogOverlayProps; portalProps?: DialogPortalProps; popupProps?: DialogPopupProps; headerProps?: DialogHeaderProps; contentProps?: DialogContentProps; footerProps?: DialogFooterProps; titleProps?: DialogTitleProps; descriptionProps?: DialogDescriptionProps; closeProps?: DialogCloseProps; cancelProps?: DialogCancelProps; confirmProps?: DialogConfirmProps; isAlert?: boolean; alertType?: DialogAlertType; open?: boolean; defaultOpen?: boolean; modal?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/dialog/types.ts",
         "typeParameters": [],
@@ -2230,42 +2432,12 @@
             ]
           },
           {
-            "name": "open",
-            "type": "boolean",
-            "required": false,
-            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
-            "default": "undefined",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "defaultOpen",
-            "type": "boolean",
-            "required": false,
-            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "modal",
-            "type": "boolean",
-            "required": false,
-            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
-            "default": "true",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "isAlert",
             "type": "boolean",
             "required": false,
             "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "isAlert",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -2275,7 +2447,7 @@
             "required": false,
             "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "alertType",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": [
               {
@@ -2291,6 +2463,36 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "open",
+            "type": "boolean",
+            "required": false,
+            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
+            "default": "undefined",
+            "inheritedFrom": "open",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "defaultOpen",
+            "type": "boolean",
+            "required": false,
+            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
+            "default": "false",
+            "inheritedFrom": "defaultOpen",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modal",
+            "type": "boolean",
+            "required": false,
+            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
+            "default": "true",
+            "inheritedFrom": "modal",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],
@@ -2299,7 +2501,7 @@
       "emits": {
         "kind": "emits",
         "name": "DialogCompactEmits",
-        "type": "TypeAlias DialogCompactEmits",
+        "type": "TypeAlias DialogCompactEmits: DialogRootEmits & BottomSheetPopupEmits & BottomSheetCloseEmits & BottomSheetConfirmEmits & BottomSheetCancelEmits",
         "resolvedType": "{ \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; close: [event: MouseEvent]; confirm: [event: MouseEvent]; cancel: [event: MouseEvent] }",
         "description": "",
         "sourcePath": "headless/src/components/dialog/types.ts",
@@ -2715,6 +2917,41 @@
             ]
           }
         ],
+        "referencedTypes": []
+      }
+    },
+    "DialogCompactBase": {
+      "slotProps": {
+        "kind": "slotProps",
+        "name": "DialogCompactBaseSlotProps",
+        "type": "Interface DialogCompactBaseSlotProps",
+        "resolvedType": "{ open: boolean; close: () => void }",
+        "description": "",
+        "sourcePath": "headless/src/components/dialog/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "open",
+            "type": "boolean",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "close",
+            "type": "() => void",
+            "required": true,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "callables": [],
         "referencedTypes": []
       }
     },
@@ -3221,41 +3458,11 @@
         "kind": "props",
         "name": "DialogRootProps",
         "type": "Interface DialogRootProps",
-        "resolvedType": "{ open?: boolean; defaultOpen?: boolean; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ isAlert?: boolean; alertType?: DialogAlertType; open?: boolean; defaultOpen?: boolean; modal?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/dialog/types.ts",
         "typeParameters": [],
         "members": [
-          {
-            "name": "open",
-            "type": "boolean",
-            "required": false,
-            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
-            "default": "undefined",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "defaultOpen",
-            "type": "boolean",
-            "required": false,
-            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "modal",
-            "type": "boolean",
-            "required": false,
-            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
-            "default": "true",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
           {
             "name": "isAlert",
             "type": "boolean",
@@ -3288,6 +3495,36 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "open",
+            "type": "boolean",
+            "required": false,
+            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
+            "default": "undefined",
+            "inheritedFrom": "DialogBaseProps.open",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "defaultOpen",
+            "type": "boolean",
+            "required": false,
+            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
+            "default": "false",
+            "inheritedFrom": "DialogBaseProps.defaultOpen",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modal",
+            "type": "boolean",
+            "required": false,
+            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
+            "default": "true",
+            "inheritedFrom": "DialogBaseProps.modal",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],

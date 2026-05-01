@@ -78,6 +78,7 @@ import {
   CalendarNext,
   CalendarPrev,
   CalendarRoot,
+  CardCollapsibleTrigger,
   CardCompact,
   CardContent,
   CardDescription,
@@ -86,7 +87,6 @@ import {
   CardRoot,
   CardTitle,
   CardTitleRoot,
-  CardCollapsibleTrigger,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -160,14 +160,16 @@ import {
   ContextMenuSubTrigger,
   ContextMenuTrigger,
   ContextMenuWrapperCompact,
+  DateFieldCompact,
   DateFieldInput,
   DateFieldRoot,
-  DatePickerPopup,
+  DatePickerCompact,
+  DatePickerContent,
   DatePickerRoot,
   DatePickerTrigger,
   DateRangeFieldCompact,
-  DateRangeFieldRoot,
   DateRangeFieldInput,
+  DateRangeFieldRoot,
   DateRangePickerCompact,
   DateRangePickerPopup,
   DateRangePickerRoot,
@@ -464,8 +466,8 @@ import {
   TimePickerRoot,
   TimePickerTrigger,
   TimeRangeFieldCompact,
-  TimeRangeFieldRoot,
   TimeRangeFieldInput,
+  TimeRangeFieldRoot,
   TimeRangePickerCompact,
   TimeRangePickerPopup,
   TimeRangePickerRoot,
@@ -585,8 +587,8 @@ export const Avatar = {
 export { Backtop };
 
 export const Autocomplete = {
-  Root: AutocompleteRoot,
   Compact: AutocompleteCompact,
+  Root: AutocompleteRoot,
   Anchor: AutocompleteAnchor,
   Input: AutocompleteInput,
   Trigger: AutocompleteTrigger,
@@ -599,8 +601,8 @@ export const Autocomplete = {
   ItemIndicator: AutocompleteItemIndicator,
   Separator: AutocompleteSeparator
 } as {
-  Root: typeof AutocompleteRoot;
   Compact: typeof AutocompleteCompact;
+  Root: typeof AutocompleteRoot;
   Anchor: typeof AutocompleteAnchor;
   Input: typeof AutocompleteInput;
   Trigger: typeof AutocompleteTrigger;
@@ -623,8 +625,6 @@ export const Badge = {
 };
 
 export const BottomSheet = {
-  Compact: BottomSheetCompact,
-  Root: BottomSheetRoot,
   Trigger: BottomSheetTrigger,
   Portal: BottomSheetPortal,
   Header: BottomSheetHeader,
@@ -635,13 +635,13 @@ export const BottomSheet = {
   Close: BottomSheetClose,
   Cancel: BottomSheetCancel,
   Confirm: BottomSheetConfirm,
+  Compact: BottomSheetCompact,
+  Root: BottomSheetRoot,
   RootNested: BottomSheetRootNested,
   Popup: BottomSheetPopup,
   Overlay: BottomSheetOverlay,
   Handle: BottomSheetHandle
 } as {
-  Compact: typeof BottomSheetCompact;
-  Root: typeof BottomSheetRoot;
   Trigger: typeof BottomSheetTrigger;
   Portal: typeof BottomSheetPortal;
   Header: typeof BottomSheetHeader;
@@ -652,6 +652,8 @@ export const BottomSheet = {
   Close: typeof BottomSheetClose;
   Cancel: typeof BottomSheetCancel;
   Confirm: typeof BottomSheetConfirm;
+  Compact: typeof BottomSheetCompact;
+  Root: typeof BottomSheetRoot;
   RootNested: typeof BottomSheetRootNested;
   Popup: typeof BottomSheetPopup;
   Overlay: typeof BottomSheetOverlay;
@@ -710,8 +712,121 @@ export const Calendar = {
   CellTrigger: typeof CalendarCellTrigger;
 };
 
+export const DateField = {
+  Compact: DateFieldCompact,
+  Input: DateFieldInput,
+  Root: DateFieldRoot
+} as {
+  Compact: typeof DateFieldCompact;
+  Input: typeof DateFieldInput;
+  Root: typeof DateFieldRoot;
+};
+
+export const DatePicker = {
+  Compact: DatePickerCompact,
+  Content: DatePickerContent,
+  Root: DatePickerRoot,
+  Trigger: DatePickerTrigger
+} as {
+  Compact: typeof DatePickerCompact;
+  Content: typeof DatePickerContent;
+  Root: typeof DatePickerRoot;
+  Trigger: typeof DatePickerTrigger;
+};
+
+export const DateRangeField = {
+  Compact: DateRangeFieldCompact,
+  Input: DateRangeFieldInput,
+  Root: DateRangeFieldRoot
+} as {
+  Compact: typeof DateRangeFieldCompact;
+  Input: typeof DateRangeFieldInput;
+  Root: typeof DateRangeFieldRoot;
+};
+
+export const DateRangePicker = {
+  Compact: DateRangePickerCompact,
+  Root: DateRangePickerRoot,
+  Trigger: DateRangePickerTrigger,
+  Popup: DateRangePickerPopup
+} as {
+  Compact: typeof DateRangePickerCompact;
+  Root: typeof DateRangePickerRoot;
+  Trigger: typeof DateRangePickerTrigger;
+  Popup: typeof DateRangePickerPopup;
+};
+
+export const MonthPicker = {
+  Popup: MonthPickerPopup,
+  Root: MonthPickerRoot,
+  Trigger: MonthPickerTrigger
+} as {
+  Popup: typeof MonthPickerPopup;
+  Root: typeof MonthPickerRoot;
+  Trigger: typeof MonthPickerTrigger;
+};
+
+export const MonthRangePicker = {
+  Popup: MonthRangePickerPopup,
+  Root: MonthRangePickerRoot,
+  Trigger: MonthRangePickerTrigger
+} as {
+  Popup: typeof MonthRangePickerPopup;
+  Root: typeof MonthRangePickerRoot;
+  Trigger: typeof MonthRangePickerTrigger;
+};
+
+export const YearPicker = {
+  Popup: YearPickerPopup,
+  Root: YearPickerRoot,
+  Trigger: YearPickerTrigger
+} as {
+  Popup: typeof YearPickerPopup;
+  Root: typeof YearPickerRoot;
+  Trigger: typeof YearPickerTrigger;
+};
+
+export const YearRangePicker = {
+  Popup: YearRangePickerPopup,
+  Root: YearRangePickerRoot,
+  Trigger: YearRangePickerTrigger
+} as {
+  Popup: typeof YearRangePickerPopup;
+  Root: typeof YearRangePickerRoot;
+  Trigger: typeof YearRangePickerTrigger;
+};
+
+export const RangeCalendar = {
+  Compact: RangeCalendarCompact,
+  Root: RangeCalendarRoot,
+  Header: RangeCalendarHeader,
+  Heading: RangeCalendarHeading,
+  Prev: RangeCalendarPrev,
+  Next: RangeCalendarNext,
+  Grid: RangeCalendarGrid,
+  GridHead: RangeCalendarGridHead,
+  GridBody: RangeCalendarGridBody,
+  GridRow: RangeCalendarGridRow,
+  HeadCell: RangeCalendarHeadCell,
+  Cell: RangeCalendarCell,
+  CellTrigger: RangeCalendarCellTrigger
+} as {
+  Compact: typeof RangeCalendarCompact;
+  Root: typeof RangeCalendarRoot;
+  Header: typeof RangeCalendarHeader;
+  Heading: typeof RangeCalendarHeading;
+  Prev: typeof RangeCalendarPrev;
+  Next: typeof RangeCalendarNext;
+  Grid: typeof RangeCalendarGrid;
+  GridHead: typeof RangeCalendarGridHead;
+  GridBody: typeof RangeCalendarGridBody;
+  GridRow: typeof RangeCalendarGridRow;
+  HeadCell: typeof RangeCalendarHeadCell;
+  Cell: typeof RangeCalendarCell;
+  CellTrigger: typeof RangeCalendarCellTrigger;
+};
+
 export const Card = {
-  Compact: CardCompact,
   Root: CardRoot,
   Header: CardHeader,
   Title: CardTitle,
@@ -719,9 +834,9 @@ export const Card = {
   Description: CardDescription,
   Content: CardContent,
   Footer: CardFooter,
-  CollapsibleTrigger: CardCollapsibleTrigger
+  CollapsibleTrigger: CardCollapsibleTrigger,
+  Compact: CardCompact
 } as {
-  Compact: typeof CardCompact;
   Root: typeof CardRoot;
   Header: typeof CardHeader;
   Title: typeof CardTitle;
@@ -730,6 +845,7 @@ export const Card = {
   Content: typeof CardContent;
   Footer: typeof CardFooter;
   CollapsibleTrigger: typeof CardCollapsibleTrigger;
+  Compact: typeof CardCompact;
 };
 
 export const Carousel = {
@@ -781,36 +897,36 @@ export const Collapsible = {
 };
 
 export const Combobox = {
-  Root: ComboboxRoot,
   Compact: ComboboxCompact,
+  Root: ComboboxRoot,
   Anchor: ComboboxAnchor,
   Trigger: ComboboxTrigger,
-  Cancel: ComboboxCancel,
   Portal: ComboboxPortal,
-  Content: ComboboxContent,
-  Arrow: ComboboxArrow,
   Viewport: ComboboxViewport,
-  Input: ComboboxInput,
+  Content: ComboboxContent,
+  Cancel: ComboboxCancel,
+  Arrow: ComboboxArrow,
   Group: ComboboxGroup,
   GroupLabel: ComboboxGroupLabel,
+  Input: ComboboxInput,
   Item: ComboboxItem,
   ItemIndicator: ComboboxItemIndicator,
   Empty: ComboboxEmpty,
   Separator: ComboboxSeparator,
   Virtualizer: ComboboxVirtualizer
 } as {
-  Root: typeof ComboboxRoot;
   Compact: typeof ComboboxCompact;
+  Root: typeof ComboboxRoot;
   Anchor: typeof ComboboxAnchor;
   Trigger: typeof ComboboxTrigger;
-  Cancel: typeof ComboboxCancel;
   Portal: typeof ComboboxPortal;
-  Content: typeof ComboboxContent;
-  Arrow: typeof ComboboxArrow;
   Viewport: typeof ComboboxViewport;
-  Input: typeof ComboboxInput;
+  Content: typeof ComboboxContent;
+  Cancel: typeof ComboboxCancel;
+  Arrow: typeof ComboboxArrow;
   Group: typeof ComboboxGroup;
   GroupLabel: typeof ComboboxGroupLabel;
+  Input: typeof ComboboxInput;
   Item: typeof ComboboxItem;
   ItemIndicator: typeof ComboboxItemIndicator;
   Empty: typeof ComboboxEmpty;
@@ -914,46 +1030,6 @@ export const ContextMenu = {
   WrapperCompact: typeof ContextMenuWrapperCompact;
 };
 
-export const DateField = {
-  Root: DateFieldRoot,
-  Input: DateFieldInput
-} as {
-  Root: typeof DateFieldRoot;
-  Input: typeof DateFieldInput;
-};
-
-export const DatePicker = {
-  Root: DatePickerRoot,
-  Trigger: DatePickerTrigger,
-  Popup: DatePickerPopup
-} as {
-  Root: typeof DatePickerRoot;
-  Trigger: typeof DatePickerTrigger;
-  Popup: typeof DatePickerPopup;
-};
-
-export const DateRangeField = {
-  Compact: DateRangeFieldCompact,
-  Root: DateRangeFieldRoot,
-  Input: DateRangeFieldInput
-} as {
-  Compact: typeof DateRangeFieldCompact;
-  Root: typeof DateRangeFieldRoot;
-  Input: typeof DateRangeFieldInput;
-};
-
-export const DateRangePicker = {
-  Compact: DateRangePickerCompact,
-  Root: DateRangePickerRoot,
-  Trigger: DateRangePickerTrigger,
-  Popup: DateRangePickerPopup
-} as {
-  Compact: typeof DateRangePickerCompact;
-  Root: typeof DateRangePickerRoot;
-  Trigger: typeof DateRangePickerTrigger;
-  Popup: typeof DateRangePickerPopup;
-};
-
 export const Dialog = {
   Compact: DialogCompact,
   Provider: DialogProvider,
@@ -1037,16 +1113,15 @@ export const DropdownMenu = {
 };
 
 export const Editable = {
-  Compact: EditableCompact,
   Area: EditableArea,
   CancelTrigger: EditableCancelTrigger,
   EditTrigger: EditableEditTrigger,
   Input: EditableInput,
   Preview: EditablePreview,
   Root: EditableRoot,
-  SubmitTrigger: EditableSubmitTrigger
+  SubmitTrigger: EditableSubmitTrigger,
+  Compact: EditableCompact
 } as {
-  Compact: typeof EditableCompact;
   Area: typeof EditableArea;
   CancelTrigger: typeof EditableCancelTrigger;
   EditTrigger: typeof EditableEditTrigger;
@@ -1054,6 +1129,7 @@ export const Editable = {
   Preview: typeof EditablePreview;
   Root: typeof EditableRoot;
   SubmitTrigger: typeof EditableSubmitTrigger;
+  Compact: typeof EditableCompact;
 };
 
 export const Empty = {
@@ -1087,21 +1163,21 @@ export const Form = {
 };
 
 export const HoverCard = {
-  Compact: HoverCardCompact,
   Root: HoverCardRoot,
   Trigger: HoverCardTrigger,
   Portal: HoverCardPortal,
   Positioner: HoverCardPositioner,
   Popup: HoverCardPopup,
-  Arrow: HoverCardArrow
+  Arrow: HoverCardArrow,
+  Compact: HoverCardCompact
 } as {
-  Compact: typeof HoverCardCompact;
   Root: typeof HoverCardRoot;
   Trigger: typeof HoverCardTrigger;
   Portal: typeof HoverCardPortal;
   Positioner: typeof HoverCardPositioner;
   Popup: typeof HoverCardPopup;
   Arrow: typeof HoverCardArrow;
+  Compact: typeof HoverCardCompact;
 };
 
 export const Input = {
@@ -1292,28 +1368,7 @@ export const Menubar = {
   Compact: typeof MenubarCompact;
 };
 
-export const MonthPicker = {
-  Root: MonthPickerRoot,
-  Trigger: MonthPickerTrigger,
-  Popup: MonthPickerPopup
-} as {
-  Root: typeof MonthPickerRoot;
-  Trigger: typeof MonthPickerTrigger;
-  Popup: typeof MonthPickerPopup;
-};
-
-export const MonthRangePicker = {
-  Root: MonthRangePickerRoot,
-  Trigger: MonthRangePickerTrigger,
-  Popup: MonthRangePickerPopup
-} as {
-  Root: typeof MonthRangePickerRoot;
-  Trigger: typeof MonthRangePickerTrigger;
-  Popup: typeof MonthRangePickerPopup;
-};
-
 export const NavigationMenu = {
-  Compact: NavigationMenuCompact,
   Root: NavigationMenuRoot,
   List: NavigationMenuList,
   Item: NavigationMenuItem,
@@ -1322,9 +1377,9 @@ export const NavigationMenu = {
   Link: NavigationMenuLink,
   SubList: NavigationMenuSubList,
   Viewport: NavigationMenuViewport,
-  Indicator: NavigationMenuIndicator
+  Indicator: NavigationMenuIndicator,
+  Compact: NavigationMenuCompact
 } as {
-  Compact: typeof NavigationMenuCompact;
   Root: typeof NavigationMenuRoot;
   List: typeof NavigationMenuList;
   Item: typeof NavigationMenuItem;
@@ -1334,6 +1389,7 @@ export const NavigationMenu = {
   SubList: typeof NavigationMenuSubList;
   Viewport: typeof NavigationMenuViewport;
   Indicator: typeof NavigationMenuIndicator;
+  Compact: typeof NavigationMenuCompact;
 };
 
 export const PageTabs = {
@@ -1349,7 +1405,6 @@ export const PageTabs = {
 };
 
 export const Pagination = {
-  Compact: PaginationCompact,
   Root: PaginationRoot,
   List: PaginationList,
   ListItem: PaginationListItem,
@@ -1357,9 +1412,9 @@ export const Pagination = {
   Prev: PaginationPrev,
   Next: PaginationNext,
   Last: PaginationLast,
-  Ellipsis: PaginationEllipsis
+  Ellipsis: PaginationEllipsis,
+  Compact: PaginationCompact
 } as {
-  Compact: typeof PaginationCompact;
   Root: typeof PaginationRoot;
   List: typeof PaginationList;
   ListItem: typeof PaginationListItem;
@@ -1368,6 +1423,7 @@ export const Pagination = {
   Next: typeof PaginationNext;
   Last: typeof PaginationLast;
   Ellipsis: typeof PaginationEllipsis;
+  Compact: typeof PaginationCompact;
 };
 
 export const Popover = {
@@ -1436,36 +1492,6 @@ export const RadioGroup = {
   Control: typeof RadioGroupControl;
   Indicator: typeof RadioGroupIndicator;
   Label: typeof RadioGroupLabel;
-};
-
-export const RangeCalendar = {
-  Compact: RangeCalendarCompact,
-  Root: RangeCalendarRoot,
-  Header: RangeCalendarHeader,
-  Heading: RangeCalendarHeading,
-  Prev: RangeCalendarPrev,
-  Next: RangeCalendarNext,
-  Grid: RangeCalendarGrid,
-  GridHead: RangeCalendarGridHead,
-  GridBody: RangeCalendarGridBody,
-  GridRow: RangeCalendarGridRow,
-  HeadCell: RangeCalendarHeadCell,
-  Cell: RangeCalendarCell,
-  CellTrigger: RangeCalendarCellTrigger
-} as {
-  Compact: typeof RangeCalendarCompact;
-  Root: typeof RangeCalendarRoot;
-  Header: typeof RangeCalendarHeader;
-  Heading: typeof RangeCalendarHeading;
-  Prev: typeof RangeCalendarPrev;
-  Next: typeof RangeCalendarNext;
-  Grid: typeof RangeCalendarGrid;
-  GridHead: typeof RangeCalendarGridHead;
-  GridBody: typeof RangeCalendarGridBody;
-  GridRow: typeof RangeCalendarGridRow;
-  HeadCell: typeof RangeCalendarHeadCell;
-  Cell: typeof RangeCalendarCell;
-  CellTrigger: typeof RangeCalendarCellTrigger;
 };
 
 export const RovingFocus = {
@@ -1577,16 +1603,15 @@ export const Slider = {
 export { Slot };
 
 export const Stepper = {
-  Compact: StepperCompact,
   Root: StepperRoot,
   Item: StepperItem,
   Trigger: StepperTrigger,
   Indicator: StepperIndicator,
   Separator: StepperSeparator,
   Title: StepperTitle,
-  Description: StepperDescription
+  Description: StepperDescription,
+  Compact: StepperCompact
 } as {
-  Compact: typeof StepperCompact;
   Root: typeof StepperRoot;
   Item: typeof StepperItem;
   Trigger: typeof StepperTrigger;
@@ -1594,6 +1619,7 @@ export const Stepper = {
   Separator: typeof StepperSeparator;
   Title: typeof StepperTitle;
   Description: typeof StepperDescription;
+  Compact: typeof StepperCompact;
 };
 
 export const Switch = {
@@ -1664,32 +1690,22 @@ export const TagsInput = {
   Clear: typeof TagsInputClear;
 };
 
-export const Textarea = {
-  Root: TextareaRoot,
-  Control: TextareaControl,
-  Counter: TextareaCounter
-} as {
-  Root: typeof TextareaRoot;
-  Control: typeof TextareaControl;
-  Counter: typeof TextareaCounter;
-};
-
 export const TimeField = {
-  Input: TimeFieldInput,
-  Root: TimeFieldRoot
+  Root: TimeFieldRoot,
+  Input: TimeFieldInput
 } as {
-  Input: typeof TimeFieldInput;
   Root: typeof TimeFieldRoot;
+  Input: typeof TimeFieldInput;
 };
 
 export const TimePicker = {
+  Popup: TimePickerPopup,
   Root: TimePickerRoot,
-  Trigger: TimePickerTrigger,
-  Popup: TimePickerPopup
+  Trigger: TimePickerTrigger
 } as {
+  Popup: typeof TimePickerPopup;
   Root: typeof TimePickerRoot;
   Trigger: typeof TimePickerTrigger;
-  Popup: typeof TimePickerPopup;
 };
 
 export const TimeRangeField = {
@@ -1704,14 +1720,24 @@ export const TimeRangeField = {
 
 export const TimeRangePicker = {
   Compact: TimeRangePickerCompact,
+  Popup: TimeRangePickerPopup,
   Root: TimeRangePickerRoot,
-  Trigger: TimeRangePickerTrigger,
-  Popup: TimeRangePickerPopup
+  Trigger: TimeRangePickerTrigger
 } as {
   Compact: typeof TimeRangePickerCompact;
+  Popup: typeof TimeRangePickerPopup;
   Root: typeof TimeRangePickerRoot;
   Trigger: typeof TimeRangePickerTrigger;
-  Popup: typeof TimeRangePickerPopup;
+};
+
+export const Textarea = {
+  Root: TextareaRoot,
+  Control: TextareaControl,
+  Counter: TextareaCounter
+} as {
+  Root: typeof TextareaRoot;
+  Control: typeof TextareaControl;
+  Counter: typeof TextareaCounter;
 };
 
 export const Toast = {
@@ -1807,23 +1833,3 @@ export const Virtualizer = {
 };
 
 export { VisuallyHidden, VisuallyHiddenInput };
-
-export const YearPicker = {
-  Root: YearPickerRoot,
-  Trigger: YearPickerTrigger,
-  Popup: YearPickerPopup
-} as {
-  Root: typeof YearPickerRoot;
-  Trigger: typeof YearPickerTrigger;
-  Popup: typeof YearPickerPopup;
-};
-
-export const YearRangePicker = {
-  Root: YearRangePickerRoot,
-  Trigger: YearRangePickerTrigger,
-  Popup: YearRangePickerPopup
-} as {
-  Root: typeof YearRangePickerRoot;
-  Trigger: typeof YearRangePickerTrigger;
-  Popup: typeof YearRangePickerPopup;
-};

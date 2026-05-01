@@ -1,6 +1,6 @@
-import type { AnchorItemData, ThemeSize } from '@soybeanjs/ui';
+import type { AnchorOptionData, ThemeSize } from '@soybeanjs/ui';
 
-export const anchorItems: AnchorItemData[] = [
+export const anchorItems: AnchorOptionData[] = [
   {
     href: '#overview',
     title: 'Overview'
@@ -50,7 +50,7 @@ export const anchorSections = [
 
 export const anchorSizes: ThemeSize[] = ['xs', 'sm', 'md', 'lg', 'xl', '2xl'];
 
-export function createAnchorItems(prefix = ''): AnchorItemData[] {
+export function createAnchorItems(prefix = ''): AnchorOptionData[] {
   const hash = (id: string) => `#${prefix}${id}`;
 
   return [

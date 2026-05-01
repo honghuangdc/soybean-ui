@@ -132,7 +132,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/segment/types.ts",
             "referencedTypes": []
           },
@@ -142,7 +142,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.enableIndicator",
+            "inheritedFrom": "enableIndicator",
             "sourcePath": "headless/src/components/segment/types.ts",
             "referencedTypes": []
           },
@@ -152,7 +152,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.listProps",
+            "inheritedFrom": "listProps",
             "sourcePath": "headless/src/components/segment/types.ts",
             "referencedTypes": [
               {
@@ -175,7 +175,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.triggerProps",
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/segment/types.ts",
             "referencedTypes": [
               {
@@ -239,7 +239,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.indicatorProps",
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/segment/types.ts",
             "referencedTypes": [
               {
@@ -283,7 +283,7 @@
             "required": false,
             "description": "The controlled value of the tab to activate. Can be bind as `v-model`.",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": []
           },
@@ -293,7 +293,7 @@
             "required": false,
             "description": "The value of the tab that should be active when initially rendered. Use when you do not need to control the state\nof the tabs",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": []
           },
@@ -303,7 +303,7 @@
             "required": false,
             "description": "Whether a tab is activated automatically (on focus) or manually (on click).",
             "default": "automatic",
-            "inheritedFrom": "SegmentCompactProps.activationMode",
+            "inheritedFrom": "activationMode",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": [
               {
@@ -326,7 +326,7 @@
             "required": false,
             "description": "When `true`, the element will be unmounted on closed state.",
             "default": "`true`",
-            "inheritedFrom": "SegmentCompactProps.unmountOnHide",
+            "inheritedFrom": "unmountOnHide",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": []
           },
@@ -336,7 +336,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -359,7 +359,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": "SegmentCompactProps.orientation",
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -382,7 +382,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": "SegmentCompactProps.loop",
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           }
@@ -465,7 +465,7 @@
         "resolvedType": "{ items: T[]; enableIndicator?: boolean; listProps?: SegmentListProps; triggerProps?: SegmentTriggerProps; indicatorProps?: SegmentIndicatorProps; modelValue?: T['value'] | null; defaultValue?: T['value'] | null; activationMode?: TabsActivationMode; unmountOnHide?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/segment/types.ts",
-        "typeParameters": ["T extends SegmentOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "items",
@@ -624,7 +624,7 @@
             "required": false,
             "description": "The controlled value of the tab to activate. Can be bind as `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": []
           },
@@ -634,7 +634,7 @@
             "required": false,
             "description": "The value of the tab that should be active when initially rendered. Use when you do not need to control the state\nof the tabs",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": []
           },
@@ -644,7 +644,7 @@
             "required": false,
             "description": "Whether a tab is activated automatically (on focus) or manually (on click).",
             "default": "automatic",
-            "inheritedFrom": null,
+            "inheritedFrom": "activationMode",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": [
               {
@@ -667,7 +667,7 @@
             "required": false,
             "description": "When `true`, the element will be unmounted on closed state.",
             "default": "`true`",
-            "inheritedFrom": null,
+            "inheritedFrom": "unmountOnHide",
             "sourcePath": "headless/src/components/tabs/types.ts",
             "referencedTypes": []
           },
@@ -677,7 +677,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -700,7 +700,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -723,7 +723,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           }
@@ -734,11 +734,11 @@
       "emits": {
         "kind": "emits",
         "name": "SegmentCompactEmits",
-        "type": "TypeAlias SegmentCompactEmits<T>",
+        "type": "TypeAlias SegmentCompactEmits<T>: SegmentRootEmits<T>",
         "resolvedType": "{ \"update:modelValue\": [payload: NonNullable<T>] }",
         "description": "",
         "sourcePath": "headless/src/components/segment/types.ts",
-        "typeParameters": ["T extends AcceptableValue = AcceptableValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -760,7 +760,7 @@
         "resolvedType": "{ item?: ((props: T & { active: boolean; }) => any); indicator?: (() => any) }",
         "description": "",
         "sourcePath": "headless/src/components/segment/types.ts",
-        "typeParameters": ["T extends SegmentOptionData = SegmentOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {

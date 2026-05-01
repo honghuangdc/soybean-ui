@@ -1059,7 +1059,7 @@
             "required": false,
             "description": "The open state of the hover card when it is initially rendered. Use when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/hover-card/types.ts",
             "referencedTypes": []
           },
@@ -1069,7 +1069,7 @@
             "required": false,
             "description": "The controlled open state of the hover card.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/hover-card/types.ts",
             "referencedTypes": []
           },
@@ -1079,7 +1079,7 @@
             "required": false,
             "description": "The duration from when the pointer enters the trigger until the hover card opens.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "openDelay",
             "sourcePath": "headless/src/components/hover-card/types.ts",
             "referencedTypes": []
           },
@@ -1089,7 +1089,7 @@
             "required": false,
             "description": "The duration from when the pointer leaves the trigger or popup until the hover card closes.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "closeDelay",
             "sourcePath": "headless/src/components/hover-card/types.ts",
             "referencedTypes": []
           }
@@ -1100,7 +1100,7 @@
       "emits": {
         "kind": "emits",
         "name": "HoverCardCompactEmits",
-        "type": "TypeAlias HoverCardCompactEmits",
+        "type": "TypeAlias HoverCardCompactEmits: HoverCardRootEmits & HoverCardPositionerEmits",
         "resolvedType": "{ \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent] }",
         "description": "",
         "sourcePath": "headless/src/components/hover-card/types.ts",

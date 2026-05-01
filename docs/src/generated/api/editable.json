@@ -1119,7 +1119,7 @@
             "required": false,
             "description": "The default value of the editable field.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1129,7 +1129,7 @@
             "required": false,
             "description": "The controlled value of the editable field.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1139,7 +1139,7 @@
             "required": false,
             "description": "The placeholder for the editable field.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "placeholder",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": [
               {
@@ -1183,7 +1183,7 @@
             "required": false,
             "description": "The reading direction of the editable field when applicable.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": [
               {
@@ -1206,7 +1206,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the editable field.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1216,7 +1216,7 @@
             "required": false,
             "description": "When `true`, prevents the user from editing the value.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "readonly",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1226,7 +1226,7 @@
             "required": false,
             "description": "The activation event of the editable field.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "activationMode",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": [
               {
@@ -1249,7 +1249,7 @@
             "required": false,
             "description": "Whether to select the text in the input when it is focused.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "selectOnFocus",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1259,7 +1259,7 @@
             "required": false,
             "description": "The submit event of the editable field.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "submitMode",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": [
               {
@@ -1282,7 +1282,7 @@
             "required": false,
             "description": "Whether to start with the edit mode active.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "startWithEditMode",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1292,7 +1292,7 @@
             "required": false,
             "description": "The maximum number of characters allowed.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "maxLength",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1302,7 +1302,7 @@
             "required": false,
             "description": "Whether the editable field should auto resize.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "autoResize",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1312,7 +1312,7 @@
             "required": false,
             "description": "The id of the field.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "id",
             "sourcePath": "headless/src/components/editable/types.ts",
             "referencedTypes": []
           },
@@ -1322,7 +1322,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -1332,7 +1332,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -1363,7 +1363,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1373,7 +1373,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -1384,7 +1384,7 @@
       "emits": {
         "kind": "emits",
         "name": "EditableCompactEmits",
-        "type": "TypeAlias EditableCompactEmits",
+        "type": "TypeAlias EditableCompactEmits: EditableRootEmits",
         "resolvedType": "{ \"update:modelValue\": [value: string]; submit: [value: string]; \"update:state\": [state: EditableEventState] }",
         "description": "",
         "sourcePath": "headless/src/components/editable/types.ts",

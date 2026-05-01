@@ -894,7 +894,7 @@
             "required": false,
             "description": "The value of the step that should be active when initially rendered.",
             "default": "1",
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/stepper/types.ts",
             "referencedTypes": []
           },
@@ -904,7 +904,7 @@
             "required": false,
             "description": "The controlled value of the step to activate. Can be bind as `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/stepper/types.ts",
             "referencedTypes": []
           },
@@ -914,7 +914,7 @@
             "required": false,
             "description": "The orientation of the stepper.",
             "default": "'horizontal'",
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/stepper/types.ts",
             "referencedTypes": [
               {
@@ -937,7 +937,7 @@
             "required": false,
             "description": "The reading direction of the stepper.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/stepper/types.ts",
             "referencedTypes": [
               {
@@ -960,7 +960,7 @@
             "required": false,
             "description": "Whether the steps must be completed in order.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "linear",
             "sourcePath": "headless/src/components/stepper/types.ts",
             "referencedTypes": []
           },
@@ -970,7 +970,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -980,7 +980,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -1012,7 +1012,7 @@
       "emits": {
         "kind": "emits",
         "name": "StepperCompactEmits",
-        "type": "TypeAlias StepperCompactEmits",
+        "type": "TypeAlias StepperCompactEmits: StepperRootEmits",
         "resolvedType": "{ \"update:modelValue\": [payload: number] }",
         "description": "",
         "sourcePath": "headless/src/components/stepper/types.ts",
@@ -1437,28 +1437,6 @@
       }
     },
     "StepperRoot": {
-      "emits": {
-        "kind": "emits",
-        "name": "StepperRootEmits",
-        "type": "TypeAlias StepperRootEmits",
-        "resolvedType": "{ \"update:modelValue\": [payload: number] }",
-        "description": "",
-        "sourcePath": "headless/src/components/stepper/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "update:modelValue",
-            "type": "[payload: number]",
-            "parameters": "payload: number",
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/stepper/types.ts",
-            "referencedTypes": []
-          }
-        ],
-        "referencedTypes": []
-      },
       "props": {
         "kind": "props",
         "name": "StepperRootProps",
@@ -1588,13 +1566,35 @@
         ],
         "callables": [],
         "referencedTypes": []
+      },
+      "emits": {
+        "kind": "emits",
+        "name": "StepperRootEmits",
+        "type": "TypeAlias StepperRootEmits",
+        "resolvedType": "{ \"update:modelValue\": [payload: number] }",
+        "description": "",
+        "sourcePath": "headless/src/components/stepper/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[payload: number]",
+            "parameters": "payload: number",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/stepper/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "referencedTypes": []
       }
     },
     "StepperSeparator": {
       "props": {
         "kind": "props",
         "name": "StepperSeparatorProps",
-        "type": "TypeAlias StepperSeparatorProps: SeparatorRootProps",
+        "type": "TypeAlias StepperSeparatorProps: ContextMenuSeparatorProps",
         "resolvedType": "{ orientation?: DataOrientation; decorative?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/stepper/types.ts",

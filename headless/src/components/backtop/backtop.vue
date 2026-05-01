@@ -4,7 +4,7 @@ import { useEventListener, useRafFn } from '@vueuse/core';
 import { useOmitProps } from '../../composables';
 import { Button } from '../button';
 import { easeInOutCubic, getScrollTop, prefersReducedMotion, resolveBacktopTarget, setScrollTop } from './shared';
-import type { BacktopProps, BacktopEmits, BacktopExposed, BacktopState } from './types';
+import type { BacktopProps, BacktopEmits, BacktopState } from './types';
 
 defineOptions({
   name: 'Backtop'
@@ -158,7 +158,7 @@ onBeforeUnmount(() => {
   cancelScrollToTop();
 });
 
-defineExpose<BacktopExposed>({
+defineExpose({
   visible,
   scrollToTop,
   updateVisibility

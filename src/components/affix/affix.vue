@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { AffixCompact, provideAffixUi } from '@soybeanjs/headless';
+import { AffixCompact, provideAffixUi } from '@soybeanjs/headless/affix';
 import { useForwardListeners, useOmitProps } from '@soybeanjs/headless/composables';
 import { mergeSlotVariants } from '@/theme';
 import { affixVariants } from './variants';

@@ -1,8 +1,8 @@
 <script setup lang="ts" generic="T extends AccordionOptionData = AccordionOptionData, M extends boolean = false">
 import { computed } from 'vue';
+import { AccordionCompact, provideAccordionUi } from '@soybeanjs/headless/accordion';
+import type { AccordionOptionData } from '@soybeanjs/headless/accordion';
 import { useForwardListeners, useOmitProps } from '@soybeanjs/headless/composables';
-import { AccordionCompact, provideAccordionUi } from '@soybeanjs/headless';
-import type { AccordionOptionData } from '@soybeanjs/headless';
 import { keysOf } from '@soybeanjs/utils';
 import { mergeSlotVariants } from '@/theme';
 import { accordionVariants } from './variants';

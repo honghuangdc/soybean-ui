@@ -106,7 +106,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.title",
+            "inheritedFrom": "title",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": []
           },
@@ -116,7 +116,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.description",
+            "inheritedFrom": "description",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": []
           },
@@ -126,7 +126,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.headerProps",
+            "inheritedFrom": "headerProps",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": [
               {
@@ -149,7 +149,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": [
               {
@@ -203,7 +203,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.footerProps",
+            "inheritedFrom": "footerProps",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": [
               {
@@ -226,7 +226,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.titleRootProps",
+            "inheritedFrom": "titleRootProps",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": [
               {
@@ -249,7 +249,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.titleProps",
+            "inheritedFrom": "titleProps",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": [
               {
@@ -272,7 +272,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CardCompactProps.descriptionProps",
+            "inheritedFrom": "descriptionProps",
             "sourcePath": "headless/src/components/card/types.ts",
             "referencedTypes": [
               {
@@ -295,7 +295,7 @@
             "required": false,
             "description": "The open state of the collapsible when it is initially rendered.\n\nUse when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": "CardCompactProps.defaultOpen",
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -305,7 +305,7 @@
             "required": false,
             "description": "The controlled open state of the collapsible. Can be bound with `v-model`.",
             "default": null,
-            "inheritedFrom": "CardCompactProps.open",
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -315,7 +315,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the collapsible.",
             "default": null,
-            "inheritedFrom": "CardCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -325,7 +325,7 @@
             "required": false,
             "description": "When `true`, the element will be unmounted on closed state.",
             "default": null,
-            "inheritedFrom": "CardCompactProps.unmountOnHide",
+            "inheritedFrom": "unmountOnHide",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -335,7 +335,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "CardCompactProps.asChild",
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -345,7 +345,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "CardCompactProps.as",
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -646,7 +646,7 @@
             "required": false,
             "description": "The open state of the collapsible when it is initially rendered.\n\nUse when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -656,7 +656,7 @@
             "required": false,
             "description": "The controlled open state of the collapsible. Can be bound with `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -666,7 +666,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the collapsible.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -676,7 +676,7 @@
             "required": false,
             "description": "When `true`, the element will be unmounted on closed state.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "unmountOnHide",
             "sourcePath": "headless/src/components/collapsible/types.ts",
             "referencedTypes": []
           },
@@ -686,7 +686,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -696,7 +696,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -728,7 +728,7 @@
       "emits": {
         "kind": "emits",
         "name": "CardCompactEmits",
-        "type": "TypeAlias CardCompactEmits",
+        "type": "TypeAlias CardCompactEmits: CardRootEmits",
         "resolvedType": "{ \"update:open\": [value: boolean] }",
         "description": "",
         "sourcePath": "headless/src/components/card/types.ts",
@@ -1062,7 +1062,7 @@
       "emits": {
         "kind": "emits",
         "name": "CardRootEmits",
-        "type": "TypeAlias CardRootEmits",
+        "type": "TypeAlias CardRootEmits: CollapsibleRootEmits",
         "resolvedType": "{ \"update:open\": [value: boolean] }",
         "description": "",
         "sourcePath": "headless/src/components/card/types.ts",

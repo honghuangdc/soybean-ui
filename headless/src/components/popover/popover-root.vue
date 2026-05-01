@@ -12,9 +12,7 @@ defineOptions({
 
 const props = withDefaults(defineProps<PopoverRootProps>(), {
   open: undefined,
-  defaultOpen: false,
-  avoidCollisions: true,
-  modal: false
+  avoidCollisions: true
 });
 
 const emit = defineEmits<PopoverRootEmits>();
@@ -32,7 +30,7 @@ const close = () => {
 };
 
 providePopoverRootContext({
-  ...transformPropsToContext(props, ['modal']),
+  ...transformPropsToContext(props, ['modal', 'disabled']),
   open
 });
 </script>

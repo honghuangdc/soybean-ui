@@ -86,7 +86,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": []
           },
@@ -96,7 +96,7 @@
             "required": false,
             "description": "The range of items to show ellipsis.\n\nWhen the item count is greater than 4, we will show ellipsis.",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.ellipsis",
+            "inheritedFrom": "ellipsis",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": []
           },
@@ -106,7 +106,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.listProps",
+            "inheritedFrom": "listProps",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": [
               {
@@ -129,7 +129,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.itemProps",
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": [
               {
@@ -152,7 +152,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.linkProps",
+            "inheritedFrom": "linkProps",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": [
               {
@@ -376,7 +376,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.pageProps",
+            "inheritedFrom": "pageProps",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": [
               {
@@ -399,7 +399,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.separatorProps",
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": [
               {
@@ -422,7 +422,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "BreadcrumbCompactProps.ellipsisProps",
+            "inheritedFrom": "ellipsisProps",
             "sourcePath": "headless/src/components/breadcrumb/types.ts",
             "referencedTypes": [
               {
@@ -637,7 +637,7 @@
         "resolvedType": "{ items: T[]; ellipsis?: true | [number, number] | null; listProps?: BreadcrumbListProps; itemProps?: BreadcrumbItemProps; linkProps?: BreadcrumbLinkProps; pageProps?: BreadcrumbPageProps; separatorProps?: BreadcrumbSeparatorProps; ellipsisProps?: BreadcrumbEllipsisProps }",
         "description": "",
         "sourcePath": "headless/src/components/breadcrumb/types.ts",
-        "typeParameters": ["T extends BreadcrumbOptionData = BreadcrumbOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "items",
@@ -1009,7 +1009,7 @@
         "resolvedType": "{ click: [item: T] }",
         "description": "",
         "sourcePath": "headless/src/components/breadcrumb/types.ts",
-        "typeParameters": ["T extends BreadcrumbOptionData = BreadcrumbOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -1031,7 +1031,7 @@
         "resolvedType": "{ default?: ((props: BreadcrumbCompactItemSlotProps<T>) => any); ellipsis?: ((props: BreadcrumbCompactEllipsisSlotProps<T>) => any); \"ellipsis-icon\"?: (() => any); separator?: (() => any); \"item-leading\"?: ((props: BreadcrumbCompactItemSlotProps<T>) => any); \"item-link\"?: ((props: BreadcrumbCompactItemSlotProps<T>) => any); \"item-label\"?: ((props: BreadcrumbCompactItemSlotProps<T>) => any); \"item-trailing\"?: ((props: BreadcrumbCompactItemSlotProps<T>) => any) }",
         "description": "",
         "sourcePath": "headless/src/components/breadcrumb/types.ts",
-        "typeParameters": ["T extends BreadcrumbOptionData = BreadcrumbOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {

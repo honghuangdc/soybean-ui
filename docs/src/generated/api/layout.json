@@ -86,7 +86,7 @@
             "required": false,
             "description": "The controlled open state of the layout. Can be bound with `v-model`.",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.open",
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -96,7 +96,7 @@
             "required": false,
             "description": "The open state of the layout when it is initially rendered.\n\nUse when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.defaultOpen",
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -106,7 +106,7 @@
             "required": false,
             "description": "The side of the layout.",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.side",
+            "inheritedFrom": "side",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -129,7 +129,7 @@
             "required": false,
             "description": "The variant of the layout.",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.variant",
+            "inheritedFrom": "variant",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -152,7 +152,7 @@
             "required": false,
             "description": "The collapsible state of the layout.",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.collapsible",
+            "inheritedFrom": "collapsible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -175,7 +175,7 @@
             "required": false,
             "description": "whether to show the sidebar.",
             "default": "true",
-            "inheritedFrom": "LayoutCompactProps.sidebarVisible",
+            "inheritedFrom": "sidebarVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -185,7 +185,7 @@
             "required": false,
             "description": "The width of the sidebar. (px)",
             "default": "240",
-            "inheritedFrom": "LayoutCompactProps.sidebarWidth",
+            "inheritedFrom": "sidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -195,7 +195,7 @@
             "required": false,
             "description": "The width of the sidebar when it is collapsed. (px)",
             "default": "50",
-            "inheritedFrom": "LayoutCompactProps.collapsedSidebarWidth",
+            "inheritedFrom": "collapsedSidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -205,7 +205,7 @@
             "required": false,
             "description": "Whether the layout is in mobile view.",
             "default": "false",
-            "inheritedFrom": "LayoutCompactProps.isMobile",
+            "inheritedFrom": "isMobile",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -215,7 +215,7 @@
             "required": false,
             "description": "The width of the sidebar in the mobile view. (px)",
             "default": "240",
-            "inheritedFrom": "LayoutCompactProps.mobileSidebarWidth",
+            "inheritedFrom": "mobileSidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -225,7 +225,7 @@
             "required": false,
             "description": "whether to show the header.",
             "default": "true",
-            "inheritedFrom": "LayoutCompactProps.headerVisible",
+            "inheritedFrom": "headerVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -235,7 +235,7 @@
             "required": false,
             "description": "The height of the header. (px)",
             "default": "56",
-            "inheritedFrom": "LayoutCompactProps.headerHeight",
+            "inheritedFrom": "headerHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -245,7 +245,7 @@
             "required": false,
             "description": "whether to show the tab.",
             "default": "true",
-            "inheritedFrom": "LayoutCompactProps.tabVisible",
+            "inheritedFrom": "tabVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -255,7 +255,7 @@
             "required": false,
             "description": "The height of the tab. (px)",
             "default": "44",
-            "inheritedFrom": "LayoutCompactProps.tabHeight",
+            "inheritedFrom": "tabHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -265,7 +265,7 @@
             "required": false,
             "description": "whether to show the footer.",
             "default": "true",
-            "inheritedFrom": "LayoutCompactProps.footerVisible",
+            "inheritedFrom": "footerVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -275,7 +275,7 @@
             "required": false,
             "description": "The height of the footer. (px)",
             "default": "48",
-            "inheritedFrom": "LayoutCompactProps.footerHeight",
+            "inheritedFrom": "footerHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -285,7 +285,7 @@
             "required": false,
             "description": "whether the content takes the full height of the layout (include).",
             "default": "false",
-            "inheritedFrom": "LayoutCompactProps.fullContent",
+            "inheritedFrom": "fullContent",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -295,7 +295,7 @@
             "required": false,
             "description": "The function to convert pixels to rem.",
             "default": "(px: number) => px / 16 (16 is the base font size)",
-            "inheritedFrom": "LayoutCompactProps.pxToRem",
+            "inheritedFrom": "pxToRem",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -305,7 +305,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.sidebarProps",
+            "inheritedFrom": "sidebarProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -328,7 +328,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.railProps",
+            "inheritedFrom": "railProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -351,7 +351,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.mainProps",
+            "inheritedFrom": "mainProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -374,7 +374,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.headerProps",
+            "inheritedFrom": "headerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -397,7 +397,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.tabProps",
+            "inheritedFrom": "tabProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -420,7 +420,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -443,7 +443,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.footerProps",
+            "inheritedFrom": "footerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -466,7 +466,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutCompactProps.mobileProps",
+            "inheritedFrom": "mobileProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -766,7 +766,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.orientation",
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -789,7 +789,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.scrollBehavior",
+            "inheritedFrom": "scrollBehavior",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -812,7 +812,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.scrollId",
+            "inheritedFrom": "scrollId",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -822,7 +822,7 @@
             "required": false,
             "description": "The base z-index of the layout. The z-index of the sidebar, header, tab, footer, and their fixed versions will be calculated based on this value.",
             "default": "50",
-            "inheritedFrom": "LayoutClassicCompactProps.baseZIndex",
+            "inheritedFrom": "baseZIndex",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -832,7 +832,7 @@
             "required": false,
             "description": "Whether the header and tab are fixed to the top of the layout when the orientation is vertical. If true, the header and tab will be fixed to the top of the layout when the orientation is vertical, and will scroll with the content when the orientation is horizontal.",
             "default": "true",
-            "inheritedFrom": "LayoutClassicCompactProps.fixedTop",
+            "inheritedFrom": "fixedTop",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -842,7 +842,7 @@
             "required": false,
             "description": "Whether footer is fixed",
             "default": "true",
-            "inheritedFrom": "LayoutClassicCompactProps.fixedFooter",
+            "inheritedFrom": "fixedFooter",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -852,7 +852,7 @@
             "required": false,
             "description": "Whether the footer should stretch to the full width of the layout or the content when layout orientation is vertical.",
             "default": "true",
-            "inheritedFrom": "LayoutClassicCompactProps.stretchFooter",
+            "inheritedFrom": "stretchFooter",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1025,7 +1025,7 @@
             "required": false,
             "description": "The function to convert pixels to rem.",
             "default": "(px: number) => px / 16 (16 is the base font size)",
-            "inheritedFrom": "LayoutClassicCompactProps.pxToRem",
+            "inheritedFrom": "pxToRem",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1035,7 +1035,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.sidebarProps",
+            "inheritedFrom": "sidebarProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1058,7 +1058,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.railProps",
+            "inheritedFrom": "railProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1081,7 +1081,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.mainProps",
+            "inheritedFrom": "mainProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1104,7 +1104,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.headerProps",
+            "inheritedFrom": "headerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1127,7 +1127,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.tabProps",
+            "inheritedFrom": "tabProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1150,7 +1150,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1173,7 +1173,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.footerProps",
+            "inheritedFrom": "footerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1196,7 +1196,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "LayoutClassicCompactProps.mobileProps",
+            "inheritedFrom": "mobileProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1427,7 +1427,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.orientation",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1450,7 +1450,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.scrollBehavior",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1473,7 +1473,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.scrollId",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1483,7 +1483,7 @@
             "required": false,
             "description": "The base z-index of the layout. The z-index of the sidebar, header, tab, footer, and their fixed versions will be calculated based on this value.",
             "default": "50",
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.baseZIndex",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1493,7 +1493,7 @@
             "required": false,
             "description": "Whether the header and tab are fixed to the top of the layout when the orientation is vertical. If true, the header and tab will be fixed to the top of the layout when the orientation is vertical, and will scroll with the content when the orientation is horizontal.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.fixedTop",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1503,7 +1503,7 @@
             "required": false,
             "description": "Whether footer is fixed",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.fixedFooter",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1513,7 +1513,7 @@
             "required": false,
             "description": "Whether the footer should stretch to the full width of the layout or the content when layout orientation is vertical.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.stretchFooter",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1523,7 +1523,7 @@
             "required": false,
             "description": "The controlled open state of the layout. Can be bound with `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1533,7 +1533,7 @@
             "required": false,
             "description": "The open state of the layout when it is initially rendered.\n\nUse when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1543,7 +1543,7 @@
             "required": false,
             "description": "The side of the layout.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "side",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1566,7 +1566,7 @@
             "required": false,
             "description": "whether to show the sidebar.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "sidebarVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1576,7 +1576,7 @@
             "required": false,
             "description": "The width of the sidebar. (px)",
             "default": "240",
-            "inheritedFrom": null,
+            "inheritedFrom": "sidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1586,7 +1586,7 @@
             "required": false,
             "description": "The width of the sidebar when it is collapsed. (px)",
             "default": "50",
-            "inheritedFrom": null,
+            "inheritedFrom": "collapsedSidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1596,7 +1596,7 @@
             "required": false,
             "description": "Whether the layout is in mobile view.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "isMobile",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1606,7 +1606,7 @@
             "required": false,
             "description": "The width of the sidebar in the mobile view. (px)",
             "default": "240",
-            "inheritedFrom": null,
+            "inheritedFrom": "mobileSidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1616,7 +1616,7 @@
             "required": false,
             "description": "whether to show the header.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "headerVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1626,7 +1626,7 @@
             "required": false,
             "description": "The height of the header. (px)",
             "default": "56",
-            "inheritedFrom": null,
+            "inheritedFrom": "headerHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1636,7 +1636,7 @@
             "required": false,
             "description": "whether to show the tab.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "tabVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1646,7 +1646,7 @@
             "required": false,
             "description": "The height of the tab. (px)",
             "default": "44",
-            "inheritedFrom": null,
+            "inheritedFrom": "tabHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1656,7 +1656,7 @@
             "required": false,
             "description": "whether to show the footer.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "footerVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1666,7 +1666,7 @@
             "required": false,
             "description": "The height of the footer. (px)",
             "default": "48",
-            "inheritedFrom": null,
+            "inheritedFrom": "footerHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1676,7 +1676,7 @@
             "required": false,
             "description": "whether the content takes the full height of the layout (include).",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "fullContent",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1686,7 +1686,7 @@
             "required": false,
             "description": "The function to convert pixels to rem.",
             "default": "(px: number) => px / 16 (16 is the base font size)",
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutClassicRootProps.pxToRem",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -1696,7 +1696,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.sidebarProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1719,7 +1719,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.railProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1742,7 +1742,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.mainProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1765,7 +1765,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.headerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1788,7 +1788,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.tabProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1811,7 +1811,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.contentProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1834,7 +1834,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.footerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1857,7 +1857,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.mobileProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -1881,7 +1881,7 @@
       "emits": {
         "kind": "emits",
         "name": "LayoutClassicCompactEmits",
-        "type": "TypeAlias LayoutClassicCompactEmits",
+        "type": "TypeAlias LayoutClassicCompactEmits: LayoutClassicRootEmits",
         "resolvedType": "{ \"update:open\": [open: boolean] }",
         "description": "",
         "sourcePath": "headless/src/components/layout/types.ts",
@@ -1926,7 +1926,7 @@
       "slots": {
         "kind": "slots",
         "name": "LayoutClassicCompactSlots",
-        "type": "TypeAlias LayoutClassicCompactSlots",
+        "type": "TypeAlias LayoutClassicCompactSlots: LayoutCompactSlots",
         "resolvedType": "{ default?: (() => any); sidebar?: ((props: { open: boolean; collapsedSidebarWidth: number; }) => any); header?: (() => any); tab?: (() => any); content?: (() => any); footer?: (() => any) }",
         "description": "",
         "sourcePath": "headless/src/components/layout/types.ts",
@@ -2088,7 +2088,7 @@
             "required": false,
             "description": "The controlled open state of the layout. Can be bound with `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2098,7 +2098,7 @@
             "required": false,
             "description": "The open state of the layout when it is initially rendered.\n\nUse when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2108,7 +2108,7 @@
             "required": false,
             "description": "The side of the layout.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "side",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2131,7 +2131,7 @@
             "required": false,
             "description": "The variant of the layout.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "variant",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2154,7 +2154,7 @@
             "required": false,
             "description": "The collapsible state of the layout.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "collapsible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2177,7 +2177,7 @@
             "required": false,
             "description": "whether to show the sidebar.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "sidebarVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2187,7 +2187,7 @@
             "required": false,
             "description": "The width of the sidebar. (px)",
             "default": "240",
-            "inheritedFrom": null,
+            "inheritedFrom": "sidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2197,7 +2197,7 @@
             "required": false,
             "description": "The width of the sidebar when it is collapsed. (px)",
             "default": "50",
-            "inheritedFrom": null,
+            "inheritedFrom": "collapsedSidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2207,7 +2207,7 @@
             "required": false,
             "description": "Whether the layout is in mobile view.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "isMobile",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2217,7 +2217,7 @@
             "required": false,
             "description": "The width of the sidebar in the mobile view. (px)",
             "default": "240",
-            "inheritedFrom": null,
+            "inheritedFrom": "mobileSidebarWidth",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2227,7 +2227,7 @@
             "required": false,
             "description": "whether to show the header.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "headerVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2237,7 +2237,7 @@
             "required": false,
             "description": "The height of the header. (px)",
             "default": "56",
-            "inheritedFrom": null,
+            "inheritedFrom": "headerHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2247,7 +2247,7 @@
             "required": false,
             "description": "whether to show the tab.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "tabVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2257,7 +2257,7 @@
             "required": false,
             "description": "The height of the tab. (px)",
             "default": "44",
-            "inheritedFrom": null,
+            "inheritedFrom": "tabHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2267,7 +2267,7 @@
             "required": false,
             "description": "whether to show the footer.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "footerVisible",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2277,7 +2277,7 @@
             "required": false,
             "description": "The height of the footer. (px)",
             "default": "48",
-            "inheritedFrom": null,
+            "inheritedFrom": "footerHeight",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2287,7 +2287,7 @@
             "required": false,
             "description": "whether the content takes the full height of the layout (include).",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "fullContent",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2297,7 +2297,7 @@
             "required": false,
             "description": "The function to convert pixels to rem.",
             "default": "(px: number) => px / 16 (16 is the base font size)",
-            "inheritedFrom": null,
+            "inheritedFrom": "pxToRem",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": []
           },
@@ -2307,7 +2307,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.sidebarProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2330,7 +2330,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.railProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2353,7 +2353,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.mainProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2376,7 +2376,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.headerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2399,7 +2399,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.tabProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2422,7 +2422,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.contentProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2445,7 +2445,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.footerProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2468,7 +2468,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "LayoutOthersProps.mobileProps",
             "sourcePath": "headless/src/components/layout/types.ts",
             "referencedTypes": [
               {
@@ -2492,7 +2492,7 @@
       "emits": {
         "kind": "emits",
         "name": "LayoutCompactEmits",
-        "type": "TypeAlias LayoutCompactEmits",
+        "type": "TypeAlias LayoutCompactEmits: LayoutRootEmits",
         "resolvedType": "{ \"update:open\": [open: boolean] }",
         "description": "",
         "sourcePath": "headless/src/components/layout/types.ts",
@@ -2999,7 +2999,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -3009,7 +3009,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {

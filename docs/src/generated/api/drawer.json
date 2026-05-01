@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "DrawerProps",
         "type": "Interface DrawerProps",
-        "resolvedType": "{ side?: Side; class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<DialogUi>; title?: string; description?: string; icon?: string | import(\"vue\").Component | VNode<import(\"vue\").RendererNode, import(\"vue\").RendererElement, { [key: string]: any; }> | null; showClose?: boolean; pure?: boolean; showCancel?: boolean | 'onlyWarning'; cancelText?: string; showConfirm?: boolean; confirmText?: string; triggerProps?: DialogTriggerProps; overlayProps?: DialogOverlayProps; portalProps?: DialogPortalProps; popupProps?: DialogPopupProps; headerProps?: DialogHeaderProps; contentProps?: DialogContentProps; footerProps?: DialogFooterProps; titleProps?: DialogTitleProps; descriptionProps?: DialogDescriptionProps; closeProps?: DialogCloseProps; cancelProps?: DialogCancelProps; confirmProps?: DialogConfirmProps; open?: boolean; defaultOpen?: boolean; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ side?: Side; class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<DialogUi>; title?: string; description?: string; icon?: string | import(\"vue\").Component | VNode<import(\"vue\").RendererNode, import(\"vue\").RendererElement, { [key: string]: any; }> | null; showClose?: boolean; pure?: boolean; showCancel?: boolean | 'onlyWarning'; cancelText?: string; showConfirm?: boolean; confirmText?: string; triggerProps?: DialogTriggerProps; overlayProps?: DialogOverlayProps; portalProps?: DialogPortalProps; popupProps?: DialogPopupProps; headerProps?: DialogHeaderProps; contentProps?: DialogContentProps; footerProps?: DialogFooterProps; titleProps?: DialogTitleProps; descriptionProps?: DialogDescriptionProps; closeProps?: DialogCloseProps; cancelProps?: DialogCancelProps; confirmProps?: DialogConfirmProps; isAlert?: boolean; alertType?: DialogAlertType; open?: boolean; defaultOpen?: boolean; modal?: boolean }",
         "description": "",
         "sourcePath": "src/components/drawer/types.ts",
         "typeParameters": [],
@@ -710,36 +710,6 @@
             ]
           },
           {
-            "name": "open",
-            "type": "boolean",
-            "required": false,
-            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
-            "default": "undefined",
-            "inheritedFrom": "open",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "defaultOpen",
-            "type": "boolean",
-            "required": false,
-            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
-            "default": "false",
-            "inheritedFrom": "defaultOpen",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "modal",
-            "type": "boolean",
-            "required": false,
-            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
-            "default": "true",
-            "inheritedFrom": "modal",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
             "name": "isAlert",
             "type": "boolean",
             "required": false,
@@ -771,6 +741,36 @@
                 "callables": []
               }
             ]
+          },
+          {
+            "name": "open",
+            "type": "boolean",
+            "required": false,
+            "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
+            "default": "undefined",
+            "inheritedFrom": "open",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "defaultOpen",
+            "type": "boolean",
+            "required": false,
+            "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
+            "default": "false",
+            "inheritedFrom": "defaultOpen",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "modal",
+            "type": "boolean",
+            "required": false,
+            "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
+            "default": "true",
+            "inheritedFrom": "modal",
+            "sourcePath": "headless/src/components/dialog/types.ts",
+            "referencedTypes": []
           }
         ],
         "callables": [],

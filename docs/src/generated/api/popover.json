@@ -1,6 +1,20 @@
 {
   "component": "popover",
   "symbols": {
+    "DatePickerTrigger": {
+      "props": {
+        "kind": "props",
+        "name": "DatePickerTriggerProps",
+        "type": "Interface DatePickerTriggerProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/popover/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
     "PopconfirmClose": {
       "props": {
         "kind": "props",
@@ -81,26 +95,12 @@
         "referencedTypes": []
       }
     },
-    "PopconfirmTrigger": {
-      "props": {
-        "kind": "props",
-        "name": "PopconfirmTriggerProps",
-        "type": "Interface PopconfirmTriggerProps",
-        "resolvedType": null,
-        "description": "",
-        "sourcePath": "headless/src/components/popover/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [],
-        "referencedTypes": []
-      }
-    },
     "Popover": {
       "props": {
         "kind": "props",
         "name": "PopoverProps",
         "type": "Interface PopoverProps",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<PopperUi>; placement?: Placement; showArrow?: boolean; positionerProps?: PopoverPositionerProps; popupProps?: PopoverPopupProps; triggerProps?: PopoverTriggerProps; closeProps?: PopoverCloseProps; portalProps?: PopoverPortalProps; arrowProps?: PopoverArrowProps; open?: boolean; defaultOpen?: boolean; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<PopperUi>; placement?: Placement; showArrow?: boolean; positionerProps?: PopoverPositionerProps; popupProps?: PopoverPopupProps; triggerProps?: PopoverTriggerProps; closeProps?: PopoverCloseProps; portalProps?: PopoverPortalProps; arrowProps?: PopoverArrowProps; disabled?: boolean; open?: boolean; defaultOpen?: boolean; modal?: boolean }",
         "description": "",
         "sourcePath": "src/components/popover/types.ts",
         "typeParameters": [],
@@ -640,6 +640,16 @@
             ]
           },
           {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "disabled",
+            "sourcePath": "headless/src/components/popover/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "open",
             "type": "boolean",
             "required": false,
@@ -668,39 +678,6 @@
             "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": "isAlert",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": "alertType",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           }
         ],
         "callables": [],
@@ -876,6 +853,28 @@
     "PopoverAnchor": {},
     "PopoverArrow": {},
     "PopoverClose": {
+      "emits": {
+        "kind": "emits",
+        "name": "PopoverCloseEmits",
+        "type": "TypeAlias PopoverCloseEmits",
+        "resolvedType": "{ close: [] }",
+        "description": "",
+        "sourcePath": "headless/src/components/popover/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "close",
+            "type": "[]",
+            "parameters": null,
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/popover/types.ts",
+            "referencedTypes": []
+          }
+        ],
+        "referencedTypes": []
+      },
       "props": {
         "kind": "props",
         "name": "PopoverCloseProps",
@@ -952,28 +951,6 @@
         ],
         "callables": [],
         "referencedTypes": []
-      },
-      "emits": {
-        "kind": "emits",
-        "name": "PopoverCloseEmits",
-        "type": "TypeAlias PopoverCloseEmits",
-        "resolvedType": "{ close: [] }",
-        "description": "",
-        "sourcePath": "headless/src/components/popover/types.ts",
-        "typeParameters": [],
-        "members": [],
-        "callables": [
-          {
-            "name": "close",
-            "type": "[]",
-            "parameters": null,
-            "required": true,
-            "description": "",
-            "sourcePath": "headless/src/components/popover/types.ts",
-            "referencedTypes": []
-          }
-        ],
-        "referencedTypes": []
       }
     },
     "PopoverCompact": {
@@ -981,7 +958,7 @@
         "kind": "props",
         "name": "PopoverCompactProps",
         "type": "Interface PopoverCompactProps",
-        "resolvedType": "{ placement?: import(\"@/index\").Placement; showArrow?: boolean; triggerProps?: PopoverTriggerProps; portalProps?: PortalProps; positionerProps?: PopoverPositionerProps; popupProps?: PopoverPopupProps; arrowProps?: PopperArrowProps; closeProps?: PopoverCloseProps; open?: boolean; defaultOpen?: boolean; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ placement?: import(\"@/index\").Placement; showArrow?: boolean; triggerProps?: PopoverTriggerProps; portalProps?: PortalProps; positionerProps?: PopoverPositionerProps; popupProps?: PopoverPopupProps; arrowProps?: PopperArrowProps; closeProps?: PopoverCloseProps; disabled?: boolean; open?: boolean; defaultOpen?: boolean; modal?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/popover/types.ts",
         "typeParameters": [],
@@ -1439,12 +1416,22 @@
             ]
           },
           {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "disabled",
+            "sourcePath": "headless/src/components/popover/types.ts",
+            "referencedTypes": []
+          },
+          {
             "name": "open",
             "type": "boolean",
             "required": false,
             "description": "The controlled open state of the dialog. Can be bound with `v-model:open`.",
             "default": "undefined",
-            "inheritedFrom": null,
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -1454,7 +1441,7 @@
             "required": false,
             "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state.",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
           },
@@ -1464,42 +1451,9 @@
             "required": false,
             "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           }
         ],
         "callables": [],
@@ -1508,7 +1462,7 @@
       "emits": {
         "kind": "emits",
         "name": "PopoverCompactEmits",
-        "type": "TypeAlias PopoverCompactEmits",
+        "type": "TypeAlias PopoverCompactEmits: PopconfirmRootEmits & PopconfirmPositionerEmits",
         "resolvedType": "{ \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/popover/types.ts",
@@ -2250,11 +2204,21 @@
         "kind": "props",
         "name": "PopoverRootProps",
         "type": "Interface PopoverRootProps",
-        "resolvedType": "{ open?: boolean; defaultOpen?: boolean; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ disabled?: boolean; open?: boolean; defaultOpen?: boolean; modal?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/popover/types.ts",
         "typeParameters": [],
         "members": [
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/popover/types.ts",
+            "referencedTypes": []
+          },
           {
             "name": "open",
             "type": "boolean",
@@ -2284,39 +2248,6 @@
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           }
         ],
         "callables": [],

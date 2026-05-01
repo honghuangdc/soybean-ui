@@ -1,13 +1,14 @@
 import { computed, shallowRef, useId } from 'vue';
-import { useContext } from '../../composables';
+import { useContext, useUiContext } from '../../composables';
 import { getDisclosureState } from '../../shared';
 import type { DisclosureState } from '../../types';
-import type { PopoverRootContextParams } from './types';
+import { providePopperUi } from '../popper/context';
+import type { PopoverRootContextParams, PopoverUiSlot } from './types';
 
 export const [providePopoverRootContext, usePopoverRootContext] = useContext(
   'PopoverRoot',
   (params: PopoverRootContextParams) => {
-    const { open, modal } = params;
+    const { open } = params;
 
     const onOpenChange = (value: boolean) => {
       open.value = value;
@@ -44,10 +45,9 @@ export const [providePopoverRootContext, usePopoverRootContext] = useContext(
     const hasCustomAnchor = shallowRef(false);
 
     return {
-      open,
+      ...params,
       onOpenChange,
       onOpenToggle,
-      modal,
       dataState,
       triggerElement,
       onTriggerElementChange,
@@ -61,3 +61,9 @@ export const [providePopoverRootContext, usePopoverRootContext] = useContext(
     };
   }
 );
+
+export const [providePopoverUi, usePopoverUi] = useUiContext<PopoverUiSlot>('Popover', ui => {
+  providePopperUi(ui);
+
+  return ui;
+});

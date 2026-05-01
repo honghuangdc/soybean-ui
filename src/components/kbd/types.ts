@@ -1,4 +1,4 @@
-import type { ClassValue, KbdValue, KbdProps as _KbdProps } from '@soybeanjs/headless';
+import type { ClassValue, KbdProps as _KbdProps } from '@soybeanjs/headless';
 import type { ThemeSize } from '@/theme';
 import type { KbdVariant } from './variants';
 
@@ -9,4 +9,4 @@ export interface KbdProps extends _KbdProps {
   raised?: boolean;
 }
 
-export type { KbdVariant, KbdValue };
+export type { KbdVariant };

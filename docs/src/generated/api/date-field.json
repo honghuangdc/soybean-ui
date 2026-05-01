@@ -86,7 +86,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.inputProps",
+            "inheritedFrom": "inputProps",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -109,7 +109,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -132,7 +132,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.defaultPlaceholder",
+            "inheritedFrom": "defaultPlaceholder",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -155,7 +155,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.placeholder",
+            "inheritedFrom": "placeholder",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -178,7 +178,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -201,7 +201,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.hourCycle",
+            "inheritedFrom": "hourCycle",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -224,7 +224,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.step",
+            "inheritedFrom": "step",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -318,7 +318,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.granularity",
+            "inheritedFrom": "granularity",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -341,7 +341,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.hideTimeZone",
+            "inheritedFrom": "hideTimeZone",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": []
           },
@@ -351,7 +351,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.maxValue",
+            "inheritedFrom": "maxValue",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -374,7 +374,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.minValue",
+            "inheritedFrom": "minValue",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -397,7 +397,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.locale",
+            "inheritedFrom": "locale",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": []
           },
@@ -407,7 +407,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": []
           },
@@ -417,7 +417,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.readonly",
+            "inheritedFrom": "readonly",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": []
           },
@@ -427,7 +427,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.isDateUnavailable",
+            "inheritedFrom": "isDateUnavailable",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -450,7 +450,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.id",
+            "inheritedFrom": "id",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": []
           },
@@ -460,7 +460,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/date-field/types.ts",
             "referencedTypes": [
               {
@@ -483,7 +483,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.asChild",
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -493,7 +493,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": "DateFieldCompactProps.as",
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -524,7 +524,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.name",
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -534,7 +534,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": "DateFieldCompactProps.required",
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -630,6 +630,568 @@
             ]
           }
         ]
+      }
+    },
+    "DateFieldCompact": {
+      "emits": {
+        "kind": "emits",
+        "name": "DateFieldCompactEmits",
+        "type": "TypeAlias DateFieldCompactEmits: DateFieldRootEmits",
+        "resolvedType": "{ \"update:modelValue\": [date: DateValue | undefined]; \"update:placeholder\": [date: DateValue] }",
+        "description": "",
+        "sourcePath": "headless/src/components/date-field/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [
+          {
+            "name": "update:modelValue",
+            "type": "[date: DateValue | undefined]",
+            "parameters": "date: DateValue | undefined",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "update:placeholder",
+            "type": "[date: DateValue]",
+            "parameters": "date: DateValue",
+            "required": true,
+            "description": "",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          }
+        ],
+        "referencedTypes": [
+          {
+            "name": "DateFieldRootEmits",
+            "kind": "typeAlias",
+            "type": "{ 'update:modelValue': [date: DateValue | undefined]; 'update:placeholder': [date: DateValue]; }",
+            "resolvedType": "{ \"update:modelValue\": [date: DateValue | undefined]; \"update:placeholder\": [date: DateValue] }",
+            "description": "",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "typeParameters": [],
+            "external": false,
+            "members": [],
+            "callables": [
+              {
+                "name": "update:modelValue",
+                "type": "[date: DateValue | undefined]",
+                "parameters": "date: DateValue | undefined",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/date-field/types.ts",
+                "referencedTypes": []
+              },
+              {
+                "name": "update:placeholder",
+                "type": "[date: DateValue]",
+                "parameters": "date: DateValue",
+                "required": true,
+                "description": "",
+                "sourcePath": "headless/src/components/date-field/types.ts",
+                "referencedTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "props": {
+        "kind": "props",
+        "name": "DateFieldCompactProps",
+        "type": "Interface DateFieldCompactProps",
+        "resolvedType": "{ inputProps?: Omit<DateFieldInputProps, 'part'>; defaultValue?: DateValue; defaultPlaceholder?: DateValue; placeholder?: DateValue; modelValue?: DateValue; hourCycle?: 12 | 24; step?: DateStep; granularity?: Granularity; hideTimeZone?: boolean; maxValue?: DateValue; minValue?: DateValue; locale?: string; disabled?: boolean; readonly?: boolean; isDateUnavailable?: Matcher; id?: string; dir?: Direction; asChild?: boolean; as?: AsTag | Component; name?: string; required?: boolean }",
+        "description": "",
+        "sourcePath": "headless/src/components/date-field/types.ts",
+        "typeParameters": [],
+        "members": [
+          {
+            "name": "inputProps",
+            "type": "Omit<DateFieldInputProps, 'part'>",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": null,
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateFieldInputProps",
+                "kind": "interface",
+                "type": "DateFieldInputProps",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "headless/src/components/date-field/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "defaultValue",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "defaultPlaceholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "defaultPlaceholder",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "placeholder",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "placeholder",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "modelValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "modelValue",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "hourCycle",
+            "type": "12 | 24",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "hourCycle",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "HourCycle",
+                "kind": "typeAlias",
+                "type": "12 | 24 | undefined",
+                "resolvedType": "12 | 24 | undefined",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "step",
+            "type": "DateStep",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "step",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateStep",
+                "kind": "interface",
+                "type": "DateStep",
+                "resolvedType": "{ year?: number; month?: number; day?: number; hour?: number; minute?: number; second?: number; millisecond?: number }",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [
+                  {
+                    "name": "year",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "month",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "day",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "hour",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "minute",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "second",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  },
+                  {
+                    "name": "millisecond",
+                    "type": "number",
+                    "required": false,
+                    "description": "",
+                    "default": null,
+                    "inheritedFrom": null,
+                    "sourcePath": "headless/src/date/types.ts",
+                    "referencedTypes": []
+                  }
+                ],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "granularity",
+            "type": "Granularity",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "granularity",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Granularity",
+                "kind": "typeAlias",
+                "type": "'day' | 'hour' | 'minute' | 'second'",
+                "resolvedType": "'day' | 'hour' | 'minute' | 'second'",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "hideTimeZone",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "hideTimeZone",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "maxValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "maxValue",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "minValue",
+            "type": "DateValue",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "minValue",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "DateValue",
+                "kind": "typeAlias",
+                "type": "DateValue",
+                "resolvedType": null,
+                "description": "",
+                "sourcePath": "node_modules/.pnpm/@internationalized+date@3.12.1/node_modules/@internationalized/date/dist/types/src/CalendarDate.d.ts",
+                "typeParameters": [],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "locale",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "disabled",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "disabled",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "readonly",
+            "type": "boolean",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "readonly",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "isDateUnavailable",
+            "type": "Matcher",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "isDateUnavailable",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Matcher",
+                "kind": "typeAlias",
+                "type": "(date: DateValue) => boolean",
+                "resolvedType": "(date: import(\"@internationalized/date\").CalendarDate | import(\"@internationalized/date\").CalendarDateTime | import(\"@internationalized/date\").ZonedDateTime) => boolean",
+                "description": "",
+                "sourcePath": "headless/src/date/types.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "id",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "id",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "dir",
+            "type": "Direction",
+            "required": false,
+            "description": "",
+            "default": null,
+            "inheritedFrom": "dir",
+            "sourcePath": "headless/src/components/date-field/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Direction",
+                "kind": "typeAlias",
+                "type": "'ltr' | 'rtl'",
+                "resolvedType": "'ltr' | 'rtl'",
+                "description": "",
+                "sourcePath": "headless/src/types/common.ts",
+                "typeParameters": [],
+                "external": false,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "asChild",
+            "type": "boolean",
+            "required": false,
+            "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
+            "default": null,
+            "inheritedFrom": "asChild",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "as",
+            "type": "AsTag | Component",
+            "required": false,
+            "description": "The element or component this component should render as. Can be overwrite by `asChild`",
+            "default": "'div'",
+            "inheritedFrom": "as",
+            "sourcePath": "headless/src/components/primitive/types.ts",
+            "referencedTypes": [
+              {
+                "name": "Component",
+                "kind": "typeAlias",
+                "type": "Component",
+                "resolvedType": null,
+                "description": "A type used in public APIs where a component type is expected.\nThe constructor type is an artificial type returned by defineComponent().",
+                "sourcePath": "node_modules/.pnpm/@vue+runtime-core@3.5.33/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+                "typeParameters": [
+                  "PropsOrInstance = any",
+                  "RawBindings = any",
+                  "D = any",
+                  "C extends ComputedOptions = ComputedOptions",
+                  "M extends MethodOptions = MethodOptions",
+                  "E extends EmitsOptions | Record<string, any[]> = {}",
+                  "S extends Record<string, any> = any"
+                ],
+                "external": true,
+                "members": [],
+                "callables": []
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "required": false,
+            "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
+            "default": null,
+            "inheritedFrom": "name",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          },
+          {
+            "name": "required",
+            "type": "boolean",
+            "required": false,
+            "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
+            "default": null,
+            "inheritedFrom": "required",
+            "sourcePath": "headless/src/types/component.ts",
+            "referencedTypes": []
+          }
+        ],
+        "callables": [],
+        "referencedTypes": []
       }
     },
     "DateFieldInput": {

@@ -86,7 +86,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -96,7 +96,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.showArrow",
+            "inheritedFrom": "showArrow",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -106,7 +106,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.triggerProps",
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -170,7 +170,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.triggerIconProps",
+            "inheritedFrom": "triggerIconProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -193,7 +193,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.placeholder",
+            "inheritedFrom": "placeholder",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -203,7 +203,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.valueProps",
+            "inheritedFrom": "valueProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -237,7 +237,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.portalProps",
+            "inheritedFrom": "portalProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -301,7 +301,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -565,7 +565,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.placement",
+            "inheritedFrom": "placement",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -575,7 +575,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.popupProps",
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -598,7 +598,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.viewportProps",
+            "inheritedFrom": "viewportProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -632,7 +632,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.scrollDownButtonProps",
+            "inheritedFrom": "scrollDownButtonProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -676,7 +676,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.scrollUpButtonProps",
+            "inheritedFrom": "scrollUpButtonProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -720,7 +720,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.groupProps",
+            "inheritedFrom": "groupProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -743,7 +743,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.groupLabelProps",
+            "inheritedFrom": "groupLabelProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -766,7 +766,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.itemProps",
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -840,7 +840,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.itemTextProps",
+            "inheritedFrom": "itemTextProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -863,7 +863,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.itemIndicatorProps",
+            "inheritedFrom": "itemIndicatorProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -907,7 +907,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.separatorProps",
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -930,7 +930,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.arrowProps",
+            "inheritedFrom": "arrowProps",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -953,7 +953,7 @@
             "required": false,
             "description": "The controlled open state of the Select. Can be bind as `v-model:open`.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.open",
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -963,7 +963,7 @@
             "required": false,
             "description": "The open state of the select when it is initially rendered. Use when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.defaultOpen",
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -973,7 +973,7 @@
             "required": false,
             "description": "The reading direction of the combobox when applicable. <br> If omitted, inherits globally from `ConfigProvider` or\nassumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -996,7 +996,7 @@
             "required": false,
             "description": "Native html input `autocomplete` attribute.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.autocomplete",
+            "inheritedFrom": "autocomplete",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -1006,7 +1006,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with Select",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -1016,7 +1016,7 @@
             "required": false,
             "description": "The controlled value of the selected item(s).\n\nUse this when you need to control the state of the items. Can be bound with `v-model`",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -1026,7 +1026,7 @@
             "required": false,
             "description": "The default value of the selected item(s).\n\nUse this when you need to set the initial state of the items.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -1036,7 +1036,7 @@
             "required": false,
             "description": "Determines whether a \"single\" or \"multiple\" items can be selected at a time.\n\nThis prop will overwrite the inferred type from `modelValue` and `defaultValue`.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.multiple",
+            "inheritedFrom": "multiple",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -1046,7 +1046,7 @@
             "required": false,
             "description": "Whether selected item can be cleared when `multiple` is false.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.clearable",
+            "inheritedFrom": "clearable",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -1056,7 +1056,7 @@
             "required": false,
             "description": "How multiple selection should behave in the collection.",
             "default": "'toggle'",
-            "inheritedFrom": "SelectCompactProps.selectionBehavior",
+            "inheritedFrom": "selectionBehavior",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": [
               {
@@ -1079,7 +1079,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.name",
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1089,7 +1089,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": "SelectCompactProps.required",
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -1416,7 +1416,7 @@
         "resolvedType": "{ items: SelectOptionData<T>[]; showArrow?: boolean; triggerProps?: SelectTriggerProps; triggerIconProps?: SelectTriggerIconProps; placeholder?: string; valueProps?: SelectValueProps; portalProps?: PortalProps; contentProps?: SelectContentProps; placement?: import(\"@/index\").Placement; popupProps?: SelectPopupProps; viewportProps?: SelectViewportProps; scrollDownButtonProps?: SelectScrollDownButtonProps; scrollUpButtonProps?: SelectScrollUpButtonProps; groupProps?: SelectGroupProps; groupLabelProps?: SelectGroupLabelProps; itemProps?: SelectItemProps; itemTextProps?: SelectItemTextProps; itemIndicatorProps?: SelectItemIndicatorProps; separatorProps?: SelectSeparatorProps; arrowProps?: PopperArrowProps; open?: boolean; defaultOpen?: boolean; dir?: Direction; autocomplete?: string; disabled?: boolean; modelValue?: (M extends true ? T[] : T); defaultValue?: (M extends true ? T[] : T); multiple?: M; clearable?: boolean; selectionBehavior?: SelectionBehavior; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/select/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue", "M extends boolean = false"],
+        "typeParameters": ["TypeParameter T", "TypeParameter M"],
         "members": [
           {
             "name": "items",
@@ -2291,7 +2291,7 @@
             "required": false,
             "description": "The controlled open state of the Select. Can be bind as `v-model:open`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "open",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -2301,7 +2301,7 @@
             "required": false,
             "description": "The open state of the select when it is initially rendered. Use when you do not need to control its open state.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultOpen",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -2311,7 +2311,7 @@
             "required": false,
             "description": "The reading direction of the combobox when applicable. <br> If omitted, inherits globally from `ConfigProvider` or\nassumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": [
               {
@@ -2334,7 +2334,7 @@
             "required": false,
             "description": "Native html input `autocomplete` attribute.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "autocomplete",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -2344,7 +2344,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with Select",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/select/types.ts",
             "referencedTypes": []
           },
@@ -2354,7 +2354,7 @@
             "required": false,
             "description": "The controlled value of the selected item(s).\n\nUse this when you need to control the state of the items. Can be bound with `v-model`",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -2364,7 +2364,7 @@
             "required": false,
             "description": "The default value of the selected item(s).\n\nUse this when you need to set the initial state of the items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -2374,7 +2374,7 @@
             "required": false,
             "description": "Determines whether a \"single\" or \"multiple\" items can be selected at a time.\n\nThis prop will overwrite the inferred type from `modelValue` and `defaultValue`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "multiple",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -2384,7 +2384,7 @@
             "required": false,
             "description": "Whether selected item can be cleared when `multiple` is false.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "clearable",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": []
           },
@@ -2394,7 +2394,7 @@
             "required": false,
             "description": "How multiple selection should behave in the collection.",
             "default": "'toggle'",
-            "inheritedFrom": null,
+            "inheritedFrom": "selectionBehavior",
             "sourcePath": "headless/src/types/common.ts",
             "referencedTypes": [
               {
@@ -2417,7 +2417,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -2427,7 +2427,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -2438,11 +2438,11 @@
       "emits": {
         "kind": "emits",
         "name": "SelectCompactEmits",
-        "type": "TypeAlias SelectCompactEmits<T, M>",
+        "type": "TypeAlias SelectCompactEmits<T, M>: SelectRootEmits<T, M> & SelectContentEmits & SelectItemEmits<T>",
         "resolvedType": "{ \"update:modelValue\": [value: M extends true ? T[] : T]; \"update:open\": [value: boolean]; closeAutoFocus: [event: Event]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; select: [event: SelectItemEvent<T>] }",
         "description": "",
         "sourcePath": "headless/src/components/select/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue", "M extends boolean = false"],
+        "typeParameters": ["TypeParameter T", "TypeParameter M"],
         "members": [],
         "callables": [
           {
@@ -2561,7 +2561,7 @@
         "resolvedType": "{ \"trigger-leading\"?: (() => any); \"trigger-value\"?: ((props: SelectCompactTriggerValueSlotProps<T, M>) => any); \"trigger-trailing\"?: (() => any); \"trigger-icon\"?: (() => any); \"scroll-up-button\"?: (() => any); \"scroll-down-button\"?: (() => any); \"group-label\"?: ((props: SelectCompactGroupLabelSlotProps<T>) => any); \"item-text\"?: ((props: SelectCompactItemSlotProps<T>) => any); \"item-leading\"?: ((props: SelectCompactItemSlotProps<T>) => any); \"item-trailing\"?: ((props: SelectCompactItemSlotProps<T>) => any); \"item-indicator\"?: ((props: SelectCompactItemSlotProps<T>) => any) }",
         "description": "",
         "sourcePath": "headless/src/components/select/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue", "M extends boolean = false"],
+        "typeParameters": ["TypeParameter T", "TypeParameter M"],
         "members": [],
         "callables": [
           {
@@ -3447,6 +3447,20 @@
         "kind": "props",
         "name": "SelectItemTextProps",
         "type": "Interface SelectItemTextProps",
+        "resolvedType": null,
+        "description": "",
+        "sourcePath": "headless/src/components/select/types.ts",
+        "typeParameters": [],
+        "members": [],
+        "callables": [],
+        "referencedTypes": []
+      }
+    },
+    "SelectPopup": {
+      "props": {
+        "kind": "props",
+        "name": "SelectPopupProps",
+        "type": "Interface SelectPopupProps",
         "resolvedType": null,
         "description": "",
         "sourcePath": "headless/src/components/select/types.ts",

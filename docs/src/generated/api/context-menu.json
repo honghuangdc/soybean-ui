@@ -6,7 +6,7 @@
         "kind": "props",
         "name": "ContextMenuProps",
         "type": "TypeAlias ContextMenuProps<T>: Omit<MenuUiBaseProps, \"indicatorPosition\"> & ContextMenuCompactProps<T>",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<MenuUi>; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType; items: MenuOptionData<T>[]; activeValue?: T; itemProps?: MenuItemProps; linkProps?: LinkProps; groupProps?: MenuGroupProps; groupLabelProps?: MenuGroupLabelProps; subProps?: MenuSubProps; subTriggerProps?: MenuSubTriggerProps; subContentProps?: MenuSubContentProps; separatorProps?: MenuSeparatorProps; shortcutProps?: MenuShortcutProps }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<MenuUi>; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; items: MenuOptionData<T>[]; activeValue?: T; itemProps?: MenuItemProps; linkProps?: LinkProps; groupProps?: MenuGroupProps; groupLabelProps?: MenuGroupLabelProps; subProps?: MenuSubProps; subTriggerProps?: MenuSubTriggerProps; subContentProps?: MenuSubContentProps; separatorProps?: MenuSeparatorProps; shortcutProps?: MenuShortcutProps }",
         "description": "",
         "sourcePath": "src/components/context-menu/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -510,39 +510,6 @@
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           },
           {
             "name": "items",
@@ -1695,7 +1662,7 @@
         "kind": "props",
         "name": "ContextMenuCheckboxProps",
         "type": "TypeAlias ContextMenuCheckboxProps<T>: MenuUiBaseProps & ContextMenuCheckboxCompactProps<T>",
-        "resolvedType": "{ class?: ((string | Record<string, boolean> | ClassValue[]) & (string | false | Record<string, any> | import(\"vue\").ClassValue[])) | null; size?: ThemeSize; ui?: Partial<MenuUi>; indicatorPosition?: AlignSide; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType; items: MenuCheckboxOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; checkboxItemProps?: MenuCheckboxItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T[]; defaultValue?: T[]; asChild?: boolean; as?: AsTag | Component }",
+        "resolvedType": "{ class?: ((string | Record<string, boolean> | ClassValue[]) & (string | false | Record<string, any> | import(\"vue\").ClassValue[])) | null; size?: ThemeSize; ui?: Partial<MenuUi>; indicatorPosition?: AlignSide; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; items: MenuCheckboxOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; checkboxItemProps?: MenuCheckboxItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T[]; defaultValue?: T[]; asChild?: boolean; as?: AsTag | Component }",
         "description": "",
         "sourcePath": "src/components/context-menu/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -2222,39 +2189,6 @@
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           },
           {
             "name": "items",
@@ -2917,18 +2851,18 @@
         "kind": "props",
         "name": "ContextMenuCheckboxCompactProps",
         "type": "Interface ContextMenuCheckboxCompactProps<T>",
-        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType; items: MenuCheckboxOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; checkboxItemProps?: MenuCheckboxItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T[]; defaultValue?: T[]; asChild?: boolean; as?: AsTag | Component }",
+        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; items: MenuCheckboxOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; checkboxItemProps?: MenuCheckboxItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T[]; defaultValue?: T[]; asChild?: boolean; as?: AsTag | Component }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "disabled",
             "type": "boolean",
             "required": false,
-            "description": "",
+            "description": "When `true`, prevents the user from interacting with the checkboxes",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -2938,7 +2872,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "showArrow",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -2948,7 +2882,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -3012,7 +2946,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "portalProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -3076,7 +3010,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -3270,7 +3204,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -3293,7 +3227,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "arrowProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -3316,7 +3250,7 @@
             "required": false,
             "description": "The duration from when the trigger is pressed until the menu opens.",
             "default": "700",
-            "inheritedFrom": null,
+            "inheritedFrom": "pressOpenDelay",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -3326,7 +3260,7 @@
             "required": false,
             "description": "The reading direction of the combobox when applicable.\n\nIf omitted, inherits globally from `ConfigProvider` or assumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3349,42 +3283,9 @@
             "required": false,
             "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           },
           {
             "name": "items",
@@ -3392,7 +3293,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -3402,7 +3303,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "groupLabelProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3425,7 +3326,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "checkboxItemProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3509,7 +3410,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3563,7 +3464,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "shortcutProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3597,7 +3498,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -3641,7 +3542,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -3651,7 +3552,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -3661,7 +3562,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -3671,7 +3572,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -3703,11 +3604,11 @@
       "emits": {
         "kind": "emits",
         "name": "ContextMenuCheckboxCompactEmits",
-        "type": "TypeAlias ContextMenuCheckboxCompactEmits<T>",
+        "type": "TypeAlias ContextMenuCheckboxCompactEmits<T>: ContextMenuWrapperCompactEmits & MenuCheckboxOptionsCompactEmits<T>",
         "resolvedType": "{ \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event]; \"update:modelValue\": [value: T[]]; select: [item: MenuCheckboxOptionData<T>, event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -3934,11 +3835,11 @@
       "slots": {
         "kind": "slots",
         "name": "ContextMenuCheckboxCompactSlots",
-        "type": "TypeAlias ContextMenuCheckboxCompactSlots<T>",
+        "type": "TypeAlias ContextMenuCheckboxCompactSlots<T>: MenuCheckboxOptionsCompactSlots<T> & { trigger: () => any }",
         "resolvedType": "{ item?: ((props: MenuCheckboxOptionData<T>) => any); \"item-leading\"?: ((props: MenuCheckboxOptionData<T>) => any); \"item-trailing\"?: ((props: MenuCheckboxOptionData<T>) => any); \"item-indicator-icon\"?: ((props: MenuCheckboxOptionData<T>) => any); trigger: () => any }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -4049,10 +3950,10 @@
         "kind": "props",
         "name": "ContextMenuCompactProps",
         "type": "Interface ContextMenuCompactProps<T>",
-        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType; items: MenuOptionData<T>[]; activeValue?: T; itemProps?: MenuItemProps; linkProps?: LinkProps; groupProps?: MenuGroupProps; groupLabelProps?: MenuGroupLabelProps; subProps?: MenuSubProps; subTriggerProps?: MenuSubTriggerProps; subContentProps?: MenuSubContentProps; separatorProps?: MenuSeparatorProps; shortcutProps?: MenuShortcutProps }",
+        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; items: MenuOptionData<T>[]; activeValue?: T; itemProps?: MenuItemProps; linkProps?: LinkProps; groupProps?: MenuGroupProps; groupLabelProps?: MenuGroupLabelProps; subProps?: MenuSubProps; subTriggerProps?: MenuSubTriggerProps; subContentProps?: MenuSubContentProps; separatorProps?: MenuSeparatorProps; shortcutProps?: MenuShortcutProps }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "disabled",
@@ -4060,7 +3961,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -4070,7 +3971,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "showArrow",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -4080,7 +3981,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -4144,7 +4045,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "portalProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -4208,7 +4109,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -4402,7 +4303,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -4425,7 +4326,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "arrowProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -4448,7 +4349,7 @@
             "required": false,
             "description": "The duration from when the trigger is pressed until the menu opens.",
             "default": "700",
-            "inheritedFrom": null,
+            "inheritedFrom": "pressOpenDelay",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -4458,7 +4359,7 @@
             "required": false,
             "description": "The reading direction of the combobox when applicable.\n\nIf omitted, inherits globally from `ConfigProvider` or assumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -4481,42 +4382,9 @@
             "required": false,
             "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           },
           {
             "name": "items",
@@ -4524,7 +4392,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -4534,7 +4402,7 @@
             "required": false,
             "description": "The active value of the menu.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "activeValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -4544,7 +4412,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "itemProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -4608,7 +4476,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "linkProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -4832,7 +4700,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "groupProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -4876,7 +4744,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "groupLabelProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -4899,7 +4767,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "subProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -4943,7 +4811,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "subTriggerProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -5007,7 +4875,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "subContentProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -5231,7 +5099,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -5275,7 +5143,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "shortcutProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -5310,11 +5178,11 @@
       "emits": {
         "kind": "emits",
         "name": "ContextMenuCompactEmits",
-        "type": "TypeAlias ContextMenuCompactEmits<T>",
+        "type": "TypeAlias ContextMenuCompactEmits<T>: ContextMenuWrapperCompactEmits & MenuOptionsCompactEmits<T>",
         "resolvedType": "{ \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event]; select: [item: MenuOptionData<T>, event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -5532,11 +5400,11 @@
       "slots": {
         "kind": "slots",
         "name": "ContextMenuCompactSlots",
-        "type": "TypeAlias ContextMenuCompactSlots<T>",
+        "type": "TypeAlias ContextMenuCompactSlots<T>: MenuOptionsCompactSlots<T> & { trigger: () => any }",
         "resolvedType": "{ item?: ((props: { item: MenuOptionData<T>; isTrigger?: boolean; }) => any); \"item-leading\"?: ((props: { item: MenuOptionData<T>; }) => any); \"item-trailing\"?: ((props: { item: MenuOptionData<T>; }) => any); \"item-trigger-icon\"?: ((props: { item: MenuOptionData<T>; }) => any); \"item-link-icon\"?: ((props: { item: MenuOptionData<T>; }) => any); trigger: () => any }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -5666,7 +5534,7 @@
       "props": {
         "kind": "props",
         "name": "ContextMenuContentProps",
-        "type": "TypeAlias ContextMenuContentProps",
+        "type": "TypeAlias ContextMenuContentProps: Omit<MenuContentProps, \"side\" | \"sideOffset\" | \"align\" | \"arrowPadding\" | \"updatePositionStrategy\">",
         "resolvedType": "{ loop?: boolean; placement?: Placement; popupProps?: MenuPopupProps; sideFlip?: boolean; alignOffset?: number; alignFlip?: boolean; avoidCollisions?: boolean; collisionBoundary?: Element | (Element | null)[] | null; collisionPadding?: Padding; hideShiftedArrow?: boolean; sticky?: 'partial' | 'always'; hideWhenDetached?: boolean; positionStrategy?: 'fixed' | 'absolute'; disableUpdateOnLayoutShift?: boolean; prioritizePosition?: boolean; reference?: ReferenceElement; forceMount?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
@@ -5914,7 +5782,7 @@
       "emits": {
         "kind": "emits",
         "name": "ContextMenuContentEmits",
-        "type": "TypeAlias ContextMenuContentEmits",
+        "type": "TypeAlias ContextMenuContentEmits: MenuContentEmits",
         "resolvedType": "{ escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
@@ -6178,7 +6046,7 @@
         "kind": "props",
         "name": "ContextMenuRadioProps",
         "type": "TypeAlias ContextMenuRadioProps<T>: MenuUiBaseProps & ContextMenuRadioCompactProps<T>",
-        "resolvedType": "{ class?: ((string | Record<string, boolean> | ClassValue[]) & (string | false | Record<string, any> | import(\"vue\").ClassValue[])) | null; size?: ThemeSize; ui?: Partial<MenuUi>; indicatorPosition?: AlignSide; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType; items: MenuRadioOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; radioItemProps?: MenuRadioItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T; defaultValue?: T; asChild?: boolean; as?: AsTag | Component }",
+        "resolvedType": "{ class?: ((string | Record<string, boolean> | ClassValue[]) & (string | false | Record<string, any> | import(\"vue\").ClassValue[])) | null; size?: ThemeSize; ui?: Partial<MenuUi>; indicatorPosition?: AlignSide; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; items: MenuRadioOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; radioItemProps?: MenuRadioItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T; defaultValue?: T; asChild?: boolean; as?: AsTag | Component }",
         "description": "",
         "sourcePath": "src/components/context-menu/types.ts",
         "typeParameters": ["TypeParameter T"],
@@ -6705,39 +6573,6 @@
             "inheritedFrom": null,
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           },
           {
             "name": "items",
@@ -7390,18 +7225,18 @@
         "kind": "props",
         "name": "ContextMenuRadioCompactProps",
         "type": "Interface ContextMenuRadioCompactProps<T>",
-        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType; items: MenuRadioOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; radioItemProps?: MenuRadioItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T; defaultValue?: T; asChild?: boolean; as?: AsTag | Component }",
+        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; items: MenuRadioOptionData<T>[]; groupLabelProps?: MenuGroupLabelProps; radioItemProps?: MenuRadioItemProps; indicatorProps?: MenuItemIndicatorProps; shortcutProps?: MenuShortcutProps; separatorProps?: MenuSeparatorProps; modelValue?: T; defaultValue?: T; asChild?: boolean; as?: AsTag | Component }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends AcceptableBooleanValue = AcceptableBooleanValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "disabled",
             "type": "boolean",
             "required": false,
-            "description": "",
+            "description": "When `true`, prevents the user from interacting with radio items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -7411,7 +7246,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "showArrow",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -7421,7 +7256,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -7485,7 +7320,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "portalProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -7549,7 +7384,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -7743,7 +7578,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -7766,7 +7601,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "arrowProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -7789,7 +7624,7 @@
             "required": false,
             "description": "The duration from when the trigger is pressed until the menu opens.",
             "default": "700",
-            "inheritedFrom": null,
+            "inheritedFrom": "pressOpenDelay",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -7799,7 +7634,7 @@
             "required": false,
             "description": "The reading direction of the combobox when applicable.\n\nIf omitted, inherits globally from `ConfigProvider` or assumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -7822,42 +7657,9 @@
             "required": false,
             "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           },
           {
             "name": "items",
@@ -7865,7 +7667,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -7875,7 +7677,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "groupLabelProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -7898,7 +7700,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "radioItemProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -7972,7 +7774,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -8026,7 +7828,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "shortcutProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -8060,7 +7862,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "separatorProps",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -8104,7 +7906,7 @@
             "required": false,
             "description": "The controlled value of the radio item to check. Can be bound as `v-model`.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -8114,7 +7916,7 @@
             "required": false,
             "description": "The value of the radio item that should be checked when initially rendered. Use when you do not need to control the\nstate of the radio items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -8124,7 +7926,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -8134,7 +7936,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -8166,11 +7968,11 @@
       "emits": {
         "kind": "emits",
         "name": "ContextMenuRadioCompactEmits",
-        "type": "TypeAlias ContextMenuRadioCompactEmits<T>",
+        "type": "TypeAlias ContextMenuRadioCompactEmits<T>: ContextMenuWrapperCompactEmits & MenuRadioOptionsCompactEmits<T>",
         "resolvedType": "{ \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event]; \"update:modelValue\": [payload: NonNullable<T>]; select: [item: MenuRadioOptionData<T>, event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends AcceptableBooleanValue = AcceptableBooleanValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -8397,11 +8199,11 @@
       "slots": {
         "kind": "slots",
         "name": "ContextMenuRadioCompactSlots",
-        "type": "TypeAlias ContextMenuRadioCompactSlots<T>",
+        "type": "TypeAlias ContextMenuRadioCompactSlots<T>: MenuRadioOptionsCompactSlots<T> & { trigger: () => any }",
         "resolvedType": "{ item?: ((props: MenuRadioOptionData<T>) => any); \"item-leading\"?: ((props: MenuRadioOptionData<T>) => any); \"item-trailing\"?: ((props: MenuRadioOptionData<T>) => any); \"item-indicator-icon\"?: ((props: MenuRadioOptionData<T>) => any); trigger: () => any }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
-        "typeParameters": ["T extends AcceptableBooleanValue = AcceptableBooleanValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -8512,7 +8314,7 @@
         "kind": "props",
         "name": "ContextMenuRootProps",
         "type": "Interface ContextMenuRootProps",
-        "resolvedType": "{ pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ pressOpenDelay?: number; dir?: Direction; modal?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
         "typeParameters": [],
@@ -8533,7 +8335,7 @@
             "required": false,
             "description": "The reading direction of the combobox when applicable.\n\nIf omitted, inherits globally from `ConfigProvider` or assumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -8556,42 +8358,9 @@
             "required": false,
             "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           }
         ],
         "callables": [],
@@ -8600,7 +8369,7 @@
       "emits": {
         "kind": "emits",
         "name": "ContextMenuRootEmits",
-        "type": "TypeAlias ContextMenuRootEmits",
+        "type": "TypeAlias ContextMenuRootEmits: MenuRootEmits",
         "resolvedType": "{ \"update:open\": [value: boolean] }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
@@ -8686,7 +8455,7 @@
             "required": false,
             "description": "When `true`, the menu would not open when triggered.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": []
           },
@@ -8696,7 +8465,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -8706,7 +8475,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -8741,7 +8510,7 @@
         "kind": "props",
         "name": "ContextMenuWrapperProps",
         "type": "Interface ContextMenuWrapperProps",
-        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<MenuUi>; indicatorPosition?: AlignSide; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ class?: string | Record<string, boolean> | ClassValue[] | null; size?: ThemeSize; ui?: Partial<MenuUi>; indicatorPosition?: AlignSide; disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean }",
         "description": "",
         "sourcePath": "src/components/context-menu/types.ts",
         "typeParameters": [],
@@ -8844,7 +8613,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ContextMenuWrapperCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -8854,7 +8623,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ContextMenuWrapperCompactProps.showArrow",
+            "inheritedFrom": "showArrow",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -8864,7 +8633,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ContextMenuWrapperCompactProps.triggerProps",
+            "inheritedFrom": "triggerProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -8928,7 +8697,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ContextMenuWrapperCompactProps.portalProps",
+            "inheritedFrom": "portalProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -8992,7 +8761,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ContextMenuWrapperCompactProps.contentProps",
+            "inheritedFrom": "contentProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -9186,7 +8955,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ContextMenuWrapperCompactProps.popupProps",
+            "inheritedFrom": "popupProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -9209,7 +8978,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "ContextMenuWrapperCompactProps.arrowProps",
+            "inheritedFrom": "arrowProps",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": [
               {
@@ -9232,7 +9001,7 @@
             "required": false,
             "description": "The duration from when the trigger is pressed until the menu opens.",
             "default": "700",
-            "inheritedFrom": "ContextMenuWrapperCompactProps.pressOpenDelay",
+            "inheritedFrom": "pressOpenDelay",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -9268,39 +9037,6 @@
             "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": "isAlert",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": "alertType",
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           }
         ],
         "callables": [],
@@ -9586,7 +9322,7 @@
         "kind": "props",
         "name": "ContextMenuWrapperCompactProps",
         "type": "Interface ContextMenuWrapperCompactProps",
-        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean; isAlert?: boolean; alertType?: DialogAlertType }",
+        "resolvedType": "{ disabled?: boolean; showArrow?: boolean; triggerProps?: ContextMenuTriggerProps; portalProps?: MenuPortalProps; contentProps?: ContextMenuContentProps; popupProps?: MenuPopupProps; arrowProps?: MenuArrowProps; pressOpenDelay?: number; dir?: Direction; modal?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",
         "typeParameters": [],
@@ -9985,7 +9721,7 @@
             "required": false,
             "description": "The duration from when the trigger is pressed until the menu opens.",
             "default": "700",
-            "inheritedFrom": null,
+            "inheritedFrom": "pressOpenDelay",
             "sourcePath": "headless/src/components/context-menu/types.ts",
             "referencedTypes": []
           },
@@ -9995,7 +9731,7 @@
             "required": false,
             "description": "The reading direction of the combobox when applicable.\n\nIf omitted, inherits globally from `ConfigProvider` or assumes LTR (left-to-right) reading mode.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/menu/types.ts",
             "referencedTypes": [
               {
@@ -10018,42 +9754,9 @@
             "required": false,
             "description": "The modality of the dialog. When set to `true`, interaction with outside elements will be disabled and only dialog\ncontent will be visible to screen readers.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "modal",
             "sourcePath": "headless/src/components/dialog/types.ts",
             "referencedTypes": []
-          },
-          {
-            "name": "isAlert",
-            "type": "boolean",
-            "required": false,
-            "description": "Whether the dialog is an alert dialog. An alert dialog is a dialog that interrupts the user's workflow to communicate an important message and requires a response.\n\nWhen set to `true`, the dialog will have `role=\"alertdialog\"` and will require a `DialogTitle` to be provided. This is used for accessibility purposes.",
-            "default": "false",
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": []
-          },
-          {
-            "name": "alertType",
-            "type": "DialogAlertType",
-            "required": false,
-            "description": "The alert type of the dialog, which determines the default icon and styles when the dialog is an alert dialog.",
-            "default": null,
-            "inheritedFrom": null,
-            "sourcePath": "headless/src/components/dialog/types.ts",
-            "referencedTypes": [
-              {
-                "name": "DialogAlertType",
-                "kind": "typeAlias",
-                "type": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "resolvedType": "'success' | 'warning' | 'info' | 'error' | 'default'",
-                "description": "",
-                "sourcePath": "headless/src/components/dialog/types.ts",
-                "typeParameters": [],
-                "external": false,
-                "members": [],
-                "callables": []
-              }
-            ]
           }
         ],
         "callables": [],
@@ -10062,7 +9765,7 @@
       "emits": {
         "kind": "emits",
         "name": "ContextMenuWrapperCompactEmits",
-        "type": "TypeAlias ContextMenuWrapperCompactEmits",
+        "type": "TypeAlias ContextMenuWrapperCompactEmits: MenuRootEmits & MenuContentEmits",
         "resolvedType": "{ \"update:open\": [value: boolean]; escapeKeyDown: [event: KeyboardEvent]; pointerDownOutside: [event: PointerDownOutsideEvent]; focusOutside: [event: FocusOutsideEvent]; interactOutside: [event: PointerDownOutsideEvent | FocusOutsideEvent]; openAutoFocus: [event: Event]; closeAutoFocus: [event: Event]; entryFocus: [event: Event] }",
         "description": "",
         "sourcePath": "headless/src/components/context-menu/types.ts",

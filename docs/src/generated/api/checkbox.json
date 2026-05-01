@@ -132,7 +132,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.label",
+            "inheritedFrom": "label",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -142,7 +142,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.controlProps",
+            "inheritedFrom": "controlProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -176,7 +176,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.indicatorProps",
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -230,7 +230,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.labelProps",
+            "inheritedFrom": "labelProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -264,7 +264,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.id",
+            "inheritedFrom": "id",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -274,7 +274,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -284,7 +284,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -307,7 +307,7 @@
             "required": false,
             "description": "The value given as data when submitted with a `name`.",
             "default": "on",
-            "inheritedFrom": "CheckboxCompactProps.value",
+            "inheritedFrom": "value",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -330,7 +330,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkbox",
             "default": "false",
-            "inheritedFrom": "CheckboxCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -340,7 +340,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.name",
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -350,7 +350,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": "CheckboxCompactProps.required",
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -555,7 +555,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.label",
+            "inheritedFrom": "label",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -565,7 +565,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.controlProps",
+            "inheritedFrom": "controlProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -599,7 +599,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.indicatorProps",
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -653,7 +653,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.labelProps",
+            "inheritedFrom": "labelProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -687,7 +687,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.id",
+            "inheritedFrom": "id",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -697,7 +697,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -707,7 +707,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -730,7 +730,7 @@
             "required": false,
             "description": "The value given as data when submitted with a `name`.",
             "default": "on",
-            "inheritedFrom": "CheckboxCardCompactProps.value",
+            "inheritedFrom": "value",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -753,7 +753,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkbox",
             "default": "false",
-            "inheritedFrom": "CheckboxCardCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -763,7 +763,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.name",
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -773,7 +773,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": "CheckboxCardCompactProps.required",
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -876,7 +876,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "label",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -886,7 +886,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "controlProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -920,7 +920,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -974,7 +974,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "labelProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1008,7 +1008,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "id",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1018,7 +1018,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1028,7 +1028,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1051,7 +1051,7 @@
             "required": false,
             "description": "The value given as data when submitted with a `name`.",
             "default": "on",
-            "inheritedFrom": null,
+            "inheritedFrom": "value",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1074,7 +1074,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkbox",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1084,7 +1084,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1094,7 +1094,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -1105,7 +1105,7 @@
       "emits": {
         "kind": "emits",
         "name": "CheckboxCardCompactEmits",
-        "type": "TypeAlias CheckboxCardCompactEmits",
+        "type": "TypeAlias CheckboxCardCompactEmits: CheckboxCompactEmits",
         "resolvedType": "{ \"update:modelValue\": [value: CheckedState | null] }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
@@ -1279,7 +1279,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1289,7 +1289,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.rootProps",
+            "inheritedFrom": "rootProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1383,7 +1383,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.controlProps",
+            "inheritedFrom": "controlProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1417,7 +1417,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.indicatorProps",
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1471,7 +1471,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.labelProps",
+            "inheritedFrom": "labelProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1505,7 +1505,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1515,7 +1515,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1525,7 +1525,7 @@
             "required": false,
             "description": "When `false`, navigating through the items using arrow keys will be disabled.",
             "default": "true",
-            "inheritedFrom": "CheckboxCardGroupCompactProps.rovingFocus",
+            "inheritedFrom": "rovingFocus",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1535,7 +1535,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkboxes",
             "default": "false",
-            "inheritedFrom": "CheckboxCardGroupCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1545,7 +1545,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -1568,7 +1568,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.orientation",
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -1591,7 +1591,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": "CheckboxCardGroupCompactProps.loop",
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           },
@@ -1601,7 +1601,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.name",
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1611,7 +1611,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": "CheckboxCardGroupCompactProps.required",
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -1650,7 +1650,7 @@
         "resolvedType": "{ items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
-        "typeParameters": ["T extends CheckboxCardGroupOptionData = CheckboxCardGroupOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "items",
@@ -1658,7 +1658,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1668,7 +1668,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "rootProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1762,7 +1762,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "controlProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1796,7 +1796,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1850,7 +1850,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "labelProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -1884,7 +1884,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1894,7 +1894,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1904,7 +1904,7 @@
             "required": false,
             "description": "When `false`, navigating through the items using arrow keys will be disabled.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "rovingFocus",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1914,7 +1914,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkboxes",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -1924,7 +1924,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -1947,7 +1947,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -1970,7 +1970,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           },
@@ -1980,7 +1980,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -1990,7 +1990,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -2001,11 +2001,11 @@
       "emits": {
         "kind": "emits",
         "name": "CheckboxCardGroupCompactEmits",
-        "type": "TypeAlias CheckboxCardGroupCompactEmits<T>",
+        "type": "TypeAlias CheckboxCardGroupCompactEmits<T>: CheckboxGroupRootEmits<T>",
         "resolvedType": "{ \"update:modelValue\": [value: T[]] }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -2169,7 +2169,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "id",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2179,7 +2179,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2189,7 +2189,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -2212,7 +2212,7 @@
             "required": false,
             "description": "The value given as data when submitted with a `name`.",
             "default": "on",
-            "inheritedFrom": null,
+            "inheritedFrom": "value",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -2235,7 +2235,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkbox",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2245,7 +2245,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -2255,7 +2255,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -2266,7 +2266,7 @@
       "emits": {
         "kind": "emits",
         "name": "CheckboxCompactEmits",
-        "type": "TypeAlias CheckboxCompactEmits",
+        "type": "TypeAlias CheckboxCompactEmits: CheckboxRootEmits",
         "resolvedType": "{ \"update:modelValue\": [value: CheckedState | null] }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
@@ -2465,7 +2465,7 @@
             "required": true,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.items",
+            "inheritedFrom": "items",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2475,7 +2475,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.rootProps",
+            "inheritedFrom": "rootProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -2569,7 +2569,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.controlProps",
+            "inheritedFrom": "controlProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -2603,7 +2603,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.indicatorProps",
+            "inheritedFrom": "indicatorProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -2657,7 +2657,7 @@
             "required": false,
             "description": "",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.labelProps",
+            "inheritedFrom": "labelProps",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": [
               {
@@ -2691,7 +2691,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2701,7 +2701,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.defaultValue",
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2711,7 +2711,7 @@
             "required": false,
             "description": "When `false`, navigating through the items using arrow keys will be disabled.",
             "default": "true",
-            "inheritedFrom": "CheckboxGroupCompactProps.rovingFocus",
+            "inheritedFrom": "rovingFocus",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2721,7 +2721,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkboxes",
             "default": "false",
-            "inheritedFrom": "CheckboxGroupCompactProps.disabled",
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -2731,7 +2731,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.dir",
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -2754,7 +2754,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.orientation",
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -2777,7 +2777,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": "CheckboxGroupCompactProps.loop",
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           },
@@ -2787,7 +2787,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.name",
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -2797,7 +2797,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": "CheckboxGroupCompactProps.required",
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -2836,7 +2836,7 @@
         "resolvedType": "{ items: T[]; rootProps?: CheckboxRootProps; controlProps?: CheckboxControlProps; indicatorProps?: CheckboxIndicatorProps; labelProps?: CheckboxLabelProps; modelValue?: T['value'][]; defaultValue?: T['value'][]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
-        "typeParameters": ["T extends CheckboxGroupOptionData = CheckboxGroupOptionData"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "items",
@@ -3070,7 +3070,7 @@
             "required": false,
             "description": "The controlled value of the checkbox. Can be bound with v-model.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -3080,7 +3080,7 @@
             "required": false,
             "description": "The value of the checkbox when it is initially rendered. Use when you do not need to control its value.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "defaultValue",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -3090,7 +3090,7 @@
             "required": false,
             "description": "When `false`, navigating through the items using arrow keys will be disabled.",
             "default": "true",
-            "inheritedFrom": null,
+            "inheritedFrom": "rovingFocus",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -3100,7 +3100,7 @@
             "required": false,
             "description": "When `true`, prevents the user from interacting with the checkboxes",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "disabled",
             "sourcePath": "headless/src/components/checkbox/types.ts",
             "referencedTypes": []
           },
@@ -3110,7 +3110,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "dir",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -3133,7 +3133,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "orientation",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -3156,7 +3156,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           },
@@ -3166,7 +3166,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -3176,7 +3176,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -3187,11 +3187,11 @@
       "emits": {
         "kind": "emits",
         "name": "CheckboxGroupCompactEmits",
-        "type": "TypeAlias CheckboxGroupCompactEmits<T>",
+        "type": "TypeAlias CheckboxGroupCompactEmits<T>: CheckboxGroupRootEmits<T>",
         "resolvedType": "{ \"update:modelValue\": [value: T[]] }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -3215,7 +3215,7 @@
         "resolvedType": "{ modelValue?: T[]; defaultValue?: T[]; rovingFocus?: boolean; disabled?: boolean; dir?: Direction; orientation?: DataOrientation; loop?: boolean; name?: string; required?: boolean }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [
           {
             "name": "modelValue",
@@ -3263,7 +3263,7 @@
             "required": false,
             "description": "The direction of navigation between items.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "Omit.dir",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -3286,7 +3286,7 @@
             "required": false,
             "description": "The orientation of the group. Mainly so arrow navigation is done accordingly (left & right vs. up & down)",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "Omit.orientation",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": [
               {
@@ -3309,7 +3309,7 @@
             "required": false,
             "description": "Whether keyboard navigation should loop around",
             "default": "false",
-            "inheritedFrom": null,
+            "inheritedFrom": "Omit.loop",
             "sourcePath": "headless/src/components/roving-focus/types.ts",
             "referencedTypes": []
           },
@@ -3319,7 +3319,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -3329,7 +3329,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -3344,7 +3344,7 @@
         "resolvedType": "{ \"update:modelValue\": [value: T[]] }",
         "description": "",
         "sourcePath": "headless/src/components/checkbox/types.ts",
-        "typeParameters": ["T extends DefinedValue = DefinedValue"],
+        "typeParameters": ["TypeParameter T"],
         "members": [],
         "callables": [
           {
@@ -3376,7 +3376,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -3386,7 +3386,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -3417,7 +3417,7 @@
             "required": false,
             "description": "Used to force mounting when more control is needed.\n\nUseful when controlling animation with Vue animation libraries.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "forceMount",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }
@@ -3519,7 +3519,7 @@
             "required": false,
             "description": "The name of the field. Submitted with its owning form as part of a name/value pair.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "name",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           },
@@ -3529,7 +3529,7 @@
             "required": false,
             "description": "When `true`, indicates that the user must set the value before the owning form can be submitted.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "required",
             "sourcePath": "headless/src/types/component.ts",
             "referencedTypes": []
           }

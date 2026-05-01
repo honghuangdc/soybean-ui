@@ -165,7 +165,7 @@
             "required": false,
             "description": "The active tab value.",
             "default": null,
-            "inheritedFrom": "PageTabsRootProps.modelValue",
+            "inheritedFrom": "modelValue",
             "sourcePath": "headless/src/components/page-tabs/types.ts",
             "referencedTypes": []
           },
@@ -175,7 +175,7 @@
             "required": false,
             "description": "Whether middle-clicking a tab closes it.",
             "default": null,
-            "inheritedFrom": "PageTabsRootProps.middleClickClose",
+            "inheritedFrom": "middleClickClose",
             "sourcePath": "headless/src/components/page-tabs/types.ts",
             "referencedTypes": []
           }
@@ -212,7 +212,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -222,7 +222,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -289,7 +289,7 @@
       "emits": {
         "kind": "emits",
         "name": "PageTabsItemEmits",
-        "type": "TypeAlias PageTabsItemEmits",
+        "type": "TypeAlias PageTabsItemEmits: { (e: \"click\"): void; (e: \"close\"): void; (e: \"pin\", pinned: boolean): void }",
         "resolvedType": "(e: 'click') => void | (e: 'close') => void | (e: 'pin', pinned: boolean) => void",
         "description": "",
         "sourcePath": "headless/src/components/page-tabs/types.ts",
@@ -315,7 +315,7 @@
             "required": false,
             "description": "Change the default rendered element for the one passed as a child, merging their props and behavior.",
             "default": null,
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.asChild",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": []
           },
@@ -325,7 +325,7 @@
             "required": false,
             "description": "The element or component this component should render as. Can be overwrite by `asChild`",
             "default": "'div'",
-            "inheritedFrom": null,
+            "inheritedFrom": "PrimitiveProps.as",
             "sourcePath": "headless/src/components/primitive/types.ts",
             "referencedTypes": [
               {
@@ -392,7 +392,7 @@
       "emits": {
         "kind": "emits",
         "name": "PageTabsRootEmits",
-        "type": "TypeAlias PageTabsRootEmits",
+        "type": "TypeAlias PageTabsRootEmits: (e: \"update:modelValue\", value: string) => void",
         "resolvedType": "(e: 'update:modelValue', value: string) => void",
         "description": "",
         "sourcePath": "headless/src/components/page-tabs/types.ts",

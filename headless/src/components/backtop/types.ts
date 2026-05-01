@@ -1,4 +1,3 @@
-import type { ShallowRef } from 'vue';
 import type { AffixTarget } from '../affix/types';
 import type { ButtonProps } from '../button/types';
 
@@ -31,15 +30,3 @@ export type BacktopEmits = {
   change: [visible: boolean];
   click: [event: MouseEvent];
 };
-
-export interface BacktopExposed {
-  visible: ShallowRef<boolean>;
-  /**
-   * Scroll the target container back to the start position.
-   */
-  scrollToTop: () => void;
-  /**
-   * Schedule a visibility update on the next animation frame.
-   */
-  updateVisibility: () => void;
-}
