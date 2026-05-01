@@ -102,6 +102,44 @@ export interface EditableRootContext extends Omit<EditableRootContextParams, 'di
   dataState: ComputedRef<EditableViewState>;
 }
 
-export type EditableUiSlot = 'root' | 'area' | 'preview' | 'input' | 'editTrigger' | 'submitTrigger' | 'cancelTrigger';
+export type EditableUiSlot =
+  | 'root'
+  | 'area'
+  | 'preview'
+  | 'input'
+  | 'controls'
+  | 'editTrigger'
+  | 'submitTrigger'
+  | 'cancelTrigger';
 
 export type EditableUi = UiClass<EditableUiSlot>;
+
+export interface EditableCompactProps extends EditableRootProps {
+  areaProps?: EditableAreaProps;
+  previewProps?: EditablePreviewProps;
+  inputProps?: EditableInputProps;
+  editTriggerProps?: EditableEditTriggerProps;
+  submitTriggerProps?: EditableSubmitTriggerProps;
+  cancelTriggerProps?: EditableCancelTriggerProps;
+}
+
+export type EditableCompactEmits = EditableRootEmits;
+
+export interface EditableCompactSlotProps {
+  modelValue: string | undefined;
+  inputValue: string;
+  isEditing: boolean;
+  isEmpty: boolean;
+  edit: () => void;
+  cancel: () => void;
+  submit: () => void;
+}
+
+export interface EditableCompactSlots {
+  default?: (props: EditableCompactSlotProps) => any;
+  preview?: (props: EditableCompactSlotProps) => any;
+  input?: (props: EditableCompactSlotProps) => any;
+  'edit-trigger'?: (props: EditableCompactSlotProps) => any;
+  'submit-trigger'?: (props: EditableCompactSlotProps) => any;
+  'cancel-trigger'?: (props: EditableCompactSlotProps) => any;
+}

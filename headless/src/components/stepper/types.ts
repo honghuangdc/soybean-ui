@@ -75,8 +75,44 @@ export interface StepperItemContext extends StepperItemContextParams {
   descriptionId: ShallowRef<string>;
 }
 
-export type StepperUiSlot = 'root' | 'item' | 'trigger' | 'indicator' | 'separator' | 'title' | 'description';
+export type StepperUiSlot =
+  | 'root'
+  | 'item'
+  | 'trigger'
+  | 'indicator'
+  | 'indicatorIcon'
+  | 'itemContent'
+  | 'separator'
+  | 'title'
+  | 'description';
 
 export type StepperUi = UiClass<StepperUiSlot>;
 
 export type StepperSeparatorProps = SeparatorRootProps;
+
+export interface StepperItemData {
+  title?: string;
+  description?: string;
+  disabled?: boolean;
+  completed?: boolean;
+}
+
+export interface StepperCompactProps extends StepperRootProps {
+  items: StepperItemData[];
+  itemProps?: StepperItemProps;
+  triggerProps?: StepperTriggerProps;
+  indicatorProps?: StepperIndicatorProps;
+  separatorProps?: StepperSeparatorProps;
+  titleProps?: StepperTitleProps;
+  descriptionProps?: StepperDescriptionProps;
+}
+
+export type StepperCompactEmits = StepperRootEmits;
+
+export interface StepperCompactSlots {
+  item?: (props: StepperItemData & { step: number; state: StepperState }) => any;
+  indicator?: (props: StepperItemData & { step: number; state: StepperState }) => any;
+  title?: (props: StepperItemData & { step: number; state: StepperState }) => any;
+  description?: (props: StepperItemData & { step: number; state: StepperState }) => any;
+  separator?: (props: StepperItemData & { step: number; state: StepperState }) => any;
+}
