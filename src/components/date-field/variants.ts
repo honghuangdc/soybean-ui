@@ -5,13 +5,13 @@ import type { VariantProps } from 'tailwind-variants';
 export const dateFieldVariants = tv({
   slots: {
     root: [
-      'group inline-flex w-full flex-wrap items-center rounded-md border border-input bg-background px-2.5 transition-all-150 gap-1.5',
-      'focus-within:outline-none focus-within:ring-3 focus-within:ring-offset-background focus-within:ring-primary/30',
+      'group inline-flex flex-wrap items-center w-fit rounded-md border border-input bg-background transition-all-150',
+      'outline-none focus-within:ring-3 focus-within:ring-offset-background focus-within:ring-primary/30',
       'data-[disabled]:opacity-60 data-[readonly]:bg-muted/40',
       'data-[invalid]:border-destructive data-[invalid]:ring-3 data-[invalid]:ring-destructive/20'
     ],
     input: [
-      'inline-flex min-w-5 items-center justify-center rounded-sm px-0.5 text-center outline-none',
+      'inline-flex items-center justify-center rounded-sm px-0.5 text-center outline-none',
       'tabular-nums leading-none',
       'data-[segment=literal]:min-w-0 data-[segment=literal]:px-0 data-[segment=literal]:text-muted-foreground',
       'data-[segment=timeZoneName]:min-w-fit data-[segment=timeZoneName]:px-1 data-[segment=timeZoneName]:text-muted-foreground',

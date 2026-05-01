@@ -59,6 +59,28 @@ describe('SDateField', () => {
       expect(wrapper.emitted('update:modelValue')).toBeTruthy();
       wrapper.unmount();
     });
+
+    it('increments the focused segment on ArrowUp', async () => {
+      const wrapper = mount(SDateField, {
+        attachTo: document.body,
+        props: {
+          modelValue: new CalendarDate(2026, 4, 19),
+          'aria-label': 'Event date'
+        }
+      });
+
+      const day = wrapper.find('[data-segment="day"]');
+
+      await day.trigger('focusin');
+      await day.trigger('keydown', { key: 'ArrowUp', preventDefault() {} });
+
+      const emitted = wrapper.emitted('update:modelValue');
+
+      expect(emitted).toBeTruthy();
+      expect((emitted as NonNullable<typeof emitted>).at(-1)?.[0] as CalendarDate)?.toBeInstanceOf(CalendarDate);
+      expect(((emitted as NonNullable<typeof emitted>).at(-1)?.[0] as CalendarDate)?.toString()).toBe('2026-04-20');
+      wrapper.unmount();
+    });
   });
 
   describe('disabled state', () => {

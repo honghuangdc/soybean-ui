@@ -47,6 +47,12 @@ export interface DateFieldSegment {
   value: string;
 }
 
+export interface DateFieldCompactProps extends DateFieldRootProps {
+  inputProps?: Omit<DateFieldInputProps, 'part'>;
+}
+
+export type DateFieldCompactEmits = DateFieldRootEmits;
+
 export interface DateFieldRootContext extends PropsToContext<DateFieldRootProps, 'disabled' | 'readonly'> {
   locale: ComputedRef<string>;
   dir: ComputedRef<Direction>;

@@ -8,4 +8,4 @@ export type {
   DateFieldUiSlot
 } from '@soybeanjs/headless/date-field';
 
-export type { DateFieldEmits, DateFieldProps, DateFieldSlotProps, DateFieldSlots } from './types';
+export type * from './types';
