@@ -7,6 +7,7 @@ import {
   useExposedElement,
   useFocusGuards,
   useFocusScope,
+  useHideOthers,
   useOmitProps
 } from '../../composables';
 import { PopperPopup, PopperPositioner } from '../popper';
@@ -34,6 +35,7 @@ const {
   ignoreFilter,
   allItems,
   filterState,
+  parentElement,
   inputElement,
   triggerElement,
   onOpenChange,
@@ -48,9 +50,17 @@ const { pointerEvents } = useDismissableLayer(contentElement, {
     emit('escapeKeyDown', event);
   },
   onPointerDownOutside: event => {
+    if (parentElement.value?.contains(event.target as Node)) {
+      event.preventDefault();
+    }
+
     emit('pointerDownOutside', event);
   },
   onFocusOutside: event => {
+    if (parentElement.value?.contains(event.target as Node)) {
+      event.preventDefault();
+    }
+
     emit('focusOutside', event);
   },
   onInteractOutside: event => {
@@ -66,11 +76,10 @@ const { onKeydown } = useFocusScope(contentElement, {
   loop: true,
   onOpenAutoFocus: event => {
     emit('openAutoFocus', event);
+    event.preventDefault();
   },
   onCloseAutoFocus: event => {
     emit('closeAutoFocus', event);
-    if (event.defaultPrevented) return;
-    triggerElement.value?.focus({ preventScroll: true });
     event.preventDefault();
   }
 });
@@ -122,6 +131,7 @@ provideComboboxContentContext({
 });
 
 useFocusGuards();
+useHideOthers(() => [parentElement.value, contentElement.value], open);
 
 watchEffect(() => {
   if (!props.bodyLock) {

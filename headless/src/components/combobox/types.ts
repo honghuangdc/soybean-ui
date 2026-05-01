@@ -7,7 +7,6 @@ import type {
   ForceMountProps,
   MaybeArray,
   PropsToContext,
-  SelectEvent,
   TrapFocusProps,
   UiClass
 } from '../../types';
@@ -16,6 +15,8 @@ import type {
   ListboxFilterProps,
   ListboxRootEmits,
   ListboxRootProps,
+  ListboxItemProps,
+  ListboxItemEmits,
   ListboxGroupProps as ComboboxGroupProps,
   ListboxGroupLabelProps as ComboboxGroupLabelProps,
   ListboxItemIndicatorProps as ComboboxItemIndicatorProps,
@@ -106,15 +107,11 @@ export interface ComboboxViewportProps extends /** @vue-ignore */ HTMLAttributes
   nonce?: string;
 }
 
-export interface ComboboxItemProps extends PrimitiveProps, /** @vue-ignore */ Omit<HTMLAttributes, 'onSelect'> {
-  value: string;
-  disabled?: boolean;
+export interface ComboboxItemProps extends ListboxItemProps {
   textValue?: string;
 }
 
-export type ComboboxItemEmits = {
-  select: [event: SelectEvent<string>];
-};
+export type ComboboxItemEmits = ListboxItemEmits;
 
 export interface ComboboxEmptyProps extends PrimitiveProps, /** @vue-ignore */ HTMLAttributes {}
 
@@ -218,6 +215,7 @@ export interface ComboboxRootContext extends PropsToContext<
   onOpenChange: (value: boolean) => Promise<void> | void;
   isUserInputted: ShallowRef<boolean>;
   isVirtual: ShallowRef<boolean>;
+  parentElement: ComputedRef<HTMLElement | undefined>;
   contentId: ShallowRef<string>;
   initContentId: () => void;
   inputElement: ShallowRef<HTMLInputElement | undefined>;
